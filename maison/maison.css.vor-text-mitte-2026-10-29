@@ -1,0 +1,986 @@
+/* La Maison · Waldhotel Doldenhorn (17.10.2026), gebaut von _werkzeuge/maison/bau.py: Vorlage mit Farben, Schriften und Tapete des Hauses,
+   dazu wegweiser.css (Empfang) und doldenhorn.css (Kleid). Nicht von Hand ändern. */
+@font-face{font-family:'Caslon WD';font-style:normal;font-weight:400 700;font-display:swap;src:url('/assets/fonts/librecaslon-700.woff2') format('woff2')}
+@font-face{font-family:'Caslon Ersatz';src:local('Georgia Bold'),local('Georgia-Bold'),local('Georgia');size-adjust:104%}
+@font-face{font-family:'Instrument Sans';font-weight:400 600;font-display:swap;src:url('/assets/fonts/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-weight:400;font-display:swap;src:url('/assets/fonts/DMMono-normal-400.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-weight:500;font-display:swap;src:url('/assets/fonts/DMMono-normal-500.woff2') format('woff2')}
+:root{
+  --marine:#0d1621;--blau:#142235;--nacht:#070c14;--tinte:#0f1620;--papier:#f1ece2;--creme:#e7e0d2;--weiss:#fbf8f1;--sand:#d9d1c2;
+  --gold:#e3d2a6;--goldhell:#f3e8cc;--taupe:#9a7d3e;--taupe-tief:#7a6230;--leise:rgba(15,22,32,.68);--stahl:#3d5370;--hausgold:#b89850;
+  --serif:'Caslon WD','Caslon Ersatz',Georgia,serif;--caps:'DM Mono',ui-monospace,Menlo,monospace;--sans:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace;
+  --e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1);
+  --rand:clamp(20px,4.6vw,76px);--max:1360px;
+  --platte:linear-gradient(180deg,#fbf8f1,#f1ece2 55%,#e7e0d2);
+  --platte-s:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(159,137,111,.18),0 1.5px 0 rgba(120,100,70,.35),0 40px 60px -34px rgba(0,0,0,.75),0 14px 26px -16px rgba(0,0,0,.45);
+  --kuhle:linear-gradient(180deg,#ddd5c5,#e7e0d2 40%,#ece6da);
+  --kuhle-s:inset 0 3px 6px -1px rgba(26,29,40,.16),inset 0 1px 0 rgba(26,29,40,.08),inset 0 0 0 1px rgba(159,137,111,.14),0 1px 0 #fff;
+  --insel:radial-gradient(120% 160% at 50% -50%,rgba(227,210,166,.12),rgba(227,210,166,0) 60%),linear-gradient(180deg,#27405f 0%,#1a2b42 30%,#0f1b2b 66%,#0d1621 100%);
+  --insel-s:inset 0 1px 0 rgba(255,255,255,.18),inset 0 -2px 0 rgba(0,0,0,.4),0 0 0 1px rgba(210,191,152,.42),0 26px 40px -20px rgba(0,0,0,.8),0 8px 14px -8px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+html,body{margin:0;padding:0}
+body.ma{font-variant-numeric:lining-nums;background:var(--marine);color:var(--tinte);font:17px/1.62 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.ma img{display:block;max-width:100%}
+.ma a{color:inherit}
+.ma svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+::selection{background:var(--sand);color:var(--tinte)}
+:focus-visible{outline:1.5px solid var(--gold);outline-offset:3px}
+
+/* ---------- Knöpfe mit Tiefe (Baustein des Hauses, wie Le Bureau) ---------- */
+.kn{--o:#27405f;--m:#1a2b42;--u:#0f1b2b;--t:#f7efdd;--licht:rgba(190,206,255,.34);--kante:rgba(0,0,0,.5);--tf:rgba(0,0,0,.55);
+  --ko:#f6e8c2;--ku:#b8975a;--kt:#0f1620;--klicht:rgba(255,250,232,.95);
+  position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;gap:14px;height:54px;padding:0 7px 0 24px;border:0;border-radius:999px;text-decoration:none;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;white-space:nowrap;color:var(--t)!important;text-shadow:0 1px 1px rgba(0,0,0,.35);
+  background:linear-gradient(180deg,var(--o) 0%,var(--m) 46%,var(--u) 100%);
+  box-shadow:inset 0 1px 0 var(--licht),inset 0 -3px 0 var(--kante),inset 0 0 0 1px rgba(210,191,152,.6),0 0 0 1px rgba(0,0,0,.25),0 18px 30px -14px var(--tf);
+  transition:transform .55s var(--e2)}
+.kn::after{content:'';position:absolute;z-index:-1;top:-20%;bottom:-20%;left:0;width:40%;background:linear-gradient(100deg,transparent,rgba(222,232,255,.3) 50%,transparent);transform:translateX(-180%) skewX(-18deg)}
+.kn i{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,var(--ko),var(--ku));color:var(--kt);font-style:normal;
+  box-shadow:inset 0 1px 0 var(--klicht),inset 0 -2px 0 rgba(0,0,0,.4),0 0 0 1px rgba(210,191,152,.45),0 6px 12px -6px rgba(9,17,39,.55);transition:transform .6s var(--e2)}
+.kn i svg{width:15px;height:15px;stroke-width:1.8}
+@media (hover:hover){.kn:hover{transform:translateY(-2px)}.kn:hover::after{transform:translateX(360%) skewX(-18deg);transition:transform 1.1s var(--e1)}.kn:hover i{transform:translateX(2px) scale(1.06)}}
+.kn:active{transform:translateY(1px) scale(.985)}
+.kn--gold{--o:#f7e9c6;--m:#e3cd98;--u:#b99a5c;--t:#1b2033;--licht:rgba(255,252,240,.95);--kante:rgba(92,66,24,.5);--ko:#27405f;--ku:#0f1b2b;--kt:#f6e8c2;--klicht:rgba(190,206,255,.4);
+  text-shadow:0 1px 0 rgba(255,250,235,.5);box-shadow:inset 0 1px 0 var(--licht),inset 0 -3px 0 var(--kante),inset 0 0 0 1px rgba(255,240,205,.6),0 0 0 1px rgba(0,0,0,.35),0 18px 30px -14px rgba(0,0,0,.7)}
+.kn--gold::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.85) 50%,transparent)}
+.kn--klein{height:42px;padding:0 5px 0 17px;gap:10px;font-size:10.5px}.kn--klein i{width:32px;height:32px}
+@property --ga{syntax:"<angle>";initial-value:0deg;inherits:false}
+.glanz-kn::before{content:'';position:absolute;inset:0;z-index:-2;border-radius:inherit;padding:1.4px;pointer-events:none;
+  background:conic-gradient(from var(--ga),transparent 0 60%,rgba(210,191,152,.25) 70%,#fff3d2 80%,var(--gold) 86%,transparent 95%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ga 4.2s linear infinite}
+@keyframes ga{to{--ga:360deg}}
+
+/* ---------- Leiste oben: Insel in der Mitte, zwei Eck-Knöpfe mit Glanzkante ---------- */
+.m-oben{position:fixed;z-index:20;top:16px;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 clamp(14px,2vw,26px);pointer-events:none}
+.m-oben>*{pointer-events:auto}
+.m-insel{display:flex;align-items:center;gap:clamp(14px,1.8vw,28px);height:62px;padding:0 26px 0 9px;border-radius:999px;background:var(--insel);box-shadow:var(--insel-s);color:#f7efdd}
+.m-insel__marke{display:flex;align-items:center;gap:12px;padding-right:clamp(6px,1vw,14px);margin-right:2px;text-decoration:none;border-right:1px solid rgba(210,191,152,.28);height:40px}
+.m-insel__marke img{width:46px;height:46px;filter:drop-shadow(0 1px 0 rgba(0,0,0,.7)) drop-shadow(0 3px 8px rgba(0,0,0,.5))}
+.m-insel__marke span{font:500 15px/1 var(--caps);letter-spacing:.24em;text-transform:uppercase;color:var(--goldhell);padding-right:10px}
+.m-insel__p{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;text-decoration:none;color:rgba(247,239,221,.86);transition:color .4s}
+.m-insel__p:hover,.m-insel__p.an{color:var(--goldhell)}
+.rl{display:inline-flex;overflow:hidden;height:1.25em;line-height:1.25em}
+.rl>b{display:inline-block;font-weight:400;white-space:pre;transition:transform .55s var(--e1);transition-delay:calc(var(--n)*16ms);text-shadow:0 1.25em 0 currentColor}
+@media (hover:hover){.m-insel__p:hover .rl>b{transform:translateY(-1.25em)}}
+.kn--hell{--o:#27405f}
+.m-oben__ecke{flex:none}
+@media (max-width:1240px){.m-insel__p{display:none}.m-insel{padding-right:9px}.m-insel__marke{border:0;margin:0}}
+@media (max-width:640px){.m-oben__ecke:first-child{display:none}.m-oben{top:10px}.m-insel{height:54px}.m-insel__marke img{width:38px;height:38px}.m-insel__marke span{font-size:13px}}
+
+/* ---------- Auftritt (nur mit Skript; ohne Skript steht alles) ---------- */
+.js [data-r]{transform:translate3d(0,30px,0);transition:opacity 1.1s ease,transform 1.3s var(--e1);transition-delay:calc(var(--i,0)*90ms)}
+.js [data-r].da{opacity:1;transform:none}
+.js [data-r="schweb"]{transform:translate3d(0,70px,0) scale(.96);transition:opacity .9s ease,transform 1.05s var(--e1);transition-delay:calc(var(--i,0)*140ms)}
+.js [data-r="schweb"].da{transform:var(--lage,none)}
+.js [data-r="bild"]{opacity:1;transform:none}
+.m-vorhang{overflow:hidden}
+.m-vorhang img{transform:scale(1.13);transition:transform 1.9s var(--e1)}
+.m-vorhang.da img,html:not(.js) .m-vorhang img{transform:none}
+.js [data-r="blase"]{transform:translate3d(0,14px,0) scale(.98);transition-delay:calc(.35s + var(--i,0)*620ms)}
+.js [data-r="fach"]{transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s var(--e1);transition-delay:calc(var(--i,0)*60ms)}
+
+/* ---------- Empfang ---------- */
+.m-empfang{position:relative;min-height:max(100svh,760px);overflow:hidden;isolation:isolate;background:var(--nacht);color:#fff;display:flex}
+.m-empfang__bild{position:absolute;inset:0;z-index:0}
+.m-empfang__bild img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+/* Hof hinter den Zeilen: weich, gross, das Foto bleibt sonst unverändert (Auftakt der Website) */
+.m-empfang__hof{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(50% 40% at 50% 38%,rgba(12,14,24,.55) 0%,rgba(12,14,24,.36) 45%,rgba(12,14,24,0) 100%),linear-gradient(180deg,rgba(12,14,24,.22) 0%,rgba(12,14,24,0) 20%,rgba(12,14,24,0) 70%,rgba(12,14,24,.35) 100%)}
+.m-empfang__vorhang{position:absolute;inset:0;z-index:2;background:var(--nacht);pointer-events:none;animation:vorhang 1.6s cubic-bezier(.4,0,.2,1) .1s forwards}
+@keyframes vorhang{to{opacity:0}}
+.m-empfang__in{min-height:max(100svh,760px);position:relative;z-index:3;width:100%;max-width:calc(1240px + 2*var(--rand));margin:0 auto;padding:clamp(118px,15vh,170px) var(--rand) clamp(30px,4vh,52px);display:flex;flex-direction:column;align-items:center;text-align:center}
+.m-empfang__zeichen{width:clamp(96px,10vw,148px);height:auto;filter:drop-shadow(0 2px 2px rgba(7,8,12,.6)) drop-shadow(0 10px 26px rgba(7,8,12,.55))}
+.js .m-empfang__zeichen{transform:translate3d(0,14px,0) scale(.96);transition:opacity 1.4s ease .5s,transform 1.8s var(--e1) .5s}
+.m-empfang__name{margin:clamp(18px,2vw,28px) 0 0;font-family:var(--caps);font-weight:400;font-size:clamp(1.6rem,4.8vw,4.4rem);letter-spacing:.2em;line-height:1.1;text-transform:uppercase;color:#fcf7ee;
+  text-shadow:0 1px 2px rgba(7,8,12,.6),0 6px 18px rgba(7,8,12,.5),0 14px 40px rgba(7,8,12,.4)}
+.m-empfang__name .w{display:inline-block;overflow:hidden;padding:.14em .02em .1em;margin:-.14em 0 -.1em;vertical-align:top}
+.m-empfang__name .w>b{display:inline-block;font-weight:inherit;white-space:pre}
+.js .m-empfang__name .w>b{transform:translate3d(0,110%,0);transition:transform 1.3s var(--e1);transition-delay:calc(.75s + var(--n)*42ms)}
+.js .m-empfang__name.da .w>b{transform:none}
+.m-empfang__ort{margin:clamp(12px,1.3vw,18px) 0 0;font-family:var(--caps);font-weight:600;font-size:clamp(.82rem,1.05vw,1.08rem);letter-spacing:.32em;text-transform:uppercase;color:var(--gold);
+  text-shadow:0 0 .2em rgba(9,11,18,1),0 1px 2px rgba(9,11,18,1),0 2px 10px rgba(9,11,18,.9),0 4px 26px rgba(9,11,18,.7)}
+.m-empfang__gruss{margin:clamp(26px,3.4vh,44px) 0 0;font-family:var(--serif);font-weight:500;font-size:clamp(2.3rem,4.4vw,4.4rem);line-height:1.06;letter-spacing:-.005em;color:#fff;
+  text-shadow:0 1px 2px rgba(7,8,12,.6),0 4px 22px rgba(7,8,12,.55)}
+.m-hell{color:var(--goldhell)}
+.m-empfang__datum{margin:12px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.86);text-shadow:0 1px 2px rgba(7,8,12,.9),0 3px 12px rgba(7,8,12,.7)}
+.js .m-empfang [data-r]:not(.m-empfang__zeichen){transition-delay:calc(1.25s + var(--i,0)*130ms)}
+
+/* Platte mit allen fünf Werkzeugen, wie die Buchungsleiste der Website: Papier, fünf Kuhlen */
+.m-platte{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;width:100%;margin:auto 0 0;padding:9px;border-radius:30px;text-align:left;color:var(--tinte);
+  background:var(--platte);box-shadow:var(--platte-s),0 50px 80px -30px rgba(7,8,12,.75)}
+.js .m-platte[data-r]{transform:translate3d(0,clamp(50px,6vw,90px),0);transition:opacity 1.2s ease 1.9s,transform 1.9s cubic-bezier(.2,.72,.2,1) 1.9s}
+.js .m-platte[data-r].da{transform:none}
+.m-empfang__in>.m-platte{margin-top:auto}
+.m-empfang__datum{margin-bottom:clamp(36px,6vh,80px)!important}
+.m-platte__k{position:relative;display:grid;align-content:start;gap:4px;min-height:118px;padding:16px 20px 15px;border-radius:22px;text-decoration:none;background:var(--kuhle);box-shadow:var(--kuhle-s);transition:transform .55s var(--e2),box-shadow .55s var(--e2)}
+.m-platte__w{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--taupe-tief)}
+.m-platte__k b{position:relative;width:fit-content;font:500 clamp(1.45rem,1.9vw,1.85rem)/1.05 var(--serif);color:var(--marine)}
+.m-platte__k b::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--taupe);transform:scaleX(0);transform-origin:0 50%;transition:transform .7s var(--e1)}
+.m-platte__s{font-size:13px;line-height:1.4;color:var(--leise)}
+.m-platte__s b{font:inherit;color:var(--marine)}
+.m-platte__p{position:absolute;top:13px;right:13px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--marine);
+  background:linear-gradient(180deg,#f6e8c2,#b8975a);box-shadow:inset 0 1px 0 rgba(255,250,232,.95),inset 0 -2px 0 rgba(0,0,0,.3),0 0 0 1px rgba(150,125,64,.45),0 6px 12px -6px rgba(9,17,39,.55);transition:transform .6s var(--e2)}
+.m-platte__p svg{width:13px;height:13px;stroke-width:1.9}
+@media (hover:hover){
+  .m-platte__k:hover{transform:translateY(-3px);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(159,137,111,.3),0 14px 24px -14px rgba(26,29,40,.45);background:linear-gradient(180deg,#fdf9f1,#f6efe1)}
+  .m-platte__k:hover b::after{transform:none}
+  .m-platte__k:hover .m-platte__p{transform:translate(2px,-2px) scale(1.06)}
+}
+
+/* ---------- Goldband ---------- */
+.m-goldband{position:relative;z-index:3;overflow:hidden;color:var(--marine);
+  background:linear-gradient(180deg,#f4e9cf 0%,#e3d1aa 22%,#cfb98d 55%,#bba072 82%,#a88c5f 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -1px 0 rgba(70,52,26,.55),0 10px 18px -10px rgba(9,10,16,.7)}
+.m-goldband::before,.m-goldband::after{content:'';position:absolute;left:0;right:0;height:1px;z-index:1;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(110,84,44,.45) 12%,rgba(110,84,44,.45) 88%,transparent)}
+.m-goldband::before{top:4px;box-shadow:0 1px 0 rgba(255,255,255,.45)}.m-goldband::after{bottom:4px;box-shadow:0 1px 0 rgba(255,255,255,.35)}
+.m-goldband__zug{display:flex;align-items:center;width:max-content;margin:0;padding:0;list-style:none;animation:goldlauf 60s linear infinite;animation-play-state:paused}
+.m-goldband.laeuft .m-goldband__zug{animation-play-state:running}
+.m-goldband li{flex:none;display:flex;align-items:center;height:44px;padding:0 30px;font-family:var(--caps);font-weight:500;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;white-space:nowrap;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.m-goldband .m-goldband__z{padding:0 4px}
+.m-goldband__z img{width:22px;height:22px;filter:brightness(.42) sepia(.4) drop-shadow(0 1px 0 rgba(255,255,255,.5))}
+@keyframes goldlauf{to{transform:translate3d(-50%,0,0)}}
+@media (hover:hover){.m-goldband:hover .m-goldband__zug{animation-play-state:paused}}
+
+/* ---------- Säle: gemeinsamer Kopf (Zeichen mittig, Überschrift gross auf einer Zeile, Satz mittig) ---------- */
+.m-saal{position:relative;padding:clamp(90px,10vw,150px) var(--rand) clamp(90px,10vw,150px)}
+.m-saal--papier{background:linear-gradient(rgba(241,236,226,.5),rgba(241,236,226,.5)),url(/assets/img/tapete-stahl-085.png?v=1) 0 0/150px 170px,#f1ece2}
+.m-saal--creme{background:linear-gradient(rgba(231,224,210,.5),rgba(231,224,210,.5)),url(/assets/img/tapete-stahl-085.png?v=1) 0 0/150px 170px,#e7e0d2}
+.m-saal--nacht{background:linear-gradient(rgba(13,22,33,.5),rgba(13,22,33,.5)),url(/assets/img/tapete-gold-055.png?v=1) 0 0/150px 170px,#0d1621;color:#fff}
+.m-saal--livre{background:linear-gradient(rgba(7,12,20,.5),rgba(7,12,20,.5)),url(/assets/img/tapete-gold-055.png?v=1) 0 0/150px 170px,#070c14;color:#fff}
+.m-kopf{max-width:860px;margin:0 auto clamp(46px,5vw,72px);text-align:center;display:flex;flex-direction:column;align-items:center}
+.m-kopf__z{width:58px;height:auto;margin-bottom:18px;filter:drop-shadow(0 1px 0 rgba(0,0,0,.25)) drop-shadow(0 6px 14px rgba(0,0,0,.25))}
+.m-titel{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(3.4rem,7.6vw,7rem);line-height:1;letter-spacing:-.01em;white-space:nowrap;color:var(--marine)}
+.m-saal--nacht .m-titel,.m-saal--livre .m-titel{color:#fdf9f1}
+.m-satz{margin:clamp(16px,1.8vw,24px) 0 0;max-width:46ch;font-size:clamp(17px,1.3vw,19.5px);line-height:1.6;color:var(--leise)}
+.m-saal--nacht .m-satz,.m-saal--livre .m-satz{color:rgba(247,239,221,.78)}
+.m-knoepfe{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:clamp(40px,4.4vw,64px)}
+.m-knoepfe--links{align-items:flex-start;margin-top:34px}
+.m-hinweis{margin:0;font-size:14px;color:var(--leise)}
+.m-hinweis--hell{color:rgba(240,227,194,.72)}
+[data-stand="livre"]{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase}
+
+/* ---------- Le Bureau: Halle über die Breite, helle Tafel liegt darüber ---------- */
+.m-lage{position:relative;max-width:var(--max);margin:0 auto}
+.m-lage__bild{display:block;position:relative;aspect-ratio:16/8.4;border-radius:34px;overflow:hidden;background:var(--sand);transform:translateZ(0);
+  box-shadow:0 0 0 1px rgba(210,191,152,.2),0 50px 80px -40px rgba(0,0,0,.9)}
+.m-lage__bild img{width:100%;height:100%;object-fit:cover;object-position:50% 46%}
+.m-lage__tafel{position:absolute;right:clamp(18px,3vw,46px);bottom:clamp(-60px,-4vw,-30px);width:min(470px,46%);padding:12px;border-radius:30px;background:var(--platte);box-shadow:var(--platte-s);display:grid;gap:14px}
+.m-angaben{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.m-angabe{display:grid;gap:2px;padding:14px 16px 12px;border-radius:20px;background:var(--kuhle);box-shadow:var(--kuhle-s)}
+.m-angabe span{font-family:var(--mono);font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--taupe-tief)}
+.m-angabe b{font:500 2.5rem/1 var(--serif);color:var(--marine)}
+.m-lage__stand{margin:0 6px;font-size:14.5px;color:var(--leise)}
+.m-lage__stand b{font-weight:600;color:var(--marine)}
+.m-lage__tafel .kn{justify-content:space-between;margin:0 2px 2px}
+
+/* ---------- La Carte: die Karten des Hauses auf der Nacht, Zahlen frei ---------- */
+.m-karten{display:flex;justify-content:center;align-items:flex-start;gap:clamp(14px,2vw,30px);max-width:var(--max);margin:0 auto}
+.m-karte{--lage:none;flex:0 1 17%;display:flex;flex-direction:column;align-items:center;gap:16px;text-decoration:none;color:var(--taupe-tief)}
+.m-karte img{width:100%;height:auto;border-radius:4px;box-shadow:0 1px 1px rgba(26,29,40,.25),0 4px 8px -3px rgba(26,29,40,.3),0 40px 50px -26px rgba(26,29,40,.6)}
+.m-karte span{font-family:var(--caps);font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+.m-karte--schmal{flex-basis:11.6%}
+.m-karte:nth-child(2){--lage:translate3d(0,34px,0)}.m-karte:nth-child(4){--lage:translate3d(0,34px,0)}
+.m-karte--innen img{box-shadow:0 0 0 1px rgba(159,137,111,.25),0 4px 8px -3px rgba(26,29,40,.25),0 40px 50px -26px rgba(26,29,40,.55)}
+html:not(.js) .m-karte:nth-child(even){transform:translate3d(0,34px,0)}
+.m-zahlen{display:flex;justify-content:center;gap:clamp(40px,8vw,140px);margin:clamp(70px,7vw,110px) auto 0;text-align:center}
+.m-zahl{display:flex;flex-direction:column;align-items:center}
+.m-zahl b{font:500 clamp(3.6rem,6.4vw,6rem)/.95 var(--serif);color:var(--marine)}
+.m-zahl i{display:block;width:64px;height:1px;margin:16px 0 12px;background:linear-gradient(90deg,transparent,var(--taupe),transparent)}
+.m-zahl span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-tief)}
+
+/* ---------- Fenster: das Bild steht, die Seite zieht darüber (sticky in einer Hülle, kein Skript) ---------- */
+.m-fenster{position:relative;height:min(78vh,820px);overflow:clip;background:var(--nacht)}
+.m-fenster__huelle{position:absolute;left:0;right:0;top:-100vh;bottom:-100vh}
+.m-fenster__steht{position:sticky;top:0;height:100vh;overflow:hidden}
+.m-fenster__steht>img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.m-fenster__satz{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;color:#fff;
+  background:radial-gradient(40% 30% at 50% 50%,rgba(12,14,24,.42),rgba(12,14,24,0) 100%)}
+.m-fenster__satz img{width:72px;height:auto;filter:drop-shadow(0 2px 2px rgba(7,8,12,.6)) drop-shadow(0 8px 20px rgba(7,8,12,.5))}
+.m-fenster__satz p{margin:0;padding:0 var(--rand);font-family:var(--caps);font-size:clamp(1.05rem,2.3vw,2rem);letter-spacing:.24em;text-transform:uppercase;line-height:1.3;
+  text-shadow:0 1px 2px rgba(7,8,12,.8),0 4px 18px rgba(7,8,12,.6)}
+
+/* ---------- L’Imprimerie: Unterlage im Mittelton, Drucksachen frei darauf ---------- */
+.m-atelier{position:relative;max-width:1240px;margin:0 auto;aspect-ratio:16/8.2;border-radius:34px;
+  background:radial-gradient(120% 90% at 50% 0%,#b9a68a 0%,#a8937a 55%,#9a8670 100%);
+  box-shadow:inset 0 2px 6px rgba(60,44,22,.35),inset 0 0 0 1px rgba(90,70,40,.25),0 1px 0 rgba(255,255,255,.7)}
+.m-blatt{position:absolute;height:auto;border-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,.18),0 3px 6px -2px rgba(30,20,10,.35),0 30px 40px -24px rgba(30,20,10,.6)}
+.m-blatt--a{left:5%;top:9%;width:22%;--lage:rotate(-2.2deg)}
+.m-blatt--b{left:31%;top:8%;width:37%;--lage:rotate(1.2deg)}
+.m-blatt--c{left:31.5%;top:52%;width:28%;--lage:rotate(-1.4deg)}
+.m-blatt--d{left:62%;top:62%;width:15%;--lage:rotate(2.6deg)}
+.m-blatt--e{left:73%;top:7%;width:21%;--lage:rotate(1.8deg)}
+html:not(.js) .m-blatt{transform:var(--lage)}
+
+/* ---------- La Réception: Tea Time gross, daneben das Gespräch ---------- */
+.m-rez{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:center;max-width:var(--max);margin:0 auto}
+.m-rez__bild{position:relative;aspect-ratio:4/4.6;border-radius:34px;overflow:hidden;transform:translateZ(0);box-shadow:0 2px 3px rgba(26,29,40,.12),0 50px 80px -40px rgba(26,29,40,.55)}
+.m-rez__bild img{width:100%;height:100%;object-fit:cover;object-position:46% 50%}
+.m-rez__text{display:flex;flex-direction:column;align-items:flex-start}
+.m-rez__text .m-titel{font-size:clamp(3.2rem,6vw,6rem)}
+.m-chat{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:34px;padding:12px;border-radius:30px;background:var(--platte);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(159,137,111,.2),0 1.5px 0 rgba(120,100,70,.3),0 30px 50px -30px rgba(26,29,40,.45)}
+.m-chat p{margin:0;max-width:88%;padding:13px 18px;font-size:15.5px;line-height:1.5}
+.m-chat__gast{align-self:flex-end;border-radius:20px 20px 6px 20px;color:#f7efdd;background:linear-gradient(180deg,#27405f,#1a2b42 60%,#0d1621);box-shadow:inset 0 1px 0 rgba(190,206,255,.3),0 10px 18px -12px rgba(0,0,0,.6)}
+.m-chat__haus{align-self:flex-start;border-radius:20px 20px 20px 6px;color:var(--tinte);background:var(--kuhle);box-shadow:var(--kuhle-s)}
+.m-chat .m-chat__quelle{align-self:center;padding:2px 0 4px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe-tief)}
+
+/* ---------- Le Livre: das Zeichen gross, die Farben als Fächer ---------- */
+.m-livre__z{width:clamp(150px,15vw,230px);height:auto;margin-bottom:26px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.6)) drop-shadow(0 18px 40px rgba(0,0,0,.6))}
+.js .m-livre__z[data-r]{transform:translate3d(0,30px,0) scale(.9);transition:opacity 1.4s ease,transform 2s var(--e1)}
+.js .m-livre__z[data-r].da{transform:none}
+.m-faecher{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:clamp(6px,.9vw,12px);max-width:1180px;margin:0 auto;padding:0;list-style:none}
+.m-faecher li{display:flex;flex-direction:column;gap:6px}
+.m-faecher i{display:block;aspect-ratio:1/2.3;border-radius:16px;background:var(--c);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 0 0 1px rgba(255,255,255,.08),0 0 0 1px rgba(210,191,152,.22),0 22px 34px -18px rgba(0,0,0,.85)}
+.m-faecher b{margin-top:8px;font:500 1.15rem/1.1 var(--serif);color:#fdf9f1}
+.m-faecher span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:rgba(240,227,194,.62)}
+
+/* ---------- Fuss: Platte mit Siegel ---------- */
+.m-fuss{background:linear-gradient(rgba(7,12,20,.5),rgba(7,12,20,.5)),url(/assets/img/tapete-gold-055.png?v=1) 0 0/150px 170px,#070c14;padding:0 var(--rand) clamp(40px,5vw,70px)}
+.m-fuss__platte{display:grid;grid-template-columns:auto 1.3fr 1fr 1fr;gap:clamp(20px,3vw,50px);align-items:center;max-width:var(--max);margin:0 auto;padding:clamp(24px,3vw,40px) clamp(24px,3.4vw,50px);border-radius:34px;background:var(--platte);box-shadow:var(--platte-s)}
+.m-fuss__siegel{width:84px;height:auto}
+.m-fuss__spalte{display:flex;flex-direction:column;gap:4px;font-size:15px;color:var(--leise)}
+.m-fuss__spalte p{margin:0}
+.m-fuss__name{font:500 2rem/1.05 var(--serif);color:var(--marine)!important}
+.m-fuss__k{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--taupe-tief)!important;margin-bottom:4px!important}
+.m-fuss__spalte a{color:var(--marine);text-decoration:none;box-shadow:inset 0 -1px 0 rgba(159,137,111,.5);width:fit-content;transition:box-shadow .4s}
+.m-fuss__spalte a:hover{box-shadow:inset 0 -1px 0 var(--marine)}
+
+/* ---------- Tablet und Handy ---------- */
+@media (max-width:1100px){
+  .m-platte{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .m-lage__tafel{position:relative;right:auto;bottom:auto;width:auto;margin:-60px 18px 0}
+  .m-karten{flex-wrap:wrap}.m-karte{flex-basis:28%}.m-karte--schmal{flex-basis:19%}.m-karte--innen{display:none}
+  .m-atelier{aspect-ratio:16/10}
+  .m-fuss__platte{grid-template-columns:auto 1fr 1fr}.m-fuss__platte>.m-fuss__spalte:last-child{grid-column:2/-1}
+}
+@media (max-width:900px){
+  .m-rez{grid-template-columns:1fr}.m-rez__bild{aspect-ratio:4/3}
+  .m-faecher{grid-template-columns:repeat(5,minmax(0,1fr));row-gap:22px}
+}
+@media (max-width:700px){
+  html{scroll-padding-top:76px}
+  .m-empfang__in{min-height:0}
+  body.ma{font-variant-numeric:lining-nums;font-size:16px}
+  .m-empfang{min-height:auto}
+  .m-empfang__in{padding-top:104px}
+  .m-empfang__name{font-size:clamp(1.15rem,5.6vw,2.4rem);letter-spacing:.13em}
+  .m-empfang__gruss{font-size:clamp(2rem,9vw,2.6rem)}
+  .m-empfang__in>.m-platte{margin-top:34px}
+  .m-platte{grid-template-columns:1fr 1fr;padding:8px;gap:8px;border-radius:26px}
+  .m-platte__k{min-height:100px;padding:13px 14px 12px}.m-platte__k:last-child{grid-column:1/-1}
+  .m-platte__p{width:28px;height:28px;top:10px;right:10px}
+  .m-titel{font-size:clamp(2.7rem,13vw,3.6rem)}
+  .m-lage__bild{aspect-ratio:4/3.4;border-radius:26px}
+  .m-lage__tafel{margin:-40px 8px 0}
+  .m-angabe{padding:11px 12px 10px}.m-angabe b{font-size:2rem}
+  .m-karten{gap:14px 12px}.m-karte{flex-basis:44%}.m-karte--schmal{flex-basis:30%}.m-karte:nth-child(2),.m-karte:nth-child(4){--lage:none}
+  .m-zahlen{gap:22px;flex-wrap:wrap}.m-zahl b{font-size:3.2rem}
+  .m-fenster{height:62vh}
+  .m-atelier{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:22px;align-items:center}
+  .m-blatt{position:static;width:100%!important}
+  .m-blatt--b,.m-blatt--c{grid-column:1/-1}
+  .m-rez__bild{border-radius:26px}
+  .m-faecher{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;row-gap:20px}.m-faecher i{border-radius:12px}.m-faecher b{font-size:1rem}.m-faecher span{font-size:8.5px;letter-spacing:.06em}
+  .m-fuss__platte{grid-template-columns:1fr;text-align:left}.m-fuss__platte>.m-fuss__spalte:last-child{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .m-empfang__vorhang{display:none}
+  .js [data-r],.js .m-empfang__name .w>b,.m-vorhang img{opacity:1!important;transform:var(--lage,none)!important;transition:none!important}
+  .m-goldband__zug,.glanz-kn::before{animation:none}
+}
+.js .m-empfang__name[data-r]{opacity:1;transform:none}
+/* Ziffern in der Titelschrift aufrecht (der font-Kurzbefehl setzt sie sonst auf Mediävalziffern zurück) */
+.m-angabe b,.m-zahl b,.m-platte__s,.m-empfang__gruss,.m-titel,.m-faecher b,.m-fuss__name{font-variant-numeric:lining-nums}
+.m-insel__marke span{white-space:nowrap}
+.m-hinweis{text-align:center}
+.m-rez__stand{margin:18px 2px 0;font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--taupe-tief)}
+.m-rez__stand b{font-weight:400;color:var(--marine)}
+.m-knoepfe--links{flex-direction:row;align-items:center;gap:22px}
+.m-link{font-size:15px;color:var(--marine);text-decoration:none;box-shadow:inset 0 -1px 0 rgba(159,137,111,.6);transition:box-shadow .4s}
+.m-link:hover{box-shadow:inset 0 -1px 0 var(--marine)}
+
+/* Schriftzug und Zeichen oben in Gold wie Le Livre / L’Imprimerie (Robert 12.10.2026) */
+.m-insel__z{display:block;width:40px;height:40px;background:none}
+.m-insel__marke span{font-weight:400;background:linear-gradient(180deg,#fbf0cf 0%,#ead39c 34%,#c9a764 52%,#9c7b43 62%,#dcc189 80%,#f3e3b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
+@media (max-width:640px){.m-insel__z{width:34px;height:34px}}
+
+/* ---------- Empfang «Fünf Fenster» (Entwurf 18, Robert 12.10.2026): fünf hohe Bildstreifen, je Werkzeug ein Raum des Hauses.
+   Gruss tiefer, Zeichen grösser, Schrift mit kräftigem Schatten und dunklem Hof dahinter, damit sie auf jedem Bild lesbar bleibt. ---------- */
+.m-f5{display:block;min-height:max(100svh,720px);background:linear-gradient(rgba(13,22,33,.5),rgba(13,22,33,.5)),url(/assets/img/tapete-gold-055.png?v=1) 0 0/150px 170px,#0d1621}
+.m-f5__reihe{position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.m-f5__k+.m-f5__k{border-left:3px solid var(--gold)}
+.m-f5__k{position:relative;overflow:hidden;text-decoration:none;color:#fff!important;background:var(--nacht);animation:m5schweb 1s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.1s + var(--i)*90ms)}
+.m-f5__k img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--e1)}
+.m-f5__k::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,14,24,.9),rgba(12,14,24,.1) 42%,rgba(12,14,24,.22) 60%,rgba(12,14,24,.62) 100%)}
+.m-f5__t{position:absolute;z-index:1;left:clamp(16px,1.8vw,26px);right:clamp(16px,1.8vw,26px);bottom:clamp(28px,4.4vh,44px);animation:m5auf .9s var(--e1) both;animation-delay:calc(.4s + var(--i)*90ms)}
+.m-f5__w{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}
+.m-f5__t b{display:block;margin:8px 0 6px;font:500 clamp(1.6rem,2.2vw,2.2rem)/1 var(--serif)}
+.m-f5__t small{display:block;font-size:13px;color:rgba(255,255,255,.76)}.m-f5__t small b{display:inline;font:inherit;margin:0;color:#fff}
+.m-f5__p{margin-top:18px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--marine);background:linear-gradient(180deg,#f6e8c2,#b8975a);
+  box-shadow:inset 0 1px 0 rgba(255,250,232,.95),inset 0 -2px 0 rgba(0,0,0,.3),0 0 0 1px rgba(150,125,64,.45),0 6px 12px -6px rgba(9,17,39,.55);transition:transform .6s var(--e2)}
+.m-f5__p svg{width:13px;height:13px;stroke-width:1.9}
+@media (hover:hover){.m-f5__k:hover img{transform:scale(1.06)}.m-f5__k:hover .m-f5__p{transform:translate(2px,-2px) scale(1.06)}}
+.m-f5__oben{position:absolute;z-index:5;left:0;right:0;top:0;padding:clamp(170px,25vh,250px) var(--rand) 140px;text-align:center;pointer-events:none;
+  background:radial-gradient(64% 52% at 50% 52%,rgba(9,11,18,.74) 0%,rgba(9,11,18,.5) 46%,rgba(9,11,18,.18) 78%,rgba(9,11,18,0) 100%)}
+.m-f5__zeichen{width:clamp(130px,11vw,170px);height:auto;margin:0 auto 22px;filter:drop-shadow(0 2px 2px rgba(7,8,12,.8)) drop-shadow(0 10px 30px rgba(7,8,12,.75));animation:m5auf 1.4s var(--e1) both .2s}
+.m-f5__gruss{margin:0;font:500 clamp(2.4rem,4.2vw,4.4rem)/1.06 var(--serif);color:#fff;font-variant-numeric:lining-nums;
+  text-shadow:0 0 .12em rgba(7,8,12,.9),0 1px 2px rgba(7,8,12,.95),0 3px 12px rgba(7,8,12,.85),0 8px 34px rgba(7,8,12,.7);animation:m5auf 1.3s var(--e1) both .35s}
+.m-f5__datum{margin:14px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#fff;
+  text-shadow:0 0 .3em rgba(7,8,12,1),0 1px 2px rgba(7,8,12,1),0 3px 14px rgba(7,8,12,.85);animation:m5auf 1.3s var(--e1) both .5s}
+@keyframes m5schweb{from{transform:translate3d(0,110px,0)}}
+@keyframes m5auf{from{transform:translate3d(0,22px,0)}}
+@media (max-width:800px){
+  .m-f5{background:linear-gradient(rgba(13,22,33,.5),rgba(13,22,33,.5)),url(/assets/img/tapete-gold-055.png?v=1) 0 0/150px 170px,#0d1621;min-height:0}
+  .m-f5__oben{position:relative;padding:110px var(--rand) 34px;background:none}
+  .m-f5__zeichen{width:110px}
+  .m-f5__reihe{position:relative;grid-template-columns:1fr}.m-f5__k+.m-f5__k{border-left:0;border-top:3px solid var(--gold)}
+  .m-f5__k{height:150px}.m-f5__k::after{background:linear-gradient(90deg,rgba(12,14,24,.85),rgba(12,14,24,.2) 70%)}
+  .m-f5__t{bottom:auto;top:50%;transform:translateY(-50%);animation:none;display:grid;grid-template-columns:1fr auto;column-gap:14px;align-items:center}
+  .m-f5__t>*{grid-column:1}.m-f5__p{grid-column:2;grid-row:1/4;margin:0}
+}
+@media (prefers-reduced-motion:reduce){.m-f5__k,.m-f5__t,.m-f5__zeichen,.m-f5__gruss,.m-f5__datum{animation:none}}
+
+/* ---------- Säle als Entree (Robert 12.10.2026): je Werkzeug eine Bühne mit den echten Bildschirmen, Stücken des Hauses und einer Tafel,
+   was man damit machen kann. Bühne in Prozent gesetzt (Seitenverhältnis fest), am Handy alles untereinander. ---------- */
+.m-entree .m-kopf{margin-bottom:clamp(40px,4.4vw,64px)}
+.m-buehne{position:relative;max-width:var(--max);margin:0 auto;aspect-ratio:16/10}
+.m-buehne>*{position:absolute;margin:0}
+/* Bildschirm: Fenster mit schmaler Leiste, echter Bildschirm darin */
+.m-schirm{z-index:1;border-radius:16px;overflow:hidden;background:#0f1322;transform:translateZ(0);
+  box-shadow:0 0 0 1px rgba(210,191,152,.38),0 1px 0 1px rgba(0,0,0,.35),0 60px 90px -44px rgba(0,0,0,.85),0 22px 40px -22px rgba(0,0,0,.55)}
+.m-schirm__leiste{display:flex;align-items:center;justify-content:center;height:28px;background:linear-gradient(180deg,#1a2b42,#0d1621);box-shadow:inset 0 -1px 0 rgba(210,191,152,.25)}
+.m-schirm__leiste span{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,227,194,.7);white-space:nowrap}
+.m-schirm img{display:block;width:100%;height:auto}
+.m-saal--creme .m-schirm,.m-saal--papier .m-schirm{box-shadow:0 0 0 1px rgba(159,137,111,.45),0 2px 3px rgba(26,29,40,.15),0 60px 90px -44px rgba(26,29,40,.6),0 22px 40px -22px rgba(26,29,40,.35)}
+/* Tafel: Papier-Platte, je Zeile ein Goldknauf mit Strich-Zeichen */
+.m-tafel{z-index:4;display:grid;gap:2px;padding:10px 12px;border-radius:26px;background:var(--platte);box-shadow:var(--platte-s),0 50px 70px -30px rgba(7,8,12,.6);color:var(--tinte)}
+.m-tafel__z{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:center;padding:12px 8px}
+.m-tafel__z+.m-tafel__z{box-shadow:inset 0 1px 0 rgba(159,137,111,.28)}
+.m-tafel__z i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--marine);background:linear-gradient(180deg,#f6e8c2,#b8975a);
+  box-shadow:inset 0 1px 0 rgba(255,250,232,.95),inset 0 -2px 0 rgba(0,0,0,.28),0 0 0 1px rgba(150,125,64,.45),0 6px 12px -6px rgba(9,17,39,.5)}
+.m-tafel__z svg{width:19px;height:19px;stroke-width:1.5}
+.m-tafel__z p{margin:0;font-size:14px;line-height:1.5;color:var(--leise)}
+.m-tafel__z b{display:block;font:500 1.32rem/1.15 var(--serif);color:var(--marine)}
+.m-tafel--nacht{background:var(--insel);box-shadow:var(--insel-s);color:#f7efdd}
+.m-tafel--nacht .m-tafel__z p{color:rgba(247,239,221,.7)}.m-tafel--nacht .m-tafel__z b{color:var(--goldhell)}
+.m-tafel--nacht .m-tafel__z+.m-tafel__z{box-shadow:inset 0 1px 0 rgba(210,191,152,.22)}
+.m-tafel .m-rez__stand{margin:6px 10px 6px 62px}
+/* Stücke des Hauses (Karten, Drucksachen) frei auf der Bühne */
+.m-stueck img,.m-blatt2{display:block;width:100%;height:auto;border-radius:3px;box-shadow:0 1px 1px rgba(26,29,40,.25),0 4px 8px -3px rgba(26,29,40,.3),0 40px 50px -26px rgba(26,29,40,.65)}
+.m-saal--nacht .m-blatt2{box-shadow:0 1px 1px rgba(0,0,0,.3),0 4px 10px -3px rgba(0,0,0,.45),0 44px 60px -26px rgba(0,0,0,.85)}
+/* Handy */
+.m-telefon{z-index:3;padding:8px;border-radius:42px;background:linear-gradient(160deg,#27405f,#0d1621 40%,#070c14);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 0 0 1px rgba(210,191,152,.45),0 60px 80px -36px rgba(26,29,40,.75),0 20px 34px -18px rgba(26,29,40,.5)}
+.m-telefon img{display:block;width:100%;height:auto;border-radius:34px}
+
+/* Le Bureau */
+.m-buehne--bureau{aspect-ratio:16/10.3}
+.m-buehne--bureau .m-schirm--haupt{left:0;top:0;width:70%}
+.m-buehne--bureau .m-schirm--neben{right:0;top:27%;width:45%;z-index:2}
+.m-buehne--bureau .m-tafel--a{left:2%;bottom:-3%;width:min(450px,33%)}
+.m-buehne--bureau .m-tafel--stand{right:3%;bottom:-3%;width:min(440px,34%);gap:14px;padding:12px}
+.m-tafel--stand .kn{justify-content:space-between;margin:0 2px 2px}
+/* La Carte */
+.m-buehne--carte{aspect-ratio:16/8.7}
+.m-buehne--carte .m-schirm--haupt{right:0;top:0;width:66%}
+.m-stueck{z-index:2;display:block}
+.m-stueck--a{left:1%;top:7%;width:16.5%;--lage:rotate(-4deg)}
+.m-stueck--b{left:14%;top:14%;width:16.5%;--lage:rotate(2.5deg)}
+.m-stueck--c{left:27.5%;top:22%;width:11%;--lage:rotate(-2deg);z-index:3}
+.m-buehne--carte .m-tafel--c{right:2%;bottom:-12%;width:min(450px,34%)}
+.m-entree#carte .m-zahlen{margin-top:clamp(130px,12vw,180px)}
+/* L’Imprimerie */
+.m-buehne--impr{aspect-ratio:16/9}
+.m-buehne--impr .m-schirm--haupt{left:14%;top:0;width:72%}
+.m-blatt2{position:absolute;z-index:2}
+.m-blatt2--a{left:0;top:3%;width:18.5%;--lage:rotate(-5deg)}
+.m-blatt2--b{right:0;top:5%;width:24%;--lage:rotate(4deg)}
+.m-blatt2--c{right:2%;bottom:3%;width:30%;--lage:rotate(-2.5deg)}
+.m-buehne--impr .m-tafel--d{left:1%;bottom:-6%;width:min(450px,33%)}
+/* La Réception */
+.m-buehne--rez{aspect-ratio:16/8.6}
+.m-buehne--rez .m-schirm--haupt{left:0;top:0;width:66%}
+.m-telefon--a{right:17.5%;top:9%;width:17%;--lage:rotate(-5deg)}
+.m-telefon--b{right:1%;top:4%;width:18.5%;--lage:rotate(3deg);z-index:4}
+.m-buehne--rez .m-tafel--e{left:2%;bottom:-10%;width:min(470px,36%)}
+/* Le Livre */
+.m-buehne--livre{aspect-ratio:16/8.2;margin-bottom:clamp(130px,12vw,190px)}
+.m-buehne--livre .m-schirm--haupt{left:19%;top:0;width:62%;z-index:2}
+.m-buehne--livre .m-schirm--links{left:0;top:14%;width:40%}
+.m-buehne--livre .m-schirm--rechts{right:0;top:14%;width:40%}
+.m-buehne--livre .m-tafel--f{left:50%;bottom:-10%;width:min(1120px,84%);margin-left:max(-560px,-42%);grid-template-columns:repeat(3,1fr);gap:0}
+.m-tafel--f .m-tafel__z+.m-tafel__z{box-shadow:inset 1px 0 0 rgba(159,137,111,.28)}
+.m-tafel--f .m-tafel__z{padding:10px 14px}
+
+@media (max-width:1180px){
+  .m-tafel__z{grid-template-columns:34px 1fr;gap:10px;padding:9px 6px}.m-tafel__z i{width:34px;height:34px}.m-tafel__z svg{width:16px;height:16px}
+  .m-tafel__z b{font-size:1.12rem}.m-tafel__z p{font-size:12.5px}
+  .m-tafel .m-angabe b{font-size:1.9rem}
+}
+@media (max-width:900px){
+  .m-buehne,.m-buehne--livre{aspect-ratio:auto;display:grid;gap:18px;margin-bottom:0}
+  .m-buehne>*{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto!important;margin:0!important}
+  .m-schirm--neben,.m-schirm--links,.m-schirm--rechts,.m-stueck--b,.m-stueck--c,.m-blatt2--b,.m-blatt2--c,.m-telefon--a{display:none!important}
+  .m-stueck--a,.m-blatt2--a,.m-blatt2--c{width:56%!important;justify-self:center;margin-top:-90px!important}
+  .m-telefon--b{width:62%!important;justify-self:center;margin-top:-120px!important}
+  .m-buehne--livre .m-tafel--f{grid-template-columns:1fr}.m-tafel--f .m-tafel__z+.m-tafel__z{box-shadow:inset 0 1px 0 rgba(159,137,111,.28)}
+  .m-entree .m-faecher{margin-top:40px}
+}
+/* Zeichen über den Säle-Überschriften deutlich grösser (Robert 12.10.2026) */
+.m-entree .m-kopf__z{width:clamp(104px,9vw,136px);margin-bottom:22px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.35)) drop-shadow(0 12px 26px rgba(0,0,0,.35))}
+.m-saal--creme.m-entree .m-kopf__z,.m-saal--papier.m-entree .m-kopf__z{filter:drop-shadow(0 1px 1px rgba(90,70,30,.3)) drop-shadow(0 10px 22px rgba(90,70,30,.25))}
+
+/* ---------- Durchgang 12.10.2026 04:37 (Robert): Tafeln edler und übersichtlicher, Fenster-Satz wie auf der Website, kein dunkler Rand beim Scrollen, keine Leere links unten ---------- */
+/* Tafel: Platte mit eingelassenem Rahmen, Kopfzeile in der Titelschrift, grössere Zeilen, Namen aus dem Werkzeug hervorgehoben */
+.m-tafel{padding:16px 16px 12px;border-radius:30px;gap:0}
+.m-tafel::before{content:'';position:absolute;inset:7px;border-radius:24px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(159,137,111,.32)}
+.m-tafel--nacht::before{box-shadow:inset 0 0 0 1px rgba(210,191,152,.26)}
+.m-tafel__kopf{display:flex;align-items:center;gap:14px;margin:6px 14px 4px;font:500 11px/1 var(--caps);letter-spacing:.3em;text-transform:uppercase;color:var(--taupe-tief)}
+.m-tafel__kopf::before,.m-tafel__kopf::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(159,137,111,0),rgba(159,137,111,.55))}
+.m-tafel__kopf::after{background:linear-gradient(90deg,rgba(159,137,111,.55),rgba(159,137,111,0))}
+.m-tafel--nacht .m-tafel__kopf{color:var(--gold)}
+.m-tafel__z{grid-template-columns:48px 1fr;gap:18px;align-items:start;padding:18px 16px}
+.m-tafel__z+.m-tafel__z{box-shadow:none;background:linear-gradient(90deg,rgba(159,137,111,0),rgba(159,137,111,.38) 18%,rgba(159,137,111,.38) 82%,rgba(159,137,111,0)) 0 0/100% 1px no-repeat}
+.m-tafel--nacht .m-tafel__z+.m-tafel__z{box-shadow:none;background:linear-gradient(90deg,rgba(210,191,152,0),rgba(210,191,152,.3) 18%,rgba(210,191,152,.3) 82%,rgba(210,191,152,0)) 0 0/100% 1px no-repeat}
+.m-tafel__z i{width:46px;height:46px;margin-top:2px;box-shadow:inset 0 1px 0 rgba(255,250,232,.95),inset 0 -2px 0 rgba(0,0,0,.28),0 0 0 1px rgba(150,125,64,.45),0 0 0 5px #f1ece2,0 0 0 6px rgba(184,151,90,.45),0 10px 18px -8px rgba(9,17,39,.5)}
+.m-tafel--nacht .m-tafel__z i{box-shadow:inset 0 1px 0 rgba(255,250,232,.95),inset 0 -2px 0 rgba(0,0,0,.28),0 0 0 1px rgba(150,125,64,.45),0 0 0 5px #142235,0 0 0 6px rgba(210,191,152,.4),0 10px 18px -8px rgba(0,0,0,.6)}
+.m-tafel__z svg{width:20px;height:20px}
+.m-tafel__z b{margin-bottom:5px;font-size:1.5rem;line-height:1.1}
+.m-tafel__z p{font-size:14.5px;line-height:1.58}
+.m-ui{font-weight:600;color:var(--marine);white-space:nowrap}
+.m-ui::before{content:'«'}.m-ui::after{content:'»'}
+.m-tafel--nacht .m-ui{color:var(--goldhell)}
+.m-tafel .m-rez__stand{margin:4px 16px 8px 82px}
+/* Tafeln etwas breiter für die grössere Schrift */
+.m-buehne--bureau .m-tafel--a{width:min(480px,35%)}
+.m-buehne--carte .m-tafel--c{width:min(480px,36%);bottom:-16%}
+.m-buehne--impr .m-tafel--d{width:min(480px,35%);bottom:-10%}
+.m-buehne--rez .m-tafel--e{width:min(500px,38%);bottom:-16%}
+.m-buehne--livre .m-tafel--f{bottom:-16%}
+.m-buehne--livre .m-tafel--f .m-tafel__kopf{grid-column:1/-1}
+.m-tafel--f .m-tafel__z+.m-tafel__z{background:linear-gradient(180deg,rgba(159,137,111,0),rgba(159,137,111,.38) 20%,rgba(159,137,111,.38) 80%,rgba(159,137,111,0)) 0 0/1px 100% no-repeat}
+.m-buehne--livre{margin-bottom:clamp(170px,15vw,230px)}
+/* La Carte: Zahlen und Knopf links unten unter den Karten, dort war Leere */
+.m-stand-c{position:absolute;left:1%;bottom:-14%;width:min(560px,44%);display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.m-stand-c .m-zahlen{margin:0;justify-content:flex-start;gap:clamp(30px,4vw,64px);text-align:left}
+.m-stand-c .m-zahl{align-items:flex-start}
+.m-stand-c .m-zahl b{font-size:clamp(3rem,4.8vw,4.8rem)}
+.m-stand-c .m-zahl i{width:100%;background:linear-gradient(90deg,var(--taupe),rgba(159,137,111,0))}
+.m-buehne--carte{margin-bottom:clamp(80px,7vw,110px)}
+/* Fenster-Satz wie auf der Website: gross, zwei Zeilen aus dem Schlitz, zweite in Gold, Schatten dicht an der Schrift */
+.m-fenster__satz{background:none;gap:0}
+.m-f-d2{margin:0;padding:0 var(--rand);font:500 clamp(2.2rem,5.4vw,5.8rem)/1.02 var(--serif);color:#fff;text-align:center}
+.m-f-d2 .z{display:block;padding:.3em 0 .65em;margin:-.3em 0 -.65em;clip-path:inset(0 -.6em)}
+.m-f-d2 .z>span{display:inline-block;transform:translateY(165%);transition:transform 1.25s var(--e1);
+  text-shadow:0 .02em .04em rgba(3,8,20,.9),0 .05em .14em rgba(3,8,20,.8),0 .1em .4em rgba(3,8,20,.7),0 .2em 1em rgba(3,8,20,.55),0 0 1.6em rgba(3,8,20,.45)}
+.m-f-d2 .z:nth-child(2)>span{transition-delay:.09s}
+.m-f-d2 em{font-style:normal;color:var(--gold)}
+.js .m-f-d2[data-r]{opacity:1;transform:none}
+.m-f-d2.da .z>span,html:not(.js) .m-f-d2 .z>span{transform:none}
+.m-f-d2.da .z{animation:mfFrei 0s 1.6s both}
+@keyframes mfFrei{to{clip-path:none}}
+@supports (overflow:clip){
+  .m-fenster{overflow:visible;background:transparent}
+  .m-fenster::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--nacht)}
+  .m-fenster__steht>img,.m-fenster__satz{position:relative;z-index:-1}
+  .m-fenster__satz{position:absolute}
+  .m-saal,.m-goldband,.m-fuss{position:relative;z-index:1}
+}
+@media (max-width:900px){
+  .m-stand-c{position:relative;left:auto;bottom:auto;width:auto;align-items:center}
+  .m-stand-c .m-zahlen{justify-content:center}.m-stand-c .m-zahl{align-items:center}
+  .m-buehne--carte,.m-buehne--livre{margin-bottom:0}
+  .m-buehne--livre .m-tafel--f .m-tafel__kopf{grid-column:auto}
+}
+/* Abstände nach den höheren Tafeln: Bühnen bekommen Luft nach unten, La Réception trägt ihren Knopf rechts unter den Handys */
+.m-buehne--bureau{margin-bottom:clamp(70px,7vw,110px)}
+.m-buehne--bureau .m-tafel--a{bottom:-12%}
+.m-buehne--impr{margin-bottom:clamp(80px,8vw,120px)}
+.m-buehne--rez{margin-bottom:clamp(110px,10vw,160px)}
+.m-stand-r{position:absolute;right:3%;bottom:-12%;display:flex;flex-direction:column;align-items:center;gap:16px;width:37%}
+@media (max-width:900px){.m-buehne--bureau,.m-buehne--impr,.m-buehne--rez{margin-bottom:0}.m-stand-r{position:relative;right:auto;bottom:auto;width:auto}}
+
+/* ---------- Die Besuche (12.10.2026): sechs Werte der Zählung, frei auf Creme wie die Zahlen bei La Carte. Nichts bewegt sich ausser dem Auftritt. ---------- */
+.m-besuche .m-zahlen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(48px,5.4vw,84px) clamp(24px,4vw,64px);max-width:1180px;margin:0 auto}
+.m-besuche .m-zahl b{font-size:clamp(3.2rem,5.4vw,5.2rem);white-space:nowrap}
+.m-besuche .m-zahl i{margin:20px 0 14px}
+.m-besuche .m-zahl span{max-width:26ch;line-height:1.55}
+.m-besuche .m-zahl small{margin-top:10px;max-width:30ch;font-size:14.5px;line-height:1.5;color:var(--leise)}
+.m-besuche .m-hinweis{max-width:60ch;line-height:1.6}
+.m-besuche__stand{font-size:15.5px;color:var(--marine)}
+.m-fuss--luft{padding-top:clamp(40px,5vw,70px)}
+@media (max-width:900px){.m-besuche .m-zahlen{grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 20px}.m-besuche .m-zahl b{font-size:3.2rem}}
+@media (max-width:520px){.m-besuche .m-zahlen{gap:40px 14px}.m-besuche .m-zahl b{font-size:2.6rem}.m-besuche .m-zahl i{margin:16px 0 12px}.m-besuche .m-zahl span{font-size:10px;letter-spacing:.14em}.m-besuche .m-zahl small{font-size:13px}}
+
+/* Handy (12.10.2026, Robert: La Maison bei 390 px zu breit): Kopfleiste passt in die Breite, Tafeln laufen nicht über die Bühne hinaus */
+@media (max-width:480px){
+  .m-oben{gap:8px;padding:0 10px}
+  .m-oben .m-oben__ecke{padding-left:14px;font-size:9px;letter-spacing:.12em}
+  .m-insel__marke span{font-size:12px;letter-spacing:.2em}
+}
+@media (max-width:900px){.m-tafel,.m-tafel__z,.m-tafel__z>*{min-width:0}.m-tafel__z p,.m-tafel__z b{overflow-wrap:anywhere}}
+
+/* Le Registre (13.10.2026): der Bildschirm des Werkzeugs steht mittig über den sechs Werten */
+.m-schirm--registre{position:relative;width:min(1080px,92%);margin:0 auto clamp(60px,6vw,96px)}
+.m-besuche .m-knoepfe .kn{margin-bottom:6px}
+/* Sechs Werkzeuge in der Insel: unter 1360 px stossen sie an «Website ansehen», dann bleibt nur die Marke */
+@media (max-width:1360px){.m-insel__p{display:none}.m-insel{padding-right:9px}.m-insel__marke{border:0;margin:0}}
+
+.m-saal+.m-saal,.m-fuss{--saal-rund:clamp(26px,3.6vw,56px);position:relative;z-index:2;margin-top:calc(-1*var(--saal-rund));border-radius:var(--saal-rund) var(--saal-rund) 0 0;
+  box-shadow:inset 0 1px 0 rgba(214,186,128,.85),inset 0 2px 0 rgba(255,255,255,.18),0 -22px 60px -14px rgba(3,8,22,.6)}
+.m-saal--creme+.m-saal,.m-saal--papier+.m-saal{box-shadow:inset 0 1px 0 rgba(214,186,128,.85),inset 0 2px 0 rgba(255,255,255,.18),0 -22px 60px -14px rgba(60,44,20,.38)}
+.m-saal+.m-saal--creme,.m-saal+.m-saal--papier{box-shadow:inset 0 1px 0 rgba(214,186,128,.85),inset 0 2px 0 rgba(255,255,255,.55),0 -22px 60px -14px rgba(3,8,22,.6)}
+
+/* ---------- Cover: Le Registre als Zahlenzeile unter dem Gruss (Fassung 02 aus entwuerfe-cover, Robert 14.10.2026 abends) ---------- */
+.m-f5__zeile{pointer-events:auto;display:inline-flex;align-items:baseline;gap:10px;margin:26px auto 0;padding:12px 22px 12px 26px;border-radius:999px;
+  background:rgba(12,14,24,.62);box-shadow:inset 0 0 0 1px rgba(210,191,152,.45),0 20px 30px -20px rgba(0,0,0,.9);
+  font-family:var(--serif);font-weight:500;color:#fff;animation:m5auf 1.3s var(--e1) both .6s}
+.m-f5__zeile span{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-right:4px}
+.m-f5__zeile b{font-size:1.7rem;line-height:1;color:var(--gold)}
+.m-f5__zeile small{font-size:.95rem;color:rgba(255,255,255,.82)}
+.m-f5__zeile i{width:1px;height:18px;background:rgba(210,191,152,.5);margin:0 6px;align-self:center}
+.m-f5__zeile a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+.m-f5__zeile a svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.6}
+@media (max-width:800px){.m-f5__zeile{flex-wrap:wrap;justify-content:center;margin-top:18px;padding:10px 16px;row-gap:6px}.m-f5__zeile a{width:100%;justify-content:center;margin-top:4px}}
+@media (prefers-reduced-motion:reduce){.m-f5__zeile{animation:none}}
+
+/* ---------- Hereinfliegen statt Auftauchen, in allen Abschnitten (Robert 15.10.2026: «reingeflogen von unten und von der Seite, nicht aus dem Nichts») ----------
+   Nur transform und opacity, einmal je Element, Staffel über --i. Am Ende steht jedes Stück in seiner Lage (--lage). */
+.js [data-r]{--von:translate3d(0,110px,0);transform:var(--von) scale(.97);opacity:1;
+  transition:opacity .8s ease,transform 1.5s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0)*120ms)}
+.js [data-r].da{opacity:1;transform:var(--lage,none)}
+.js [data-r="schweb"]{--von:translate3d(0,140px,0);transform:var(--von) scale(.94)}
+/* von links */
+.js .m-schirm--haupt[data-r],.js .m-schirm--links[data-r],.js .m-telefon--a[data-r],.js .m-blatt2--a[data-r],.js .m-stueck--a[data-r],
+.js .m-tafel--a[data-r],.js .m-tafel--c[data-r],.js .m-tafel--e[data-r]{--von:translate3d(-180px,60px,0)}
+/* von rechts */
+.js .m-schirm--rechts[data-r],.js .m-schirm--neben[data-r],.js .m-schirm--registre[data-r],.js .m-telefon--b[data-r],.js .m-blatt2--b[data-r],.js .m-blatt2--c[data-r],
+.js .m-stueck--c[data-r],.js .m-tafel--d[data-r],.js .m-tafel--f[data-r],.js .m-tafel--stand[data-r],.js .m-stand-r[data-r],.js .m-stand-c[data-r],.js .m-zahlen[data-r]{--von:translate3d(180px,60px,0)}
+/* Kopf der Abschnitte: Zeichen, Satz und Knöpfe steigen ruhig von unten */
+.js .m-kopf__z[data-r],.js .m-satz[data-r],.js .m-knoepfe[data-r]{--von:translate3d(0,50px,0)}
+/* Seitwärts fliegende Stücke dürfen den Rand nicht aufschieben */
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){.js [data-r]{opacity:1!important;transform:var(--lage,none)!important;transition:none!important}}
+
+/* Auftakt (Robert 16.10.2026: «direkt richtig flüssig hochgehen, die Bilder nacheinander von links nach rechts»): die fünf Tafeln fahren erst los,
+   wenn ihre Fotos dekodiert sind (maison.js setzt .bereit, spätestens nach 1,4 s), dann in einem Zug mit leichter Feder, links beginnend */
+.js .m-f5:not(.bereit) .m-f5__k,.js .m-f5:not(.bereit) .m-f5__t{animation-play-state:paused}
+.m-f5__k{animation:m5schweb 1.6s cubic-bezier(.28,1.18,.42,1) both!important;animation-delay:calc(var(--i)*120ms)!important}
+.m-f5__t{animation-delay:calc(.35s + var(--i)*120ms)!important}
+@keyframes m5schweb{from{transform:translate3d(0,140px,0)}}
+
+/* ---------- Empfang: der Wegweiser (Doldenhorn, 17.10.2026). Wie an den Wanderwegen um Kandersteg: ein Pfosten, oben das Standortschild
+   des Hauses, darunter sechs Schilder, je Werkzeug eines, rechts auf dem Schild sein Stand wie sonst die Gehzeit. Links gross der Raum des
+   Hauses, der zum Schild gehört; Zeiger oder Tastatur auf einem Schild wechselt das Bild hart (kein Überblenden).
+   Bewegung nur über transform: die Schilder steigen gestaffelt auf, wenn die sechs runden Raumbilder dekodiert sind (.bereit, höchstens 1,4 s),
+   deckend ab dem ersten Bild. Kein Schatten, keine Transparenz über etwas Bewegtem. ---------- */
+.ww{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr);align-items:start;gap:clamp(28px,3.6vw,64px);
+  min-height:max(100svh,720px);padding:clamp(96px,12vh,124px) var(--rand) clamp(24px,4vh,44px);
+  background:linear-gradient(rgba(13,22,33,.5),rgba(13,22,33,.5)),url(/assets/img/tapete-gold-055.png?v=1) 0 0/150px 170px,#0d1621;color:#fff}
+.ww__buehne{min-width:0;padding-top:12px}
+.ww__bild{position:relative;margin:0;aspect-ratio:1/1.02;max-height:calc(100svh - 170px);width:100%;border-radius:var(--r-xl,34px);overflow:hidden;background:#0f1b2b;
+  box-shadow:0 0 0 1px rgba(227,210,166,.42),0 50px 80px -46px rgba(0,0,0,.95)}
+.ww__bild::after{content:'';position:absolute;inset:10px;border-radius:calc(var(--r-xl,34px) - 10px);box-shadow:inset 0 0 0 1px rgba(227,210,166,.38);pointer-events:none}
+.ww__raum{position:absolute;inset:0;width:100%!important;height:100%;max-width:none!important;object-fit:cover;visibility:hidden}
+.ww__raum.an{visibility:visible}
+.ww__unter{position:absolute;left:22px;bottom:22px;z-index:1;display:block;padding:9px 16px;border-radius:999px;background:#0d1621;
+  box-shadow:0 0 0 1px rgba(227,210,166,.45);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.ww__unter span{display:none}
+.ww__unter span.an{display:inline}
+
+.ww__seite{display:flex;flex-direction:column;gap:clamp(14px,2.2vh,22px);min-width:0}
+.ww__titel{margin:0;font-family:var(--serif);font-weight:700;font-size:clamp(2.7rem,5vw,4.6rem);line-height:1;letter-spacing:-.01em;color:var(--gold)}
+.ww__gruss{margin:10px 0 0;font-family:var(--serif);font-weight:700;font-size:clamp(1.12rem,1.5vw,1.45rem);line-height:1.3;color:#fff}
+.ww__gruss span{color:var(--gold)}
+.ww__gruss small{display:block;margin-top:8px;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(241,236,226,.62)}
+
+/* Pfosten mit Standortschild und sechs Schildern */
+.ww__pfosten{position:relative;display:flex;flex-direction:column;gap:8px;padding-left:26px}
+.ww__pfosten::before{content:'';position:absolute;left:6px;top:6px;bottom:-14px;width:9px;border-radius:5px;
+  background:linear-gradient(90deg,#6b5527 0%,#b89850 38%,#e3d2a6 52%,#9a7d3e 80%,#5f4a20 100%);box-shadow:0 0 0 1px rgba(7,12,20,.55)}
+.ww__standort{display:flex;align-items:center;gap:12px;width:fit-content;margin:0 0 4px -26px;padding:9px 18px 9px 12px;border-radius:7px;color:var(--tinte);
+  background:linear-gradient(180deg,#fbf8f1,#f1ece2 60%,#e2dacb);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(15,22,32,.18),0 0 0 1px rgba(184,152,80,.6)}
+.ww__standort svg{width:20px;height:auto;aspect-ratio:31.24/45.18;color:var(--stahl)}
+.ww__standort b{display:block;font-family:var(--serif);font-weight:700;font-size:1.02rem;line-height:1.05}
+.ww__standort small{display:block;margin-top:3px;font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--stahl)}
+
+.ma .ws{--spitze:28px;position:relative;isolation:isolate;display:grid;grid-template-columns:30px 44px minmax(0,1fr) auto 18px;align-items:center;gap:13px;
+  height:58px;padding:0 calc(var(--spitze) + 6px) 0 12px;color:#fff;text-decoration:none;transition:transform .5s var(--e2)}
+.ws__form,.ws__form::before{position:absolute;clip-path:polygon(0 0,calc(100% - var(--spitze)) 0,100% 50%,calc(100% - var(--spitze)) 100%,0 100%)}
+.ws__form{inset:0;z-index:-1;background:linear-gradient(180deg,#e3d2a6,#b89850 55%,#8a7038)}
+.ws__form::before{content:'';inset:1px 1.4px 1px 1px;background:linear-gradient(180deg,#1f324d 0%,#142235 46%,#0f1b2b 100%)}
+.ws__form::after{content:'';position:absolute;left:1px;right:30px;top:1px;height:1px;background:rgba(227,210,166,.28)}
+.ws__nr{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;font-family:var(--serif);font-weight:700;font-size:.95rem;color:var(--gold);box-shadow:inset 0 0 0 1px rgba(227,210,166,.55)}
+.ws__raum{width:44px!important;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1.5px #b89850,0 0 0 3px #0f1b2b}
+.ws__t{min-width:0}
+.ws__t small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(227,210,166,.72);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ws__t b{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(1.12rem,1.35vw,1.3rem);line-height:1.12;white-space:nowrap}
+.ws__stand{max-width:23ch;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;line-height:1.35;color:var(--gold);text-align:right;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ws__stand b{font-weight:500;color:#fff}
+.ws__pf{display:grid;place-items:center;color:var(--gold)}
+.ws__pf svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.7}
+.ma .ws:focus-visible{outline:none}
+.ws:focus-visible .ws__form{background:#fff}
+@media (hover:hover){.ma .ws:hover{transform:translateX(10px)}.ws:hover .ws__form::before{background:linear-gradient(180deg,#27405f 0%,#1a2b42 50%,#142235 100%)}}
+.ma .ws.an{transform:translateX(10px)}
+.ws.an .ws__form::before{background:linear-gradient(180deg,#27405f 0%,#1a2b42 50%,#142235 100%)}
+.ws.gedrueckt{transform:translateX(16px)!important}
+
+/* Auftritt der Schilder: nur Bewegung, erst wenn die Raumbilder dekodiert sind */
+@media (prefers-reduced-motion:no-preference){
+  .ma .ws{animation:wsAuf 1.1s var(--e1) both;animation-delay:calc(.15s + var(--i)*.075s)}
+  .js .ww__pfosten:not(.bereit) .ws{animation-play-state:paused}
+  .ww__kopf,.ww__standort{animation:wwAuf 1.2s var(--e1) both .05s}
+}
+@keyframes wsAuf{from{transform:translate3d(0,26px,0)}to{transform:none}}
+@keyframes wwAuf{from{transform:translate3d(0,18px,0)}to{transform:none}}
+
+/* Zahlenzeile «Heute» (M06) und Hinweis */
+.ww__zeile{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:10px;width:fit-content;margin:6px 0 0;padding:10px 20px 10px 22px;border-radius:999px;background:#070c14;
+  box-shadow:inset 0 0 0 1px rgba(227,210,166,.4);font-family:var(--serif);color:#fff}
+.ww__z{display:inline-flex;align-items:baseline;gap:8px;white-space:nowrap}
+.ww__zeile>span:first-child{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-right:2px}
+.ww__zeile b{font-weight:700;font-size:1.4rem;line-height:1;color:var(--gold)}
+.ww__zeile small{font-family:var(--sans);font-size:.9rem;color:rgba(255,255,255,.82)}
+.ww__zeile i{width:1px;height:18px;background:rgba(227,210,166,.45);margin:0 4px;align-self:center}
+.ma .ww__zeile a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.ww__zeile a svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.6}
+.ww__zeile.beispiel>span:first-child::after{content:' · Beispiel'}
+.ww__h{margin:0;max-width:52ch;font-size:.92rem;color:rgba(241,236,226,.66)}
+.ww__h kbd{display:inline-grid;place-items:center;min-width:22px;padding:0 5px;border-radius:5px;font-family:var(--serif);font-weight:700;font-size:.85rem;color:var(--tinte);background:var(--gold)}
+
+/* Mittlere Breiten: Bild schmaler, Schilder ohne Rolle */
+@media (max-width:1000px){
+  .ww{grid-template-columns:1fr;align-items:start;gap:26px;padding-top:96px}
+  .ww__bild{aspect-ratio:16/10;max-height:none}
+  .ww__buehne{order:2}
+  .ww__seite{order:1}
+  .ww__buehne{padding-top:0}
+  .ws__stand{max-width:34ch}
+}
+@media (max-width:640px){
+  .ww{padding:84px 16px 28px;gap:22px;min-height:0}
+  .ww__pfosten{padding-left:20px}
+  .ww__pfosten::before{left:4px;width:8px}
+  .ww__standort{margin-left:-20px}
+  .ma .ws{--spitze:20px;height:auto;min-height:60px;padding:9px 26px 9px 10px;grid-template-columns:26px 38px minmax(0,1fr) 12px;gap:10px;row-gap:2px}
+  .ws__nr{width:26px;height:26px;font-size:.85rem;grid-row:1/3}
+  .ws__raum{width:38px!important;height:38px;grid-row:1/3}
+  .ws__t{grid-column:3;grid-row:1}
+  .ws__stand{grid-column:3;grid-row:2;max-width:none;text-align:left;font-size:9.5px;-webkit-line-clamp:2}
+  .ws__pf{grid-column:4;grid-row:1/3}
+  .ma .ws:hover,.ma .ws.an{transform:translateX(6px)}
+  .ww__zeile{justify-content:center;padding:10px 14px;border-radius:22px;width:100%}
+  .ww__zeile i:last-of-type{display:none}
+  .ww__zeile a{width:100%;justify-content:center;margin-top:2px}
+  .ww__h{display:none}
+}
+@media (max-width:380px){
+  .ws__t small{display:none}
+  .ma .m-insel{padding:0 14px 0 4px;gap:8px}
+  .m-insel__marke{gap:8px}
+  .ma svg.m-insel__z{margin-left:8px;width:20px}
+  .ma .m-insel__marke span{font-size:14px;padding-right:0}
+  .ma .m-oben .m-oben__ecke{padding-left:12px;gap:6px;font-size:8.5px;letter-spacing:.08em}
+  .ma .m-oben .m-oben__ecke i{width:28px;height:28px}
+}
+
+/* ---------- Kleid des Doldenhorn (17.10.2026): die drei Tannen als Zeichen (Gold auf Nacht, Stahl auf Papier), Libre Caslon fett für Titel,
+   Knöpfe wie auf der Website (Pille mit rundem Knauf: hell auf Nacht, nachtblau auf Papier, golden für den Hauptweg), Säle als Etappen,
+   Goldband im Gold des Hauses. Läuft nach der Vorlage (bau.py hängt es an). ---------- */
+body.ma{background:#0d1621}
+.ma svg.tn{fill:currentColor;stroke:none}
+svg.m-kopf__z,.m-entree svg.m-kopf__z{width:clamp(40px,3.6vw,54px);height:auto;aspect-ratio:31.24/45.18;margin-bottom:18px;color:var(--gold);filter:none}
+.m-saal--papier svg.m-kopf__z,.m-saal--creme svg.m-kopf__z{color:var(--stahl)}
+svg.m-insel__z{width:24px;height:auto;aspect-ratio:31.24/45.18;margin-left:12px;color:var(--gold)}
+svg.m-fuss__siegel{width:54px;height:auto;aspect-ratio:31.24/45.18;color:var(--stahl)}
+.m-goldband__z svg{width:15px;height:auto;aspect-ratio:31.24/45.18;color:#2a2312}
+.m-insel__marke span{font:700 16px/1 var(--serif);letter-spacing:.04em;text-transform:none;color:var(--gold)}
+.m-titel{font-weight:700;letter-spacing:-.015em;font-size:clamp(3rem,6.6vw,6rem)}
+.m-titel em{font-style:normal;color:var(--hausgold);margin-right:.06em}
+.m-saal--nacht .m-titel em,.m-saal--livre .m-titel em{color:var(--gold)}
+.m-etappe{margin:0 0 8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--stahl)}
+.m-etappe span{color:var(--hausgold)}
+.m-saal--nacht .m-etappe,.m-saal--livre .m-etappe{color:rgba(241,236,226,.6)}
+.m-saal--nacht .m-etappe span,.m-saal--livre .m-etappe span{color:var(--gold)}
+.m-tafel__z b,.m-angabe b,.m-zahl b,.m-fuss__name{font-weight:700}
+.m-tafel__kopf{font-family:var(--mono);font-size:10.5px}
+.m-goldband{background:linear-gradient(180deg,#f3e8cc 0%,#e3d2a6 24%,#c9ad6c 58%,#b89850 82%,#9a7d3e 100%);color:#1b1608}
+.m-goldband li{font-family:var(--mono);letter-spacing:.24em}
+.m-schirm__leiste{background:linear-gradient(180deg,#1a2b42,#0d1621)}
+.m-schirm{background:#0f1b2b}
+.m-faecher{grid-template-columns:repeat(var(--n,12),minmax(0,1fr))}
+@media (max-width:900px){.m-faecher{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media (max-width:560px){.m-faecher{grid-template-columns:repeat(4,minmax(0,1fr))}.ma .m-faecher b{font-size:.82rem;line-height:1.15}}
+.ma .m-faecher b{overflow-wrap:anywhere;hyphens:auto}
+
+/* Knöpfe des Hauses (assets/css/main.css .kn): Pille mit Lichtkante, runder Knauf. Grundform hell (auf Nacht), --dunkel auf Papier, --gold Hauptweg */
+.ma .kn{--o:#f6f1e6;--m:#e5ddcc;--u:#d5cbb8;--t:#0f1620;--licht:#fffdf8;--kante:#a79c86;--tf:rgba(0,0,0,.6);--ko:#223452;--ku:#0f1b2b;--kt:#f1ece2;--klicht:#4a6384;
+  font-weight:500;text-shadow:none;box-shadow:inset 0 1px 0 var(--licht),inset 0 -2px 0 var(--kante),0 12px 22px -12px var(--tf)}
+.ma .kn::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.5) 50%,transparent)}
+.ma .kn i{box-shadow:inset 0 1px 0 var(--klicht),inset 0 -2px 0 #060b13}
+.ma .kn i svg{stroke:currentColor}
+.ma .kn--dunkel{--o:#27405f;--m:#1a2b42;--u:#0f1b2b;--t:#f1ece2;--licht:#5a7396;--kante:#060b13;--tf:rgba(15,22,32,.7);--ko:#f6f1e6;--ku:#d5cbb8;--kt:#0f1620;--klicht:#fffdf8}
+.ma .kn--dunkel i{box-shadow:inset 0 1px 0 #fffdf8,inset 0 -2px 0 #a79c86}
+.ma .kn--dunkel::after{background:linear-gradient(100deg,transparent,rgba(227,210,166,.28) 50%,transparent)}
+.ma .kn--gold{--o:#f6ecd0;--m:#e3d2a6;--u:#b89850;--t:#0f1620;--licht:rgba(255,255,255,.85);--kante:rgba(0,0,0,.28);--ko:#223452;--ku:#0f1b2b;--kt:#f1ece2;--klicht:#4a6384}
+.m-saal--papier .m-oben__ecke,.ma .m-oben .kn{--tf:rgba(0,0,0,.55)}
+
+/* Platzhalter für Bildschirme, die noch nicht aufgenommen sind (nur lokal; online steht das Foto des Raums) */
+.m-schirm--platz .m-platz{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;aspect-ratio:1440/900;padding:24px;text-align:center;color:var(--tinte);
+  background:linear-gradient(rgba(241,236,226,.5),rgba(241,236,226,.5)),url(/assets/img/tapete-stahl-085.png?v=1) 0 0/150px 170px,#f1ece2}
+.m-platz svg.m-platz__z{width:36px;height:auto;aspect-ratio:31.24/45.18;color:var(--stahl)}
+.m-platz p{margin:0;max-width:34ch;font-size:.95rem;line-height:1.45;color:var(--leise)}
+.m-platz b{display:block;margin-bottom:4px;font-family:var(--serif);font-weight:700;font-size:1.35rem;color:var(--tinte)}
+.m-platz small{font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--hausgold)}
+.m-schirm--raum img{aspect-ratio:1440/900;object-fit:cover}
+
+/* Fuss: Hinweis, solange es keine Anleitung gibt */
+.m-fuss__leer{font-size:.92rem;color:var(--leise)}
+
+/* Startfehler-Tür (R04): Band oben, die Seite darunter bleibt bedienbar */
+.m-tuer{position:fixed;left:50%;top:16px;transform:translateX(-50%);z-index:200;width:min(560px,calc(100% - 32px));padding:18px 22px;border-radius:18px;
+  background:#070c14;color:#fff;box-shadow:0 0 0 1px rgba(227,210,166,.4),0 18px 50px rgba(0,0,0,.5);text-align:center}
+.m-tuer[hidden]{display:none}
+.m-tuer__t{margin:0 0 4px;font:700 1.35rem/1.25 var(--serif);color:var(--gold)}
+.m-tuer p{margin:0 0 12px;font-size:.95rem;color:rgba(255,255,255,.82)}
+
+/* Le Registre: die acht Werte «Zur Buchung» des Hauses in zwei Reihen */
+#registre .m-zahlen.m-zahlen--8{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){#registre .m-zahlen.m-zahlen--8{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Prüf-Chat 17.10.2026: bei 320 px ragte «La Maison · Le Registre · Beispielwerte» links und rechts 15 px aus der Fensterleiste; enger setzen, notfalls Auslassung am Ende */
+.m-schirm__leiste{padding:0 10px}.m-schirm__leiste span{min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:360px){.m-schirm__leiste span{letter-spacing:.1em}}
+
+/* Einheitliches Startbild oben (17.10.2026, Vorlage Le Bureau): über beide Spalten, darunter Raumbild und Wegweiser */
+.ww .ww__start{grid-column:1/-1;margin:0}
+@media (max-width:1000px){.ww .ww__start{order:0}}
+
+.m-platte__k{transition:transform 1.1s var(--e1),box-shadow 1.1s var(--e1),background .9s var(--e1)}
+.m-platte__k::before{content:'';position:absolute;inset:5px;border-radius:17px;box-shadow:inset 0 0 0 1px rgba(184,152,80,.55);opacity:0;transition:opacity .9s var(--e1);pointer-events:none}
+.m-platte__p{background:transparent;color:var(--taupe-tief,#8a7036);box-shadow:inset 0 0 0 1px rgba(184,152,80,.75);transition:background .9s var(--e1),color .9s var(--e1),box-shadow .9s var(--e1)}
+.m-f5__k img{transition:filter 1.4s var(--e1)}
+.m-f5__k::after{content:'';position:absolute;inset:14px;z-index:2;border:1px solid rgba(227,210,166,.6);opacity:0;transition:opacity 1s var(--e1);pointer-events:none}
+.m-f5__p{background:transparent;color:var(--gold,#e3d2a6);box-shadow:inset 0 0 0 1px rgba(227,210,166,.75);transition:background .9s var(--e1),color .9s var(--e1)}
+@media (hover:hover){
+  .m-platte__k:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 #fff,0 18px 28px -20px rgba(26,29,40,.5)}
+  .m-platte__k:hover::before{opacity:1}
+  .m-platte__k:hover .m-platte__p,.m-f5__k:hover .m-f5__p{transform:none;color:var(--marine);background:linear-gradient(180deg,#f6e8c2,#b8975a);box-shadow:inset 0 1px 0 rgba(255,250,232,.95),0 0 0 1px rgba(150,125,64,.45)}
+  .m-f5__k:hover img{transform:none;filter:brightness(1.06)}
+  .m-f5__k:hover::after{opacity:1}
+}
+@media (prefers-reduced-motion:reduce){.m-platte__k,.m-platte__k::before,.m-f5__k::after{transition:none}}
+/* M21 für den Wegweiser des Doldenhorn: die Schilder rücken nicht mehr 10 px, sondern gleiten langsam 3 px; das Messing-Innere wird heller,
+   die Nummer bekommt einen goldenen Ring, der Pfeil steht in einem feinen Ring und füllt sich beim Darüberfahren. */
+.ma .ws{transition:transform 1.1s var(--e1)}
+.ws__form::before{transition:background 1s var(--e1)}
+.ws__nr{transition:box-shadow .9s var(--e1),color .9s var(--e1)}
+.ws__pf{width:28px;height:28px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(227,210,166,.55);transition:background .9s var(--e1),color .9s var(--e1),box-shadow .9s var(--e1)}
+.ws__pf svg{width:11px;height:11px}
+@media (hover:hover){
+  .ma .ws:hover,.ma .ws.an{transform:translateX(3px)}
+  .ws:hover .ws__nr{box-shadow:inset 0 0 0 1px #e3d2a6,0 0 0 3px rgba(227,210,166,.12);color:#f6e8c2}
+  .ws:hover .ws__pf{color:#142235;background:linear-gradient(180deg,#f6e8c2,#b8975a);box-shadow:inset 0 1px 0 rgba(255,250,232,.9)}
+}
+.ma .ws.an{transform:translateX(3px)}
+.ws.gedrueckt{transform:translateX(5px)!important}
+
+/* La Maison, Vorschau und ruhigere Schilder (Robert 18.10.2026, 16:11: «Die Schilder noch ein bisschen groß und das sieht alles noch ein bisschen zu sehr
+   unübersichtlich und nach KI aus» · «und die Texte auch zu klein»): links blendet die Startseite des Werkzeugs weich über die Halle, sie füllt die Kachel
+   (oben angelegt). Schilder ohne Rundfoto, flachere Spitze, grössere Namen und Angaben. */
+.ww__vorschau{position:absolute;inset:0;width:100%!important;height:100%;max-width:none!important;object-fit:cover;object-position:50% 0;opacity:0;transition:opacity .6s var(--e1)}
+.ww__vorschau.an{opacity:1}
+.ma .ws{--spitze:14px;grid-template-columns:34px minmax(0,1fr) auto 30px;gap:16px;height:72px;padding:0 calc(var(--spitze) + 14px) 0 16px}
+.ws__nr{width:34px;height:34px;font-size:1.05rem}
+.ws__t small{font-size:11px;letter-spacing:.16em;margin-bottom:3px}
+.ws__t b{font-size:clamp(1.35rem,1.65vw,1.62rem)}
+.ws__stand{max-width:26ch;font-family:var(--sans,'Instrument Sans',system-ui,sans-serif);font-size:.92rem;letter-spacing:0;text-transform:none;line-height:1.3}
+.ws__pf{width:30px;height:30px}
+@media (max-width:640px){
+  .ma .ws{--spitze:12px;height:auto;min-height:66px;padding:11px 24px 11px 12px;grid-template-columns:30px minmax(0,1fr) 26px;gap:12px;row-gap:3px}
+  .ws__nr{width:30px;height:30px;grid-row:1/3}
+  .ws__t{grid-column:2;grid-row:1}
+  .ws__stand{grid-column:2;grid-row:2;max-width:none;text-align:left;font-size:.86rem}
+  .ws__pf{grid-column:3;grid-row:1/3}
+  .ws__t b{font-size:1.3rem}
+}
+
+/* Farbfelder in Le Livre füllen sich wieder nacheinander von links nach rechts (Robert 18.10.2026, 16:59: «dass es so von links nach rechts sich auffüllt»).
+   Weg war es, weil die spätere Regel «Hochschweben ohne Einblenden» für alle [data-r] gilt und den Auftritt der Farbfelder ersetzt hat.
+   Jetzt: das Feld steht still, die Farbe läuft einmal von links ein, Feld für Feld (--i), sobald der Fächer ins Bild kommt; nichts hängt am Scrollen. */
+.js .m-faecher [data-r="fach"]{transform:none!important;opacity:1}
+.js .m-faecher [data-r="fach"] i{clip-path:inset(0 100% 0 0 round 16px);transition:clip-path .75s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--i,0)*110ms)}
+.js .m-faecher [data-r="fach"].da i{clip-path:inset(0 0 0 0 round 16px)}
+.js .m-faecher [data-r="fach"] b,.js .m-faecher [data-r="fach"] span{opacity:0;transition:opacity .6s ease;transition-delay:calc(var(--i,0)*110ms + .35s)}
+.js .m-faecher [data-r="fach"].da b,.js .m-faecher [data-r="fach"].da span{opacity:1}
+@media (prefers-reduced-motion:reduce){.js .m-faecher [data-r="fach"] i{clip-path:none;transition:none}.js .m-faecher [data-r="fach"] b,.js .m-faecher [data-r="fach"] span{opacity:1;transition:none}}
+/* Farben höchstens eine Reihe (Robert 18.10.2026, 17:36: «Und so Farben max. eine Reihe, nie 2»): alle Töne nebeneinander, am Handy schmale Felder ohne Namen */
+.ma .m-faecher{grid-template-columns:repeat(var(--n,11),minmax(0,1fr))!important;gap:clamp(5px,.7vw,10px)}
+.ma .m-faecher b{font-size:clamp(.82rem,1vw,1rem);overflow-wrap:anywhere;hyphens:auto}
+.ma .m-faecher span{font-size:9px;letter-spacing:.04em}
+@media (max-width:900px){.ma .m-faecher{grid-template-columns:repeat(var(--n,11),minmax(0,1fr))!important;row-gap:0}.ma .m-faecher b,.ma .m-faecher span{display:none}.ma .m-faecher i{border-radius:8px}}
+
+/* Le Registre, Zahlen unten (Robert 18.10.2026, 17:37: «eleganter und übersichtlicher … Das sieht so hingerotzt aus»):
+   drei Werte gross in einer Reihe, darunter die acht Wege zur Buchung als ruhige Liste, Name links, Wert rechts, feine Linien */
+#registre .m-kenn{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:1040px;margin:clamp(64px,6.5vw,104px) auto 0;text-align:center}
+#registre .m-kenn__z{display:flex;flex-direction:column;align-items:center;padding:6px clamp(16px,3vw,40px)}
+#registre .m-kenn__z+.m-kenn__z{border-left:1px solid rgba(15,22,32,.12)}
+#registre .m-kenn__z b{font:500 clamp(3.2rem,5.2vw,5rem)/1 var(--serif);color:var(--marine);font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.01em}
+#registre .m-kenn__z span{margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-tief)}
+#registre .m-kenn__z small{margin-top:8px;font-size:14.5px;line-height:1.45;color:rgba(15,22,32,.6)}
+#registre .m-liste{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(40px,5vw,72px);max-width:1040px;margin:clamp(56px,5.5vw,84px) auto 0;padding:0;text-align:left}
+#registre .m-liste li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:17px 2px 16px;border-top:1px solid rgba(15,22,32,.12)}
+#registre .m-liste li:nth-last-child(-n+2){border-bottom:1px solid rgba(15,22,32,.12)}
+#registre .m-liste span{display:flex;flex-direction:column;font-size:15.5px;line-height:1.35;color:var(--marine)}
+#registre .m-liste small{margin-top:4px;font-size:13px;line-height:1.4;color:rgba(15,22,32,.56)}
+#registre .m-liste b{flex:none;font:500 27px/1 var(--serif);color:var(--marine);font-variant-numeric:lining-nums tabular-nums}
+@media (max-width:760px){
+  #registre .m-kenn{grid-template-columns:1fr;max-width:420px}
+  #registre .m-kenn__z{padding:22px 0}
+  #registre .m-kenn__z+.m-kenn__z{border-left:0;border-top:1px solid rgba(15,22,32,.12)}
+  #registre .m-liste{grid-template-columns:1fr;max-width:520px}
+  #registre .m-liste li:nth-last-child(2){border-bottom:0}
+  #registre .m-liste b{font-size:23px}
+}
+
+/* Robert 18.10.2026, 18:12: «bei allen 4 Maisons soll links bündig mit rechts abschliessen unten.» Die Halle links ist so hoch wie die Spalte rechts:
+   oben auf Höhe des Hausschilds, unten auf der letzten Zeile rechts (Breiten über 1000 px, darunter stehen beide untereinander) */
+@media (min-width:1001px){
+  .ww{align-items:stretch}
+  .ww .ww__buehne{padding-top:0;display:flex;flex-direction:column}
+  .ww .ww__bild{flex:1 1 auto;aspect-ratio:auto;max-height:none;min-height:0}
+}
+
+/* Prüf-Chat 18.10.2026 (Empfang stand ganz): die Halle zoomt beim Laden einmal in ihren Rahmen (nur das erste Bild, beim Wechsel nichts neu).
+   Kein Weg von unten: der Empfang schneidet unten ab, was sich darunter bewegt, wäre angeschnitten */
+@keyframes wwZoom{from{transform:scale(1.12)}}
+.js .ww__bild .ww__raum:first-child{animation:wwZoom 2.2s var(--e1) both}
+@media (prefers-reduced-motion:reduce){.js .ww__bild .ww__raum:first-child{animation:none}}
+
+/* Die Mitte zwischen zu träge und zu hastig (Robert 18.10.2026, 18:17, alle Häuser gleich): 40 px und 1,04 → 1 in 0,85 s ohne Überschwingen, Reihen 0,12 s */
+.js [data-r]{--von:translate3d(0,40px,0);transform:var(--von) scale(1.04);transition:opacity .6s ease,transform .85s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0)*120ms)}
+.js [data-r].da{transform:var(--lage,none)}
+.js .m-platte[data-r]{transform:translate3d(0,40px,0) scale(1.04);transition:opacity .6s ease,transform .85s cubic-bezier(.22,.61,.36,1)}
+.js .m-platte[data-r].da{transform:none}
+
+/* Le Registre unten: «Weg des Gastes» (Robert 18.10.2026, 20:03 Wahl «C» aus drei Fassungen, alle Häuser). Vier Stufen von links nach rechts,
+   feine Goldlinie dahinter, die Zahlen werden von Stufe zu Stufe kleiner, viel Luft. Die alte Summenzeile darunter ist im Hinweis aufgegangen. */
+#registre .m-besuche__stand{display:none}
+#registre .m-weg{list-style:none;margin:clamp(56px,6vw,96px) auto 0;padding:0;max-width:1040px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative;color:var(--marine)}
+#registre .m-weg::before{content:'';position:absolute;left:12.5%;right:12.5%;top:clamp(46px,4.6vw,60px);height:1px;background:linear-gradient(90deg,var(--gold),rgba(184,152,80,.25))}
+#registre .m-weg__st{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px}
+#registre .m-weg__st b{display:grid;place-items:center;height:clamp(92px,9.2vw,120px);padding:0 14px;font-family:var(--serif);font-weight:500;line-height:1;color:var(--marine);font-variant-numeric:lining-nums;background:radial-gradient(closest-side,#f1ece2 70%,transparent)}
+#registre .m-weg__st--1 b{font-size:clamp(3.4rem,5.6vw,4.8rem)}
+#registre .m-weg__st--2 b{font-size:clamp(2.6rem,4.3vw,3.7rem)}
+#registre .m-weg__st--3 b{font-size:clamp(2.1rem,3.4vw,2.9rem)}
+#registre .m-weg__st--4 b{font-size:2.2rem;color:var(--gold)}
+#registre .m-weg__st span{margin-top:12px;font-size:1.04rem;line-height:1.35;color:var(--marine)}
+#registre .m-weg__st small{margin-top:8px;max-width:15em;font-size:.88rem;line-height:1.45;color:rgba(15,22,32,.55)}
+#registre .m-weg__hinweis{margin:30px auto 0;text-align:center;font-size:.86rem;line-height:1.5;color:rgba(15,22,32,.5)}
+@media (max-width:760px){
+  #registre .m-weg{grid-template-columns:1fr;gap:18px;max-width:420px}
+  #registre .m-weg::before{left:50%;right:auto;top:40px;bottom:40px;width:1px;height:auto;background:linear-gradient(180deg,var(--gold),rgba(184,152,80,.25))}
+}
+@media (max-width:760px){
+  #registre .m-weg::before{display:none}
+  #registre .m-weg{gap:6px}
+  #registre .m-weg__st+.m-weg__st::before{content:'';display:block;width:1px;height:30px;margin:0 auto 4px;background:linear-gradient(180deg,rgba(184,152,80,.2),var(--gold))}
+  #registre .m-weg__st b{height:auto;padding:4px 14px;background:none}
+}
+
+/* Robert 19.10.2026 (Fehlerbuch 10a, «in allen Tools Bilder dazu» und Hafenbüro: «keine Werkzeugliste nur aus Text»): jedes Schild mit dem Foto seines Raums,
+   als ruhiges Rechteck neben der Nummer (kein Rundfoto, das am 18.10. als unruhig herausgenommen wurde), Schildhöhe bleibt 72 px */
+.ma .ws{grid-template-columns:34px 56px minmax(0,1fr) auto 30px}
+@media (min-width:641px){.ma .ws .ws__stand{max-width:17ch;font-size:.88rem}}
+.ma .ws .ws__t small{letter-spacing:.1em}
+@media (max-width:640px){.ma .ws .ws__t small{letter-spacing:.04em;font-size:10px}}
+.ws__bild{width:56px!important;height:42px;border-radius:9px;object-fit:cover;display:block;box-shadow:0 0 0 1px rgba(227,210,166,.45)}
+@media (max-width:640px){
+  .ma .ws{grid-template-columns:30px 52px minmax(0,1fr) 26px}
+  .ws__bild{width:52px!important;height:40px;grid-column:2;grid-row:1/3}
+  .ws__t{grid-column:3;grid-row:1}
+  .ws__stand{grid-column:3;grid-row:2}
+  .ws__pf{grid-column:4;grid-row:1/3}
+}
+@media (min-width:641px) and (max-width:1280px){.ma .ws{grid-template-columns:30px 48px minmax(0,1fr) auto 28px;gap:12px}.ws__bild{width:48px!important;height:36px}.ma .ws .ws__t small{letter-spacing:.04em;font-size:10px}}
+@media (min-width:641px) and (max-width:1439px){.ma .ws .ws__t small{letter-spacing:.03em;font-size:10px}}
+
+/* Einheitliches Startbild der Werkzeuge des Waldhotel Doldenhorn (17.10.2026, Robert über den Oberchef: «bei den anderen sechs … dass die überall gleich
+   die Optik im Hero überall gleich ist»; La Carte bleibt). Vorlage: das Startbild von Le Bureau (studio/bureau.css .titel.buehne), Masse und Farben von dort
+   gemessen. Eine Datei für Le Bureau, La Réception, Le Livre, Le Registre, L’Imprimerie und La Maison; das Markup baut startbild.js (DHStart), La Maison
+   setzt es beim Bau (maison/bau.py). Eigene Schriftnamen, damit jedes Werkzeug gleich aussieht, egal wie es seine Schriften nennt. */
+@font-face{font-family:'DH Caslon';font-weight:400 700;font-display:swap;src:url('/assets/fonts/librecaslon-700.woff2') format('woff2')}
+@font-face{font-family:'DH Sans';font-weight:400 600;font-display:swap;src:url('/assets/fonts/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DH Mono';font-weight:400;font-display:swap;src:url('/assets/fonts/DMMono-normal-400.woff2') format('woff2')}
+.dh-st{--dh-gold:#e3d2a6;--dh-e:cubic-bezier(.16,1,.3,1);position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;box-sizing:border-box;
+  width:100%;max-width:none;margin:0 0 38px;padding:clamp(34px,3.8vw,58px) clamp(28px,3.6vw,58px);min-height:clamp(250px,33vw,480px);border-radius:28px;color:#fbf8f1;
+  background:radial-gradient(90% 120% at 0% 0%,rgba(160,176,196,.18),transparent 55%),linear-gradient(rgba(13,22,33,.6),rgba(13,22,33,.6)),linear-gradient(rgba(13,22,33,.5),rgba(13,22,33,.5)),url('/assets/img/tapete-gold-055.png?v=1') 0 0/150px 170px,#0d1621;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 0 0 1px rgba(205,184,134,.45),0 36px 60px -36px rgba(13,22,33,.75),0 12px 24px -16px rgba(13,22,33,.35)}
+.dh-st *{box-sizing:border-box}
+.dh-st::before{content:'';position:absolute;inset:8px;border-radius:21px;border:1px solid rgba(205,184,134,.34);pointer-events:none;z-index:2}
+.dh-st__foto{position:absolute;top:0;right:0;bottom:0;width:min(58%,820px);z-index:-1;pointer-events:none;margin:0;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 42%);mask-image:linear-gradient(90deg,transparent 0,#000 42%)}
+.dh-st__foto img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%;border-radius:0;transform:scale(1.08);transition:transform 2.4s var(--dh-e)}
+.dh-st__foto.da img{transform:none}
+.dh-st__foto::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,12,20,.5),transparent 48%),linear-gradient(90deg,rgba(13,22,33,.3),transparent 60%)}
+.dh-st>:not(.dh-st__foto){position:relative;z-index:1;max-width:min(60%,720px)}
+.dh-st__zier{display:flex;align-items:center;gap:12px;margin:0;font:400 9.5px/1.3 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--dh-gold)}
+.dh-st__zier svg{display:none}   /* wie Le Bureau: Zeile ohne Zeichen */
+.dh-st__zier i{flex:0 1 110px;min-width:36px;width:110px;height:1px;background:linear-gradient(90deg,rgba(205,184,134,.65),rgba(205,184,134,0))}
+.dh-st h1.dh-st__h{margin:18px 0 0;padding:0;font:500 clamp(42px,4.3vw,70px)/1.02 'DH Caslon','Caslon WD',Georgia,serif;letter-spacing:-.008em;text-align:left;color:#fbf8f1;text-shadow:0 2px 26px rgba(0,0,0,.4);text-wrap:balance}
+.dh-st h1.dh-st__h em{font-style:normal;color:var(--dh-gold)}
+.dh-st__satz{margin:18px 0 0;max-width:58ch;font:400 16px/1.6 'DH Sans','Instrument Sans',system-ui,sans-serif;color:rgba(251,248,241,.84);text-shadow:0 1px 14px rgba(0,0,0,.45)}
+.dh-st__kn{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:26px}
+.dh-st__k{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;gap:12px;height:46px;padding:0 6px 0 20px;border:0;border-radius:999px;cursor:pointer;text-decoration:none!important;
+  font:400 11px/1 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#0d1621!important;text-shadow:0 1px 0 rgba(255,253,246,.5);
+  background:linear-gradient(180deg,#f6ecd0 0%,#e3d2a6 46%,#b89850 100%);
+  box-shadow:inset 0 1px 0 rgba(255,253,248,.95),inset 0 -3px 0 rgba(80,64,30,.5),inset 0 0 0 1px rgba(150,125,64,.36),0 1px 1px rgba(7,12,20,.14),0 16px 26px -14px rgba(7,12,20,.35);transition:transform .55s var(--dh-e)}
+.dh-st__k:hover{transform:translateY(-1px)}
+.dh-st__k i{flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#223452,#070c14);color:#f6ecd0;font-style:normal;
+  box-shadow:inset 0 1px 0 rgba(200,212,228,.4),inset 0 -2px 0 rgba(0,0,0,.4),0 0 0 1px rgba(205,184,134,.45),0 6px 12px -6px rgba(7,12,20,.55)}
+.dh-st__k i svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.dh-st__zusatz{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+/* Zahlen und Wahl neben dem Knopf (Le Livre, Le Registre): gleiche Schilder auf der dunklen Karte */
+.dh-st__chip,.dh-st .buehne__chips li{display:inline-flex;align-items:baseline;gap:9px;height:auto;margin:0;padding:10px 15px;border-radius:999px;list-style:none;background:rgba(7,12,20,.42);box-shadow:inset 0 0 0 1px rgba(205,184,134,.42);
+  font:400 10px/1 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,248,241,.78)}
+.dh-st__chip b,.dh-st .buehne__chips b{font:500 19px/1 'DH Caslon',Georgia,serif;letter-spacing:0;text-transform:none;color:var(--dh-gold);font-variant-numeric:lining-nums tabular-nums}
+.dh-st .buehne__chips span{font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit}
+.dh-st .buehne__chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;animation:none}
+.dh-st .wahl3{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:rgba(7,12,20,.42);box-shadow:inset 0 0 0 1px rgba(205,184,134,.36)}
+.dh-st .wahl3 button{height:38px;padding:0 16px;border:0;border-radius:999px;background:transparent;font:400 13.5px/1 'DH Sans',system-ui,sans-serif;color:rgba(251,248,241,.8);cursor:pointer;white-space:nowrap}
+.dh-st .wahl3 button:hover{color:#fff}
+.dh-st .wahl3 button.an{background:linear-gradient(180deg,#f6ecd0 0%,#e3d2a6 46%,#c9ac68 100%);color:#0d1621}
+/* Auftritt wie Le Bureau: Text kommt ruhig herein, Goldrahmen zieht sich auf (nur transform) */
+@keyframes dhStAuf{from{transform:translateY(16px)}to{transform:none}}
+@keyframes dhStRahmen{from{transform:scale(.985)}to{transform:none}}
+.dh-st>:not(.dh-st__foto){animation:dhStAuf .9s var(--dh-e) both}
+.dh-st>.dh-st__h{animation-delay:.06s}
+.dh-st::before{animation:dhStRahmen 1.4s var(--dh-e) .25s both}
+@media (max-width:860px){
+  .dh-st{padding:0 0 26px;min-height:0;border-radius:22px}
+  .dh-st::before{inset:6px;border-radius:17px}
+  .dh-st__foto{position:relative;width:100%;height:160px;z-index:0;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 55%);mask-image:linear-gradient(0deg,transparent 0,#000 55%)}
+  .dh-st>:not(.dh-st__foto){max-width:none;margin-left:22px;margin-right:22px}
+  .dh-st h1.dh-st__h{font-size:clamp(34px,9vw,44px);margin-left:22px;margin-right:22px}
+}
+@media (prefers-reduced-motion:reduce){.dh-st>:not(.dh-st__foto),.dh-st::before{animation:none}.dh-st__foto img{transition:none;transform:none}}
+
+/* M24 (Werkzeug-Master; Robert 18.10.2026, 17:36: «die Ecken oben links bei den Tools alle so machen wie bei Bureau? Also Gold so … dass alle Tools oben links
+   denselben Stil haben»): Tannen-Zeichen im goldenen Ring 42 px, Name in Gold (Caslon 700, 17 px, keine Versalien), darunter «Bereich · Waldhotel Doldenhorn»
+   in DM Mono. Masse und Farben von Le Bureau (studio.css .kopf__z / .kopf__marke). */
+html body :is(.kopf__marke,.oben__marke){display:flex;align-items:center;gap:13px}
+html body :is(.kopf__marke,.oben__marke)>:is(img,svg,.kopf__zeichen,.oben__z,.zt){box-sizing:border-box;width:42px!important;height:42px!important;flex:0 0 42px;padding:9px 12px;border-radius:50%;object-fit:contain;
+  background:rgba(13,22,33,.62);box-shadow:inset 0 0 0 1px rgba(227,210,166,.42),inset 0 0 0 4px rgba(13,22,33,.62),inset 0 0 0 5px rgba(227,210,166,.16);filter:none}
+html body .kopf__marke>.kopf__zeichen{display:grid;place-items:center;padding:0}
+html body .kopf__marke>.kopf__zeichen>*{width:17px!important;height:auto!important}
+html body :is(.kopf__marke,.oben__marke) b{display:block;font:700 17px/1.05 var(--serif,'Caslon WD',Georgia,serif)!important;letter-spacing:.01em!important;text-transform:none!important;
+  background:linear-gradient(180deg,#f8efd6 0%,#e6d4a6 34%,#c9ad6c 52%,#9a7d3e 62%,#dcc79a 80%,#f2e5c4 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
+html body :is(.kopf__marke,.oben__marke) small{display:block;margin-top:6px;font:9.5px/1 var(--mono,'DM Mono',ui-monospace,monospace)!important;letter-spacing:.26em!important;text-transform:uppercase;color:rgba(227,210,166,.7)!important;text-align:left}
+
+/* Glanz bleibt im Knopf (Robert 18.10.2026 23:32: «dass dieser Schein über den Button als Balken noch weiter nach rechts und links geht»).
+   Safari schneidet einen wandernden Balken an runden Enden nicht immer ab. Der Glanz liegt jetzt in einer Fläche mit der Form des Knopfs und wandert als Verlauf darin. */
+.kn::after{top:0!important;bottom:0!important;left:0!important;right:0!important;width:auto!important;height:auto!important;border-radius:inherit!important;transform:none!important;background-size:42% 100%!important;background-repeat:no-repeat!important;background-position:-75% 0!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent)!important;mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent)!important;-webkit-mask-size:42% 100%!important;mask-size:42% 100%!important;-webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;-webkit-mask-position:-75% 0!important;mask-position:-75% 0!important;transition:background-position 0s,-webkit-mask-position 0s,mask-position 0s!important}
+.kn:hover::after,.kn:focus-visible::after{background-position:175% 0!important;-webkit-mask-position:175% 0!important;mask-position:175% 0!important;transition:background-position 1s cubic-bezier(.22,.61,.36,1),-webkit-mask-position 1s cubic-bezier(.22,.61,.36,1),mask-position 1s cubic-bezier(.22,.61,.36,1)!important}

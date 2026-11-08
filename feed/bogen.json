@@ -1,0 +1,221 @@
+{
+ "reihen": 12,
+ "stuecke": [
+  {
+   "id": "titel-1",
+   "r": 1,
+   "c": 1,
+   "w": 2,
+   "h": 2,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "kamin",
+   "r": 1,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "kamin"
+  },
+  {
+   "id": "empfang",
+   "r": 2,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "empfang"
+  },
+  {
+   "id": "zahl-1",
+   "r": 3,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "familie",
+   "r": 3,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "familie"
+  },
+  {
+   "id": "feuer",
+   "r": 3,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "feuer"
+  },
+  {
+   "id": "pass",
+   "r": 4,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "pass"
+  },
+  {
+   "id": "titel-2",
+   "r": 4,
+   "c": 2,
+   "w": 2,
+   "h": 2,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "gedeck",
+   "r": 5,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "gedeck"
+  },
+  {
+   "id": "salon",
+   "r": 6,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "salon"
+  },
+  {
+   "id": "weinkeller",
+   "r": 6,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "weinkeller"
+  },
+  {
+   "id": "zahl-2",
+   "r": 6,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "titel-3",
+   "r": 7,
+   "c": 1,
+   "w": 2,
+   "h": 2,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "becken",
+   "r": 7,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "becken"
+  },
+  {
+   "id": "eisgrotte",
+   "r": 8,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "eisgrotte"
+  },
+  {
+   "id": "zahl-3",
+   "r": 9,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "arvensauna",
+   "r": 9,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "arvensauna"
+  },
+  {
+   "id": "ruhe",
+   "r": 9,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "ruhe"
+  },
+  {
+   "id": "hochzeit",
+   "r": 10,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "hochzeit"
+  },
+  {
+   "id": "titel-4",
+   "r": 10,
+   "c": 2,
+   "w": 2,
+   "h": 2,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "wintergarten",
+   "r": 11,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "wintergarten"
+  },
+  {
+   "id": "z-suite-1",
+   "r": 12,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "z-suite-1"
+  },
+  {
+   "id": "fenstertisch",
+   "r": 12,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "fenstertisch"
+  },
+  {
+   "id": "zahl-4",
+   "r": 12,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  }
+ ]
+}

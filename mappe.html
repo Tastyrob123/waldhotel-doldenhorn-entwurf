@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de-CH" class="kein-vorhang" data-buchung="https://www.simplebooking.it/ibe2/hotel/11517">
+<head>
+<meta charset="utf-8"><script src="/assets/js/oben.js?v=cf693918de"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ihre Zimmermappe · Waldhotel Doldenhorn</title>
+<meta name="description" content="Die Rezeption auf Ihrem Handy: Hallenbad, Sauna, Massage, Restaurants, Ausflüge.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0d1621">
+<link rel="icon" href="assets/logo/tannen.svg">
+<link rel="preload" href="assets/fonts/librecaslon-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/InstrumentSans-normal-400_600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css?v=a931157535">
+<link rel="stylesheet" href="assets/css/gast.css?v=f4fc298452">
+<link rel="preload" as="image" href="assets/img/mappe/foto-bad.webp?v=c534095b-dh1410"><link rel="preload" as="image" href="assets/img/mappe/foto-sauna.webp?v=fda2faa3-dh1410"><link rel="preload" as="image" href="assets/img/mappe/foto-massage.webp?v=0ab2cfba-dh1410"><link rel="preload" as="image" href="assets/img/mappe/foto-restaurant.webp?v=4f6d7827-dh1410"><link rel="preload" as="image" href="assets/img/mappe/foto-tisch.webp?v=f0ecc3ab-dh1410"><link rel="preload" as="image" href="assets/img/mappe/foto-wetter.webp?v=11a67c69-dh1410">
+<style>
+.mappe{min-height:100svh;background:var(--nacht) url('assets/img/tapete-stahl-085.png') 50% 0/150px 170px;padding:max(18px,env(safe-area-inset-top)) 16px max(18px,env(safe-area-inset-bottom))}
+.mappe__kopf{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--hellgold);padding:10px 0 18px}
+.mappe__kopf svg{width:auto;height:44px}
+.mappe__kopf b{font-family:var(--titel);font-weight:700;font-size:18px;letter-spacing:.01em;color:var(--papier)}
+.mappe__kopf span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--hellgold)}
+.mappe__fuss{text-align:center;font-size:12px;color:var(--papier);opacity:.7;padding:16px 0 0}
+.mappe__fuss a{text-decoration:underline}
+/* Die Mappe füllt genau den Bildschirm: Kopf, Gespräch (rollt), Eingabe unten */
+html,body.mappe{height:100%}
+body.mappe{display:flex;flex-direction:column;height:100svh;overflow:hidden}
+.mappe main{flex:1;min-height:0;display:flex;flex-direction:column}
+.gast--seite{position:static;width:auto;height:auto;opacity:1;transform:none;pointer-events:auto;visibility:visible;max-width:720px;margin:0 auto;flex:1;min-height:0!important;display:flex;flex-direction:column}
+.gast--seite .gast__lauf{min-height:0!important;flex:1}
+.mappe__kopf,.mappe__fuss{flex:none}
+.im-rahmen body.mappe{padding-top:50px}
+/* Zimmermappe schöner (Robert 18.10.2026, 20:33 «das sieht nicht schön aus», 20:36 «Wenn das bie allen häusern so aussieht pass es überall an !»):
+   oben das Haus am Abend, die Vorschläge als Kacheln mit Zeichen in zwei Spalten statt grauer Liste, am Laptop links das Bild, rechts die Mappe, ohne leere Fläche */
+.mappe__bild{position:relative;margin:-18px -16px 0;height:190px;overflow:hidden}
+.mappe__bild img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;display:block}
+.mappe__bild::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,22,33,.15),rgba(13,22,33,.35) 55%,var(--nacht))}
+.mappe__bild figcaption{display:none}
+.mappe__spalte{position:relative;display:flex;flex-direction:column;flex:1;min-height:0;margin-top:-92px}
+.mappe .gast__vor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.mappe .gast__vor button{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:12px;min-height:108px;padding:14px 14px 15px;text-align:left;font-size:.95rem;line-height:1.3;border-radius:16px;color:var(--nacht);background:linear-gradient(180deg,#fffdf8,#f6f0e2);box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(184,152,80,.4),0 12px 20px -16px rgba(13,22,33,.55);transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s}
+.mappe .gast__vor button svg{display:none}
+.mappe .gast__vor button::before{content:'';flex:none;width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#1d3049,#0d1621);box-shadow:inset 0 0 0 1px rgba(205,184,134,.55)}
+.mappe .gast__vor button::after{content:'';position:absolute;left:23px;top:23px;width:20px;height:20px;background:#e3d2a6;-webkit-mask:var(--z) center/contain no-repeat;mask:var(--z) center/contain no-repeat}
+.mappe .gast__vor button:nth-child(1){--z:url(assets/img/mappe/bad.svg)}
+.mappe .gast__vor button:nth-child(2){--z:url(assets/img/mappe/sauna.svg)}
+.mappe .gast__vor button:nth-child(3){--z:url(assets/img/mappe/massage.svg)}
+.mappe .gast__vor button:nth-child(4){--z:url(assets/img/mappe/restaurant.svg)}
+.mappe .gast__vor button:nth-child(5){--z:url(assets/img/mappe/tisch.svg)}
+.mappe .gast__vor button:nth-child(6){--z:url(assets/img/mappe/wetter.svg)}
+@media (hover:hover){.mappe .gast__vor button:hover{transform:translateY(-3px);background:linear-gradient(180deg,#fffefb,#f8f3e8);box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(184,152,80,.6),0 18px 26px -18px rgba(13,22,33,.6)}}
+@media (max-width:999px){
+  .mappe__bild{height:150px}
+  .mappe__spalte{margin-top:-74px}
+  .mappe__kopf{padding:4px 0 12px}
+  .mappe .gast__vor{gap:8px}
+  .mappe .gast__vor button{flex-direction:row;align-items:center;gap:10px;min-height:66px;padding:10px 10px 10px 10px;font-size:.88rem;line-height:1.28}
+  .mappe .gast__vor button::before{width:32px;height:32px}
+  .mappe .gast__vor button::after{left:18px;top:50%;width:16px;height:16px;margin-top:-8px}
+}
+@media (min-width:1000px){
+  body.mappe{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(560px,640px);height:100svh;padding:0;overflow:hidden}
+  .mappe__bild{margin:0;height:100svh}
+  .mappe__bild::after{background:linear-gradient(90deg,rgba(13,22,33,0) 55%,rgba(13,22,33,.55)),linear-gradient(180deg,rgba(13,22,33,0) 50%,rgba(13,22,33,.7))}
+  .mappe__bild figcaption{display:block;position:absolute;left:56px;bottom:52px;z-index:1;color:var(--papier)}
+  .mappe__bild figcaption span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--hellgold)}
+  .mappe__bild figcaption b{display:block;margin-top:8px;font-family:var(--titel);font-weight:700;font-size:clamp(2.4rem,3.4vw,3.4rem);line-height:1.05}
+  .mappe__bild figcaption small{display:block;margin-top:10px;font-size:14px;opacity:.8}
+  .mappe__spalte{margin:0;height:100svh;padding:28px 36px 22px;justify-content:center;background:var(--nacht) url('assets/img/tapete-stahl-085.png') 50% 0/150px 170px}
+  .mappe main{flex:none}
+  .mappe .gast--seite{flex:none;max-height:calc(100svh - 180px)}
+  .mappe .gast--seite .gast__lauf{flex:1 1 auto;min-height:0;overflow:auto}
+}
+/* Kacheln mit Fotos des Hauses (Robert 18.10.2026, 23:48: «da auch Bilder einfügen … dass es aussieht mit Bildern schön»): oben ein kleines echtes Foto, darunter die Frage */
+.mappe .gast__vor button{padding:0 0 13px;gap:10px;overflow:hidden;min-height:0;justify-content:flex-start}
+.mappe .gast__vor button::before{width:100%;height:auto;aspect-ratio:16/10;border-radius:0;background:var(--f) center/cover no-repeat,#16263c;box-shadow:none}
+.mappe .gast__vor button::after{display:none}
+.mappe .gast__vor button>span{padding:0 13px}
+.mappe .gast__vor button:nth-child(1){--f:url(assets/img/mappe/foto-bad.webp)}
+.mappe .gast__vor button:nth-child(2){--f:url(assets/img/mappe/foto-sauna.webp)}
+.mappe .gast__vor button:nth-child(3){--f:url(assets/img/mappe/foto-massage.webp)}
+.mappe .gast__vor button:nth-child(4){--f:url(assets/img/mappe/foto-restaurant.webp)}
+.mappe .gast__vor button:nth-child(5){--f:url(assets/img/mappe/foto-tisch.webp)}
+.mappe .gast__vor button:nth-child(6){--f:url(assets/img/mappe/foto-wetter.webp)}
+@media (min-width:1000px){body.mappe{grid-template-columns:minmax(0,1fr) minmax(620px,700px)}.mappe .gast__vor{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:999px){.mappe .gast__vor button{flex-direction:column;align-items:stretch;padding:0 0 10px;min-height:0}.mappe .gast__vor button::before{width:100%;height:auto;aspect-ratio:21/9}.mappe .gast__vor button{gap:7px;padding-bottom:9px}.mappe .gast__vor button>span{font-size:.84rem;line-height:1.25}.mappe__bild{height:120px}.mappe__spalte{margin-top:-64px}.mappe .gast__vor button>span{padding:0 10px}}
+</style>
+<script>if(window.self!==window.top)document.documentElement.classList.add('im-rahmen')</script>
+<script src="/besuch.js?v=108cf13990" defer></script><script src="/verweil.js?v=5d7a8c4284" defer></script></head>
+<body class="mappe">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="zeichen"><path fill-rule="nonzero" fill="currentColor" d="M 283.816406 441.621094 L 282.855469 445.226562 L 298.234375 445.226562 L 297.273438 441.621094 Z M 285.019531 436.9375 L 284.054688 440.78125 L 297.035156 440.78125 L 296.074219 436.9375 Z M 298.355469 436.9375 L 297.394531 440.78125 L 312.894531 440.78125 L 311.8125 436.9375 Z M 286.21875 432.25 L 285.136719 436.09375 L 295.832031 436.09375 L 294.871094 432.25 Z M 299.558594 432.25 L 298.476562 436.09375 L 311.574219 436.09375 L 310.613281 432.25 Z M 287.421875 427.683594 L 286.460938 431.53125 L 288.503906 431.53125 L 289.34375 427.683594 Z M 290.183594 427.683594 L 289.105469 431.53125 L 298.835938 431.53125 L 299.796875 427.683594 Z M 300.757812 427.683594 L 299.675781 431.53125 L 310.371094 431.53125 L 309.410156 427.683594 Z M 288.621094 422.996094 L 287.660156 426.84375 L 289.703125 426.84375 L 290.664062 422.996094 Z M 291.386719 422.996094 L 290.425781 426.84375 L 300.039062 426.84375 L 301 422.996094 Z M 301.960938 422.996094 L 300.878906 426.84375 L 309.167969 426.84375 L 308.207031 422.996094 Z M 289.824219 418.3125 L 288.863281 422.15625 L 290.90625 422.15625 L 291.625 419.394531 L 291.265625 418.3125 Z M 292.589844 418.3125 L 291.625 422.15625 L 301.238281 422.15625 L 301.71875 419.992188 L 301.238281 418.3125 Z M 303.164062 418.3125 L 302.082031 422.15625 L 307.96875 422.15625 L 307.007812 418.3125 Z M 289.945312 417.46875 L 291.027344 417.46875 L 290.546875 415.425781 Z M 293.789062 413.625 L 292.828125 417.46875 L 301.121094 417.46875 L 300.160156 413.625 Z M 304.363281 413.625 L 303.28125 417.46875 L 306.765625 417.46875 L 305.804688 413.625 Z M 304.484375 412.785156 L 305.566406 412.785156 L 304.964844 410.742188 C 305.085938 410.742188 304.484375 412.785156 304.484375 412.785156 M 294.992188 408.9375 L 294.03125 412.785156 L 299.917969 412.785156 L 298.957031 408.9375 Z M 297.035156 401.25 L 295.230469 408.097656 L 298.714844 408.097656 Z M 297.035156 401.25 "/></g></defs></svg>
+<figure class="mappe__bild" aria-hidden="true"><img src="assets/img/haus-abend-n.webp?v=2ad464e5-dh1410" srcset="assets/img/haus-abend-x-600.webp?v=312bebb5-dh1410 600w, assets/img/haus-abend-s.webp?v=3f6fe14f-dh1410 900w, assets/img/haus-abend-n.webp?v=2ad464e5-dh1410 1200w, assets/img/haus-abend-m.webp?v=52f7d4ad-dh1410 1500w, assets/img/haus-abend-x.webp?v=f878f915-dh1410 1920w" sizes="(-webkit-min-device-pixel-ratio:1.5) and (min-width:1000px) 41.2vw, (-webkit-min-device-pixel-ratio:1.5) 75vw, (min-width:1000px) 55vw, 100vw" alt="" fetchpriority="high"><figcaption><span>Willkommen</span><b>Waldhotel Doldenhorn</b><small>Kandersteg · Familie Maeder</small></figcaption></figure>
+<div class="mappe__spalte">
+<header class="mappe__kopf"><svg class="" viewBox="282.26 400.65 31.24 45.18" aria-hidden="true" fill="currentColor"><use href="#zeichen"/></svg><div><span>Ihre Zimmermappe</span><b>Waldhotel Doldenhorn · Kandersteg</b></div></header>
+<main data-mappe></main>
+<p class="mappe__fuss">Rezeption <a href="tel:+41336758181">+41 33 675 81 81</a> · <a href="index.html">Zur Website</a></p>
+</div>
+<script src="assets/js/gast.js?v=fc3b6ed3c0" defer></script>
+</body>
+</html>

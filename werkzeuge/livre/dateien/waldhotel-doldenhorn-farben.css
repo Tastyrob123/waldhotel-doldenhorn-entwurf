@@ -1,0 +1,17 @@
+/* Waldhotel Doldenhorn · Farben der Marke (Le Livre, 19.10.2026), Werte aus der Website (assets/css/main.css) und aus dem Druck des Hauses */
+:root{
+  --nacht:#0d1621; /* Nacht: Grund der Seite, Kopfleiste, dunkle Abschnitte */
+  --tief:#070c14; /* Tief: dunkelster Grund: Fuss und Menü */
+  --blau:#142235; /* Blau: zweite dunkle Fläche, Karten auf der Nacht */
+  --papier:#f1ece2; /* Papier: helle Abschnitte, Grund der Werkzeuge */
+  --blatt:#fbf8f1; /* Blatt: Karten, Blätter und Felder */
+  --leinen:#d9d1c2; /* Leinen: Linien und zweite helle Fläche */
+  --hellgold:#e3d2a6; /* Hellgold: Betonung in Titeln und Zeichen auf Dunkel */
+  --gold:#b89850; /* Gold: Linien, Zeichen und Punkte, Tapete */
+  --tinte:#0f1620; /* Tinte: Schrift auf hellen Flächen */
+  --schiefer:#384858; /* Schiefer: kleine Flächen */
+  --stahl:#3d5370; /* Stahl: kleine Marken und Angaben auf Hell */
+  --gruen:#004a1f; /* Tannengrün: Farbfläche der Druckdatei, Gutschein, Bistrokarte */
+  --braun:#481f00; /* Dunkelbraun: Überschriften und Wortmarke im Magazin und auf den Flyern */
+  --druckpapier:#e3e3d1; /* Papier mit feinen Streifen: Innenseiten des Magazins, Flyer */
+}

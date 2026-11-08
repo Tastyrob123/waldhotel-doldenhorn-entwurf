@@ -1,0 +1,156 @@
+[
+ {
+  "name": "Nacht",
+  "hex": "#0d1621",
+  "rgb": [
+   13,
+   22,
+   33
+  ],
+  "rolle": "Grund der Seite, Kopfleiste, dunkle Abschnitte",
+  "gruppe": "nacht"
+ },
+ {
+  "name": "Tief",
+  "hex": "#070c14",
+  "rgb": [
+   7,
+   12,
+   20
+  ],
+  "rolle": "dunkelster Grund: Fuss und Menü",
+  "gruppe": "nacht"
+ },
+ {
+  "name": "Blau",
+  "hex": "#142235",
+  "rgb": [
+   20,
+   34,
+   53
+  ],
+  "rolle": "zweite dunkle Fläche, Karten auf der Nacht",
+  "gruppe": "nacht"
+ },
+ {
+  "name": "Papier",
+  "hex": "#f1ece2",
+  "rgb": [
+   241,
+   236,
+   226
+  ],
+  "rolle": "helle Abschnitte, Grund der Werkzeuge",
+  "gruppe": "papier"
+ },
+ {
+  "name": "Blatt",
+  "hex": "#fbf8f1",
+  "rgb": [
+   251,
+   248,
+   241
+  ],
+  "rolle": "Karten, Blätter und Felder",
+  "gruppe": "papier"
+ },
+ {
+  "name": "Leinen",
+  "hex": "#d9d1c2",
+  "rgb": [
+   217,
+   209,
+   194
+  ],
+  "rolle": "Linien und zweite helle Fläche",
+  "gruppe": "papier"
+ },
+ {
+  "name": "Hellgold",
+  "hex": "#e3d2a6",
+  "rgb": [
+   227,
+   210,
+   166
+  ],
+  "rolle": "Betonung in Titeln und Zeichen auf Dunkel",
+  "gruppe": "gold"
+ },
+ {
+  "name": "Gold",
+  "hex": "#b89850",
+  "rgb": [
+   184,
+   152,
+   80
+  ],
+  "rolle": "Linien, Zeichen und Punkte, Tapete",
+  "gruppe": "gold"
+ },
+ {
+  "name": "Tinte",
+  "hex": "#0f1620",
+  "rgb": [
+   15,
+   22,
+   32
+  ],
+  "rolle": "Schrift auf hellen Flächen",
+  "gruppe": "tinte"
+ },
+ {
+  "name": "Schiefer",
+  "hex": "#384858",
+  "rgb": [
+   56,
+   72,
+   88
+  ],
+  "rolle": "kleine Flächen",
+  "gruppe": "tinte"
+ },
+ {
+  "name": "Stahl",
+  "hex": "#3d5370",
+  "rgb": [
+   61,
+   83,
+   112
+  ],
+  "rolle": "kleine Marken und Angaben auf Hell",
+  "gruppe": "tinte"
+ },
+ {
+  "name": "Tannengrün",
+  "hex": "#004a1f",
+  "rgb": [
+   0,
+   74,
+   31
+  ],
+  "rolle": "Farbfläche der Druckdatei, Gutschein, Bistrokarte",
+  "gruppe": "druck"
+ },
+ {
+  "name": "Dunkelbraun",
+  "hex": "#481f00",
+  "rgb": [
+   72,
+   31,
+   0
+  ],
+  "rolle": "Überschriften und Wortmarke im Magazin und auf den Flyern",
+  "gruppe": "druck"
+ },
+ {
+  "name": "Papier mit feinen Streifen",
+  "hex": "#e3e3d1",
+  "rgb": [
+   227,
+   227,
+   209
+  ],
+  "rolle": "Innenseiten des Magazins, Flyer",
+  "gruppe": "druck"
+ }
+]

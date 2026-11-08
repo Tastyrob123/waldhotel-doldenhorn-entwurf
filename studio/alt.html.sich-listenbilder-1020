@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Bureau · Listen des Hauses · Waldhotel Doldenhorn</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1621">
+<link rel="icon" href="/assets/logo/tannen.svg">
+<link rel="preload" href="/assets/fonts/librecaslon-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="studio.css?v=4">
+</head>
+<body>
+<div id="tor" class="tor" hidden></div>
+<div id="app" class="app" hidden>
+  <aside class="rand" id="rand"></aside>
+  <div class="haupt">
+    <main class="flaeche" id="sicht" tabindex="-1"></main>
+    <div class="leiste" id="leiste" aria-live="polite"></div>
+  </div>
+</div>
+<div id="lade" class="lade" hidden></div>
+<div id="vergleich" class="vgl" hidden></div>
+<div id="fenster" class="fenster" hidden></div>
+<div id="meldung" class="meldung" aria-live="polite"></div>
+<input type="file" id="datei" accept="image/jpeg,image/png,image/webp" hidden>
+<script>
+/* Fehlerfänger und Notausgang: Jeder Fehler der Oberfläche wird für die Prüfung gemerkt. Zeigt das Studio nach zwölf Sekunden weder Tor noch Arbeitsfläche, erscheint unten ein Weg zur Prüfung (studio/pruefung.html), die ohne alles andere läuft. */
+(function(){function merk(t){try{var a=JSON.parse(localStorage.getItem('dh_fehler')||'[]');a.push({z:new Date().toISOString(),t:String(t).slice(0,300)});localStorage.setItem('dh_fehler',JSON.stringify(a.slice(-20)))}catch(x){}}
+addEventListener('error',function(e){merk((e.message||'Fehler')+' ('+String(e.filename||'').split('/').pop()+':'+(e.lineno||0)+')')});
+addEventListener('unhandledrejection',function(e){var r=e.reason;merk('Unerledigt: '+(r&&r.message||r))});
+var t=setTimeout(function(){var tor=document.getElementById('tor'),app=document.getElementById('app');if(!tor||!app||!tor.hidden||!app.hidden||document.getElementById('notausgang'))return;
+var d=document.createElement('div');d.id='notausgang';d.setAttribute('role','status');d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:2147483000;max-width:min(560px,calc(100vw - 32px));background:#fbf8f1;color:#0f1620;border-radius:16px;padding:14px 18px;box-shadow:0 24px 50px -20px rgba(0,0,0,.8);font:15px/1.5 "Instrument Sans",system-ui,sans-serif;display:flex;gap:14px;align-items:center;flex-wrap:wrap';
+d.innerHTML='<span>Das Studio braucht länger als sonst oder startet nicht.</span><a href="pruefung.html" style="font:500 10.5px/1 \'DM Mono\',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#0f1620;border-bottom:1px solid currentColor;padding-bottom:2px">Prüfung öffnen</a>';document.body.appendChild(d);
+var iv=setInterval(function(){if(!tor.hidden||!app.hidden){d.remove();clearInterval(iv)}},1000)},12000);})();
+</script>
+<script src="studio.js?v=4"></script>
+<script src="eingang_nav.js?v=1" defer></script>
+</body>
+</html>

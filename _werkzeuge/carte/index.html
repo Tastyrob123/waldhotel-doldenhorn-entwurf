@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de-CH">
+<head><!--demo-weiche--><script src="/_demo/karte.js"></script><script src="/_demo/shim.js"></script>
+<meta charset="utf-8"><script src="/assets/js/oben.js?v=cf693918de"></script>
+<link rel="preload" as="image" href="/assets/img/haus-abend-m.webp" fetchpriority="high">   <!-- Startbild sofort (Robert 18.10.2026 23:49) -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Carte · Waldhotel Doldenhorn</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1621">
+<link rel="icon" href="/assets/logo/tannen.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/librecaslon-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/InstrumentSans-normal-400_600.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/_werkzeuge/carte/fehlermelder.js?v=1"></script>
+<script src="/_werkzeuge/carte/auftakt.js?v=1"></script>
+<link rel="stylesheet" href="/_werkzeuge/carte/carte.css?v=8">
+<link rel="stylesheet" href="/_werkzeuge/carte/schweben.css?v=3">
+<link rel="stylesheet" href="/_werkzeuge/carte/auftritt.css?v=5">
+</head>
+<body class="lc">
+<header class="oben" id="oben"></header>
+<aside class="rand" id="rand"></aside>
+<main class="haupt">
+  <header class="kopf" id="kopf"></header>
+  <div class="arbeit" id="arbeit">
+    <section class="liste" id="liste" aria-label="Einträge der Karte"></section>
+    <section class="vorschau" aria-label="Vorschau der Karte">
+      <div class="vorschau__k"><div class="ansicht" role="group" aria-label="Vorschau"><button type="button" data-ansicht="karte" aria-pressed="true">Karte</button><button type="button" data-ansicht="website" aria-pressed="false">Website</button></div><span class="mono" id="v-zahl">Vorschau</span><span class="vorschau__w" id="v-warn" hidden></span><div class="vorschau__z"><button type="button" class="rund rund--d" data-zoom="-1" aria-label="Kleiner"><svg viewBox="0 0 14 14"><path d="M3 7h8"/></svg></button><button type="button" class="rund rund--d" data-zoom="1" aria-label="Grösser"><svg viewBox="0 0 14 14"><path d="M7 3v8M3 7h8"/></svg></button></div></div>
+      <iframe class="vorschau__f" id="vf" title="Die Karte, wie sie in der PDF steht" src="/_werkzeuge/carte/satz/blatt.html"></iframe>
+      <div class="web" id="web" hidden><iframe id="web-f" title="Die Seite der Website, auf der die Karte hängt"></iframe></div>
+    </section>
+  </div>
+</main>
+<footer class="leiste" id="leiste" aria-live="polite"></footer>
+<div class="fenster" id="fenster" hidden></div>
+<div class="meldung" id="meldung" aria-live="polite"></div>
+<script src="/_werkzeuge/carte/satz/satz.js?v=2"></script>
+<script src="/assets/js/listenbilder.js?v=4af0cfc863"></script>
+<script src="/_werkzeuge/carte/carte.js?v=8-qp"></script>
+<script src="/_werkzeuge/carte/schweben.js?v=3" data-wurzel=".haupt" data-blaetter=".vorschau__k" data-kacheln="#kopf .kopf__kn > *"></script>
+<script src="/_werkzeuge/carte/rundgang.js?v=2" defer></script>
+<script src="/_werkzeuge/carte/zur-werkbank.js?v=1" defer data-zw data-ueber="#leiste"></script>
+<script src="/_werkzeuge/carte/auftritt.js?v=5" defer data-wurzel="body" data-fenster="3500" data-teile="#liste .teil, #rand .kw, #rand .wege, #rand .modus"></script>
+<script src="/werkzeuge/demo-aus.js?v=faeb282807" defer></script></body>
+</html>

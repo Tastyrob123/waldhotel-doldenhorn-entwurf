@@ -1,0 +1,2298 @@
+{
+ "haus": "Waldhotel Doldenhorn",
+ "ort": "Kandersteg",
+ "fotos": [
+  {
+   "k": "haus-abend",
+   "t": {
+    "de": "Das Waldhotel Doldenhorn in der Dämmerung, alle Fenster erleuchtet"
+   },
+   "b": "aussen",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1686,
+   "art": "haus",
+   "q": "Schweiz Tourismus / HotellerieSuisse, vom Haus geliefert",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/haus-abend-l.webp",
+   "fs": "../../assets/img/haus-abend-s.webp",
+   "fm": "mini/haus-abend.webp"
+  },
+  {
+   "k": "halle",
+   "t": {
+    "de": "Halle mit Galerie, Flügel und Leuchter"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 5663,
+   "h": 3775,
+   "art": "haus",
+   "q": "Schweiz Tourismus / HotellerieSuisse, vom Haus geliefert",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/halle-l.webp",
+   "fs": "../../assets/img/halle-s.webp",
+   "fm": "mini/halle.webp"
+  },
+  {
+   "k": "kamin",
+   "t": {
+    "de": "Kamin in der Halle"
+   },
+   "b": "haus",
+   "s": "winter",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/kamin-l.webp",
+   "fs": "../../assets/img/kamin-s.webp",
+   "fm": "mini/kamin.webp"
+  },
+  {
+   "k": "arvengang",
+   "t": {
+    "de": "Gang aus hellem Arvenholz beim Empfang"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/arvengang-l.webp",
+   "fs": "../../assets/img/arvengang-s.webp",
+   "fm": "mini/arvengang.webp"
+  },
+  {
+   "k": "z-ambiance",
+   "t": {
+    "de": "Ambiance-Zimmer mit Balkon"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-ambiance-l.webp",
+   "fs": "../../assets/img/z-ambiance-s.webp",
+   "fm": "mini/z-ambiance.webp"
+  },
+  {
+   "k": "salon-bleu",
+   "t": {
+    "de": "Saal mit blauen Wänden, Leuchter und weiss gedeckten Tischen"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4288,
+   "h": 2848,
+   "art": "haus",
+   "q": "Schweiz Tourismus / HotellerieSuisse, vom Haus geliefert",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/salon-bleu-l.webp",
+   "fs": "../../assets/img/salon-bleu-s.webp",
+   "fm": "mini/salon-bleu.webp"
+  },
+  {
+   "k": "bad",
+   "t": {
+    "de": "Liegen am Hallenbad vor Bogenfenstern zum Wald"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/bad-l.webp",
+   "fs": "../../assets/img/bad-s.webp",
+   "fm": "mini/bad.webp"
+  },
+  {
+   "k": "fest",
+   "t": {
+    "de": "Festlich gedeckte Tafel"
+   },
+   "b": "feste",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2400,
+   "h": 1792,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/fest-l.webp",
+   "fs": "../../assets/img/fest-s.webp",
+   "fm": "mini/fest.webp"
+  },
+  {
+   "k": "hochzeit",
+   "t": {
+    "de": "Runder Tisch, für eine Hochzeit gedeckt, mit Blumen und Kerzen"
+   },
+   "b": "feste",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2400,
+   "h": 1792,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/hochzeit-l.webp",
+   "fs": "../../assets/img/hochzeit-s.webp",
+   "fm": "mini/hochzeit.webp"
+  },
+  {
+   "k": "luft-tal",
+   "t": {
+    "de": "Das Tal bei Kandersteg aus der Luft, am Waldrand das Waldhotel Doldenhorn"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/luft-tal-l.webp",
+   "fs": "../../assets/img/luft-tal-s.webp",
+   "fm": "mini/luft-tal.webp"
+  },
+  {
+   "k": "z-economy-1",
+   "t": {
+    "de": "Economy-Zimmer mit zwei Betten und alter Truhe"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-economy-1-l.webp",
+   "fs": "../../assets/img/z-economy-1-s.webp",
+   "fm": "mini/z-economy-1.webp"
+  },
+  {
+   "k": "z-economy-2",
+   "t": {
+    "de": "Economy-Zimmer aus hellem Holz mit Wanduhr"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-economy-2-l.webp",
+   "fs": "../../assets/img/z-economy-2-s.webp",
+   "fm": "mini/z-economy-2.webp"
+  },
+  {
+   "k": "z-economy-3",
+   "t": {
+    "de": "Kissen mit Hirsch auf dem Bett"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-economy-3-l.webp",
+   "fs": "../../assets/img/z-economy-3-s.webp",
+   "fm": "mini/z-economy-3.webp"
+  },
+  {
+   "k": "z-economy-4",
+   "t": {
+    "de": "Bad im Economy-Zimmer mit Dusche und Steinbecken"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-economy-4-l.webp",
+   "fs": "../../assets/img/z-economy-4-s.webp",
+   "fm": "mini/z-economy-4.webp"
+  },
+  {
+   "k": "z-economy-5",
+   "t": {
+    "de": "Fenster unter dem Dach, draussen der Wald"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-economy-5-l.webp",
+   "fs": "../../assets/img/z-economy-5-s.webp",
+   "fm": "mini/z-economy-5.webp"
+  },
+  {
+   "k": "z-economy-6",
+   "t": {
+    "de": "Waschtisch aus Holz mit Steinbecken"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-economy-6-l.webp",
+   "fs": "../../assets/img/z-economy-6-s.webp",
+   "fm": "mini/z-economy-6.webp"
+  },
+  {
+   "k": "z-ambiance-2",
+   "t": {
+    "de": "Sitzecke im Ambiance-Zimmer vor blauer Wand"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-ambiance-2-l.webp",
+   "fs": "../../assets/img/z-ambiance-2-s.webp",
+   "fm": "mini/z-ambiance-2.webp"
+  },
+  {
+   "k": "z-ambiance-3",
+   "t": {
+    "de": "Schlafgalerie aus Holz im Ambiance-Zimmer"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-ambiance-3-l.webp",
+   "fs": "../../assets/img/z-ambiance-3-s.webp",
+   "fm": "mini/z-ambiance-3.webp"
+  },
+  {
+   "k": "z-ambiance-4",
+   "t": {
+    "de": "Treppe zur Galerie im Ambiance-Zimmer"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-ambiance-4-l.webp",
+   "fs": "../../assets/img/z-ambiance-4-s.webp",
+   "fm": "mini/z-ambiance-4.webp"
+  },
+  {
+   "k": "z-ambiance-5",
+   "t": {
+    "de": "Aussicht vom Balkon auf Fels, Wasserfall und Wiesen"
+   },
+   "b": "zimmer",
+   "s": "sommer",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-ambiance-5-l.webp",
+   "fs": "../../assets/img/z-ambiance-5-s.webp",
+   "fm": "mini/z-ambiance-5.webp"
+  },
+  {
+   "k": "z-junior-1",
+   "t": {
+    "de": "Junior Suite mit Bett und frei stehender Wanne"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2752,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-junior-1-l.webp",
+   "fs": "../../assets/img/z-junior-1-s.webp",
+   "fm": "mini/z-junior-1.webp"
+  },
+  {
+   "k": "z-junior-2",
+   "t": {
+    "de": "Junior Suite mit bemalter Truhe und Sessel"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-junior-2-l.webp",
+   "fs": "../../assets/img/z-junior-2-s.webp",
+   "fm": "mini/z-junior-2.webp"
+  },
+  {
+   "k": "z-junior-3",
+   "t": {
+    "de": "Bett unter Dachbalken in der Junior Suite"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-junior-3-l.webp",
+   "fs": "../../assets/img/z-junior-3-s.webp",
+   "fm": "mini/z-junior-3.webp"
+  },
+  {
+   "k": "z-junior-4",
+   "t": {
+    "de": "Schreibtisch am Fenster in der Junior Suite"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-junior-4-l.webp",
+   "fs": "../../assets/img/z-junior-4-s.webp",
+   "fm": "mini/z-junior-4.webp"
+  },
+  {
+   "k": "z-junior-5",
+   "t": {
+    "de": "Balkon der Junior Suite im Schnee"
+   },
+   "b": "zimmer",
+   "s": "winter",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-junior-5-l.webp",
+   "fs": "../../assets/img/z-junior-5-s.webp",
+   "fm": "mini/z-junior-5.webp"
+  },
+  {
+   "k": "z-junior-6",
+   "t": {
+    "de": "Bad der Junior Suite"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-junior-6-l.webp",
+   "fs": "../../assets/img/z-junior-6-s.webp",
+   "fm": "mini/z-junior-6.webp"
+  },
+  {
+   "k": "z-suite-1",
+   "t": {
+    "de": "Suite unter dem Dach mit Kachelofen und Truhe"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-suite-1-l.webp",
+   "fs": "../../assets/img/z-suite-1-s.webp",
+   "fm": "mini/z-suite-1.webp"
+  },
+  {
+   "k": "z-suite-2",
+   "t": {
+    "de": "Fensterfront der Suite mit Tür zum Balkon"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-suite-2-l.webp",
+   "fs": "../../assets/img/z-suite-2-s.webp",
+   "fm": "mini/z-suite-2.webp"
+  },
+  {
+   "k": "z-suite-3",
+   "t": {
+    "de": "Bad der Suite mit Eckwanne und zwei Becken"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-suite-3-l.webp",
+   "fs": "../../assets/img/z-suite-3-s.webp",
+   "fm": "mini/z-suite-3.webp"
+  },
+  {
+   "k": "z-suite-4",
+   "t": {
+    "de": "Blick aus der Suite auf verschneite Tannen"
+   },
+   "b": "zimmer",
+   "s": "winter",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/z-suite-4-l.webp",
+   "fs": "../../assets/img/z-suite-4-s.webp",
+   "fm": "mini/z-suite-4.webp"
+  },
+  {
+   "k": "salon",
+   "t": {
+    "de": "Au Gourmet mit Leuchter und weiss gedeckten Tischen"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/salon-l.webp",
+   "fs": "../../assets/img/salon-s.webp",
+   "fm": "mini/salon.webp"
+  },
+  {
+   "k": "gedeck",
+   "t": {
+    "de": "Goldener Teller mit Besteck auf weissem Tuch"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1707,
+   "h": 2560,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/gedeck-l.webp",
+   "fs": "../../assets/img/gedeck-s.webp",
+   "fm": "mini/gedeck.webp"
+  },
+  {
+   "k": "gruener-saal",
+   "t": {
+    "de": "Grüner Saal mit runden Tischen und Kerzenleuchtern"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2008,
+   "art": "haus",
+   "q": "Schweiz Tourismus / HotellerieSuisse, vom Haus geliefert",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/gruener-saal-l.webp",
+   "fs": "../../assets/img/gruener-saal-s.webp",
+   "fm": "mini/gruener-saal.webp"
+  },
+  {
+   "k": "tisch",
+   "t": {
+    "de": "Gedeckter Tisch vor einem Gemälde mit Bergsee"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 5760,
+   "h": 3840,
+   "art": "haus",
+   "q": "Schweiz Tourismus / HotellerieSuisse, vom Haus geliefert",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/tisch-l.webp",
+   "fs": "../../assets/img/tisch-s.webp",
+   "fm": "mini/tisch.webp"
+  },
+  {
+   "k": "fenstertisch",
+   "t": {
+    "de": "Tisch am Fenster im Restaurant Doldenhorn, draussen Geranien"
+   },
+   "b": "kueche",
+   "s": "sommer",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/fenstertisch-l.webp",
+   "fs": "../../assets/img/fenstertisch-s.webp",
+   "fm": "mini/fenstertisch.webp"
+  },
+  {
+   "k": "burestube",
+   "t": {
+    "de": "Burestube mit Holztäfer und langen Tischen"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/burestube-l.webp",
+   "fs": "../../assets/img/burestube-s.webp",
+   "fm": "mini/burestube.webp"
+  },
+  {
+   "k": "wintergarten",
+   "t": {
+    "de": "Wintergarten mit Glasdach und gedeckten Tischen"
+   },
+   "b": "kueche",
+   "s": "winter",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/wintergarten-l.webp",
+   "fs": "../../assets/img/wintergarten-s.webp",
+   "fm": "mini/wintergarten.webp"
+  },
+  {
+   "k": "fruehstueck",
+   "t": {
+    "de": "Frühstücksbuffet"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2736,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/fruehstueck-l.webp",
+   "fs": "../../assets/img/fruehstueck-s.webp",
+   "fm": "mini/fruehstueck.webp"
+  },
+  {
+   "k": "weinkeller",
+   "t": {
+    "de": "Weinflaschen im Holzgestell"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 2560,
+   "h": 2560,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/weinkeller-l.webp",
+   "fs": "../../assets/img/weinkeller-s.webp",
+   "fm": "mini/weinkeller.webp"
+  },
+  {
+   "k": "snooker",
+   "t": {
+    "de": "Snooker Lounge mit grünem Tisch"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/snooker-l.webp",
+   "fs": "../../assets/img/snooker-s.webp",
+   "fm": "mini/snooker.webp"
+  },
+  {
+   "k": "pass",
+   "t": {
+    "de": "Zwei Köche richten am Pass einen Teller an"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1618,
+   "h": 1080,
+   "art": "haus",
+   "q": "Booking.com, vom Haus eingestellt",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/pass-l.webp",
+   "fs": "../../assets/img/pass-s.webp",
+   "fm": "mini/pass.webp"
+  },
+  {
+   "k": "platte",
+   "t": {
+    "de": "Platte mit Trockenfleisch, Käse und Oliven"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 2048,
+   "h": 2048,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/platte-l.webp",
+   "fs": "../../assets/img/platte-s.webp",
+   "fm": "mini/platte.webp"
+  },
+  {
+   "k": "burger",
+   "t": {
+    "de": "Burger im Körnerbrötchen"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 2048,
+   "h": 2048,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/burger-l.webp",
+   "fs": "../../assets/img/burger-s.webp",
+   "fm": "mini/burger.webp"
+  },
+  {
+   "k": "cocktail",
+   "t": {
+    "de": "Cocktails in Schalen"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 2048,
+   "h": 2048,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/cocktail-l.webp",
+   "fs": "../../assets/img/cocktail-s.webp",
+   "fm": "mini/cocktail.webp"
+  },
+  {
+   "k": "feuer",
+   "t": {
+    "de": "Zwei Gläser stossen vor dem Kaminfeuer an"
+   },
+   "b": "kueche",
+   "s": "winter",
+   "f": "quer",
+   "w": 2752,
+   "h": 1451,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/feuer-l.webp",
+   "fs": "../../assets/img/feuer-s.webp",
+   "fm": "mini/feuer.webp"
+  },
+  {
+   "k": "becken",
+   "t": {
+    "de": "Hallenbad mit Bogenfenstern"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/becken-l.webp",
+   "fs": "../../assets/img/becken-s.webp",
+   "fm": "mini/becken.webp"
+  },
+  {
+   "k": "chillout",
+   "t": {
+    "de": "Chillout Lounge mit hellen Sesseln"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/chillout-l.webp",
+   "fs": "../../assets/img/chillout-s.webp",
+   "fm": "mini/chillout.webp"
+  },
+  {
+   "k": "sauna",
+   "t": {
+    "de": "Sauna mit leuchtender Salzwand und Kessel"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/sauna-l.webp",
+   "fs": "../../assets/img/sauna-s.webp",
+   "fm": "mini/sauna.webp"
+  },
+  {
+   "k": "arvensauna",
+   "t": {
+    "de": "Tür der Bio Arven Sauna aus altem Holz"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/arvensauna-l.webp",
+   "fs": "../../assets/img/arvensauna-s.webp",
+   "fm": "mini/arvensauna.webp"
+  },
+  {
+   "k": "eisgrotte",
+   "t": {
+    "de": "Eisgrotte aus Fels mit Holzkübel"
+   },
+   "b": "spa",
+   "s": "winter",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/eisgrotte-l.webp",
+   "fs": "../../assets/img/eisgrotte-s.webp",
+   "fm": "mini/eisgrotte.webp"
+  },
+  {
+   "k": "salzarium",
+   "t": {
+    "de": "Salzarium mit leuchtenden Salzsteinen"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1704,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/salzarium-l.webp",
+   "fs": "../../assets/img/salzarium-s.webp",
+   "fm": "mini/salzarium.webp"
+  },
+  {
+   "k": "massage",
+   "t": {
+    "de": "Rückenmassage im Doldenhorn Spa"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2496,
+   "h": 1664,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/massage-l.webp",
+   "fs": "../../assets/img/massage-s.webp",
+   "fm": "mini/massage.webp"
+  },
+  {
+   "k": "ruhe",
+   "t": {
+    "de": "Ruheraum mit Liegen im Halbrund"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/ruhe-l.webp",
+   "fs": "../../assets/img/ruhe-s.webp",
+   "fm": "mini/ruhe.webp"
+  },
+  {
+   "k": "saal",
+   "t": {
+    "de": "Saal mit runden Tischen und Bogenfenstern"
+   },
+   "b": "feste",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/saal-l.webp",
+   "fs": "../../assets/img/saal-s.webp",
+   "fm": "mini/saal.webp"
+  },
+  {
+   "k": "seminar",
+   "t": {
+    "de": "Seminarraum mit Tischen im Rechteck und Flipchart"
+   },
+   "b": "feste",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2528,
+   "h": 1696,
+   "art": "haus",
+   "q": "Schweiz Tourismus / HotellerieSuisse, vom Haus geliefert",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/seminar-l.webp",
+   "fs": "../../assets/img/seminar-s.webp",
+   "fm": "mini/seminar.webp"
+  },
+  {
+   "k": "empfang",
+   "t": {
+    "de": "Empfang aus Arvenholz mit den drei Tannen an der Wand"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1440,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/empfang-l.webp",
+   "fs": "../../assets/img/empfang-s.webp",
+   "fm": "mini/empfang.webp"
+  },
+  {
+   "k": "familie",
+   "t": {
+    "de": "Familie Maeder vor einer alten Holzwand"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1620,
+   "h": 1080,
+   "art": "haus",
+   "q": "Booking.com, vom Haus eingestellt",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/familie-l.webp",
+   "fs": "../../assets/img/familie-s.webp",
+   "fm": "mini/familie.webp"
+  },
+  {
+   "k": "tal",
+   "t": {
+    "de": "Talkessel bei Kandersteg mit Felswand und Wasserfall"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/tal-l.webp",
+   "fs": "../../assets/img/tal-s.webp",
+   "fm": "mini/tal.webp"
+  },
+  {
+   "k": "bach",
+   "t": {
+    "de": "Bach im Wald bei Kandersteg"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 2731,
+   "h": 1536,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/bach-l.webp",
+   "fs": "../../assets/img/bach-s.webp",
+   "fm": "mini/bach.webp"
+  },
+  {
+   "k": "haus-wiese",
+   "t": {
+    "de": "Das Waldhotel Doldenhorn hinter der Wiese, dahinter Wald und Fels"
+   },
+   "b": "aussen",
+   "s": "sommer",
+   "f": "quer",
+   "w": 2734,
+   "h": 1536,
+   "art": "haus",
+   "q": "Booking.com, vom Haus eingestellt",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/haus-wiese-l.webp",
+   "fs": "../../assets/img/haus-wiese-s.webp",
+   "fm": "mini/haus-wiese.webp"
+  },
+  {
+   "k": "auftakt",
+   "t": {
+    "de": "Das Waldhotel Doldenhorn am Waldrand in Kandersteg, aus der Luft gesehen: vorn die Wiese, hinten Tannen und Fels"
+   },
+   "b": "aussen",
+   "s": "sommer",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "fotos/auftakt-l.webp",
+   "fs": "fotos/auftakt-s.webp",
+   "fm": "mini/auftakt.webp"
+  },
+  {
+   "k": "wiese",
+   "t": {
+    "de": "Blumenwiese mit Heuschober im Tal bei Kandersteg"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "fotos/wiese-l.webp",
+   "fs": "fotos/wiese-s.webp",
+   "fm": "mini/wiese.webp"
+  },
+  {
+   "k": "festabend",
+   "t": {
+    "de": "Der Saal am Festabend: runde Tische, Kerzenleuchter, Licht an den Bogenfenstern"
+   },
+   "b": "feste",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1920,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "fotos/festabend-l.webp",
+   "fs": "fotos/festabend-s.webp",
+   "fm": "mini/festabend.webp"
+  },
+  {
+   "k": "tal-oben",
+   "t": {
+    "de": "Kandersteg und das Tal von oben, dahinter die Berge"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "fotos/tal-oben-l.webp",
+   "fs": "fotos/tal-oben-s.webp",
+   "fm": "mini/tal-oben.webp"
+  },
+  {
+   "k": "zimmer-balkon",
+   "t": {
+    "de": "Junior Suite: Balkon mit zwei Liegen im Schnee, dahinter Tannen"
+   },
+   "b": "zimmer",
+   "s": "winter",
+   "f": "quer",
+   "w": 2560,
+   "h": 1707,
+   "art": "haus",
+   "q": "Website des Hauses, Mediathek",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "fotos/zimmer-balkon-l.webp",
+   "fs": "fotos/zimmer-balkon-s.webp",
+   "fm": "mini/zimmer-balkon.webp"
+  },
+  {
+   "k": "zimmer-abendlicht",
+   "t": {
+    "de": "Zimmer mit Bett und Sitzecke im Abendlicht"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1920,
+   "h": 950,
+   "art": "haus",
+   "q": "Booking.com, vom Haus eingestellt; hochgerechnet (Higgsfield, Bytedance-Hochrechner, ohne neue Inhalte) und Lichter der Fenster gedämpft, Tasty Studios 18.10.2026",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "fotos/zimmer-abendlicht-l.webp",
+   "fs": "fotos/zimmer-abendlicht-s.webp",
+   "fm": "mini/zimmer-abendlicht.webp"
+  },
+  {
+   "k": "auftakt-k8",
+   "t": {
+    "de": "auftakt-k8"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 800,
+   "h": 800,
+   "art": "haus",
+   "q": "Material des Hauses",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/auftakt-k8.webp",
+   "fs": "../../assets/img/auftakt-k8.webp",
+   "fm": "mini/auftakt-k8.webp"
+  },
+  {
+   "k": "haus-carlton",
+   "t": {
+    "de": "Carlton-Europe Vintage Adults Hotel in Interlaken"
+   },
+   "b": "familie",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1821,
+   "h": 864,
+   "art": "haus",
+   "q": "Website des Carlton-Europe (Entwurf Tasty Studios), Foto des Hauses",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-carlton.webp",
+   "fs": "../../assets/img/haus-carlton.webp",
+   "fm": "mini/haus-carlton.webp"
+  },
+  {
+   "k": "haus-gasterntal",
+   "t": {
+    "de": "Berghotel Gasterntal in Selden bei Kandersteg"
+   },
+   "b": "familie",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4032,
+   "h": 3024,
+   "art": "haus",
+   "q": "Website des Berghotels Gasterntal",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-gasterntal.webp",
+   "fs": "../../assets/img/haus-gasterntal.webp",
+   "fm": "mini/haus-gasterntal.webp"
+  },
+  {
+   "k": "haus-ruedihus",
+   "t": {
+    "de": "Landgasthof Ruedihus in Kandersteg zur blauen Stunde"
+   },
+   "b": "familie",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1658,
+   "h": 1080,
+   "art": "haus",
+   "q": "Booking.com, vom Landgasthof Ruedihus eingestellt",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-ruedihus.webp",
+   "fs": "../../assets/img/haus-ruedihus.webp",
+   "fm": "mini/haus-ruedihus.webp"
+  },
+  {
+   "k": "ueb-blumen",
+   "t": {
+    "de": "Rosenstrauss in Creme und Blau mit dunkelblauer Schleife"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1100,
+   "h": 822,
+   "art": "ki",
+   "q": "Mit KI erzeugt (Tasty Studios, Oktober 2026, GPT Image über Higgsfield), Platzhalter, bis das Haus eigene Fotos hat",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/ueb-blumen-1100.webp",
+   "fs": "../../assets/img/ueb-blumen-600.webp",
+   "fm": "mini/ueb-blumen.webp"
+  },
+  {
+   "k": "ueb-champagner",
+   "t": {
+    "de": "Eine Flasche Champagner in Geschenkpackung mit zwei Gläsern"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1100,
+   "h": 822,
+   "art": "ki",
+   "q": "Mit KI erzeugt (Tasty Studios, Oktober 2026, GPT Image über Higgsfield), Platzhalter, bis das Haus eigene Fotos hat",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/ueb-champagner-1100.webp",
+   "fs": "../../assets/img/ueb-champagner-600.webp",
+   "fm": "mini/ueb-champagner.webp"
+  },
+  {
+   "k": "ueb-massage",
+   "t": {
+    "de": "Geschenkgutschein für eine Massage"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1100,
+   "h": 822,
+   "art": "ki",
+   "q": "Mit KI erzeugt (Tasty Studios, Oktober 2026, GPT Image über Higgsfield), Platzhalter, bis das Haus eigene Fotos hat",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/ueb-massage-1100.webp",
+   "fs": "../../assets/img/ueb-massage-600.webp",
+   "fm": "mini/ueb-massage.webp"
+  },
+  {
+   "k": "ueb-pralinen",
+   "t": {
+    "de": "Feinste Trüffelpralinen"
+   },
+   "b": "kueche",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1100,
+   "h": 822,
+   "art": "ki",
+   "q": "Mit KI erzeugt (Tasty Studios, Oktober 2026, GPT Image über Higgsfield), Platzhalter, bis das Haus eigene Fotos hat",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/ueb-pralinen-1100.webp",
+   "fs": "../../assets/img/ueb-pralinen-600.webp",
+   "fm": "mini/ueb-pralinen.webp"
+  },
+  {
+   "k": "umg/allmenalp-1",
+   "t": {
+    "de": "Klettersteig an der Allmenalp mit Blick ins Tal"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Kent Wang, CC BY 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Klettersteig_Kandersteg-Allmenalp_07.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/allmenalp-1.webp",
+   "fs": "../../assets/img/umg/allmenalp-1.webp",
+   "fm": "mini/umg/allmenalp-1.webp"
+  },
+  {
+   "k": "umg/allmenalp-2",
+   "t": {
+    "de": "Klettersteig an der Allmenalp beim Wasserfall"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Kent Wang, CC BY 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Klettersteig_Kandersteg-Allmenalp_04.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/allmenalp-2.webp",
+   "fs": "../../assets/img/umg/allmenalp-2.webp",
+   "fm": "mini/umg/allmenalp-2.webp"
+  },
+  {
+   "k": "umg/bahnhof-1",
+   "t": {
+    "de": "Bahnhof Kandersteg"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Adrian Michael, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Kandersteg_Bahnhof_2019.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/bahnhof-1.webp",
+   "fs": "../../assets/img/umg/bahnhof-1.webp",
+   "fm": "mini/umg/bahnhof-1.webp"
+  },
+  {
+   "k": "umg/bahnhof-2",
+   "t": {
+    "de": "Zug im Bahnhof Kandersteg"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "JoachimKohler-HB, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Bahnhof_Kandersteg_mit_%22L%C3%B6tschberger%22_und_Autoverlad_(2015).jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/bahnhof-2.webp",
+   "fs": "../../assets/img/umg/bahnhof-2.webp",
+   "fm": "mini/umg/bahnhof-2.webp"
+  },
+  {
+   "k": "umg/blausee-1",
+   "t": {
+    "de": "Blausee mit dem Hotel am Ufer"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Barbara Steinemann, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Blausee_in_Kandergrund.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/blausee-1.webp",
+   "fs": "../../assets/img/umg/blausee-1.webp",
+   "fm": "mini/umg/blausee-1.webp"
+  },
+  {
+   "k": "umg/blausee-2",
+   "t": {
+    "de": "Boot auf dem Blausee"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "MartyRus, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Blausee_Lake_Boat_2015.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/blausee-2.webp",
+   "fs": "../../assets/img/umg/blausee-2.webp",
+   "fm": "mini/umg/blausee-2.webp"
+  },
+  {
+   "k": "umg/curling-1915",
+   "t": {
+    "de": "Curling auf dem Eisfeld in Kandersteg, um 1915"
+   },
+   "b": "tal",
+   "s": "winter",
+   "f": "quadrat",
+   "w": 900,
+   "h": 889,
+   "art": "frei",
+   "q": "Ward Muir, Public domain, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Curling_at_Kandersteg.jpg)",
+   "ue": false,
+   "alt": true,
+   "vn": false,
+   "fl": "../../assets/img/umg/curling-1915.webp",
+   "fs": "../../assets/img/umg/curling-1915.webp",
+   "fm": "mini/umg/curling-1915.webp"
+  },
+  {
+   "k": "umg/frutigen-1",
+   "t": {
+    "de": "Tropenhaus Frutigen"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Abaddon1337, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Tropenhaus_Frutigen_global_view.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/frutigen-1.webp",
+   "fs": "../../assets/img/umg/frutigen-1.webp",
+   "fm": "mini/umg/frutigen-1.webp"
+  },
+  {
+   "k": "umg/frutigen-2",
+   "t": {
+    "de": "Gebäude des Tropenhauses Frutigen"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Phzh, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Tropenhaus_Frutigen_Architektur.JPG)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/frutigen-2.webp",
+   "fs": "../../assets/img/umg/frutigen-2.webp",
+   "fm": "mini/umg/frutigen-2.webp"
+  },
+  {
+   "k": "umg/oeschinen-1",
+   "t": {
+    "de": "Oeschinensee vor den Felswänden"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Martin Thurnherr, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Oeschinensee_0437.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/oeschinen-1.webp",
+   "fs": "../../assets/img/umg/oeschinen-1.webp",
+   "fm": "mini/umg/oeschinen-1.webp"
+  },
+  {
+   "k": "umg/oeschinen-2",
+   "t": {
+    "de": "Oeschinensee von oben"
+   },
+   "b": "tal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Günter Seggebäing, Coesfeld, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:20190725_Oeschinensee-Panorama,_Kandersteg_(06540-42_stitch).jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/oeschinen-2.webp",
+   "fs": "../../assets/img/umg/oeschinen-2.webp",
+   "fm": "mini/umg/oeschinen-2.webp"
+  },
+  {
+   "k": "umg/ruedihus-1",
+   "t": {
+    "de": "Der Landgasthof Ruedihus im Sommer"
+   },
+   "b": "familie",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "haus",
+   "q": "Material der Familie Maeder (Schwesterhaus), vom Haus geliefert, Miniatur für die Umgebungskarte",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/ruedihus-1.webp",
+   "fs": "../../assets/img/umg/ruedihus-1.webp",
+   "fm": "mini/umg/ruedihus-1.webp"
+  },
+  {
+   "k": "umg/ruedihus-2",
+   "t": {
+    "de": "Giebel des Landgasthofs Ruedihus"
+   },
+   "b": "familie",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "haus",
+   "q": "Material der Familie Maeder (Schwesterhaus), vom Haus geliefert, Miniatur für die Umgebungskarte",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/ruedihus-2.webp",
+   "fs": "../../assets/img/umg/ruedihus-2.webp",
+   "fm": "mini/umg/ruedihus-2.webp"
+  },
+  {
+   "k": "umg/selden-1",
+   "t": {
+    "de": "Blick ins Gasterntal"
+   },
+   "b": "familie",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "haus",
+   "q": "Material der Familie Maeder (Schwesterhaus), vom Haus geliefert, Miniatur für die Umgebungskarte",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/selden-1.webp",
+   "fs": "../../assets/img/umg/selden-1.webp",
+   "fm": "mini/umg/selden-1.webp"
+  },
+  {
+   "k": "umg/selden-2",
+   "t": {
+    "de": "Giebel des Berghotels Gasterntal"
+   },
+   "b": "familie",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "haus",
+   "q": "Material der Familie Maeder (Schwesterhaus), vom Haus geliefert, Miniatur für die Umgebungskarte",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/selden-2.webp",
+   "fs": "../../assets/img/umg/selden-2.webp",
+   "fm": "mini/umg/selden-2.webp"
+  },
+  {
+   "k": "umg/sunnbuel-1",
+   "t": {
+    "de": "Gondel der Bahn auf Sunnbüel"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Adrian Michael, CC BY 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Gondelbahn_Kandersteg-Sunnb%C3%BCel.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/sunnbuel-1.webp",
+   "fs": "../../assets/img/umg/sunnbuel-1.webp",
+   "fm": "mini/umg/sunnbuel-1.webp"
+  },
+  {
+   "k": "umg/sunnbuel-2",
+   "t": {
+    "de": "Kandersteg von der Sunnbüel-Bahn aus"
+   },
+   "b": "tal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 480,
+   "art": "frei",
+   "q": "Adrian Michael, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Kandersteg_Seilbahn_Sunnb%C3%BCel.jpg)",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/umg/sunnbuel-2.webp",
+   "fs": "../../assets/img/umg/sunnbuel-2.webp",
+   "fm": "mini/umg/sunnbuel-2.webp"
+  }
+ ],
+ "dateien": [
+  {
+   "k": "logo",
+   "var": [
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-logo-weiss.png"
+     ],
+     "px": [
+      1800,
+      335
+     ]
+    },
+    {
+     "k": "hellgold",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-logo-hellgold.png"
+     ],
+     "px": [
+      1800,
+      335
+     ]
+    },
+    {
+     "k": "nacht",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-logo-nacht.png"
+     ],
+     "px": [
+      1800,
+      335
+     ]
+    },
+    {
+     "k": "gruen",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-logo-gruen.png"
+     ],
+     "px": [
+      1800,
+      335
+     ]
+    },
+    {
+     "k": "original",
+     "grund": "gruen",
+     "dateien": [
+      "waldhotel-doldenhorn-logo-druck-original.png"
+     ],
+     "px": [
+      1900,
+      480
+     ]
+    }
+   ]
+  },
+  {
+   "k": "zeichen",
+   "var": [
+    {
+     "k": "hellgold",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-tannen-hellgold.svg",
+      "waldhotel-doldenhorn-tannen-hellgold.png"
+     ],
+     "px": [
+      1000,
+      1446
+     ]
+    },
+    {
+     "k": "gold",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-tannen-gold.svg",
+      "waldhotel-doldenhorn-tannen-gold.png"
+     ],
+     "px": [
+      1000,
+      1446
+     ]
+    },
+    {
+     "k": "nacht",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-tannen-nacht.svg",
+      "waldhotel-doldenhorn-tannen-nacht.png"
+     ],
+     "px": [
+      1000,
+      1446
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-tannen-weiss.svg",
+      "waldhotel-doldenhorn-tannen-weiss.png"
+     ],
+     "px": [
+      1000,
+      1446
+     ]
+    },
+    {
+     "k": "gruen",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-tannen-gruen.svg",
+      "waldhotel-doldenhorn-tannen-gruen.png"
+     ],
+     "px": [
+      1000,
+      1446
+     ]
+    }
+   ]
+  },
+  {
+   "k": "name",
+   "var": [
+    {
+     "k": "nacht",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-name-nacht.svg",
+      "waldhotel-doldenhorn-name-nacht.png"
+     ],
+     "px": [
+      1800,
+      180
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-name-weiss.svg",
+      "waldhotel-doldenhorn-name-weiss.png"
+     ],
+     "px": [
+      1800,
+      180
+     ]
+    },
+    {
+     "k": "hellgold",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-name-hellgold.svg",
+      "waldhotel-doldenhorn-name-hellgold.png"
+     ],
+     "px": [
+      1800,
+      180
+     ]
+    }
+   ]
+  },
+  {
+   "k": "website",
+   "var": [
+    {
+     "k": "original",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-logo-website-heute.png"
+     ],
+     "px": [
+      392,
+      140
+     ]
+    }
+   ]
+  },
+  {
+   "k": "tapete",
+   "var": [
+    {
+     "k": "nacht",
+     "grund": "dunkel",
+     "dateien": [
+      "waldhotel-doldenhorn-tapete-nacht.png",
+      "waldhotel-doldenhorn-tapete-nacht.svg",
+      "waldhotel-doldenhorn-tapete-nacht.webp"
+     ],
+     "px": [
+      150,
+      170
+     ]
+    },
+    {
+     "k": "fuss",
+     "grund": "tief",
+     "dateien": [
+      "waldhotel-doldenhorn-tapete-fuss.png",
+      "waldhotel-doldenhorn-tapete-fuss.svg",
+      "waldhotel-doldenhorn-tapete-fuss.webp"
+     ],
+     "px": [
+      150,
+      170
+     ]
+    },
+    {
+     "k": "papier",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-tapete-papier.png",
+      "waldhotel-doldenhorn-tapete-papier.svg",
+      "waldhotel-doldenhorn-tapete-papier.webp"
+     ],
+     "px": [
+      150,
+      170
+     ]
+    }
+   ]
+  },
+  {
+   "k": "farben",
+   "var": [
+    {
+     "k": "alle",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-farben.css",
+      "waldhotel-doldenhorn-farben.json",
+      "waldhotel-doldenhorn-farben.ase"
+     ]
+    }
+   ]
+  },
+  {
+   "k": "schriften",
+   "var": [
+    {
+     "k": "alle",
+     "grund": "hell",
+     "dateien": [
+      "waldhotel-doldenhorn-schriften.zip"
+     ]
+    }
+   ]
+  }
+ ],
+ "farben": [
+  {
+   "k": "nacht",
+   "n": "Nacht",
+   "h": "#0D1621",
+   "rgb": [
+    13,
+    22,
+    33
+   ],
+   "r": "Grund der Seite, Kopfleiste, dunkle Abschnitte",
+   "g": "nacht",
+   "woher": "Grundfarbe der heutigen Website des Hauses"
+  },
+  {
+   "k": "tief",
+   "n": "Tief",
+   "h": "#070C14",
+   "rgb": [
+    7,
+    12,
+    20
+   ],
+   "r": "dunkelster Grund: Fuss und Menü",
+   "g": "nacht",
+   "woher": "dunkelster Grund: Fuss, Menü"
+  },
+  {
+   "k": "blau",
+   "n": "Blau",
+   "h": "#142235",
+   "rgb": [
+    20,
+    34,
+    53
+   ],
+   "r": "zweite dunkle Fläche, Karten auf der Nacht",
+   "g": "nacht",
+   "woher": "zweite dunkle Fläche, aufgehellt aus dem Nachtblau"
+  },
+  {
+   "k": "papier",
+   "n": "Papier",
+   "h": "#F1ECE2",
+   "rgb": [
+    241,
+    236,
+    226
+   ],
+   "r": "helle Abschnitte, Grund der Werkzeuge",
+   "g": "papier",
+   "woher": "aufgehellt aus der Tischwäsche des Au Gourmet (#c8c0b8)"
+  },
+  {
+   "k": "blatt",
+   "n": "Blatt",
+   "h": "#FBF8F1",
+   "rgb": [
+    251,
+    248,
+    241
+   ],
+   "r": "Karten, Blätter und Felder",
+   "g": "papier",
+   "woher": ""
+  },
+  {
+   "k": "leinen",
+   "n": "Leinen",
+   "h": "#D9D1C2",
+   "rgb": [
+    217,
+    209,
+    194
+   ],
+   "r": "Linien und zweite helle Fläche",
+   "g": "papier",
+   "woher": ""
+  },
+  {
+   "k": "hellgold",
+   "n": "Hellgold",
+   "h": "#E3D2A6",
+   "rgb": [
+    227,
+    210,
+    166
+   ],
+   "r": "Betonung in Titeln und Zeichen auf Dunkel",
+   "g": "gold",
+   "woher": "Betonung in Titeln auf Dunkel"
+  },
+  {
+   "k": "gold",
+   "n": "Gold",
+   "h": "#B89850",
+   "rgb": [
+    184,
+    152,
+    80
+   ],
+   "r": "Linien, Zeichen und Punkte, Tapete",
+   "g": "gold",
+   "woher": "Lilie von Relais & Châteaux in der Logo-Datei des Hauses, gemessen"
+  },
+  {
+   "k": "tinte",
+   "n": "Tinte",
+   "h": "#0F1620",
+   "rgb": [
+    15,
+    22,
+    32
+   ],
+   "r": "Schrift auf hellen Flächen",
+   "g": "tinte",
+   "woher": ""
+  },
+  {
+   "k": "schiefer",
+   "n": "Schiefer",
+   "h": "#384858",
+   "rgb": [
+    56,
+    72,
+    88
+   ],
+   "r": "kleine Flächen",
+   "g": "tinte",
+   "woher": "Servietten und Wände im Au Gourmet, gemessen"
+  },
+  {
+   "k": "stahl",
+   "n": "Stahl",
+   "h": "#3D5370",
+   "rgb": [
+    61,
+    83,
+    112
+   ],
+   "r": "kleine Marken und Angaben auf Hell",
+   "g": "tinte",
+   "woher": "kleine Marken auf Hell"
+  },
+  {
+   "k": "gruen",
+   "n": "Tannengrün",
+   "h": "#004A1F",
+   "rgb": [
+    0,
+    74,
+    31
+   ],
+   "r": "Farbfläche der Druckdatei, Gutschein, Bistrokarte",
+   "g": "druck",
+   "woher": ""
+  },
+  {
+   "k": "braun",
+   "n": "Dunkelbraun",
+   "h": "#481F00",
+   "rgb": [
+    72,
+    31,
+    0
+   ],
+   "r": "Überschriften und Wortmarke im Magazin und auf den Flyern",
+   "g": "druck",
+   "woher": ""
+  },
+  {
+   "k": "druckpapier",
+   "n": "Papier mit feinen Streifen",
+   "h": "#E3E3D1",
+   "rgb": [
+    227,
+    227,
+    209
+   ],
+   "r": "Innenseiten des Magazins, Flyer",
+   "g": "druck",
+   "woher": ""
+  }
+ ],
+ "gruppen": [
+  {
+   "k": "nacht",
+   "n": "Die Nacht",
+   "s": "Das Nachtblau der heutigen Website des Hauses trägt die dunklen Flächen, immer mit den Tannen als Tapete."
+  },
+  {
+   "k": "papier",
+   "n": "Das Papier",
+   "s": "Drei warme Weiss aus der Tischwäsche des Au Gourmet. Hier wird gelesen."
+  },
+  {
+   "k": "gold",
+   "n": "Das Gold",
+   "s": "Aus der Lilie von Relais & Châteaux in der Logo-Datei des Hauses. Zeichnet und betont, schreibt nie den Lesetext."
+  },
+  {
+   "k": "tinte",
+   "n": "Tinte und Schiefer",
+   "s": "Ein Schwarz mit Blau darin, nie reines Schwarz, und das Grau der Servietten im Au Gourmet."
+  },
+  {
+   "k": "druck",
+   "n": "Aus dem Druck des Hauses",
+   "s": "Die Farben, die das Haus heute auf Papier zeigt: Hausmagazin, Flyer, Gutschein. Das Grün gehört zum Logo im Druck, nicht zur Website."
+  }
+ ],
+ "glanz": [],
+ "groessen": {
+  "waldhotel-doldenhorn-farben.ase": 618,
+  "waldhotel-doldenhorn-farben.css": 1170,
+  "waldhotel-doldenhorn-farben.json": 2200,
+  "waldhotel-doldenhorn-logo-druck-original.png": 38938,
+  "waldhotel-doldenhorn-logo-gruen.png": 65110,
+  "waldhotel-doldenhorn-logo-hellgold.png": 65163,
+  "waldhotel-doldenhorn-logo-nacht.png": 65130,
+  "waldhotel-doldenhorn-logo-website-heute.png": 18119,
+  "waldhotel-doldenhorn-logo-weiss.png": 65078,
+  "waldhotel-doldenhorn-marke.zip": 730650,
+  "waldhotel-doldenhorn-name-hellgold.png": 36139,
+  "waldhotel-doldenhorn-name-hellgold.svg": 7961,
+  "waldhotel-doldenhorn-name-nacht.png": 36089,
+  "waldhotel-doldenhorn-name-nacht.svg": 7961,
+  "waldhotel-doldenhorn-name-weiss.png": 36035,
+  "waldhotel-doldenhorn-name-weiss.svg": 7961,
+  "waldhotel-doldenhorn-schriften.zip": 147665,
+  "waldhotel-doldenhorn-tannen-gold.png": 32569,
+  "waldhotel-doldenhorn-tannen-gold.svg": 2076,
+  "waldhotel-doldenhorn-tannen-gruen.png": 32565,
+  "waldhotel-doldenhorn-tannen-gruen.svg": 2076,
+  "waldhotel-doldenhorn-tannen-hellgold.png": 32565,
+  "waldhotel-doldenhorn-tannen-hellgold.svg": 2076,
+  "waldhotel-doldenhorn-tannen-nacht.png": 32567,
+  "waldhotel-doldenhorn-tannen-nacht.svg": 2076,
+  "waldhotel-doldenhorn-tannen-weiss.png": 32577,
+  "waldhotel-doldenhorn-tannen-weiss.svg": 2076,
+  "waldhotel-doldenhorn-tapete-fuss.png": 5510,
+  "waldhotel-doldenhorn-tapete-fuss.svg": 4046,
+  "waldhotel-doldenhorn-tapete-fuss.webp": 998,
+  "waldhotel-doldenhorn-tapete-nacht.png": 5032,
+  "waldhotel-doldenhorn-tapete-nacht.svg": 4046,
+  "waldhotel-doldenhorn-tapete-nacht.webp": 880,
+  "waldhotel-doldenhorn-tapete-papier.png": 5386,
+  "waldhotel-doldenhorn-tapete-papier.svg": 4046,
+  "waldhotel-doldenhorn-tapete-papier.webp": 942
+ },
+ "bereiche": [
+  "zimmer",
+  "kueche",
+  "spa",
+  "feste",
+  "haus",
+  "aussen",
+  "tal",
+  "familie"
+ ],
+ "schriften": [
+  {
+   "k": "a",
+   "n": "Libre Caslon",
+   "d": "librecaslon-700.woff2",
+   "r": "Grosse Zeilen, Titel, Namen und Preise",
+   "e": "fett 700, normale Schreibung",
+   "p": "Zu Gast – bei Freunden",
+   "w": 700
+  },
+  {
+   "k": "s",
+   "n": "Instrument Sans",
+   "d": "InstrumentSans-normal-400_600.woff2",
+   "r": "Lesetext",
+   "e": "400 bis 600, 19,4 px, Zeilenabstand 1,62",
+   "p": "Zimmer mit Balkon und Aussicht",
+   "w": 400
+  },
+  {
+   "k": "m",
+   "n": "DM Mono",
+   "d": "DMMono-normal-400.woff2",
+   "r": "Kleine Angaben",
+   "e": "400, Versalien, 17 % gesperrt",
+   "p": "Doldenhornstrasse 26 · 3718 Kandersteg",
+   "w": 400
+  },
+  {
+   "k": "m5",
+   "n": "DM Mono",
+   "d": "DMMono-normal-500.woff2",
+   "r": "Knöpfe",
+   "e": "500, Versalien, 17 % gesperrt",
+   "p": "Zimmer buchen",
+   "w": 500
+  }
+ ],
+ "stand": {
+  "fotos": 91,
+  "haus": 74,
+  "frei": 13,
+  "ki": 4,
+  "partner": 0,
+  "ue": 57,
+  "vn": 57,
+  "dateien": 36,
+  "datum": "19.10.2026"
+ }
+}

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8"><script src="/assets/js/oben.js?v=cf693918de"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mails · Waldhotel Doldenhorn</title>
+<meta name="description" content="Drei Mails an Gäste im Stil der neuen Website des Waldhotel Doldenhorn, als Idee.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1621">
+<link rel="preload" href="../werkbank/fonts/librecaslon-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../werkbank/werkbank.css?v=ff98c2c99d">
+<link rel="stylesheet" href="../werkbank/seiten.css?v=06aa5f1b43">
+<style>
+:root{--muster:url(../werkbank/muster.webp)}
+.mk{padding:clamp(120px,12vw,180px) var(--rand) clamp(40px,5vw,70px);text-align:center;color:#fff;background:var(--nacht) var(--muster) 50% 0/var(--musterb) auto}
+.mk svg{display:block;width:clamp(38px,3.7vw,58px);height:auto;margin:0 auto 18px;fill:var(--gold)}
+.mk p.mono{margin:0 0 18px;color:var(--gold)}
+.mk h1{margin:0;font-family:var(--serif);font-weight:700;font-size:clamp(2.2rem,5.3vw,5.4rem);line-height:1.04}
+.mk h1 em{font-style:normal;color:var(--gold)}
+.mk .lauf{margin:clamp(20px,2.3vw,34px) auto 0;max-width:60ch}
+.ms{padding:clamp(40px,5vw,80px) var(--rand) clamp(70px,8vw,120px);background:var(--navy)}
+.ms .in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.6vw,44px);align-items:start;max-width:1640px}
+.mb{scroll-margin-top:110px}
+.mb-art{margin:0 0 14px;text-align:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.mb-blatt{border-radius:18px;overflow:hidden;background:var(--weiss);color:var(--tinte);box-shadow:0 0 0 1px rgba(227,210,166,.24),0 50px 60px -34px rgba(0,0,0,.85)}
+.mb-kopf{display:flex;flex-direction:column;align-items:center;padding:30px 20px 26px;background:var(--nacht) var(--muster) 50% 0/var(--musterb) auto;color:#fbf8f1}
+.mb-kopf svg{width:30px;height:auto;fill:var(--gold);margin-bottom:12px}
+.mb-kopf b{font-family:var(--serif);font-weight:700;font-size:1.3rem;letter-spacing:.04em}
+.mb-kopf span{margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.mb-betreff{margin:0;padding:13px 26px;border-bottom:1px solid rgba(138,112,54,.24);font-size:.92rem;color:rgba(15,22,32,.8);background:var(--papier)}
+.mb-betreff span{margin-right:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.mb-foto{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.mb-in{padding:clamp(26px,2.6vw,40px) clamp(22px,2.6vw,40px) 10px}
+.mb-in h2{margin:0 0 18px;font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,2.05vw,2.1rem);line-height:1.12;text-wrap:balance}
+.mb-in p{margin:0 0 1em;font-size:1.02rem;line-height:1.66;color:rgba(15,22,32,.86)}
+.mb-angaben{margin:24px 0;padding:6px 20px;border-radius:14px;background:var(--papier);box-shadow:inset 0 2px 5px rgba(15,22,32,.08),inset 0 0 0 1px rgba(138,112,54,.2)}
+.mb-angaben div{display:flex;justify-content:space-between;gap:18px;padding:12px 0}
+.mb-angaben div+div{border-top:1px solid rgba(138,112,54,.22)}
+.mb-angaben dt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);line-height:1.9}
+.mb-angaben dd{margin:0;font-family:var(--serif);font-weight:700;font-size:1.04rem;text-align:right;white-space:nowrap}
+.mb-kn{text-align:center;margin:26px 0!important}
+.mb-kn a{display:inline-block;padding:16px 30px;border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-decoration:none;
+  background:linear-gradient(180deg,#253953,#101c2c 60%,#090f17);box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 14px 22px -12px rgba(13,22,33,.7)}
+.mb-gruss b{font-family:var(--serif);font-weight:700;font-size:1.14rem}
+.mb-fuss{display:flex;flex-direction:column;align-items:center;gap:5px;margin-top:8px;padding:24px 20px 28px;border-top:1px solid rgba(138,112,54,.24);text-align:center;font-size:.86rem;color:rgba(15,22,32,.66);background:var(--papier)}
+.mb-fuss b{font-family:var(--serif);font-weight:700;font-size:1.04rem;color:var(--tinte);margin-bottom:4px}
+.ms-hin{max-width:70ch;margin:clamp(34px,4vw,60px) auto 0;text-align:center;font-size:1rem;line-height:1.6;color:rgba(255,255,255,.72)}
+
+.ms{padding-inline:0}.ms-hin{padding-inline:var(--rand)}
+.ms-band{display:flex;gap:clamp(20px,2.4vw,40px);align-items:flex-start;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--rand);
+  padding:4px var(--rand) 40px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ms-band::-webkit-scrollbar{display:none}
+.ms-band:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.ms-band .mb{position:relative;flex:0 0 clamp(300px,34vw,520px);scroll-snap-align:start}
+.ms-band .mb:last-child{margin-inline-end:var(--rand)}
+.mb-ueber{display:flex;gap:16px;align-items:flex-start;margin:0 4px 18px;color:#fff}
+.mb-nr{font-family:var(--serif);font-weight:700;font-size:2.3rem;line-height:.9;color:var(--gold)}
+.mb-ueber__t{display:flex;flex-direction:column;gap:5px;min-width:0}
+.mb-ueber__t b{font-family:var(--serif);font-weight:700;font-size:1.3rem;line-height:1.15}
+.mb-ueber__t small{font-size:.86rem;line-height:1.4;color:rgba(255,255,255,.72)}
+.mb-ueber__t small span{display:inline-block;min-width:3.6em;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.mb-schalter{position:absolute;top:0;left:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.mb-blatt{max-height:760px;-webkit-mask-image:linear-gradient(#000 74%,transparent);mask-image:linear-gradient(#000 74%,transparent)}
+.mb-schalter:checked~.mb-blatt{max-height:none;-webkit-mask-image:none;mask-image:none}
+.mb-ganz{margin:-26px 0 0;text-align:center;position:relative}
+.mb-schalter:checked~.mb-ganz{margin-top:22px}
+.mb-ganz label{cursor:pointer}
+.mb-ganz__z,.mb-schalter:checked~.mb-ganz .mb-ganz__a{display:none}
+.mb-schalter:checked~.mb-ganz .mb-ganz__z{display:inline}
+.mb-schalter:checked~.mb-ganz i svg{transform:rotate(180deg)}
+.mb-schalter:focus-visible~.mb-ganz label{outline:2px solid var(--gold);outline-offset:3px}
+.ms-pfeile{display:flex;justify-content:center;gap:14px;margin-top:6px}
+.ms-pf{width:52px;height:52px;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;color:var(--tinte);
+  background:linear-gradient(180deg,#f3e6c4,#d9c38f 60%,#b89850);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 12px 20px -10px rgba(0,0,0,.7)}
+.ms-pf svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ms-pf:disabled{opacity:.35;cursor:default}
+@media (max-width:760px){.ms-band .mb{flex-basis:calc(100vw - 2 * var(--rand))}.ms-pfeile{display:none}.mb-blatt{max-height:700px}}
+@media (hover:none){.ms-pfeile{display:none}}
+</style>
+<link rel="stylesheet" href="../assets/css/auftritt.css?v=9d3c3a3c6d">
+<script src="/besuch.js?v=108cf13990" defer></script><script src="/verweil.js?v=5d7a8c4284" defer></script></head>
+<body class="haus-waldhotel-doldenhorn">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="hz"><path fill-rule="nonzero" d="M 283.816406 441.621094 L 282.855469 445.226562 L 298.234375 445.226562 L 297.273438 441.621094 Z M 285.019531 436.9375 L 284.054688 440.78125 L 297.035156 440.78125 L 296.074219 436.9375 Z M 298.355469 436.9375 L 297.394531 440.78125 L 312.894531 440.78125 L 311.8125 436.9375 Z M 286.21875 432.25 L 285.136719 436.09375 L 295.832031 436.09375 L 294.871094 432.25 Z M 299.558594 432.25 L 298.476562 436.09375 L 311.574219 436.09375 L 310.613281 432.25 Z M 287.421875 427.683594 L 286.460938 431.53125 L 288.503906 431.53125 L 289.34375 427.683594 Z M 290.183594 427.683594 L 289.105469 431.53125 L 298.835938 431.53125 L 299.796875 427.683594 Z M 300.757812 427.683594 L 299.675781 431.53125 L 310.371094 431.53125 L 309.410156 427.683594 Z M 288.621094 422.996094 L 287.660156 426.84375 L 289.703125 426.84375 L 290.664062 422.996094 Z M 291.386719 422.996094 L 290.425781 426.84375 L 300.039062 426.84375 L 301 422.996094 Z M 301.960938 422.996094 L 300.878906 426.84375 L 309.167969 426.84375 L 308.207031 422.996094 Z M 289.824219 418.3125 L 288.863281 422.15625 L 290.90625 422.15625 L 291.625 419.394531 L 291.265625 418.3125 Z M 292.589844 418.3125 L 291.625 422.15625 L 301.238281 422.15625 L 301.71875 419.992188 L 301.238281 418.3125 Z M 303.164062 418.3125 L 302.082031 422.15625 L 307.96875 422.15625 L 307.007812 418.3125 Z M 289.945312 417.46875 L 291.027344 417.46875 L 290.546875 415.425781 Z M 293.789062 413.625 L 292.828125 417.46875 L 301.121094 417.46875 L 300.160156 413.625 Z M 304.363281 413.625 L 303.28125 417.46875 L 306.765625 417.46875 L 305.804688 413.625 Z M 304.484375 412.785156 L 305.566406 412.785156 L 304.964844 410.742188 C 305.085938 410.742188 304.484375 412.785156 304.484375 412.785156 M 294.992188 408.9375 L 294.03125 412.785156 L 299.917969 412.785156 L 298.957031 408.9375 Z M 297.035156 401.25 L 295.230469 408.097656 L 298.714844 408.097656 Z M 297.035156 401.25 "/></g></defs></svg>
+<div class="gang-linie" aria-hidden="true"></div>
+<header class="leiste leiste--sofort"><div class="insel">
+  <a class="insel__m" href="../werkbank/index.html"><svg class="hz" viewBox="282.26 400.65 31.24 45.18" aria-hidden="true" fill="currentColor"><use href="#hz"/></svg><b>WALDHOTEL DOLDENHORN</b><span>Mails</span></a>
+  <a class="glanz" href="../werkbank/index.html">Alles auf einen Blick<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
+</div></header>
+<main>
+<section class="mk">
+  <svg viewBox="282.26 400.65 31.24 45.18" aria-hidden="true"><use href="#hz"/></svg>
+  <p class="mono">Als Idee</p>
+  <h1>Drei Mails, <em>im Ton Ihres Hauses.</em></h1>
+  <div class="lauf"><p>Drei Nachrichten, die ein Gast von Ihrem Haus bekommen könnte, habe ich als Idee im Stil der neuen Seite gesetzt: vor der Anreise, nach einer Tisch-Anfrage und zum Gutschein. Namen, Daten und Beträge darin sind Beispiele. Verschickt wird nichts, es sind Vorschläge zum Ansehen.</p></div>
+</section>
+<section class="ms"><div class="ms-band" id="mband" tabindex="0" aria-label="Die drei Mails, zum Blättern">
+<article class="mb" id="anreise">
+  <header class="mb-ueber"><span class="mb-nr">01</span><span class="mb-ueber__t"><b>Vor der Anreise</b><small><span>Von</span> Waldhotel Doldenhorn · info@doldenhorn.ch</small><small><span>Wann</span> Eine Woche vor der Anreise</small></span></header>
+  <input type="checkbox" class="mb-schalter" id="ganz-anreise" aria-label="Ganze Mail «Vor der Anreise» zeigen">
+  <div class="mb-blatt">
+    <header class="mb-kopf"><svg viewBox="282.26 400.65 31.24 45.18" aria-hidden="true"><use href="#hz"/></svg><b>Waldhotel Doldenhorn</b><span>Kandersteg</span></header>
+    <p class="mb-betreff"><span>Betreff</span>In einer Woche sind Sie bei uns</p>
+    <img class="mb-foto" src="../assets/img/haus-wiese-g.webp?v=d23ad82c-dh1410" alt="" loading="lazy" decoding="async">
+    <div class="mb-in">
+      <h2>Wir freuen uns auf Sie.</h2>
+      <p class="mb-anrede">Liebe Frau Muster,</p>
+      <p>in einer Woche beginnt Ihr Aufenthalt im Waldhotel Doldenhorn. Damit bei Ihrer Ankunft alles bereitsteht, haben wir eine Seite für Sie eingerichtet.</p><p>Dort sagen Sie uns, wann Sie ungefähr ankommen. Und wenn Sie mögen, bestellen Sie eine Überraschung aufs Zimmer, buchen einen Termin im Spa oder reservieren einen Tisch für den ersten Abend.</p>
+      <dl class="mb-angaben"><div><dt>Anreise</dt><dd>13. November 2026</dd></div><div><dt>Abreise</dt><dd>16. November 2026</dd></div><div><dt>Gäste</dt><dd>2 Personen</dd></div></dl>
+      <p class="mb-kn"><a href="../anreise.html" target="_blank" rel="noopener">Vor Ihrer Anreise</a></p>
+      <p class="mb-gruss">Herzlich<br><b>Ihre Familie Maeder</b></p>
+    </div>
+    <footer class="mb-fuss"><b>Zu Gast – bei Freunden</b><span>Doldenhornstrasse 26 · 3718 Kandersteg</span><span>+41 33 675 81 81 · info@doldenhorn.ch</span></footer>
+  </div>
+  <p class="mb-ganz"><label class="kn kn--klein" for="ganz-anreise"><span class="mb-ganz__a">Ganze Mail</span><span class="mb-ganz__z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></label></p>
+</article><article class="mb" id="tisch">
+  <header class="mb-ueber"><span class="mb-nr">02</span><span class="mb-ueber__t"><b>Nach der Tisch-Anfrage</b><small><span>Von</span> Waldhotel Doldenhorn · info@doldenhorn.ch</small><small><span>Wann</span> Gleich nach der Anfrage</small></span></header>
+  <input type="checkbox" class="mb-schalter" id="ganz-tisch" aria-label="Ganze Mail «Nach der Tisch-Anfrage» zeigen">
+  <div class="mb-blatt">
+    <header class="mb-kopf"><svg viewBox="282.26 400.65 31.24 45.18" aria-hidden="true"><use href="#hz"/></svg><b>Waldhotel Doldenhorn</b><span>Kandersteg</span></header>
+    <p class="mb-betreff"><span>Betreff</span>Ihre Tisch-Anfrage ist bei uns</p>
+    <img class="mb-foto" src="../assets/img/salon-x.webp?v=c17f31de-dh1410" alt="" loading="lazy" decoding="async">
+    <div class="mb-in">
+      <h2>Ihr Tisch im Au Gourmet.</h2>
+      <p class="mb-anrede">Liebe Frau Muster,</p>
+      <p>vielen Dank für Ihre Anfrage. Wir haben sie erhalten und melden uns so bald wie möglich mit der Bestätigung.</p><p>Falls sich an Ihren Plänen etwas ändert, erreichen Sie uns unter +41 33 675 81 81.</p>
+      <dl class="mb-angaben"><div><dt>Restaurant</dt><dd>Au Gourmet</dd></div><div><dt>Tag</dt><dd>13. November 2026</dd></div><div><dt>Uhrzeit</dt><dd>19:00 Uhr</dd></div><div><dt>Personen</dt><dd>2</dd></div></dl>
+      <p class="mb-kn"><a href="../kueche.html" target="_blank" rel="noopener">Die Karte ansehen</a></p>
+      <p class="mb-gruss">Herzlich<br><b>Ihre Familie Maeder</b></p>
+    </div>
+    <footer class="mb-fuss"><b>Zu Gast – bei Freunden</b><span>Doldenhornstrasse 26 · 3718 Kandersteg</span><span>+41 33 675 81 81 · info@doldenhorn.ch</span></footer>
+  </div>
+  <p class="mb-ganz"><label class="kn kn--klein" for="ganz-tisch"><span class="mb-ganz__a">Ganze Mail</span><span class="mb-ganz__z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></label></p>
+</article><article class="mb" id="gutschein">
+  <header class="mb-ueber"><span class="mb-nr">03</span><span class="mb-ueber__t"><b>Zum Gutschein</b><small><span>Von</span> Waldhotel Doldenhorn · info@doldenhorn.ch</small><small><span>Wann</span> Zusammen mit dem Gutschein</small></span></header>
+  <input type="checkbox" class="mb-schalter" id="ganz-gutschein" aria-label="Ganze Mail «Zum Gutschein» zeigen">
+  <div class="mb-blatt">
+    <header class="mb-kopf"><svg viewBox="282.26 400.65 31.24 45.18" aria-hidden="true"><use href="#hz"/></svg><b>Waldhotel Doldenhorn</b><span>Kandersteg</span></header>
+    <p class="mb-betreff"><span>Betreff</span>Ihr Gutschein vom Waldhotel Doldenhorn</p>
+    <img class="mb-foto" src="../assets/img/kamin-x.webp?v=82a570bb-dh1410" alt="" loading="lazy" decoding="async">
+    <div class="mb-in">
+      <h2>Ein Geschenk aus Kandersteg.</h2>
+      <p class="mb-anrede">Liebe Frau Muster,</p>
+      <p>Ihr Gutschein ist fertig. Sie finden ihn im Anhang als PDF, mit Ihrer Widmung und seiner Nummer. Er lässt sich ausdrucken oder gleich weiterschicken.</p><p>Wir freuen uns auf den Besuch.</p>
+      <dl class="mb-angaben"><div><dt>Wert</dt><dd>CHF 300.00</dd></div><div><dt>Für</dt><dd>Lena Berger</dd></div><div><dt>Von</dt><dd>Anna Muster</dd></div></dl>
+      <p class="mb-kn"><a href="../angebote.html#gutschein" target="_blank" rel="noopener">Gutscheine ansehen</a></p>
+      <p class="mb-gruss">Herzlich<br><b>Ihre Familie Maeder</b></p>
+    </div>
+    <footer class="mb-fuss"><b>Zu Gast – bei Freunden</b><span>Doldenhornstrasse 26 · 3718 Kandersteg</span><span>+41 33 675 81 81 · info@doldenhorn.ch</span></footer>
+  </div>
+  <p class="mb-ganz"><label class="kn kn--klein" for="ganz-gutschein"><span class="mb-ganz__a">Ganze Mail</span><span class="mb-ganz__z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></label></p>
+</article>
+</div>
+<div class="ms-pfeile" aria-hidden="false"><button type="button" class="ms-pf" data-r="-1" aria-label="Vorige Mail"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button><button type="button" class="ms-pf" data-r="1" aria-label="Nächste Mail"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button></div>
+<p class="ms-hin">An- und Abreisezeiten stehen in keiner der drei Mails, weil ich sie in Ihren Unterlagen nicht gefunden habe. Sobald ich sie von Ihnen habe, trage ich sie nach.</p>
+</section>
+</main>
+<footer class="fuss fuss--kurz"><div class="in">
+  <div><b>Mails zum Entwurf</b><p>Das sind Ideen von Robert Reff, Tasty Studios, und keine Nachrichten des Hauses. Namen, Daten und Beträge sind Beispiele. Fotos, Zeichen und Texte gehören der Familie Maeder und den jeweiligen Fotografen.</p></div>
+  <div class="r mono"><span>robert@tasty-studios.de</span><span>Stand 18.10.2026</span></div>
+</div></footer>
+<script src="../werkbank/werkbank.js?v=587be648cc"></script>
+<script src="band.js?v=53cc9a649d" defer></script>
+<script src="../assets/js/auftritt.js?v=3690c50034" defer data-teile=".mk h1, .mk p, .mb-blatt"></script>
+<script src="../assets/js/zur-werkbank.js?v=44fddfe352" defer data-zw></script>
+</body>
+</html>
