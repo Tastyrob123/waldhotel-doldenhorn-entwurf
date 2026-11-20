@@ -167,3 +167,16 @@
   if (rep) Location.prototype.replace = function (u) { return rep.call(this, brauchts(u) ? ziel(u) : u); };
   var wo = window.open; window.open = function (u) { var a = [].slice.call(arguments); if (u && brauchts(u)) a[0] = ziel(u); return wo.apply(window, a); };
 })();
+/* Prüfung 20.11.2026: Online gibt es keinen Server für PDF-Verweise der Karten. «Veröffentlichte PDF» und «PDF öffnen» in Karten & Preislisten
+   (/_werkzeuge/carte/api/pdf?z=<karte>&q=live) führen auf die PDF, die heute auf der Website liegt (/unterlagen/pdf/<karte>.pdf), wie der Server es tut, solange nichts veröffentlicht ist. */
+(function () {
+  function um(a) {
+    var u; try { u = new URL(a.getAttribute('href'), location.href); } catch (e) { return; }
+    if (u.origin !== location.origin || !/\/_?werkzeuge\/carte\/api\/pdf$/.test(u.pathname)) return;
+    var z = u.searchParams.get('z'); if (!z || !/^[a-z0-9-]+$/.test(z) || (u.searchParams.get('q') || 'live') !== 'live') return;
+    a.setAttribute('href', '/unterlagen/pdf/' + z + '.pdf');
+  }
+  ['pointerdown', 'mousedown', 'click', 'auxclick', 'contextmenu', 'keydown', 'touchstart'].forEach(function (n) {
+    document.addEventListener(n, function (ev) { var a = ev.target && ev.target.closest && ev.target.closest('a[href]'); if (a) um(a); }, { capture: true, passive: true });
+  });
+})();
