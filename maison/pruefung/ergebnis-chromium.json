@@ -1,0 +1,882 @@
+[
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M00",
+  "name": "Öffnen ohne Fehler",
+  "ok": true,
+  "beleg": "geladen in 2102 ms"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "R07",
+  "name": "Kein seitliches Verrutschen",
+  "ok": true,
+  "beleg": "1440 / 1440"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M03a",
+  "name": "Gruss nach Tageszeit, Datum ausgeschrieben (de-CH)",
+  "ok": true,
+  "beleg": "Guten Morgen. · Samstag, 17. Oktober 2026"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M03b",
+  "name": "?gruss=morgen",
+  "ok": true,
+  "beleg": "Guten Morgen."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M03b",
+  "name": "?gruss=tag",
+  "ok": true,
+  "beleg": "Guten Tag."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M03b",
+  "name": "?gruss=abend",
+  "ok": true,
+  "beleg": "Guten Abend."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04",
+  "name": "Sechs Schilder mit Raumbild, Raum gross daneben",
+  "ok": true,
+  "beleg": "1 WEBSITE PFLEGEN Le Bureau WEBS | 2 KARTEN UND PREISE La Carte KAR | 3 DRUCKSACHEN UND BEITRÄGE L’Imp | 4 GÄSTEN ANTWORTEN La Réception  | 5 MARKE UND BILDER Le Livre 86 F | 6 BESUCHE DER WEBSITE Le Registr"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04e",
+  "name": "Zeiger auf einem Schild zeigt seinen Raum (harter Wechsel)",
+  "ok": true,
+  "beleg": "true,true,true,true,true,true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04f",
+  "name": "Tastatur-Fokus auf einem Schild zeigt seinen Raum",
+  "ok": true,
+  "beleg": "Raum 3"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04g",
+  "name": "Bildwechsel ohne Überblendung",
+  "ok": true,
+  "beleg": "0s"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05a",
+  "name": "Le Bureau antwortet nicht: Satz ohne Zahl, «–»",
+  "ok": true,
+  "beleg": "Website des Hauses · –/–"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05b",
+  "name": "La Carte antwortet nicht: Satz ohne Zahl, «–»",
+  "ok": true,
+  "beleg": "Karten des Hauses"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05c",
+  "name": "La Réception antwortet nicht: Satz ohne Zahl",
+  "ok": true,
+  "beleg": "Rezeption im Chat"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05e",
+  "name": "Le Livre: Fotos und Dateien aus livre.json",
+  "ok": true,
+  "beleg": "86 Fotos · 36 Dateien"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05f",
+  "name": "L’Imprimerie: Zahl der Vorlagen und Arten aus ihrer Liste",
+  "ok": true,
+  "beleg": "252 Vorlagen in 23 Arten"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M06",
+  "name": "Zahlenzeile: heute, Tageswert zur Buchung, «Beispiel»",
+  "ok": true,
+  "beleg": "HEUTE 0 Besuche 0 zur Buchung LE REGISTRE ÖFFNEN \" · Beispiel\" · erwartet heute 0, Buchung 0"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01a",
+  "name": "Insel: Zeichen, «La Maison», sechs Sprungmarken",
+  "ok": true,
+  "beleg": "#bureau #carte #imprimerie #reception #livre #registre"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01b",
+  "name": "Sprungmarke #bureau springt, ist markiert",
+  "ok": true,
+  "beleg": "Oberkante 96, markiert true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01b",
+  "name": "Sprungmarke #carte springt, ist markiert",
+  "ok": true,
+  "beleg": "Oberkante 96, markiert true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01b",
+  "name": "Sprungmarke #imprimerie springt, ist markiert",
+  "ok": true,
+  "beleg": "Oberkante 96, markiert true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01b",
+  "name": "Sprungmarke #reception springt, ist markiert",
+  "ok": true,
+  "beleg": "Oberkante 96, markiert true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01b",
+  "name": "Sprungmarke #livre springt, ist markiert",
+  "ok": true,
+  "beleg": "Oberkante 96, markiert true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01b",
+  "name": "Sprungmarke #registre springt, ist markiert",
+  "ok": true,
+  "beleg": "Oberkante 96, markiert true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M01c",
+  "name": "Buchstaben rollen beim Überfahren",
+  "ok": true,
+  "beleg": "none → matrix(1, 0, 0, 1, 0, -11.7059)"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M02a",
+  "name": "Eck-Knöpfe «Anleitungen» und «Website ansehen» mit Glanzkante",
+  "ok": true,
+  "beleg": "[\"Anleitungen #fuss true\",\"Website ansehen /index.html true\"]"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M02b",
+  "name": "«Anleitungen» springt zum Fuss",
+  "ok": true,
+  "beleg": "Fuss oben bei 517"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M07",
+  "name": "Goldband läuft nur im Bild, hält beim Überfahren",
+  "ok": true,
+  "beleg": "im Bild true/running, überfahren paused, ausserhalb läuft=false"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M09a",
+  "name": "Nach dem Durchscrollen ist jedes Stück angekommen",
+  "ok": true,
+  "beleg": "alle da"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M09b",
+  "name": "Jede Etappe schiebt sich als Platte mit runden Ecken über die vorige",
+  "ok": true,
+  "beleg": "true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M15",
+  "name": "Alle Bilder geladen, wenn ihr Stück ankommt",
+  "ok": true,
+  "beleg": "alle"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M08a",
+  "name": "Sechs Etappen mit Zeichen, Titel, Satz, Bühne, Tafel «So geht’s» und Knopf",
+  "ok": true,
+  "beleg": "bureau:4/2 carte:4/1 imprimerie:4/1 reception:3/1 livre:3/3 registre:0/1"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M08b",
+  "name": "Echte Bildschirme der Werkzeuge (Platzhalter nur, wo noch nicht geliefert)",
+  "ok": true,
+  "beleg": "alle echt"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M10",
+  "name": "Fuss: Haus, Anleitungen (wo es sie gibt), Fragen, kein fester Werkbank-Knopf",
+  "ok": true,
+  "beleg": "/studio/anleitung/index.html /_werkzeuge/carte/anleitung.html /_werkzeuge/reception/anleitung.html /_werkzeuge/livre/anleitung.html /_werkzeuge/registre/anleitung.html mailto:robert@tasty-studios.de?subject=La%20Maison%20Waldhotel%20Doldenhorn"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "K01",
+  "name": "Keine Skriptfehler",
+  "ok": true,
+  "beleg": "keine"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "K02",
+  "name": "Keine toten Anfragen (ausser Stand-Wegen nicht laufender Werkzeuge)",
+  "ok": true,
+  "beleg": "keine"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M12",
+  "name": "Taste 1 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /studio/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M12",
+  "name": "Taste 2 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/carte/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M12",
+  "name": "Taste 3 öffnet das Werkzeug",
+  "ok": true,
+  "beleg": "/_werkzeuge/imprimerie/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M12",
+  "name": "Taste 4 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/reception/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M12",
+  "name": "Taste 5 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/livre/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M12",
+  "name": "Taste 6 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/registre/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04b",
+  "name": "Klick auf Schild 1 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /studio/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04b",
+  "name": "Klick auf Schild 2 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/carte/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04b",
+  "name": "Klick auf Schild 3 öffnet das Werkzeug",
+  "ok": true,
+  "beleg": "/_werkzeuge/imprimerie/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04c",
+  "name": "Zurück in La Maison",
+  "ok": true,
+  "beleg": "/_werkzeuge/maison/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04b",
+  "name": "Klick auf Schild 4 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/reception/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04b",
+  "name": "Klick auf Schild 5 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/livre/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04b",
+  "name": "Klick auf Schild 6 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /_werkzeuge/registre/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "L01",
+  "name": "Jeder Link antwortet (14)",
+  "ok": null,
+  "beleg": "Werkzeug läuft nicht: 0 /studio/ | Werkzeug läuft nicht: 0 /_werkzeuge/carte/ | Werkzeug läuft nicht: 0 /_werkzeuge/reception/ | Werkzeug läuft nicht: 0 /_werkzeuge/livre/ | Werkzeug läuft nicht: 0 /_werkzeuge/registre/ | Werkzeug läuft nicht: 0 /studio/anleitung/index.html"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M11a",
+  "name": "Rundgang mit ?rundgang: fünf Schritte bis zum Ende, Taste 2 still",
+  "ok": true,
+  "beleg": "5 Karten: Das ist La Maison / Jedes Schild ist ein Werkzeug / Heute auf der Website / Immer erreichbar / Jedes Werkzeug stellt sich vor"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M11b",
+  "name": "Prüfbrowser (webdriver) sieht keinen Rundgang",
+  "ok": true,
+  "beleg": "kein Rundgang"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "R19",
+  "name": "«Zur Werkbank» nur aus der Werkbank geöffnet",
+  "ok": true,
+  "beleg": "ohne Herkunft: false, mit: /werkbank/index.html#werkzeuge, Adresse danach /_werkzeuge/maison/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "R17",
+  "name": "«Weniger Bewegung»: Schilder und Stücke stehen sofort, Band steht",
+  "ok": true,
+  "beleg": "alles ruhig · Band none"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "R04",
+  "name": "Startfehler-Tür mit Grund und «Prüfung öffnen», Seite bleibt sichtbar",
+  "ok": true,
+  "beleg": "La Maison startet nicht. Uncaught Error: Probefehler der Prüfung · maison.js?v=20261017a:1 PRÜFUNG ÖFFNEN"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "R03",
+  "name": "Fehlermelder schreibt nach dh_fehler und an Le Bureau (abgefangen)",
+  "ok": true,
+  "beleg": "[{\"z\":\"2026-10-17T03:30:24.469Z\",\"t\":\"La Maison: Uncaught Error: Probefehler der Prüfung · maison.js?v=2026101 · {\"text\":\"La Maison · Uncaught Error: Probefehler der Prüfung · maison.js?v=20261"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "R04b",
+  "name": "Tür auch, wenn maison.js fehlt",
+  "ok": true,
+  "beleg": "Die Datei maison.js liess sich nicht laden."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "R03b",
+  "name": "Fehlermelder: höchstens 20 je Seite, Netzfehler nie",
+  "ok": true,
+  "beleg": "20 gemeldet"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05g",
+  "name": "Probe-Antworten: Bureau 3 im Entwurf, 7 Bereiche, 25 Seiten, 1 Sprache",
+  "ok": true,
+  "beleg": "3 im Entwurf · 3 Änderungen im Entwurf. Zuletzt veröffentlicht am 16.10.2026."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05h",
+  "name": "Probe-Antworten: Carte 3 Karten, 1 Entwurf, neueste PDF 16.10.",
+  "ok": true,
+  "beleg": "{\"bereiche\":\"7\",\"seiten\":\"25\",\"sprachen\":\"1\",\"karten\":\"3\",\"pdf\":\"16.10.\",\"entwurf\":\"1\"}"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05j",
+  "name": "Probe-Antworten: Réception 2 neue, 1 Frage ohne Antwort",
+  "ok": true,
+  "beleg": "2 neue Anfragen · 1 Frage ohne Antwort"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05k",
+  "name": "Probe-Antworten: Livre 180 Fotos, 33 Dateien, KI und nachgeschärft getrennt",
+  "ok": true,
+  "beleg": "180 Fotos in fertigen Grössen, davon 4 mit KI erzeugt und 12 nachgeschärft, alle gekennzeichnet. 33 Dateien für Agenturen und Druckereien, dazu die Markenprüfung."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05l",
+  "name": "Le Bureau meldet keine weitere Sprache: «Deutsch»; nichts offen: «Veröffentlicht <Datum>»",
+  "ok": true,
+  "beleg": "Deutsch · Veröffentlicht 16.10.2026"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M05i",
+  "name": "Werkzeug fällt aus (500, leer, 404, Netz weg): Satz ohne Zahl, «–», nichts geschätzt",
+  "ok": true,
+  "beleg": "{\"bureau-kurz\":\"Website des Hauses\",\"carte-kurz\":\"Karten des Hauses\",\"imprimerie-kurz\":\"Vorlagen, druckfertig\",\"reception-kurz\":\"Rezeption im Chat\",\"livre-kurz\":\"Fotos, Dateien, Markenprüfung\",\"registre-kurz\":\"Besuche ohne Namen\",\"registre-heute\":\"–\",\"registre-buchung\":\"–\",\"bureau\":\"Der Stand ist ge"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M14",
+  "name": "Stand-Weg mit Ersatz: erster fällt aus, zweiter gilt; «zur Buchung» = Tageswert (4, nicht 13)",
+  "ok": true,
+  "beleg": "17 · 4 · Beispielwerte · Letzte 30 Tage · 400 Besuche · 900 angesehene Seiten · 5 Länder"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M14b",
+  "name": "Ersatzweg (abgelegte Beispielwerte): auf jetzt gekürzt, gleiche Zahlen wie das Werkzeug",
+  "ok": true,
+  "beleg": "0 · Beispielwerte · Letzte 30 Tage · 900 Besuche · 2'846 angesehene Seiten · 8 Länder · 5.9 % · Werkzeug [\"0\",\"900\",\"5.9 %\",true]"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "S01",
+  "name": "Schadcode aus Werkzeug-Antworten wird nicht ausgeführt, nur Zahlen gehen in die Seite",
+  "ok": true,
+  "beleg": "{\"img\":0,\"script\":false,\"breit\":1440,\"innen\":1440,\"bureau\":\"Nichts offen im Entwurf. Noch nichts veröffentlicht.\",\"livre\":\"Fotos, Dateien, Markenprüfung\",\"impr\":\"Vorlagen, druckfertig\",\"heute\":\"–\"}"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "S02",
+  "name": "5000 Zeichen, Emoji, Umlaute: kein seitliches Verrutschen",
+  "ok": true,
+  "beleg": "1440 / 1440"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "1440x900",
+  "nr": "M04d",
+  "name": "Schilder deckend ab dem ersten Bild, Auftakt nach dem Dekodieren",
+  "ok": true,
+  "beleg": "1,1,1,1,1,1,1,1 · bereit true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M00",
+  "name": "Öffnen ohne Fehler",
+  "ok": true,
+  "beleg": "geladen in 2044 ms"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "R07",
+  "name": "Kein seitliches Verrutschen",
+  "ok": true,
+  "beleg": "390 / 390"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M03a",
+  "name": "Gruss nach Tageszeit, Datum ausgeschrieben (de-CH)",
+  "ok": true,
+  "beleg": "Guten Morgen. · Samstag, 17. Oktober 2026"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M04",
+  "name": "Sechs Schilder mit Raumbild, Raum gross daneben",
+  "ok": true,
+  "beleg": "1 WEBSITE PFLEGEN Le Bureau WEBS | 2 KARTEN UND PREISE La Carte KAR | 3 DRUCKSACHEN UND BEITRÄGE L’Imp | 4 GÄSTEN ANTWORTEN La Réception  | 5 MARKE UND BILDER Le Livre 86 F | 6 BESUCHE DER WEBSITE Le Registr"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05a",
+  "name": "Le Bureau antwortet nicht: Satz ohne Zahl, «–»",
+  "ok": true,
+  "beleg": "Website des Hauses · –/–"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05b",
+  "name": "La Carte antwortet nicht: Satz ohne Zahl, «–»",
+  "ok": true,
+  "beleg": "Karten des Hauses"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05c",
+  "name": "La Réception antwortet nicht: Satz ohne Zahl",
+  "ok": true,
+  "beleg": "Rezeption im Chat"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05e",
+  "name": "Le Livre: Fotos und Dateien aus livre.json",
+  "ok": true,
+  "beleg": "86 Fotos · 36 Dateien"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05f",
+  "name": "L’Imprimerie: Zahl der Vorlagen und Arten aus ihrer Liste",
+  "ok": true,
+  "beleg": "252 Vorlagen in 23 Arten"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M06",
+  "name": "Zahlenzeile: heute, Tageswert zur Buchung, «Beispiel»",
+  "ok": true,
+  "beleg": "HEUTE 0 Besuche 0 zur Buchung LE REGISTRE ÖFFNEN \" · Beispiel\" · erwartet heute 0, Buchung 0"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M01d",
+  "name": "Unter 1360 px nur die Marke in der Insel",
+  "ok": true,
+  "beleg": "false,false,false,false,false,false"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M02a",
+  "name": "Eck-Knöpfe «Anleitungen» und «Website ansehen» mit Glanzkante",
+  "ok": true,
+  "beleg": "[\"Anleitungen #fuss false\",\"Website ansehen /index.html true\"]"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M02b",
+  "name": "«Anleitungen» am Handy ausgeblendet (wie Vorlage)",
+  "ok": true,
+  "beleg": "nicht sichtbar"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M07",
+  "name": "Goldband läuft nur im Bild, hält beim Überfahren",
+  "ok": true,
+  "beleg": "im Bild true/running, überfahren paused, ausserhalb läuft=false"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M09a",
+  "name": "Nach dem Durchscrollen ist jedes Stück angekommen",
+  "ok": true,
+  "beleg": "alle da"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M09b",
+  "name": "Jede Etappe schiebt sich als Platte mit runden Ecken über die vorige",
+  "ok": true,
+  "beleg": "true"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M15",
+  "name": "Alle Bilder geladen, wenn ihr Stück ankommt",
+  "ok": true,
+  "beleg": "alle"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M08a",
+  "name": "Sechs Etappen mit Zeichen, Titel, Satz, Bühne, Tafel «So geht’s» und Knopf",
+  "ok": true,
+  "beleg": "bureau:4/2 carte:4/1 imprimerie:4/1 reception:3/1 livre:3/3 registre:0/1"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M08b",
+  "name": "Echte Bildschirme der Werkzeuge (Platzhalter nur, wo noch nicht geliefert)",
+  "ok": true,
+  "beleg": "alle echt"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M10",
+  "name": "Fuss: Haus, Anleitungen (wo es sie gibt), Fragen, kein fester Werkbank-Knopf",
+  "ok": true,
+  "beleg": "/studio/anleitung/index.html /_werkzeuge/carte/anleitung.html /_werkzeuge/reception/anleitung.html /_werkzeuge/livre/anleitung.html /_werkzeuge/registre/anleitung.html mailto:robert@tasty-studios.de?subject=La%20Maison%20Waldhotel%20Doldenhorn"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "K01",
+  "name": "Keine Skriptfehler",
+  "ok": true,
+  "beleg": "keine"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "K02",
+  "name": "Keine toten Anfragen (ausser Stand-Wegen nicht laufender Werkzeuge)",
+  "ok": true,
+  "beleg": "keine"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M04b",
+  "name": "Antippen von Schild 1 öffnet das Werkzeug",
+  "ok": null,
+  "beleg": "Werkzeug antwortet nicht: /studio/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M11a",
+  "name": "Rundgang mit ?rundgang: fünf Schritte bis zum Ende, Taste 2 still",
+  "ok": true,
+  "beleg": "5 Karten: Das ist La Maison / Jedes Schild ist ein Werkzeug / Heute auf der Website / Immer erreichbar / Jedes Werkzeug stellt sich vor"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M11b",
+  "name": "Prüfbrowser (webdriver) sieht keinen Rundgang",
+  "ok": true,
+  "beleg": "kein Rundgang"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "R19",
+  "name": "«Zur Werkbank» nur aus der Werkbank geöffnet",
+  "ok": true,
+  "beleg": "ohne Herkunft: false, mit: /werkbank/index.html#werkzeuge, Adresse danach /_werkzeuge/maison/"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "R17",
+  "name": "«Weniger Bewegung»: Schilder und Stücke stehen sofort, Band steht",
+  "ok": true,
+  "beleg": "alles ruhig · Band none"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "R04",
+  "name": "Startfehler-Tür mit Grund und «Prüfung öffnen», Seite bleibt sichtbar",
+  "ok": true,
+  "beleg": "La Maison startet nicht. Uncaught Error: Probefehler der Prüfung · maison.js?v=20261017a:1 PRÜFUNG ÖFFNEN"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "R03",
+  "name": "Fehlermelder schreibt nach dh_fehler und an Le Bureau (abgefangen)",
+  "ok": true,
+  "beleg": "[{\"z\":\"2026-10-17T03:31:12.474Z\",\"t\":\"La Maison: Uncaught Error: Probefehler der Prüfung · maison.js?v=2026101 · {\"text\":\"La Maison · Uncaught Error: Probefehler der Prüfung · maison.js?v=20261"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "R04b",
+  "name": "Tür auch, wenn maison.js fehlt",
+  "ok": true,
+  "beleg": "Die Datei maison.js liess sich nicht laden."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "R03b",
+  "name": "Fehlermelder: höchstens 20 je Seite, Netzfehler nie",
+  "ok": true,
+  "beleg": "20 gemeldet"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05g",
+  "name": "Probe-Antworten: Bureau 3 im Entwurf, 7 Bereiche, 25 Seiten, 1 Sprache",
+  "ok": true,
+  "beleg": "3 im Entwurf · 3 Änderungen im Entwurf. Zuletzt veröffentlicht am 16.10.2026."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05h",
+  "name": "Probe-Antworten: Carte 3 Karten, 1 Entwurf, neueste PDF 16.10.",
+  "ok": true,
+  "beleg": "{\"bereiche\":\"7\",\"seiten\":\"25\",\"sprachen\":\"1\",\"karten\":\"3\",\"pdf\":\"16.10.\",\"entwurf\":\"1\"}"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05j",
+  "name": "Probe-Antworten: Réception 2 neue, 1 Frage ohne Antwort",
+  "ok": true,
+  "beleg": "2 neue Anfragen · 1 Frage ohne Antwort"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05k",
+  "name": "Probe-Antworten: Livre 180 Fotos, 33 Dateien, KI und nachgeschärft getrennt",
+  "ok": true,
+  "beleg": "180 Fotos in fertigen Grössen, davon 4 mit KI erzeugt und 12 nachgeschärft, alle gekennzeichnet. 33 Dateien für Agenturen und Druckereien, dazu die Markenprüfung."
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05l",
+  "name": "Le Bureau meldet keine weitere Sprache: «Deutsch»; nichts offen: «Veröffentlicht <Datum>»",
+  "ok": true,
+  "beleg": "Deutsch · Veröffentlicht 16.10.2026"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M05i",
+  "name": "Werkzeug fällt aus (500, leer, 404, Netz weg): Satz ohne Zahl, «–», nichts geschätzt",
+  "ok": true,
+  "beleg": "{\"bureau-kurz\":\"Website des Hauses\",\"carte-kurz\":\"Karten des Hauses\",\"imprimerie-kurz\":\"Vorlagen, druckfertig\",\"reception-kurz\":\"Rezeption im Chat\",\"livre-kurz\":\"Fotos, Dateien, Markenprüfung\",\"registre-kurz\":\"Besuche ohne Namen\",\"registre-heute\":\"–\",\"registre-buchung\":\"–\",\"bureau\":\"Der Stand ist ge"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M14",
+  "name": "Stand-Weg mit Ersatz: erster fällt aus, zweiter gilt; «zur Buchung» = Tageswert (4, nicht 13)",
+  "ok": true,
+  "beleg": "17 · 4 · Beispielwerte · Letzte 30 Tage · 400 Besuche · 900 angesehene Seiten · 5 Länder"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M14b",
+  "name": "Ersatzweg (abgelegte Beispielwerte): auf jetzt gekürzt, gleiche Zahlen wie das Werkzeug",
+  "ok": true,
+  "beleg": "0 · Beispielwerte · Letzte 30 Tage · 900 Besuche · 2'846 angesehene Seiten · 8 Länder · 5.9 % · Werkzeug [\"0\",\"900\",\"5.9 %\",true]"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "S01",
+  "name": "Schadcode aus Werkzeug-Antworten wird nicht ausgeführt, nur Zahlen gehen in die Seite",
+  "ok": true,
+  "beleg": "{\"img\":0,\"script\":false,\"breit\":390,\"innen\":390,\"bureau\":\"Nichts offen im Entwurf. Noch nichts veröffentlicht.\",\"livre\":\"Fotos, Dateien, Markenprüfung\",\"impr\":\"Vorlagen, druckfertig\",\"heute\":\"–\"}"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "S02",
+  "name": "5000 Zeichen, Emoji, Umlaute: kein seitliches Verrutschen",
+  "ok": true,
+  "beleg": "390 / 390"
+ },
+ {
+  "browser": "chromium",
+  "groesse": "390x844",
+  "nr": "M04d",
+  "name": "Schilder deckend ab dem ersten Bild, Auftakt nach dem Dekodieren",
+  "ok": true,
+  "beleg": "1,1,1,1,1,1,1,1 · bereit true"
+ }
+]

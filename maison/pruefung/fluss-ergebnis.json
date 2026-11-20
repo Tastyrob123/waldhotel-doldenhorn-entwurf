@@ -1,0 +1,58 @@
+{
+ "zeit": "2026-10-16T23:29:21.720Z",
+ "last": [
+  7.68359375,
+  9.9072265625,
+  12.05517578125
+ ],
+ "werte": [
+  {
+   "groesse": "1440x900",
+   "drossel": "4×",
+   "bilder": 734,
+   "p50": 8.3,
+   "p95": 10.1,
+   "ueber33": 0,
+   "laengstes": 24,
+   "cls": 0.0008,
+   "laden_mb": 2.27,
+   "anfragen": 43
+  },
+  {
+   "groesse": "1440x900",
+   "drossel": "6×",
+   "bilder": 695,
+   "p50": 8.4,
+   "p95": 16.7,
+   "ueber33": 0,
+   "laengstes": 26,
+   "cls": 0.0008,
+   "laden_mb": 2.27,
+   "anfragen": 43
+  },
+  {
+   "groesse": "390x844",
+   "drossel": "4×",
+   "bilder": 543,
+   "p50": 8.3,
+   "p95": 10,
+   "ueber33": 0,
+   "laengstes": 18,
+   "cls": 0,
+   "laden_mb": 2.27,
+   "anfragen": 43
+  },
+  {
+   "groesse": "390x844",
+   "drossel": "6×",
+   "bilder": 538,
+   "p50": 8.3,
+   "p95": 10.1,
+   "ueber33": 0,
+   "laengstes": 18,
+   "cls": 0,
+   "laden_mb": 2.27,
+   "anfragen": 43
+  }
+ ]
+}
