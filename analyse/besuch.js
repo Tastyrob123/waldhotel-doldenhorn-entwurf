@@ -1,3 +1,4 @@
+/* Prüfung 20.11.2026: Empfänger lag bei Vercel (gesperrt); diese Datei sendet nichts mehr, die Analyse meldet über /besuch.js. */
 /* Besuche (Robert 14.10.2026): meldet je Seitenaufruf «pfad geraet [code]» an tasty-besuche, der Zeit, Land und Ort dazuschreibt.
    Kein Cookie. Nur online (vercel.app, tasty-studios.de, seit 19.10.2026 auch tastystudios.ch), nicht eingebettet, nicht in automatischen Browsern.
    Eigene Geräte: einmal ?ich an die Adresse. */
@@ -23,6 +24,6 @@
       d.addEventListener('click', mit, true); d.addEventListener('auxclick', mit, true); d.addEventListener('contextmenu', mit, true);
     }
     var breit = function (px) { return !!(w.matchMedia && w.matchMedia('(max-width:' + px + 'px)').matches); };
-    n.sendBeacon('https://tasty-besuche.vercel.app/api/b', location.pathname.slice(0, 120) + ' ' + (breit(700) ? 'handy' : breit(1060) ? 'tablet' : 'rechner') + (f ? ' ' + f : ''));
+    false && n.sendBeacon('', location.pathname.slice(0, 120) + ' ' + (breit(700) ? 'handy' : breit(1060) ? 'tablet' : 'rechner') + (f ? ' ' + f : ''));
   } catch (e) {}
 })();

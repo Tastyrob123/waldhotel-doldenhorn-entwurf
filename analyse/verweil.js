@@ -9,7 +9,8 @@
   try {
     var w = window, n = navigator, d = document;
     if (w.__verweil || !n.sendBeacon || n.webdriver || w.self !== w.top || !w.IntersectionObserver) return;
-    var host = location.hostname, ZIEL = w.__verweilZiel || 'https://tasty-besuche.vercel.app/api/b?w=1';
+    /* Prüfung 20.11.2026: der Empfänger lag bei Vercel, das ist gesperrt (keine Kosten mehr dort). Ohne eigenes Ziel (w.__verweilZiel) sendet diese Datei nichts; die Besuche meldet /besuch.js. */
+    var host = location.hostname, ZIEL = w.__verweilZiel || ''; if (!ZIEL) return;
     if (!/(\.vercel\.app|(^|\.)tasty-studios\.de|(^|\.)tastystudios\.ch)$/.test(host) && !w.__verweilZiel) return;
     if (localStorage.getItem('tasty-ich')) return;
     w.__verweil = 1;
