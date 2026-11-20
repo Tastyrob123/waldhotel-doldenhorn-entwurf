@@ -1,0 +1,18 @@
+--- inhalt.py
++++ inhalt.py (mit La Carte)
+@@ -325,6 +325,15 @@
+     # Angaben, die auch in Verweisen stehen (bleiben im Bau roh; die fertige Seite tauscht sie überall)
+     D.BUCHUNG, D.TERMIN, D.KARTE_LINK = roh('link.buchung'), roh('link.termin'), roh('link.karte')
+     # Karten
++    # La Carte (Werkzeug, 17.10.2026): von La Carte veröffentlichte Zeilen der Grossen Karte und der Bistrokarte gehen den Zeilen aus daten.py vor
++    # (_werkzeuge/carte/web.py zeilen(); ohne Veröffentlichung mit Anschluss bleibt alles wie bisher). Le Bureau ändert diese Zeilen nicht mehr selbst.
++    try:   # nach Pfad geladen, nicht über sys.path (Falle F10: gleichnamige Module)
++        import importlib.util as _iu
++        _sp = _iu.spec_from_file_location('la_carte_web', os.path.join(os.path.dirname(os.path.abspath(__file__)), '_werkzeuge', 'carte', 'web.py'))
++        carte_web = _iu.module_from_spec(_sp); _sp.loader.exec_module(carte_web)
++        D.KARTE, D.BISTRO_KARTE = carte_web.zeilen('karte', D.KARTE), carte_web.zeilen('bistro', D.BISTRO_KARTE)
++    except (ImportError, OSError):
++        pass
+     D.KARTE = karte('karte', D.KARTE)
+     D.BISTRO_KARTE = karte('bistro', D.BISTRO_KARTE)
+     D.MASSAGE = karte('massage', D.MASSAGE)

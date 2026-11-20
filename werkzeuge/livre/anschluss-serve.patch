@@ -1,0 +1,51 @@
+--- a/serve.py	2026-10-17 05:51:22
++++ b/serve.py	2026-10-17 05:51:22
+@@ -10,7 +10,31 @@
+ ZAHLEN = os.path.join(os.getcwd(), '_dienste', 'zahlen.jsonl')
+ ANFRAGEN = os.path.join(os.getcwd(), '_dienste', 'anfragen.jsonl')   # Anfrage-Fenster; der Eingang (studio/eingang.html) liest und setzt den Stand wie online api/anfragen.js
+ A_STAND = os.path.join(os.getcwd(), '_dienste', 'anfragen_stand.json')   # Ereignisse am Rechner (online: api/zahlen.js mit dem Blob-Speicher)
++LIVRE = os.path.join(os.getcwd(), '_werkzeuge', 'livre')   # Le Livre (dh-livre 17.10.2026): Server-Teil im Hausserver, Wege wie online
++def _livre():
++    if LIVRE not in sys.path: sys.path.insert(0, LIVRE)
++    import livre
++    return livre
+ class H(http.server.SimpleHTTPRequestHandler):
++    def _livre_api(self, u):
++        """/_werkzeuge/livre/api/<stand|bild|pruefen|fehler> und /marke/api/<…> (L’Imprimerie): wie _werkzeuge/livre/server.py, ohne Claude ausser mit LIVRE_KI=1."""
++        LV = _livre(); was = u.path.split('/api/', 1)[1].strip('/')
++        try:
++            if self.command == 'POST':
++                o = self.headers.get('Origin')
++                if (o and o not in (f'http://localhost:{PORT}', f'http://127.0.0.1:{PORT}')) or (self.headers.get('Sec-Fetch-Site') or 'same-origin') not in ('same-origin', 'none'):
++                    return self._json(403, {'fehler': 'HERKUNFT · Anfragen von fremden Seiten werden abgewiesen.'})
++                n = int(self.headers.get('Content-Length') or 0)
++                if n > 45 * 1024 * 1024: return self._json(413, {'fehler': 'GROESSE · Die Datei ist zu gross (höchstens 30 MB).'})
++                return self._json(200, LV.post(was, json.loads(self.rfile.read(n) or b'{}')))
++            from urllib.parse import parse_qs
++            r = LV.get(was, parse_qs(u.query))
++            if isinstance(r, tuple):
++                d, typ, name = r
++                self.send_response(200); self.send_header('Content-Type', typ); self.send_header('Content-Length', str(len(d))); self.send_header('Content-Disposition', f'attachment; filename="{name}"'); self.end_headers(); self.wfile.write(d); return
++            return self._json(200, r)
++        except ValueError as e:
++            return self._json(400, {'fehler': str(e)})
+     @staticmethod
+     def _anfragen():
+         """Anfragen wie online: neueste zuerst, je eine feste Kennung (aus Zeit und Inhalt) und ihr Stand neu|gelesen|erledigt."""
+@@ -31,6 +55,8 @@
+         self.send_response(code); self.send_header('Content-Type', 'application/json; charset=utf-8'); self.send_header('Content-Length', str(len(roh))); self.end_headers(); self.wfile.write(roh)
+     def do_GET(self):
+         u = urlparse(self.path)
++        if u.path.startswith(('/_werkzeuge/livre/api/', '/marke/api/')): return self._livre_api(u)
++        if u.path == '/marke/livre.json': self.path = '/_werkzeuge/livre/livre.json'; return super().do_GET()
+         if u.path == '/api/dienste':
+             os.environ['DIENSTE_HAUS'] = HAUS_DIENSTE
+             if GEMEINSAM not in sys.path: sys.path.insert(0, GEMEINSAM)
+@@ -44,6 +70,7 @@
+             return self._json(200, {'ereignisse': ev, 'tage': 30})
+         return super().do_GET()
+     def do_POST(self):
++        if urlparse(self.path).path.startswith(('/_werkzeuge/livre/api/', '/marke/api/')): return self._livre_api(urlparse(self.path))
+         if urlparse(self.path).path == '/api/anfragen':   # Anfrage-Fenster (assets/js/anfrage.js), online: api/anfragen.js
+             n = min(int(self.headers.get('Content-Length') or 0), 12000)
+             try: d = json.loads(self.rfile.read(n) or b'{}')
