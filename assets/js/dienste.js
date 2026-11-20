@@ -25,6 +25,7 @@
     if (navigator.webdriver || !window.fetch) return;
     var d = { t: t, s: SEITE, sp: 'de', l: LAND }; for (var k in mehr) d[k] = mehr[k];
     var roh = JSON.stringify(d);
+    if (/(^|\.)github\.io$|(^|\.)tastystudios\.ch$/.test(location.hostname)) return;   // Prüfung 20.11.2026: online (GitHub Pages) gibt es keinen Zähl-Dienst; nichts senden
     try { if (navigator.sendBeacon && navigator.sendBeacon('/api/zahlen', new Blob([roh], { type: 'application/json' }))) return; } catch (e) {}
     try { fetch('/api/zahlen', { method: 'POST', headers: { 'content-type': 'application/json' }, body: roh, keepalive: true }).catch(function () {}); } catch (e) {}
   }

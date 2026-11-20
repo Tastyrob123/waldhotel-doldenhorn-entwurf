@@ -1,3 +1,10 @@
+/* Prüfung 20.11.2026: Online (GitHub Pages) gibt es keinen Server für Anfragen. Dort bleibt eine Anfrage als Vorführung in diesem Browser (localStorage «dh-anfragen»)
+   und das Fenster zeigt wie vorgesehen «Vielen Dank»; am Rechner mit dem Hausserver geht sie wie bisher an /api/anfragen. */
+window.dhAnfrageSenden = window.dhAnfrageSenden || function (url, opt) {
+  if (!/(^|\.)github\.io$|(^|\.)tastystudios\.ch$/.test(location.hostname)) return fetch(url, opt);
+  try { var l = JSON.parse(localStorage.getItem('dh-anfragen') || '[]'); l.push(Object.assign({ zeit: new Date().toISOString() }, JSON.parse((opt && opt.body) || '{}'))); localStorage.setItem('dh-anfragen', JSON.stringify(l.slice(-20))); } catch (e) {}
+  return Promise.resolve(new Response(JSON.stringify({ ok: true, demo: true }), { status: 200, headers: { 'Content-Type': 'application/json' } }));
+};
 /* Vorschau (Robert 17.10.2026, Werkbank-Regel 12: «Die Formulare schicken Mails an die echte Adresse des Hauses … abstellen oder als Demo kennzeichnen»):
    nichts geht an eine Adresse des Hauses; jede Anfrage landet im Eingang von La Réception dieser Vorschau, das Fenster sagt es sichtbar.
    Anfrage-Fenster des Waldhotel Doldenhorn (Robert 16.10.2026: «wir landen nirgendwo auf der gesamten Seite in irgendwelchen E-Mail-Bereichen,
@@ -84,7 +91,7 @@
     var t = E.tag.value ? new Date(E.tag.value + 'T12:00') : null, datum = t && !isNaN(t) ? t.toLocaleDateString('de-CH', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '';
     var mitDatum = an.indexOf('jobs@') !== 0;
     senden.disabled = true; var knText = senden.firstChild.nodeValue; senden.firstChild.nodeValue = 'Wird gesendet'; meldung.hidden = true;
-    fetch('/api/anfragen', {
+    window.dhAnfrageSenden('/api/anfragen', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ an: an, anliegen: E.anliegen.value.trim(), datum: mitDatum ? datum : '', personen: mitDatum ? E.personen.value : '', nachricht: E.nachricht.value.trim(),
         name: name, kontakt: kontakt, seite: location.pathname, sprache: (document.documentElement.lang || 'de').slice(0, 2), website: E.website.value })

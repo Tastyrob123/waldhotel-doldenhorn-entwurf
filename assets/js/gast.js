@@ -1,3 +1,5 @@
+/* Prüfung 20.11.2026: online (GitHub Pages) gibt es keinen Chat-Dienst; dort antwortet gleich der eingebaute Rückfall mit den Antworten aus gast_antworten.js (kein Fehlversuch im Netz). */
+window.dhGastHolen = window.dhGastHolen || function (u, o) { return /(^|\.)github\.io$|(^|\.)tastystudios\.ch$/.test(location.hostname) ? Promise.reject(new Error('demo')) : fetch(u, o); };
 /* Aus dem Chat des Carlton-Europe übernommen von «Familie Maeder — Vier Häuser/gast_haeuser.py». Nicht hier ändern, sondern in der Vorlage. */
 /* Rezeption im Chat — Fenster unten rechts (und als Zimmermappe ganzseitig auf mappe.html).
    Fragt die Funktion /api/gast (Claude mit dem Wissen der Website, siehe _gast/gast.py); fällt sie aus, sucht das Fenster
@@ -368,7 +370,7 @@
       b.classList.remove('gast__b--denkt'); b.innerHTML = '';
       tippe(b, text, quelle, function () { beschaeftigt = false; if (m) maske(m); else if (v && v.length) vorschlaege(v); });
     }
-    fetch(BASIS + 'api/gast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: verlauf.slice(-12), mappe: MAPPE, sprache: SP, heute: iso(new Date()) }) })
+    window.dhGastHolen(BASIS + 'api/gast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: verlauf.slice(-12), mappe: MAPPE, sprache: SP, heute: iso(new Date()) }) })
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (a) {
         if (!a || !a.text) throw 0;
