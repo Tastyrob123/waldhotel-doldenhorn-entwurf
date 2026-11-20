@@ -1,12 +1,12 @@
-/* Kurzer Rundgang durch La Carte · Waldhotel Doldenhorn (Kopie aus La Carte des Carlton-Europe; Vorlage dort assets/js/rundgang.js des Grand Beau-Rivage, data-werkzeug="carte"; 17.10.2026).
+/* Kurzer Rundgang durch Karten & Preislisten · Waldhotel Doldenhorn (Kopie aus «Karten & Preislisten» des Carlton-Europe; Vorlage dort assets/js/rundgang.js des Grand Beau-Rivage, data-werkzeug="carte"; 17.10.2026).
    Robert 16.10.2026: «einmal ganz kurz zeigen, hier kannst du das machen, da das, damit man weiss, wo man gelandet ist». Ein Lichtkegel liegt auf dem echten Bedienelement, daneben eine Karte mit zwei, drei Sätzen.
    Kein Start von selbst: unten rechts erscheint ein Schild «Kurzer Rundgang» (fünf Sekunden, die Maus darauf hält es), dann zieht es sich zurück.
    Wieder aufrufen: «Kurzer Rundgang» im Rand oder ?rundgang (startet direkt). Automatische Prüfungen (navigator.webdriver) und eingebettete Ansichten sehen nichts. */
 (function () {
   var Q = new URLSearchParams(location.search), ERZWINGEN = Q.has('rundgang');
   if (window.self !== window.top && !ERZWINGEN) return;
-  var G = { name: 'La Carte', schritte: [
-    { ziel: ['#kopf'], titel: 'Das ist La Carte',
+  var G = { name: 'Karten & Preislisten', schritte: [
+    { ziel: ['#kopf'], titel: 'Das ist Karten & Preislisten',
       text: 'Die Karten des Doldenhorn an einem Ort: Grosse Karte, Bistro, Weinkarte, Menuvorschläge, Mittagsmenü und die Karten des Spa. Ein neues Gericht, ein anderer Preis, ein Wein ist aus: das ändern Sie hier selbst.' },
     { ziel: ['#rand .karten', '#rand'], titel: 'Alle Karten des Hauses',
       text: 'Au Gourmet und Restaurant, das Bistro, Feste und Bankette, das Mittagsmenü der Woche und das Spa, jede Karte für sich.' },
@@ -28,16 +28,16 @@
       'font:15px/1.55 "Instrument Sans",system-ui,sans-serif;animation:rdg-auf .42s cubic-bezier(.2,.8,.2,1) both}' +
     '@keyframes rdg-auf{from{transform:translate3d(var(--rx,0),calc(var(--ry,0px) + 14px),0)}to{transform:translate3d(var(--rx,0),var(--ry,0),0)}}' +
     '.rdg-karte{transform:translate3d(var(--rx,0),var(--ry,0),0)}' +
-    '.rdg-zier{display:flex;align-items:center;gap:10px;font:500 10px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.22em;text-transform:uppercase;color:#8a7036}' +
+    '.rdg-zier{display:flex;align-items:center;gap:10px;font:500 13px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.22em;text-transform:uppercase;color:#8a7036}' +
     '.rdg-zier i{flex:1;height:1px;background:linear-gradient(90deg,#e3d2a6,rgba(227,210,166,0))}' +
     '.rdg-karte h3{margin:12px 0 6px;font:400 25px/1.15 "Caslon WD",Georgia,serif;color:#142235;letter-spacing:0}' +
     '.rdg-karte p{margin:0;color:rgba(15,22,32,.78)}' +
     '.rdg-fuss{display:flex;align-items:center;gap:14px;margin-top:20px}' +
     '.rdg-karte .rdg-weg{display:flex;gap:5px;flex:1 1 auto;min-width:64px}.rdg-karte .rdg-weg b{display:block;height:3px;flex:1 1 0;min-width:6px;max-width:26px;border-radius:2px;background:rgba(15,22,32,.14)}.rdg-karte .rdg-weg b.da{background:#b89850}' +
-    '.rdg-karte .rdg-zu{flex:none;margin:0;border:0;background:none;padding:6px 2px;font:500 10px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#8a7036;cursor:pointer}' +
+    '.rdg-karte .rdg-zu{flex:none;margin:0;border:0;background:none;padding:6px 2px;font:500 13px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#8a7036;cursor:pointer}' +
     '.rdg-karte .rdg-zu:hover{color:#0f1620}' +
     '.rdg-karte .rdg-los,.rdg-schild .rdg-los{flex:none;margin:0;display:inline-flex;align-items:center;gap:12px;height:42px;padding:0 6px 0 18px;border:0;border-radius:999px;cursor:pointer;' +
-      'font:500 10px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:#fbf8f1;' +
+      'font:500 13px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:#fbf8f1;' +
       'background:linear-gradient(180deg,#223452,#142235 46%,#070c14);box-shadow:0 1px 0 rgba(255,255,255,.26) inset,0 -3px 0 rgba(0,0,0,.5) inset,0 10px 18px -10px rgba(7,12,20,.8)}' +
     '.rdg-karte .rdg-los i,.rdg-schild .rdg-los i{display:grid;margin:0;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#fbf3e2,#d9c79c);' +
       'box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 -2px 0 rgba(0,0,0,.22) inset;transition:transform .2s}' +
@@ -54,9 +54,9 @@
     '@keyframes rdg-schild-auf{from{transform:translate3d(0,calc(100% + 40px),0)}to{transform:translate3d(0,0,0)}}' +
     '.rdg-schild.weg{animation:none;transform:translate3d(0,calc(100% + 60px),0)}' +
     '.rdg-schild__t{display:flex;flex-direction:column;gap:4px;line-height:1}' +
-    '.rdg-schild__t small{font:500 9px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.22em;text-transform:uppercase;color:#8a7036}' +
+    '.rdg-schild__t small{font:500 13px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.22em;text-transform:uppercase;color:#8a7036}' +
     '.rdg-schild__t b{font:400 18px/1 "Caslon WD",Georgia,serif;color:#142235}' +
-    '.rdg-schild .rdg-los{height:38px;padding:0 5px 0 15px;font-size:9.5px}.rdg-schild .rdg-los i{width:28px;height:28px}' +
+    '.rdg-schild .rdg-los{height:38px;padding:0 5px 0 15px;font-size:13px}.rdg-schild .rdg-los i{width:28px;height:28px}' +
     '.rdg-schild__zu{flex:none;width:26px;height:26px;margin:0 2px 0 -4px;padding:0;border:0;border-radius:50%;background:none;cursor:pointer;color:#8a7036;font:16px/1 system-ui}' +
     '.rdg-schild__zu:hover{color:#0f1620}' +
     '@media (max-width:700px){.rdg-schild{right:16px;left:auto}}' +

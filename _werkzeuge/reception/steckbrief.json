@@ -1,0 +1,513 @@
+{
+ "stand": 1792207625.0302188,
+ "bereiche": [
+  {
+   "bereich": "Das Haus",
+   "gruppen": [
+    {
+     "gruppe": "Auf einen Blick",
+     "zeilen": [
+      {
+       "fid": "ebd4b78067",
+       "was": "Adresse",
+       "angabe": "Doldenhornstrasse 26, 3718 Kandersteg",
+       "beleg": "info@doldenhorn.chDoldenhornstrasse 26 · 3718 Kandersteg",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "41bfbf8255",
+       "was": "Telefon",
+       "angabe": "+41 33 675 81 81",
+       "beleg": "Rezeption +41 33 675 81 81",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "7ecea17534",
+       "was": "E-Mail",
+       "angabe": "info@doldenhorn.ch",
+       "beleg": "E-Mailinfo@doldenhorn.ch",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "2329e30bce",
+       "was": "Haus",
+       "angabe": "Vier Sterne Superior, Relais & Châteaux, geführt von der Familie Maeder",
+       "beleg": "Vier Sterne Superior, Relais & Châteaux, geführt von der Familie Maeder.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "20b60158f9",
+       "was": "Seit",
+       "angabe": "Familie Maeder erwirbt die Pension 1976",
+       "beleg": "1976erwirbt Familie Maeder die Pension",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "3f192f5542",
+       "was": "Relais & Châteaux",
+       "angabe": "Mitglied seit 2016",
+       "beleg": "Seit 2016 sind wir stolzes Mitglied von Relais & Châteaux",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "973f3bf8f7",
+       "was": "Gastgeber",
+       "angabe": "René und Anne Maeder, seit 50 Jahren im Haus",
+       "beleg": "René und Anne Maeder sind seit 50 Jahren im Haus.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "ee0f16e207",
+       "was": "Team",
+       "angabe": "45 Menschen aus 15 Ländern",
+       "beleg": "45 Menschenaus 15 Ländern",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Anlässe im Haus",
+     "zeilen": [
+      {
+       "fid": "d0fa93017f",
+       "was": "Küchenfest",
+       "angabe": "am 3. Donnerstag im Monat, à discrétion CHF 80",
+       "beleg": "3. Donnerstagim Monat: Küchenfest CHF 80Küchenfest à discrétion",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "b07a943417",
+       "was": "Curling",
+       "angabe": "zwei Turniere im Winter, eines im Ruedihus, eines im Doldenhorn",
+       "beleg": "Zwei Turniere im Winter, eines im Ruedihus, eines im Doldenhorn.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Lage",
+     "zeilen": [
+      {
+       "fid": "a6c68b3b7c",
+       "was": "Lage",
+       "angabe": "abseits der Hauptstrasse (300 m) in einem Naturpark",
+       "beleg": "Unser Haus liegt abseits der Hauptstrasse (300m) in mitten eines schönen Naturparkes.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "1d77e90abb",
+       "was": "Bahnhof",
+       "angabe": "Kandersteg, 15 Fussminuten",
+       "beleg": "Vom Bahnhof Kandersteg sind es 15 Fussminuten.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "9167eae7d8",
+       "was": "Parkplatz",
+       "angabe": "ein grosser Parkplatz steht zur Verfügung",
+       "beleg": "Ein grosser Parkplatz steht Ihnen ebenfalls zur Verfügung.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Zimmer & Suiten",
+   "gruppen": [
+    {
+     "gruppe": "Kategorien",
+     "zeilen": [
+      {
+       "fid": "699af1ab36",
+       "was": "Economy",
+       "angabe": "1–2 Personen, ca. 20 m², ab CHF 180 pro Nacht",
+       "beleg": "EconomyAb 180.00 CHF / Nacht1–2 Personen · ca. 20 m²",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "599bc269e9",
+       "was": "Ambiance",
+       "angabe": "1–3 Personen, ca. 30 m², ab CHF 210 pro Nacht",
+       "beleg": "AmbianceAb 210.00 CHF / Nacht1–3 Personen · ca. 30 m²",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "eb5aba6cb6",
+       "was": "Junior Suite",
+       "angabe": "2–3 Personen, ca. 50 m², ab CHF 460 pro Nacht",
+       "beleg": "Junior SuiteAb 460.00 CHF / Nacht2–3 Personen · ca. 50 m²",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "38d91a5df8",
+       "was": "Suite",
+       "angabe": "2–4 Personen, ca. 70 m², ab CHF 590 pro Nacht",
+       "beleg": "SuiteAb 590.00 CHF / Nacht2–4 Personen · ca. 70 m²",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "ec179469cb",
+       "was": "Lage der Zimmer",
+       "angabe": "ruhig zur Waldseite oder mit freiem Blick auf Tal und Berge",
+       "beleg": "Ruhige zur Waldseite gelegene Zimmer oder mit freiem Blick auf Tal und Berge.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Essen & Trinken",
+   "gruppen": [
+    {
+     "gruppe": "Restaurants",
+     "zeilen": [
+      {
+       "fid": "abfa57b5b0",
+       "was": "Au Gourmet",
+       "angabe": "15 Punkte GaultMillau; Dienstag ganzer Tag und Mittwoch geschlossen",
+       "beleg": "Öffnungszeiten Dienstags ganzer Tag und Mittwoch geschlossen Auszeichnung GaultMillau, 15 Punkte",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "7ada19de00",
+       "was": "Restaurant Doldenhorn",
+       "angabe": "im Grünen Saal, 11:30 bis 22:30 Uhr",
+       "beleg": "Im Grünen Saal geniessen Gäste erlesene Weine und kreative Menüs von René Maeders Team. 11:30 – 22:30 Uhrgeöffnet",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "b56b6242e5",
+       "was": "Bistro",
+       "angabe": "Dienstag und Mittwoch halber Tag geschlossen",
+       "beleg": "unser Bistro bietet für jeden Geschmack etwas. Öffnungszeiten Dienstags und Mittwoch halber Tag geschlossen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "443a10f5cc",
+       "was": "Reservation",
+       "angabe": "+41 33 675 81 81",
+       "beleg": "Reservation +41 33 675 81 81",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Menüs",
+     "zeilen": [
+      {
+       "fid": "135e7ce572",
+       "was": "Mittagsmenü",
+       "angabe": "täglich ausser Dienstag und Mittwoch, 11.30–13.30 Uhr, 4 Gänge CHF 50; mit 2 Glas Wein, Wasser und Kaffee CHF 75",
+       "beleg": "Täglich ausser Dienstag und Mittwoch ein 4-Gang-Menü für CHF 50.00, mit 2 Glas Wein, Wasser und Kaffee CHF 75.00. 11.30 – 13.30 Uhr",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "7a4f8f8fd1",
+       "was": "Halbpension",
+       "angabe": "jeden Abend 5 Menüs: 3 im Doldenhorn (Fleisch, Fisch, Vegetarisch), 2 im Landgasthof Ruedihus",
+       "beleg": "Jeden Abend bieten wir unseren Halbpensionsgästen 5 Menus zur Auswahl an. Drei im Doldenhorn (Fleisch, Fisch, Vegetarisch) und 2 in unserem Landgasthof Ruedihus (Schweizer Spezialitäten).",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Spa & Sauna World",
+   "gruppen": [
+    {
+     "gruppe": "Hallenbad und Saunen",
+     "zeilen": [
+      {
+       "fid": "c70b03a803",
+       "was": "Hallenbad",
+       "angabe": "Montag bis Sonntag 8 bis 22 Uhr, Wasser aus der hauseigenen Quelle",
+       "beleg": "Willkommen in unserem Hallenbad, mit Wasser aus unserer hauseigenen Quelle.",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Montag bis Sonntag, 8:00 – 22:00 Uhr"
+       ]
+      },
+      {
+       "fid": "bfc895e7fd",
+       "was": "Sauna World",
+       "angabe": "7 Bereiche: Saunen, Dampfbad, Salzarium, Eisgrotte",
+       "beleg": "7 BereicheSaunen, Dampfbad, Salzarium, Eisgrotte",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "513e5c444b",
+       "was": "Saunen",
+       "angabe": "Finnische Sauna 90°, Kräutersauna 75°, Arven Bio Sauna 65°, Heu Sauna 50°",
+       "beleg": "90° Klassische Finnische Sauna 75° Kräutersauna 65° Arven Bio Sauna 50° Heu Sauna",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Massage",
+     "zeilen": [
+      {
+       "fid": "0c85e042f2",
+       "was": "Termine",
+       "angabe": "Massagen und Kosmetik täglich auf Anfrage, spa@doldenhorn.ch",
+       "beleg": "Täglich auf AnfrageMassagen und Kosmetik spa@doldenhorn.ch",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "c726044aac",
+       "was": "Klassische Teilkörpermassage",
+       "angabe": "CHF 75, 25 Minuten",
+       "beleg": "Klassische Massage Teilkörpermassage75.0025 min",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "704eb79cfc",
+       "was": "Schulter & Rückenmassage",
+       "angabe": "CHF 100, 40 Minuten",
+       "beleg": "Schulter & Rückenmassage100.0040 min",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "6008c69d85",
+       "was": "Stornieren",
+       "angabe": "mindestens 12 Stunden im Voraus",
+       "beleg": "Wir bitten Sie, eine Stornierung mindestens 12 Stunden im Voraus zu beantragen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "1a72f99700",
+       "was": "Mindestalter",
+       "angabe": "16 Jahre für Körperbehandlungen",
+       "beleg": "Für die Körperbehandlungen gilt ein Mindestalter von 16 Jahren.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Feste & Seminare",
+   "gruppen": [
+    {
+     "gruppe": "Säle",
+     "zeilen": [
+      {
+       "fid": "64f250bdb7",
+       "was": "Event-Team",
+       "angabe": "event@doldenhorn.ch",
+       "beleg": "Das Event-Team erreichen Sie unter event@doldenhorn.ch.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "5f4dde8450",
+       "was": "Säle",
+       "angabe": "Seminarsaal 200, Grüner Saal 100, Wintergarten 60, Burestube 34 Plätze",
+       "beleg": "Seminarraum 200 Seminarsaal, verschiedene Tischformen 100 Grüner Saal, Einzeltische 60 Wintergarten, Einzeltische 34 Burestube, Einzeltische",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Hochzeit",
+     "zeilen": [
+      {
+       "fid": "106f1ef5b8",
+       "was": "Package Classic",
+       "angabe": "CHF 170 pro Person, bis 1 Uhr; Kinder 8 bis 14 Jahre CHF 75",
+       "beleg": "Unser Hochzeitspackage CLASSIC bis 1 Uhr zum Fixpreis von CHF 170.00, Kinder von 8 bis 14 Jahren CHF 75.00",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "d95063882c",
+       "was": "Package Exquisit",
+       "angabe": "CHF 250 pro Person, bis 3 Uhr",
+       "beleg": "CHF 250Package Exquisit, bis 3 Uhr",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "09a2dbd3ce",
+       "was": "In beiden Packages",
+       "angabe": "Probeessen für das Brautpaar, Hochzeitszimmer ab 50 zahlenden Gästen",
+       "beleg": "In beiden Packages inbegriffen: Probeessen für das Brautpaar, Übernachtung im speziellen Hochzeitszimmer ab 50 zahlenden Gästen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Seminar",
+     "zeilen": [
+      {
+       "fid": "27b1259b30",
+       "was": "Seminarpauschale Standardzimmer",
+       "angabe": "CHF 335 bis 7 Personen, CHF 285 ab 8 Personen, pro Person und Tag",
+       "beleg": "Standardzimmer im Waldhotel Doldenhorn und Landgasthof Ruedihus335 / 285Bis 7 Personen / ab 8 Personen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "d9267f20d5",
+       "was": "Shuttle",
+       "angabe": "vom und zum Bahnhof Kandersteg, in der Seminarpauschale",
+       "beleg": "Shuttle-Service vom und zum Bahnhof Kandersteg (15 Fussminuten) Seminarraum mit Infrastruktur und Kaffeepausen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Angebote",
+   "gruppen": [
+    {
+     "gruppe": "Packages",
+     "zeilen": [
+      {
+       "fid": "d99d98a74f",
+       "was": "Gourmet-Aufenthalt",
+       "angabe": "mit Willkommensaperitif, Frühstücksbuffet, Tea Time und 7-Gang Menü Gastronomique, ab CHF 285",
+       "beleg": "mit Willkommensaperitif, Frühstücksbuffet, Tea Time und einem 7-Gang Menü Gastronomique. Ab CHF 285.00",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "8130499fff",
+       "was": "Reisen ohne Stress",
+       "angabe": "6 Nächte von Sonntag bis Samstag, ab CHF 1100 pro Person",
+       "beleg": "6 Nächte in Kandersteg (jeweils von Sonntag – Samstag)",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "ab CHF1100pro Person"
+       ]
+      },
+      {
+       "fid": "eba9a573a2",
+       "was": "Gutschein",
+       "angabe": "Wertgutschein, Abend im Au Gourmet, Massage oder Gourmet-Aufenthalt, online bezahlt, als PDF",
+       "beleg": "Wählen Sie einen Wertgutschein, einen Abend im Au Gourmet, eine Massage oder einen Gourmet-Aufenthalt. Sie bezahlen online, der Gutschein kommt als PDF.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Anreise & Abreise",
+   "gruppen": [
+    {
+     "gruppe": "Unterwegs",
+     "zeilen": [
+      {
+       "fid": "d8517b0f57",
+       "was": "Shuttle",
+       "angabe": "vom und zum Bahnhof Kandersteg; anmelden, die Rezeption bestätigt die Fahrt",
+       "beleg": "Das Haus nennt einen Shuttle-Service vom und zum Bahnhof Kandersteg (15 Fussminuten). Melden Sie ihn hier an, die Rezeption bestätigt Ihnen die Fahrt.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "117aab7947",
+       "was": "Am Abreisetag",
+       "angabe": "Hallenbad 8 bis 22 Uhr, Mittagsmenü vor der Heimreise CHF 50",
+       "beleg": "8 – 22 UhrHallenbad, noch einmal vor der Fahrt CHF 50Mittagsmenü vor der Heimreise",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Kandersteg & Ausflüge",
+   "gruppen": [
+    {
+     "gruppe": "Bergbahnen",
+     "zeilen": [
+      {
+       "fid": "1debe107ab",
+       "was": "Bergbahnen, die das Haus nennt",
+       "angabe": "Oeschinensee, Allmenalp, Sunnbüel",
+       "beleg": "3 BergbahnenOeschinensee, Allmenalp, Sunnbüel",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "8fd505b415",
+       "was": "Gondelbahn Oeschinensee",
+       "angabe": "Erwachsene retour CHF 32; Zeiten und Preise vor der Fahrt auf oeschinensee.ch prüfen",
+       "beleg": "Gondelbahn - CHF 32.00 Erwachsene retour",
+       "datei": "gast_tal.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Karriere",
+   "gruppen": [
+    {
+     "gruppe": "Stellen",
+     "zeilen": [
+      {
+       "fid": "ce6d85b685",
+       "was": "Offene Stellen",
+       "angabe": "Sous Chef, Rezeptionist, Servicemitarbeiter, Koch (m/w/d)",
+       "beleg": "Offene StellenSous Chef (m/w/d)Rezeptionist (m/w/d)Servicemitarbeiter (m/w/d)Koch (m/w/d)",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "af817ae841",
+       "was": "Bewerbung",
+       "angabe": "per E-Mail an jobs@doldenhorn.ch",
+       "beleg": "Bewerbung per E-Mail an jobs@doldenhorn.ch",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

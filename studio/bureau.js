@@ -1,4 +1,4 @@
-/* Le Bureau · Waldhotel Doldenhorn (17.10.2026). Nachbau von Le Bureau des Grand Beau-Rivage (studio/studio.js v25 dort, lokale Fassung, nur gelesen):
+/* Website bearbeiten · Waldhotel Doldenhorn (17.10.2026). Nachbau von «Website bearbeiten» des Grand Beau-Rivage (studio/studio.js v25 dort, lokale Fassung, nur gelesen):
    jede Funktion und jeder Handgriff gleich, dazu die Zusätze des Carlton-Europe (control/bureau.js dort, nur gelesen: zwei Fenster, Grösse im Browser,
    Kleine Handys). Das Kleid ist das des Doldenhorn (bureau.css). Server-Teil: studio_bureau.py (Wege /studio/api/b/…) über studio.py.
    Was nur das Doldenhorn hat (Listen des Hauses: Zimmer, Karten der Website, Packages, Säle, Team …, dazu Menü & Seiten, Bilder, Zugang):
@@ -17,7 +17,7 @@ const SPRW = { en: 'English', fr: 'Français', it: 'Italiano' };
 const SPR = () => [['', 'Deutsch']].concat(((S.ue && S.ue.sprachen) || []).map(k => [k, SPRW[k] || k]));   // die Website hat zurzeit nur Deutsch
 const ZAHLWORT = { 1: 'Eine', 2: 'Zwei', 3: 'Drei', 4: 'Vier', 5: 'Fünf', 6: 'Sechs', 7: 'Sieben', 8: 'Acht' };
 const WEG = k => (S.ue && S.ue.wege && S.ue.wege[k]) || { website: '/', pruefung: '/studio/pruefung.html', anleitung: '/studio/anleitung/', eingang: '/studio/eingang.html' }[k] || '';
-const CARTE = () => WEG('carte');   // La Carte des Hauses: Adresse aus dem Server (anschluss.json), nie geraten
+const CARTE = () => WEG('carte');   // Karten & Preislisten des Hauses: Adresse aus dem Server (anschluss.json), nie geraten
 /* Listen des Hauses je Bereich: stehen im Reiter «Listen» des Bereichs, bearbeitet in der eingebetteten Ansicht des früheren Studios (alt.html) */
 const LISTEN_B = k => { const b = S.ue && S.ue.bereiche.find(x => x.key === k); return b && b.listen && b.listen.length ? b.listen : null; };
 const ALT_B = k => { const b = S.ue && S.ue.bereiche.find(x => x.key === k); return (b && b.alt) || ''; };
@@ -36,7 +36,7 @@ async function api(was, daten) {
   try {
     r = await fetch('/studio/api/b/' + was, daten === undefined ? { cache: 'no-store', credentials: 'same-origin' } : { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json', 'X-Studio': '1' }, body: JSON.stringify(daten) });
   } catch (e) {
-    throw new Error('VERBINDUNG · Keine Verbindung zu Le Bureau. Ihre Eingaben sind noch da: Verbindung prüfen und noch einmal speichern.');
+    throw new Error('VERBINDUNG · Keine Verbindung zu «Website bearbeiten». Ihre Eingaben sind noch da: Verbindung prüfen und noch einmal speichern.');
   }
   let d = {};
   try { d = await r.json(); } catch (e) { throw new Error('SERVER · Antwort nicht lesbar (' + r.status + ').'); }
@@ -105,7 +105,7 @@ function rand() {
       <a href="${WEG('website')}" target="_blank" rel="noopener">Website ansehen${PF}</a>
       <a href="${WEG('anleitung')}" target="_blank" rel="noopener">Anleitung${PF}</a>
       <a href="${WEG('pruefung')}" target="_blank" rel="noopener">Prüfung${PF}</a>
-      <a href="${WEG('maison')}">La Maison${PF}</a>
+      <a href="${WEG('maison')}">Kontrollpanel${PF}</a>
     </div>`;
   $$('#rand [data-gehe]').forEach(b => b.onclick = () => { $('#rand').classList.remove('auf'); gehe(b.dataset.gehe); });   // Handy: Liste nach der Wahl zuklappen (15.10.2026)
   kopfLeiste();
@@ -214,13 +214,13 @@ const IC = {
 const ic = k => `<svg viewBox="0 0 16 16" aria-hidden="true">${IC[k] || IC.text}</svg>`;
 function kopfLeiste() {
   const b = S.ansicht === 'bereich' ? bereich() : null;
-  const t = b ? b.name : (TITEL[S.ansicht] || 'Le Bureau');
+  const t = b ? b.name : (TITEL[S.ansicht] || 'Website bearbeiten');
   const u = S.ue, z = u && u.zuletzt;
   $('#kopf').innerHTML = `
-    <button class="kopf__marke" type="button" data-gehe="start" aria-label="Zur Übersicht"><span class="kopf__z">${ZEICHEN}</span><span><b>Le Bureau</b><small>Website · Waldhotel Doldenhorn</small></span></button>
+    <button class="kopf__marke" type="button" data-gehe="start" aria-label="Zur Übersicht"><span class="kopf__z">${ZEICHEN}</span><span><b>Website bearbeiten</b><small>Website · Waldhotel Doldenhorn</small></span></button>
     <div class="kopf__mitte"><div class="kopf__titel">${esc(t)}</div><div class="kopf__stand">${u && u.aenderungen ? u.aenderungen + ' im Entwurf' : z ? 'Veröffentlicht ' + esc(datum(z.zeit).split(',')[0]) : 'Wie gebaut'}</div></div>
     <div class="kopf__werk">
-      <a class="rund" href="${WEG('maison')}" data-tip="La Maison" aria-label="Zurück zu La Maison">${ic('haus')}</a>
+      <a class="rund" href="${WEG('maison')}" data-tip="Kontrollpanel" aria-label="Zurück zu «Kontrollpanel»">${ic('haus')}</a>
       <a class="rund" href="${WEG('pruefung')}" target="_blank" rel="noopener" data-tip="Prüfung" aria-label="Prüfung">${SYM.pruef}</a>
       <a class="rund" href="${WEG('anleitung')}" target="_blank" rel="noopener" data-tip="Anleitung" aria-label="Anleitung">${SYM.buch}</a>
       <span class="kopf__trenn"></span>
@@ -257,10 +257,10 @@ const EXTRA = {
   bilder: ['Für alle Seiten', 'Die <em>Bilder.</em>', 'Jedes Foto der Website an einem Ort, auch Startbild, Fenster und Schlussbild: tauschen, überall wo es steht, und die Beschreibung für Blinde und Google.'],
   kueche: ['Karten', 'Karten <em>der Website.</em>', 'Die Grosse Karte, die Bistrokarte, das Massage-Menü, die Saunen und die Pauschalen, wie sie auf den Seiten stehen. Jede Zeile hat «Bearbeiten», Pfeile, ein Auge zum Ausblenden und einen Papierkorb.'],
   zahlen: ['Im Betrieb', 'Zahlen <em>der Website.</em>', 'Was Gäste auf der Website anklicken: Zimmer, Angebote, Anfragen, Buchen. Ohne Kekse, ohne Namen.'],
-  zugang: ['Sicher', 'Ihr <em>Zugang.</em>', 'Passwort und Anmeldung. Bei der Auslieferung an das Haus wird Le Bureau mit Anmeldung und Passwort geschützt.']
+  zugang: ['Sicher', 'Ihr <em>Zugang.</em>', 'Passwort und Anmeldung. Bei der Auslieferung an das Haus wird Website bearbeiten mit Anmeldung und Passwort geschützt.']
 };
 function zeichneExtra(name, listen) {
-  const x = EXTRA[name] || ['Le Bureau', esc(name), ''];
+  const x = EXTRA[name] || ['Website bearbeiten', esc(name), ''];
   const ziel = listen ? `/studio/alt.html?eingebettet=1#/${ALT_B(listen)}` : `/studio/alt.html?eingebettet=1#/${name}`;
   const html = `<div class="einbett"><iframe id="ein-f" title="${esc(TITEL['x:' + name] || name || 'Listen')}" src="${ziel}"></iframe><div class="lade-schleier">Wird geladen …</div></div>`;
   if (listen) return html;
@@ -277,11 +277,11 @@ window.addEventListener('message', ev => { const d = ev.data || {}; if (d.bureau
 
 /* ---------- Übersicht ---------- */
 /* Titel der Startansicht sofort, ohne auf die Daten zu warten (Prüf-Chat 18.10.2026: kam 1,7 s nach dem Aufruf); der Rest kommt nach, der Titel bleibt stehen */
-const START_SATZ = 'Hier pflegen Sie die Website des Hauses: jeden Text, jedes Foto, jede Angabe. Alles wartet zuerst im Entwurf. In dieser Vorschau lässt sich alles ansehen und ausprobieren, veröffentlicht wird nichts.';
+const START_SATZ = 'Hier pflegen Sie die Website des Hauses: jeden Text, jedes Foto, jede Angabe. Alles wartet zuerst im Entwurf. Auf die Website kommt es erst, wenn Sie veröffentlichen, und jeder frühere Stand lässt sich zurückholen.';
 function startKopf() {
   const h = new Date().getHours(), gruss = h >= 5 && h < 11 ? 'Guten Morgen.' : h >= 11 && h < 18 ? 'Guten Tag.' : 'Guten Abend.';
-  return (window.DHStart ? DHStart({ werkzeug: 'Le Bureau', h1: `${gruss} <em>Was ändern wir heute?</em>`, satz: START_SATZ, kn: [{ t: 'Anleitung', href: WEG('anleitung'), neu: true }] })   // einheitliches Startbild (17.10.2026, startbild.css)
-    : kopf('Le Bureau · Waldhotel Doldenhorn · Kandersteg', `${gruss} <em>Was ändern wir heute?</em>`, START_SATZ,
+  return (window.DHStart ? DHStart({ werkzeug: 'Website bearbeiten', h1: `${gruss} <em>Was ändern wir heute?</em>`, satz: START_SATZ, kn: [{ t: 'Anleitung', href: WEG('anleitung'), neu: true }] })   // einheitliches Startbild (17.10.2026, startbild.css)
+    : kopf('Website bearbeiten · Waldhotel Doldenhorn · Kandersteg', `${gruss} <em>Was ändern wir heute?</em>`, START_SATZ,
     `<a class="kn kn--linie" href="${WEG('anleitung')}" target="_blank" rel="noopener">Anleitung<i>${PF}</i></a>`));
 }
 function setzeStart(el) {
@@ -306,12 +306,12 @@ function start() {
     ['angaben', 'Telefon oder E-Mail', 'Einmal ändern, auf allen Seiten richtig.', 'tel', 'empfang']];
   const mc = (u.karten && u.karten.karten) || [];
   const kw = (u.karten && u.karten.website) || [];
-  const satzS = 'Hier pflegen Sie die Website des Hauses: jeden Text, jedes Foto, jede Angabe. Alles wartet zuerst im Entwurf. In dieser Vorschau lässt sich alles ansehen und ausprobieren, veröffentlicht wird nichts.';
+  const satzS = 'Hier pflegen Sie die Website des Hauses: jeden Text, jedes Foto, jede Angabe. Alles wartet zuerst im Entwurf. Auf die Website kommt es erst, wenn Sie veröffentlichen, und jeder frühere Stand lässt sich zurückholen.';
   return startKopf() +
     `<div class="lage platte">
       <div class="lg"><i class="lg__z">${ic('stift')}</i><span class="mono">Entwurf</span><b>${u.aenderungen ? u.aenderungen + ' Änderung' + (u.aenderungen > 1 ? 'en warten' : ' wartet') : 'Nichts offen'}</b><span>${u.aenderungen ? 'Gespeichert, noch nicht auf der Website.' : 'Was Sie speichern, sammelt sich hier.'}</span>${u.aenderungen ? '<button type="button" data-gehe="entwurf">Ansehen und veröffentlichen</button>' : ''}</div>
       <div class="lg"><i class="lg__z">${ic('welt')}</i><span class="mono">Website</span><b>${u.zuletzt ? 'Veröffentlicht ' + datum(u.zuletzt.zeit).split(',')[0] : 'Wie gebaut'}</b><span>${u.seiten} Seiten, dazu das Rechtliche.${u.zuletzt && u.zuletzt.notiz ? ' Zuletzt: ' + esc(u.zuletzt.notiz) : ''}</span><a href="${WEG('website')}" target="_blank" rel="noopener">Website öffnen</a></div>
-      <div class="lg"><i class="lg__z">${ic('karte')}</i><span class="mono">Karten</span><b>${mc.filter(k => k.entwurf).length ? mc.filter(k => k.entwurf).length + ' Karte im Entwurf' : mc.length ? (ZAHLWORT[mc.length] || mc.length) + ' Karten in La Carte' : (ZAHLWORT[kw.length] || kw.length) + ' Karten auf der Website'}</b><span>Grosse Karte, Bistrokarte, Massage-Menü, Saunen und die Pauschalen, Zeile für Zeile mit Preis.</span><button type="button" data-gehe="karten">Zu den Karten</button></div>
+      <div class="lg"><i class="lg__z">${ic('karte')}</i><span class="mono">Karten</span><b>${mc.filter(k => k.entwurf).length ? mc.filter(k => k.entwurf).length + ' Karte im Entwurf' : mc.length ? (ZAHLWORT[mc.length] || mc.length) + ' Karten in «Karten & Preislisten»' : (ZAHLWORT[kw.length] || kw.length) + ' Karten auf der Website'}</b><span>Grosse Karte, Bistrokarte, Massage-Menü, Saunen und die Pauschalen, Zeile für Zeile mit Preis.</span><button type="button" data-gehe="karten">Zu den Karten</button></div>
     </div>
     <h2 class="zw">Häufig <em>gebraucht</em></h2>
     <div class="aufgaben edel">${AUFG.map(([z, t, s, k, f]) => `<button class="ag ag--foto" type="button" data-gehe="${z}"><span class="ag__b"><img src="${vorschau('/assets/img/' + f + '-s.webp')}" alt="" loading="lazy" decoding="async"></span><i class="ag__z">${ic(k)}</i><b>${t}</b><span>${s}</span><em>${PF}</em></button>`).join('')}</div>
@@ -442,9 +442,9 @@ function verbindeZeigen() {
   $$('[data-zeigen]').forEach(x => x.onclick = () => { const [h, n] = x.dataset.zeigen.split('|'); vormerken(`aus|${S.seite}|${h}|${n}`, { art: 'aus', seite: S.seite, h, n: +n, an: false }); speichern(); });
 }
 function gruppeHtml(g, gi) {
-  if (g.mc) return `<details class="gr gr--mc" data-g="${gi}"><summary><b>${esc(g.titel || 'Karte')}</b><small>La Carte</small></summary>
-    <div class="ed" style="border-top:0"><p style="margin:0 0 10px">Gerichte, Preise und Weine dieser Karte kommen aus La Carte, zusammen mit der PDF und allen Sprachen. Dort ändern, dann stimmt alles überein.</p>
-    <a class="kn kn--linie kn--klein" href="${CARTE}" target="_blank" rel="noopener">La Carte öffnen<i>${PF}</i></a></div></details>`;
+  if (g.mc) return `<details class="gr gr--mc" data-g="${gi}"><summary><b>${esc(g.titel || 'Karte')}</b><small>Karten & Preislisten</small></summary>
+    <div class="ed" style="border-top:0"><p style="margin:0 0 10px">Gerichte, Preise und Weine dieser Karte kommen aus «Karten & Preislisten», zusammen mit der PDF und allen Sprachen. Dort ändern, dann stimmt alles überein.</p>
+    <a class="kn kn--linie kn--klein" href="${CARTE}" target="_blank" rel="noopener">Karten & Preislisten öffnen<i>${PF}</i></a></div></details>`;
   const geaendert = g.stellen.some(s => s.neu !== undefined) || g.fotos.some(f => f.neu || f.alt_neu);
   const offen = gi < 2 || geaendert || (S.offenGr && S.offenGr.has(String(gi)));
   return `<details class="gr${g.aus ? ' ist-aus' : ''}" ${offen ? 'open' : ''} data-g="${gi}"${offen ? '' : ' data-leer'}><summary><b>${esc(g.titel || 'Abschnitt')}</b><small>${g.stellen.length} Text${g.stellen.length === 1 ? '' : 'e'}${g.fotos.length ? ' · ' + g.fotos.length + ' Foto' + (g.fotos.length > 1 ? 's' : '') : ''}</small></summary>
@@ -493,7 +493,7 @@ function senden(d) { const f = $('#vf'); if (f && f.contentWindow) f.contentWind
 function oeffneStelle(h, n, zeigen, bloecke) {
   const s = stelleVon(h, n);
   if (!s) return;
-  if (s.mc) { quit('Diese Karte pflegt La Carte', 'Gerichte, Preise und Weine dort ändern: dann stimmen PDF, Website und alle Sprachen überein.', [['La Carte öffnen', () => window.open(CARTE, '_blank')]], false, 8000); return; }
+  if (s.mc) { quit('Diese Karte pflegt Karten & Preislisten', 'Gerichte, Preise und Weine dort ändern: dann stimmen PDF, Website und alle Sprachen überein.', [['Karten & Preislisten öffnen', () => window.open(CARTE, '_blank')]], false, 8000); return; }
   if (s.q && s.q.length) return oeffneAngabe(s, h, n, zeigen);   // die Stelle zeigt eine Angabe, eine Karte oder einen Listeneintrag des Hauses (wie beim Carlton)
   S.wahl = { h, n };
   $$('.ed').forEach(x => x.remove());
@@ -793,13 +793,13 @@ function ersetzeText(html, alt, neu) {
   return h;
 }
 
-/* ---------- Karten (La Carte) ---------- */
+/* ---------- Karten (Karten & Preislisten) ---------- */
 function karten() {
   const K = S.ue.karten || {}, mc = K.karten || [], kw = K.website || [];
   const BILD = { karte: 'gedeck', bistro: 'feuer', massage: 'massage', saunen: 'sauna', seminar: 'seminar', gourmet: 'salon', reisen: 'luft-tal', ueberraschung: 'fest' };
-  return kopf('Karten', 'Die <em>Karten.</em>', 'Grosse Karte, Bistrokarte, Massage-Menü, Saunen und die Pauschalen stehen auf der Website als Listen mit Preis. Sie pflegen sie Zeile für Zeile unter «Karten der Website». Gedruckte Karten und PDFs macht La Carte.',
-    `${CARTE() ? `<a class="kn" href="${CARTE()}" target="_blank" rel="noopener">La Carte öffnen<i>${PF}</i></a>` : ''}<button class="kn${CARTE() ? ' kn--linie' : ''}" type="button" data-gehe="x:kueche">Karten der Website<i>${PF}</i></button>`) +
-    (K.fehler ? `<div class="leer-hinweis"><b>${CARTE() ? 'La Carte antwortet nicht.' : 'La Carte ist noch nicht angeschlossen.'}</b>${CARTE() ? esc(K.fehler) : 'Die gedruckten Karten und ihre PDFs bekommen ein eigenes Werkzeug. Bis es an Le Bureau angeschlossen ist, pflegen Sie die Karten der Website hier, die PDFs stehen unter «Angaben des Hauses».'}</div>` : '') +
+  return kopf('Karten', 'Die <em>Karten.</em>', 'Grosse Karte, Bistrokarte, Massage-Menü, Saunen und die Pauschalen stehen auf der Website als Listen mit Preis. Sie pflegen sie Zeile für Zeile unter «Karten der Website». Gedruckte Karten und PDFs macht Karten & Preislisten.',
+    `${CARTE() ? `<a class="kn" href="${CARTE()}" target="_blank" rel="noopener">Karten & Preislisten öffnen<i>${PF}</i></a>` : ''}<button class="kn${CARTE() ? ' kn--linie' : ''}" type="button" data-gehe="x:kueche">Karten der Website<i>${PF}</i></button>`) +
+    (K.fehler ? `<div class="leer-hinweis"><b>${CARTE() ? 'Karten & Preislisten antwortet nicht.' : 'Karten & Preislisten ist noch nicht angeschlossen.'}</b>${CARTE() ? esc(K.fehler) : 'Die gedruckten Karten und ihre PDFs bekommen ein eigenes Werkzeug. Bis es an Website bearbeiten angeschlossen ist, pflegen Sie die Karten der Website hier, die PDFs stehen unter «Angaben des Hauses».'}</div>` : '') +
     (mc.length ? `<div class="kt-flaeche">${mc.map((k, i) => `<a class="kt" style="--i:${i};--r:${[-2.5, 1.8, -1.2, 2.4, -1.8][i % 5]}deg" href="${CARTE()}#${esc(k.ziel)}" target="_blank" rel="noopener"><span class="kt__b"><img src="${vorschau('/assets/img/gedeck-s.webp')}" alt="" loading="lazy" decoding="async"></span><b>${esc(k.name)}</b><small>${esc(k.gruppe || 'Karte')} · PDF vom ${esc((k.pdf_zeit || '–').split(' ')[0])}</small>${k.entwurf ? '<em>Entwurf wartet</em>' : ''}</a>`).join('')}</div>` : '') +
     `<h2 class="zw">Auf der <em>Website</em></h2>
     <div class="kt-flaeche">${kw.map((k, i) => `<button class="kt" type="button" data-gehe="x:kueche" style="--i:${i};--r:${[-2.5, 1.8, -1.2, 2.4, -1.8][i % 5]}deg"><span class="kt__b"><img src="${vorschau('/assets/img/' + (BILD[k.key] || 'gedeck') + '-s.webp')}" alt="" loading="lazy" decoding="async"></span><b>${esc(k.titel)}</b><small>${esc((k.unter || '').split(' · ')[0] || 'Website')} · ${k.zeilen} Zeile${k.zeilen === 1 ? '' : 'n'}</small></button>`).join('')}</div>
@@ -890,7 +890,7 @@ async function zeichneSprachen() {
         return `<div class="ue__sp"><label for="ue-${i}-${sp}">${SPNAME[sp] || sp}</label><input id="ue-${i}-${sp}" type="text" data-sp="${sp}" value="${esc(op ? op.ue : x.wert)}" placeholder="${x.haus ? esc(x.haus) : 'steht deutsch, bis hier etwas steht'}">${x.haus ? '<small>Schon übersetzt (aus dem Wörterbuch der Website).</small>' : x.alt ? `<small>Bisher: ${esc(x.alt)}</small>` : ''}</div>`;
       }).join('')}</section>`).join('')
       : `<div class="leer-hinweis"><b>Noch nichts zu übersetzen.</b>${SP.length ? 'Sobald Sie einen Text auf Deutsch ändern und speichern, steht er hier mit einem Feld je Sprache.' : 'Kommt Englisch oder Französisch dazu, läuft es so:'}</div>
-      <div class="ue-weg">${[['stift', 'Auf Deutsch ändern', 'In Le Bureau einen Satz der Website neu schreiben und speichern.'],
+      <div class="ue-weg">${[['stift', 'Auf Deutsch ändern', 'In «Website bearbeiten» einen Satz der Website neu schreiben und speichern.'],
         ['sprache', 'Hier übersetzen', 'Der Satz erscheint hier, mit einem Feld je Sprache der Website.'],
         ['welt', 'Gäste lesen ihn', 'Wer die Website in einer anderen Sprache öffnet, liest Ihre Übersetzung.']].map(([k, t, x], i) => `<div class="ue-weg__s" style="--i:${i}"><i>${ic(k)}</i><b>${t}</b><span>${x}</span></div>`).join('')}</div>
       <section class="karte ue ue--bsp" aria-label="Beispiel"><div class="ue-wo"><img src="${vorschau('/assets/img/becken-s.webp')}" alt=""><div><small>Steht auf der Website</small><b>Spa · Hallenbad</b><span>Gäste, die die Seite in einer anderen Sprache öffnen, lesen die Zeile aus dem Feld ihrer Sprache.</span></div></div><span class="mono">Beispiel · Spa · Hallenbad</span><div class="ue__de">Das Hallenbad ist täglich von 7 bis 21 Uhr geöffnet.</div><div class="ue__vor">Vorher: Das Hallenbad ist täglich von 8 bis 22 Uhr geöffnet.</div>
@@ -1000,7 +1000,7 @@ async function zeichneVerlauf() {
           ['Freitag, 24. Oktober, 09.05 Uhr', '1 Änderung · Foto des Bistros am Kamin getauscht', ''],
           ['Montag, 20. Oktober, 11.40 Uhr', '5 Änderungen · Küchenfest im November, Telefon der Rezeption', '']].map(([z, t, m], i) => `<div class="vl"><i class="vl__z">${ic(i ? 'zurueck' : 'welt')}</i><div><b>${z}</b><span>${t}</span></div>${m ? `<em class="vl__m">${m}</em>` : ''}<span class="kn kn--linie kn--klein" aria-disabled="true">In den Entwurf holen<i>${PF}</i></span></div>`).join('')}
           <p class="leise vl-bsp__satz">Eine ältere Fassung zurückholen: Sie kommt zuerst in den Entwurf. Dort sehen Sie vorher und nachher und veröffentlichen erst, wenn alles stimmt.</p></div>`) +
-    `<div class="vl vl--ursprung"><div><b>Ursprünglicher Stand</b><span>Die Website, wie Tasty Studios sie gebaut hat, ohne jede Änderung in Le Bureau.</span></div><button class="kn kn--linie kn--klein" type="button" data-id="ursprung">In den Entwurf holen<i>${PF}</i></button></div>`;
+    `<div class="vl vl--ursprung"><div><b>Ursprünglicher Stand</b><span>Die Website, wie Tasty Studios sie gebaut hat, ohne jede Änderung in «Website bearbeiten».</span></div><button class="kn kn--linie kn--klein" type="button" data-id="ursprung">In den Entwurf holen<i>${PF}</i></button></div>`;
   $$('[data-id]').forEach(b => b.onclick = async () => {
     try { const r = await api('zurueckholen', { id: b.dataset.id }); S.offen = {}; await frisch(false); gehe('entwurf'); quit('Im Entwurf', `${r.offen} Änderung${r.offen === 1 ? '' : 'en'} gegenüber der Website. Prüfen, dann veröffentlichen.`, [], false, 6000); } catch (e) { fehler(e); }
   });
@@ -1016,8 +1016,8 @@ function fenster(html, schmal = false) {
 }
 function fensterZu() { $('#fenster').hidden = true; $('#fenster').innerHTML = ''; }
 
-/* Eingang (Anfragen aus dem Anfrage-Fenster der Website, studio/eingang.html, Werkzeug La Réception): Zahl der neuen, alle zwei Minuten.
-   Liest denselben Weg wie der Eingang (/api/anfragen, nur von der eigenen Seite); antwortet er nicht (Le Bureau am Rechner ohne Hausserver), steht keine Zahl. */
+/* Eingang (Anfragen aus dem Anfrage-Fenster der Website, studio/eingang.html, Werkzeug Anfragen & Chat): Zahl der neuen, alle zwei Minuten.
+   Liest denselben Weg wie der Eingang (/api/anfragen, nur von der eigenen Seite); antwortet er nicht (Website bearbeiten am Rechner ohne Hausserver), steht keine Zahl. */
 function eingangZahl() {
   fetch('/api/anfragen', { cache: 'no-store', credentials: 'same-origin' }).then(r => r.ok ? r.json() : null).then(j => {
     const n = j && Array.isArray(j.anfragen) ? j.anfragen.filter(x => x.stand === 'neu').length : 0;
@@ -1038,7 +1038,7 @@ function eingangZahl() {
     window.bureauMerk && window.bureauMerk('Start: ' + (e.message || e));
     return;
   }
-  /* Aus La Maison geöffnet: immer auf der Übersicht anfangen (Robert 16.10.2026), beim Neuladen bleibt die letzte Ansicht */
+  /* Aus «Kontrollpanel» geöffnet: immer auf der Übersicht anfangen (Robert 16.10.2026), beim Neuladen bleibt die letzte Ansicht */
   if ((/\/maison\/?(index\.html)?([?#].*)?$/.test(document.referrer) && ((performance.getEntriesByType('navigation')[0] || {}).type !== 'reload'))) try { localStorage.removeItem('bureau-ansicht'); } catch (e) { /* privat */ }
   else try { const m = JSON.parse(localStorage.getItem('bureau-ansicht') || 'null'); if (m) { S.ansicht = m.a || 'start'; S.bereich = m.b || ''; S.seite = m.s || ''; } } catch (e) { /* privat */ }
   if (S.ansicht === 'bereich' && !S.ue.bereiche.some(b => b.key === S.bereich)) S.ansicht = 'start';

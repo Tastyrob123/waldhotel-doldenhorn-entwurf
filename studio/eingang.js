@@ -1,7 +1,7 @@
 /* Eingang · Studio · Waldhotel Doldenhorn. Die Anfragen aus dem Anfrage-Fenster der Website (assets/js/anfrage.js) für das Team.
    Fassung 2 (17.10.2026, Robert: «Mach das noch ein bisschen geiler wie die anderen Tools auch und bau da ein paar Beispiele ein»): Kopfleiste Nachtblau,
    heller Raum, Bühne mit dem Haus am Abend, Abteilungen als Kacheln, Liste nach Tagen mit Foto je Anliegen, Anfrage auf dunkler Platte mit der
-   Antwort als Brief im Ton des Hauses. Vorbild: der Eingang von La Réception des Grand Beau-Rivage (nur gelesen). Fassung 1: _sicherung/2026-10-17-eingang-v1/.
+   Antwort als Brief im Ton des Hauses. Vorbild: der Eingang von «Anfragen & Chat» des Grand Beau-Rivage (nur gelesen). Fassung 1: _sicherung/2026-10-17-eingang-v1/.
    Funktionen wie Fassung 1: gelesen beim Öffnen, erledigt / wieder offen, löschen mit zweitem Klick, nach Abteilung und Stand filtern, alle zwei Minuten
    nachsehen. Liest und schreibt nur über /api/anfragen (online api/anfragen.js, lokal serve.py). Aus dem Eingang wird nichts verschickt.
    Beispiele: neun erfundene Anfragen, überall «Beispiel» beschriftet, ohne Angaben über das Haus; ihr Stand lebt nur in diesem Browser. */

@@ -1,8 +1,8 @@
 /* Studio · Waldhotel Doldenhorn. Das Werkzeug, mit dem das Haus seine Seite pflegt. Ohne Bibliothek, nach dem Vorbild des Studios von Salt & Silver. */
 (() => {
 'use strict';
-/* Le Bureau (17.10.2026): dieses frühere Studio läuft als alt.html weiter; Le Bureau bettet seine Ansichten ein (Listen, Karten der Website, Menü & Seiten,
-   Bilder, Zahlen, Zugang). Eingebettet ohne Rand und Leiste; jede gespeicherte Änderung meldet es an Le Bureau, dann stimmen Leiste, Rand und Zahlen dort sofort. */
+/* Website bearbeiten (17.10.2026): dieses frühere Studio läuft als alt.html weiter; Website bearbeiten bettet seine Ansichten ein (Listen, Karten der Website, Menü & Seiten,
+   Bilder, Zahlen, Zugang). Eingebettet ohne Rand und Leiste; jede gespeicherte Änderung meldet es an Website bearbeiten, dann stimmen Leiste, Rand und Zahlen dort sofort. */
 const EIN = new URLSearchParams(location.search).has('eingebettet') && window.parent !== window;
 if (EIN) document.documentElement.classList.add('eingebettet');
 const melden = () => { if (EIN) window.parent.postMessage({ bureau: 'geaendert' }, '*'); };
@@ -136,7 +136,7 @@ function rand() {
   const n = Z.aenderungen.length, teil = location.hash.split('/')[1] || 'uebersicht', an = teil === 'seite' ? 'seiten' : teil;
   $('#rand').innerHTML = `<a class="rand__marke" href="#/uebersicht"><img src="/assets/logo/wortmarke-leiste.webp" width="760" height="141" alt="Waldhotel Doldenhorn"><span>Studio</span></a>
   <nav aria-label="Bereiche">${NAV.map(p => p ? `<a href="${p[0] === 'pruefung' ? 'pruefung.html' : '#/' + p[0]}" class="${an === p[0] ? 'an' : ''}">${ik(p[2])}${p[1]}${p[0] === 'aenderungen' && n ? `<b>${n}</b>` : ''}</a>` : '<div class="rand__trenn"></div>').join('')}</nav>
-  <div class="rand__fuss"><a href="/live/index.html" target="_blank" rel="noopener">Website ansehen ${PF}</a>${OFFEN || PROBE ? '' : '<button type="button" data-akt="abmelden">Abmelden</button>'}</div>`;
+  <div class="rand__fuss"><a href="/" target="_blank" rel="noopener">Website ansehen ${PF}</a>${OFFEN || PROBE ? '' : '<button type="button" data-akt="abmelden">Abmelden</button>'}</div>`;
   const aktiv = $('#rand nav a.an');
   if (aktiv && innerWidth <= 860) aktiv.scrollIntoView({ block: 'nearest', inline: 'center' });
 }
@@ -181,7 +181,7 @@ function leiste() {
   el.innerHTML = n ? `<button class="leiste__l" type="button" data-akt="lade" aria-label="Liste der Änderungen zeigen"><i class="leiste__z">${n}</i><span><b>${n === 1 ? 'Änderung' : 'Änderungen'} im Entwurf</b><small>Zuletzt: ${h(neueste.satz)}${neueste.zeit ? ' · ' + vor(neueste.zeit) : ''}</small></span></button>
     <div class="leiste__r"><button class="kn kn--klein kn--linie" type="button" data-akt="lade">Liste zeigen</button><a class="kn kn--klein kn--linie" href="/entwurf/${W ? encodeURIComponent(W.datei) : 'index.html'}" target="_blank" rel="noopener">Entwurf ansehen ${PF}</a><button class="kn kn--hell" type="button" data-akt="raus">Veröffentlichen</button></div>`
     : `<div class="leiste__l"><i class="leiste__z ok">${HAKEN}</i><span><b>Alles veröffentlicht</b><small>${zuletzt ? 'Stand vom ' + datum(zuletzt.zeit) : 'Die Website zeigt den neuesten Stand.'}</small></span></div>
-    <div class="leiste__r"><a class="kn kn--klein kn--linie" href="/live/index.html" target="_blank" rel="noopener">Website ansehen ${PF}</a></div>`;
+    <div class="leiste__r"><a class="kn kn--klein kn--linie" href="/" target="_blank" rel="noopener">Website ansehen ${PF}</a></div>`;
   if (letzteZahl !== null && letzteZahl !== n && n) $('.leiste__z', el).classList.add('hupf');
   letzteZahl = n;
   if (!$('#lade').hidden) lade();
@@ -1068,7 +1068,7 @@ function veroeffentlichen() {
       leiste();
       fenster(`<div class="erfolg"><i>${HAKEN}</i><h2>Veröffent<em>licht.</em></h2><p>Die Website zeigt jetzt den neuen Stand. Das ist live:</p></div>
         <ul class="quittliste ok">${cs.map(c => `<li><i>${HAKEN}</i><span>${h(c.satz)}</span></li>`).join('')}</ul>
-        <div class="fenster__kn"><a class="kn kn--linie" href="/live/index.html" target="_blank" rel="noopener">Website ansehen</a><button class="kn" type="button" data-zu>Fertig</button></div>`);
+        <div class="fenster__kn"><a class="kn kn--linie" href="/" target="_blank" rel="noopener">Website ansehen</a><button class="kn" type="button" data-zu>Fertig</button></div>`);
       if (W) neuLaden({}); else zeige(true);
     } catch (e) { sag(e.message, true); ev.target.disabled = false; ev.target.textContent = 'Jetzt veröffentlichen'; }
   });

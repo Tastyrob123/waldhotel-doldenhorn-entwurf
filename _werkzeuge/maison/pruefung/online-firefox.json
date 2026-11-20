@@ -1,0 +1,50 @@
+[
+ {
+  "nr": "O01 1440x900",
+  "name": "Online-Fassung läuft unter strenger Sicherheitsregel (keine eingebetteten Skripte)",
+  "ok": true,
+  "beleg": "{\"csp\":[],\"fehler\":[]}"
+ },
+ {
+  "nr": "O02 1440x900",
+  "name": "Kein localhost, kein Platzhalter in der Online-Fassung",
+  "ok": true,
+  "beleg": "Platzhalter 0"
+ },
+ {
+  "nr": "O03 1440x900",
+  "name": "Jedes Linkziel liegt online wirklich (21 Links)",
+  "ok": true,
+  "beleg": "/studio/pruefung.html /index.html /studio/ /_werkzeuge/carte/ /werkzeuge/imprimerie/ /werkzeuge/reception/ /werkzeuge/livre/ /werkzeuge/registre/ /werkzeuge/reception/anleitung.html /werkzeuge/livre/anleitung.html /werkzeuge/registre/anleitung.html"
+ },
+ {
+  "nr": "O04 1440x900",
+  "name": "Stand-Wege online aus den Andock-Dateien, ohne Antwort Satz ohne Zahl",
+  "ok": true,
+  "beleg": "{\"bureau\":\"/studio/api/ueberblick\",\"carte\":\"/_werkzeuge/carte/api/status\",\"imprimerie\":\"/werkzeuge/imprimerie/haeuser/doldenhorn/vorlagen/index.json\",\"reception\":[\"/werkzeuge/reception/api/ueberblick\",\"/_werkzeuge/reception/api/ueberblick\"],\"livre\":\"/marke/livre.json\",\"registre\":[\"/api/registre?tage=30&beispiel=1\",\"/werkzeuge/registre/beispiel/30.json\"]} · Website des Hauses | Karten des Hauses | Vorlagen, druckfertig | Rezeption im Chat | Fotos, Dateien, Markenprüfung | Besuche ohne Namen"
+ },
+ {
+  "nr": "O01 390x844",
+  "name": "Online-Fassung läuft unter strenger Sicherheitsregel (keine eingebetteten Skripte)",
+  "ok": true,
+  "beleg": "{\"csp\":[],\"fehler\":[]}"
+ },
+ {
+  "nr": "O02 390x844",
+  "name": "Kein localhost, kein Platzhalter in der Online-Fassung",
+  "ok": true,
+  "beleg": "Platzhalter 0"
+ },
+ {
+  "nr": "O03 390x844",
+  "name": "Jedes Linkziel liegt online wirklich (21 Links)",
+  "ok": true,
+  "beleg": "/studio/pruefung.html /index.html /studio/ /_werkzeuge/carte/ /werkzeuge/imprimerie/ /werkzeuge/reception/ /werkzeuge/livre/ /werkzeuge/registre/ /werkzeuge/reception/anleitung.html /werkzeuge/livre/anleitung.html /werkzeuge/registre/anleitung.html"
+ },
+ {
+  "nr": "O04 390x844",
+  "name": "Stand-Wege online aus den Andock-Dateien, ohne Antwort Satz ohne Zahl",
+  "ok": true,
+  "beleg": "{\"bureau\":\"/studio/api/ueberblick\",\"carte\":\"/_werkzeuge/carte/api/status\",\"imprimerie\":\"/werkzeuge/imprimerie/haeuser/doldenhorn/vorlagen/index.json\",\"reception\":[\"/werkzeuge/reception/api/ueberblick\",\"/_werkzeuge/reception/api/ueberblick\"],\"livre\":\"/marke/livre.json\",\"registre\":[\"/api/registre?tage=30&beispiel=1\",\"/werkzeuge/registre/beispiel/30.json\"]} · Website des Hauses | Karten des Hauses | Vorlagen, druckfertig | Rezeption im Chat | Fotos, Dateien, Markenprüfung | Besuche ohne Namen"
+ }
+]

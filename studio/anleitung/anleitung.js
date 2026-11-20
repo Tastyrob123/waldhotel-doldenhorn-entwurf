@@ -1,4 +1,4 @@
-/* Anleitung zum Le Bureau des Waldhotel Doldenhorn (Vorlage: Anleitung des Grand Beau-Rivage): Hereinkommen, Filme und Bilder werden per Klick gross (Kino aus dem Werkbank-Kit, hier auch für Standbilder). */
+/* Anleitung zum Website bearbeiten des Waldhotel Doldenhorn (Vorlage: Anleitung des Grand Beau-Rivage): Hereinkommen, Filme und Bilder werden per Klick gross (Kino aus dem Werkbank-Kit, hier auch für Standbilder). */
 (function () {
   'use strict';
   var doc = document, ruhig = matchMedia('(prefers-reduced-motion:reduce)').matches;

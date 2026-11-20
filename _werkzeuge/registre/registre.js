@@ -1,7 +1,7 @@
-/* Le Registre · Waldhotel Doldenhorn (Tasty Studios 17.10.2026, Werkzeug 6 «Das Besucherbuch»). Das Haus sieht, wer seine Website besucht:
+/* Besucher · Waldhotel Doldenhorn (Tasty Studios 17.10.2026, Werkzeug 6 «Besucher»). Das Haus sieht, wer seine Website besucht:
    woher (Land, Ort), wann (Tag, Uhrzeit, Wochentag), was (Seiten, Zeit je Seite), wie es sich entwickelt (Verlauf) und ob ein Besuch
    weiterführt (Buchungsfenster, SimpleBooking, Tisch, Anfrage, Spa-Termin, Anruf, Mail, Chat). Nie ein Name, keine Adresse der Verbindung, kein Cookie.
-   Kopie von Le Registre des Carlton-Europe (Stand nach der Prüfung 16./17.10.2026), Funktion und Bedienung wie Le Registre des Grand Beau-Rivage; Kleid des Doldenhorn.
+   Kopie von «Besucher» des Carlton-Europe (Stand nach der Prüfung 16./17.10.2026), Funktion und Bedienung wie Besucher des Grand Beau-Rivage; Kleid des Doldenhorn.
    Server-Teil: registre.py über /api/registre (lokal server.py). Ohne Server-Teil liest das Werkzeug beispiel/<tage>.json und schiebt die Tage auf heute.
    Vorführ-Betrieb (Master, Lernprotokoll 14.10.2026): der Kunde sieht nur Beispielwerte, überall als Beispiel beschriftet, kein Knopf zu den echten.
    Echte Werte nur mit ?k=<Schlüssel>. Geht das Haus in Betrieb: VORFUEHRUNG = false hier, in anschluss.py und online/registre.py. */
@@ -30,7 +30,7 @@ const BEREICHE = [
   ['', 'Die Website'], ['seiten', 'Seiten', ''], ['verlauf', 'Verlauf', ''], ['buchung', 'Zur Buchung', ''], ['', 'Gut zu wissen'], ['zaehlung', 'So wird gezählt', '']];
 const TITEL = Object.fromEntries(BEREICHE.filter(x => x[0]).map(x => [x[0], x[1]]));
 const WTAG = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
-/* La Maison: lokal liegt sie neben Le Registre (_werkzeuge/maison/), online unter /maison/ (Andock-Datei von La Maison: statik → maison, Umleitung /_werkzeuge/maison/* → /maison/*) */
+/* Kontrollpanel: lokal liegt sie neben Besucher (_werkzeuge/maison/), online unter /maison/ (Andock-Datei von «Kontrollpanel»: statik → maison, Umleitung /_werkzeuge/maison/* → /maison/*) */
 const MAISON = /\/_werkzeuge\/registre\//.test(location.pathname) ? '../maison/' : '../../maison/';
 const MERK = 'dh-nicht-zaehlen';   /* dieselbe Marke liest messung.js auf der Website (gleiche Adresse vorausgesetzt) */
 const VORFUEHRUNG = true;
@@ -85,7 +85,7 @@ function schiebe(iso, tage) { const d = new Date(iso + 'T12:00:00Z'); d.setUTCDa
 async function lade() {
   const echt = !S.beispiel && SCHL;
   /* Vorführung: Beispielwerte aus den abgelegten Dateien, auf heute geschoben und genau auf jetzt gekürzt. Dieselbe Rechnung macht der Dienst
-     (registre.py ablage_heute) für La Maison, damit beide dieselben Zahlen zeigen (Prüfung 16.10.2026). Kein Aufruf an einen Dienst, den es nicht gibt. */
+     (registre.py ablage_heute) für «Kontrollpanel», damit beide dieselben Zahlen zeigen (Prüfung 16.10.2026). Kein Aufruf an einen Dienst, den es nicht gibt. */
   if (S.beispiel && !SCHL) return ablageLaden();
   let r, d = {};
   try { r = await fetch('../../api/registre?tage=' + S.tage + (S.beispiel ? '&beispiel=1' : echt ? '&k=' + SCHL : ''), { cache: 'no-store' }); }
@@ -191,15 +191,15 @@ function werteAus(sum) {
 }
 
 /* ---------- Rahmen ---------- */
-/* Kopf: Titel und Stand der Ansicht, Anleitung, La Maison, Website ansehen (wie der Kopf des Le Registre im Grand Beau-Rivage) */
+/* Kopf: Titel und Stand der Ansicht, Anleitung, Kontrollpanel, Website ansehen (wie der Kopf des Besucher im Grand Beau-Rivage) */
 function kopfLeiste() {
   const u = S.d.summe;
   $('#kopf').innerHTML = `
-    <a class="kopf__marke" href="#start" data-gehe="start" aria-label="Le Registre, Übersicht"><span class="kopf__z">${ZT}</span><span><b>Le Registre</b><small>Besuche · Waldhotel Doldenhorn</small></span></a>
-    <div class="kopf__mitte"><div class="kopf__titel">${esc(TITEL[S.ansicht] || 'Le Registre')}</div><div class="kopf__stand">${S.beispiel ? 'Beispielwerte · keine echten Besuche' : u.heute ? mal(u.heute, 'Ein Besuch heute', 'Besuche heute') : 'Heute noch kein Besuch'}</div></div>
+    <a class="kopf__marke" href="#start" data-gehe="start" aria-label="Besucher, Übersicht"><span class="kopf__z">${ZT}</span><span><b>Besucher</b><small>Besuche · Waldhotel Doldenhorn</small></span></a>
+    <div class="kopf__mitte"><div class="kopf__titel">${esc(TITEL[S.ansicht] || 'Besucher')}</div><div class="kopf__stand">${S.beispiel ? 'Beispielwerte · keine echten Besuche' : u.heute ? mal(u.heute, 'Ein Besuch heute', 'Besuche heute') : 'Heute noch kein Besuch'}</div></div>
     <div class="kopf__werk">
       <a class="rund" href="anleitung.html" target="_blank" rel="noopener" data-tip="Anleitung" aria-label="Anleitung">${SYM.buch}</a>
-      <a class="rund" href="${MAISON}" data-tip="La Maison" aria-label="La Maison">${SYM.haus}</a>
+      <a class="rund" href="${MAISON}" data-tip="Kontrollpanel" aria-label="Kontrollpanel">${SYM.haus}</a>
       <span class="kopf__trenn"></span>
       <a class="kn kn--klein kn--gold" href="../../index.html" target="_blank" rel="noopener">Website ansehen<i>${PF}</i></a>
     </div>`;
@@ -211,7 +211,7 @@ function rand() {
     : `<a href="#${key}" data-gehe="${key}" class="${an === key ? 'an' : ''}" ${an === key ? 'aria-current="page"' : ''}><span>${esc(name)}</span>${zahl === 'heute' && u.heute ? `<b>${n(u.heute)}</b>` : ''}</a>`).join('');
   $('#rand').innerHTML = `
     <div class="rand__kopf">
-      <span class="rand__titel">Das Besucherbuch</span>
+      <span class="rand__titel">Besucher</span>
       <button class="rand__auf" type="button" aria-expanded="false" aria-controls="rand-nav">${esc(TITEL[an])}<i aria-hidden="true"></i></button>
     </div>
     <nav class="rand__nav" id="rand-nav" aria-label="Bereiche">${nav}</nav>
@@ -219,7 +219,7 @@ function rand() {
       <a href="../../index.html" target="_blank" rel="noopener">Website${PF}</a>
       <a href="#zaehlung" data-gehe="zaehlung">Was gezählt wird${PF}</a>
       <a href="anleitung.html" target="_blank" rel="noopener">Anleitung${PF}</a>
-      <a href="${MAISON}">La Maison${PF}</a>
+      <a href="${MAISON}">Kontrollpanel${PF}</a>
       <span class="rand__haus">Waldhotel Doldenhorn · 3718 Kandersteg</span>
     </div>`;
   $$('#rand [data-gehe]').forEach(a => a.onclick = e => { e.preventDefault(); gehe(a.dataset.gehe); });
@@ -233,7 +233,7 @@ function leiste() {
   $('#leiste').innerHTML = `
     <div class="leiste__l"><i class="leiste__z${S.beispiel ? ' bsp' : ''}" aria-hidden="true">${S.beispiel ? 'B' : n(u.heute)}</i>
       <span><b>${S.beispiel ? 'Sie sehen Beispielwerte' : u.heute ? mal(u.heute, 'Ein Besuch heute', 'Besuche heute') : 'Heute noch kein Besuch'}</b>
-      <small>${S.beispiel ? 'Erfunden, damit Sie sehen, wie Le Registre mit Besuchen aussieht.' : esc(satz)}</small></span></div>
+      <small>${S.beispiel ? 'Erfunden, damit Sie sehen, wie Besucher mit Besuchen aussieht.' : esc(satz)}</small></span></div>
     <div class="leiste__r">
       <button class="kn kn--klein kn--linie" type="button" id="l-export" title="Alle Besuche des gewählten Zeitraums als Tabelle (CSV, öffnet in Excel und Numbers)">Als Tabelle sichern<i>${SYM.laden}</i></button>
       ${S.beispiel ? (ECHT_DA && !S.ablage ? `<button class="kn kn--klein kn--hell" type="button" id="l-echt">Zu den echten Besuchen<i>${PF}</i></button>` : '')
@@ -264,7 +264,7 @@ function zeitraum() {
   return `<div class="wahl3" role="group" aria-label="Zeitraum">${k(7)}${k(30)}${k(90)}</div>`;
 }
 function hinweisBeispiel() {
-  return S.beispiel ? `<p class="bsp-band"><b>Beispielwerte.</b> Diese Zahlen sind erfunden und zeigen, wie Le Registre mit Besuchen aussieht. Echte Besuche erscheinen hier, sobald die Website zählt.</p>` : '';
+  return S.beispiel ? `<p class="bsp-band"><b>Beispielwerte.</b> Diese Zahlen sind erfunden und zeigen, wie Besucher mit Besuchen aussieht. Echte Besuche erscheinen hier, sobald die Website zählt.</p>` : '';
 }
 function gehe(ziel, wahl) {
   if (!TITEL[ziel]) ziel = 'start';
@@ -293,7 +293,7 @@ async function frisch(sagen = false) {
     if (S.wahl >= S.d.besuche.length) S.wahl = 0;
     rand(); leiste(); zeichne();
     if (sagen) quit('Neu geladen', '', false, 2500);
-  } catch (e) { quit('Le Registre ist gerade nicht abrufbar', e.message, true, 0); }
+  } catch (e) { quit('Besucher ist gerade nicht abrufbar', e.message, true, 0); }
 }
 function beispiel(an) {
   if (!an && !ECHT_DA) return;
@@ -304,7 +304,7 @@ function beispiel(an) {
 
 /* ---------- Datenexport (Website-Bau-Master 9d Punkt 21, Prüfung 16.10.2026): alle Besuche des Zeitraums als Tabelle, ohne uns ----------
    Echte Werte (mit Schlüssel): der Dienst gibt alle Besuche des Zeitraums heraus (?export=1), nicht nur die neuesten 400. Beispielwerte: was die Liste zeigt,
-   im Dateinamen und in der ersten Spalte als Beispiel gekennzeichnet. Nur Angaben, die Le Registre ohnehin zeigt: kein Name, keine Adresse, kein Kürzel. */
+   im Dateinamen und in der ersten Spalte als Beispiel gekennzeichnet. Nur Angaben, die Besucher ohnehin zeigt: kein Name, keine Adresse, kein Kürzel. */
 function zelle(x) {
   let t = String(x == null ? '' : x);
   if (/^[=+\-@\t\r]/.test(t)) t = "'" + t;   /* keine Formeln in Excel (CSV-Einschleusung) */
@@ -382,10 +382,10 @@ function zeichne(ruhig) {
   $$('[data-filter]', el).forEach(b => b.onclick = () => { S.filter = b.dataset.filter; S.wahl = -1; S.zeige = 40; zeichne(true); });
   $$('[data-mehr]', el).forEach(b => b.onclick = () => { S.zeige += 60; zeichne(true); });
   $$('[data-raster]', el).forEach(b => b.onclick = () => { S.raster = b.dataset.raster; zeichne(); });
-  document.title = (TITEL[S.ansicht] || 'Le Registre') + ' · Le Registre · Waldhotel Doldenhorn';
+  document.title = (TITEL[S.ansicht] || 'Besucher') + ' · Besucher · Waldhotel Doldenhorn';
   schweben(el, ruhig);
 }
-/* Schweben (Gefühl der Carlton-Seiten, Rezeptur des Le Registre im Grand Beau-Rivage, Robert 16.10.2026: «darf nicht an den Scroll geknüpft sein, muss luxuriös
+/* Schweben (Gefühl der Carlton-Seiten, Rezeptur des Besucher im Grand Beau-Rivage, Robert 16.10.2026: «darf nicht an den Scroll geknüpft sein, muss luxuriös
    reingeschwebt kommen»): Sobald ein Blatt am unteren Rand auftaucht, schwebt es nach der Uhr an seinen Platz (.rg-da). Balken und Säulen wachsen erst, wenn ihr Blatt
    gut zur Hälfte im Bild ist (.rg-los). */
 let IO = null, IO_LOS = null;
@@ -411,8 +411,8 @@ function start() {
   const d = S.d, u = d.summe, v = d.vorher, h = new Date().getHours();
   const gruss = /[?&]gruss=tag/.test(location.search) ? 'Guten Tag.' : h >= 5 && h < 11 ? 'Guten Morgen.' : h >= 11 && h < 18 ? 'Guten Tag.' : 'Guten Abend.';
   const satzS = 'Hier sehen Sie, wer Ihre Website besucht: woher die Gäste kommen, welche Seiten sie ansehen, wie lange sie bleiben und wie viele weiter zur Buchung gehen. Gezählt ohne Cookies, nie mit Namen.';
-  let aus = (window.DHStart ? DHStart({ werkzeug: 'Le Registre', h1: `${gruss} <em>Wer war zu Besuch?</em>`, satz: satzS, kn: [{ t: 'Anleitung', href: 'anleitung.html', neu: true }], zusatz: chipsStart(d) + zeitraum() })   // einheitliches Startbild (17.10.2026)
-    : kopf('Le Registre · Waldhotel Doldenhorn', `${gruss} <em>Wer war zu Besuch?</em>`, satzS, zeitraum(), chipsStart(d))) + hinweisBeispiel();
+  let aus = (window.DHStart ? DHStart({ werkzeug: 'Besucher', h1: `${gruss} <em>Wer war zu Besuch?</em>`, satz: satzS, kn: [{ t: 'Anleitung', href: 'anleitung.html', neu: true }], zusatz: chipsStart(d) + zeitraum() })   // einheitliches Startbild (17.10.2026)
+    : kopf('Besucher · Waldhotel Doldenhorn', `${gruss} <em>Wer war zu Besuch?</em>`, satzS, zeitraum(), chipsStart(d))) + hinweisBeispiel();
   if (d.leer) return aus + leer();
   const viele = d.je_tag.length, schritt = viele <= 7 ? 1 : viele <= 31 ? 5 : 15;
   aus += `<div class="zahlen">
@@ -425,7 +425,7 @@ function start() {
       <header><h3>Besuche je Tag</h3><p>${esc(datum(d.von))} bis ${esc(datum(d.bis))} · <button class="link" type="button" data-gehe="verlauf">Verlauf</button></p></header>
       ${saeulen(d.je_tag.map(t => t.besuche), i => (viele - 1 - i) % schritt === 0 ? kurzDatum(d.je_tag[i].tag) : '', Object.assign((i, z) => tagWort(d.je_tag[i].tag) + ': ' + mal(z, 'ein Besuch', 'Besuche'), { label: 'Besuche je Tag' }))}
     </section>
-    <div class="zwei">
+    <div class="zwei zwei--unter">
       <section class="blatt"><header><h3>Woher die Gäste kommen</h3><button class="link" type="button" data-gehe="herkunft">Alle Länder</button></header>
         ${balken(d.laender.slice(0, 6), x => esc(land(x.k) || 'Ort nicht bekannt'), null, u.besuche)}</section>
       <section class="blatt"><header><h3>Am meisten angesehen</h3><button class="link" type="button" data-gehe="seiten">Alle Seiten</button></header>
@@ -564,7 +564,7 @@ function verlauf() {
       <header><h3>Besuche je Tag</h3><p><span class="punkt"></span>dieser Zeitraum <span class="punkt punkt--hell"></span>davor</p></header>
       ${saeulen(d.je_tag.map(t => t.besuche), i => (viele - 1 - i) % schritt === 0 ? kurzDatum(d.je_tag[i].tag) : '', Object.assign((i, z) => tagWort(d.je_tag[i].tag) + ': ' + mal(z, 'ein Besuch', 'Besuche') + ' · davor ' + n(d.vor_tag[i]), { label: 'Besuche je Tag im Vergleich zum Zeitraum davor' }), 'saeulen--vgl', d.vor_tag)}
     </section>
-    <div class="zwei">
+    <div class="zwei zwei--unter">
       <section class="blatt vergleich"><header><h3>Neben dem Zeitraum davor</h3></header>
         <div class="vz vz--kopf"><span></span><b>Jetzt</b><em>Davor</em><small></small></div>
         ${zeile('Besuche', u.besuche, v.besuche)}${zeile('Angesehene Seiten', u.seiten, v.seiten)}
@@ -610,7 +610,7 @@ function buchung() {
     ${k('kontakt', 'Anruf oder Mail', x => mal_(x.anruf) + ' die Nummer, ' + mal_(x.mail) + ' die Mail-Adresse, bei ' + n(x.von) + ' ' + auf(x.von), 'Noch kein Aufruf.')}
     ${k('chat', 'Rezeption im Chat', x => mal_(x.zahl) + ' geöffnet, bei ' + n(x.von) + ' ' + auf(x.von), 'Noch kein Aufruf.')}
   </div>
-  <div class="zwei">
+  <div class="zwei zwei--unter">
     <section class="blatt"><header><h3>Von welcher Seite gebucht wird</h3></header>
       ${balken(d.seiten.filter(x => x.buchung).sort((a, b) => b.buchung - a.buchung).slice(0, 8).map(x => ({ k: x.s, n: x.buchung })), x => mitBild(x.k), null, d.seiten.reduce((a, x) => a + (x.buchung || 0), 0))}</section>
     <section class="blatt"><header><h3>Der Weg zur Buchung</h3></header>${trichter(w)}</section>
@@ -625,7 +625,7 @@ function trichter(w) {
 }
 
 function zaehlung() {
-  return kopf('So wird gezählt', 'Was Le Registre <em>weiss und was nicht.</em>', 'Le Registre zählt so wenig wie möglich und so viel wie nötig, damit Sie sehen, was Ihre Website leistet. Nach Schweizer Datenschutzgesetz und DSGVO.') + `
+  return kopf('So wird gezählt', 'Was Besucher <em>weiss und was nicht.</em>', 'Besucher zählt so wenig wie möglich und so viel wie nötig, damit Sie sehen, was Ihre Website leistet. Nach Schweizer Datenschutzgesetz und DSGVO.') + `
   <div class="zwei">
     <section class="blatt liste-txt"><h3>Was gezählt wird</h3><ul>
       <li>Welche Seite geöffnet wurde, wann und wie lange sie im Vordergrund war</li>
@@ -636,7 +636,7 @@ function zaehlung() {
     <section class="blatt liste-txt"><h3>Was nie gezählt wird</h3><ul>
       <li>Kein Name, keine Mailadresse, nichts, was jemand eintippt: von einer Anfrage zählt nur, dass sie abgeschickt wurde, nicht ihr Inhalt</li>
       <li>Keine Adresse der Verbindung: sie hält nur am selben Tag die Seiten eines Besuchs zusammen und wird dafür unumkehrbar verschlüsselt, nie gespeichert</li>
-      <li>Kein Cookie, nichts auf dem Gerät des Gastes. Am nächsten Tag erkennt Le Registre denselben Gast nicht wieder</li>
+      <li>Kein Cookie, nichts auf dem Gerät des Gastes. Am nächsten Tag erkennt Besucher denselben Gast nicht wieder</li>
       <li>Keine Weitergabe: die Zahlen liegen nur in Ihrem Speicher, nicht bei Google oder einem anderen Dienst</li>
       <li>Keine automatischen Besucher wie Suchmaschinen-Roboter</li></ul></section>
   </div>
@@ -645,7 +645,7 @@ function zaehlung() {
     <li><b>Grenzen:</b> Wer Werbeblocker nutzt oder die Seite in einem anderen Fenster offen lässt, zählt womöglich nicht oder kürzer. Die Zahlen zeigen die Richtung, kein Protokoll.</li>
     <li><b>Uhrzeit:</b> Alle Zeiten sind die von Kandersteg.</li>
     <li><b>Datenschutzerklärung:</b> Die Zählung ist in der Datenschutzerklärung der Website beschrieben, sobald sie eingeschaltet wird.</li>
-    <li><b>Zugang:</b> Bei der Übergabe an das Haus wird Le Registre wie alle Werkzeuge mit Anmeldung und Passwort geschützt.</li></ul></section>`;
+    <li><b>Zugang:</b> Bei der Übergabe an das Haus wird Besucher wie alle Werkzeuge mit Anmeldung und Passwort geschützt.</li></ul></section>`;
 }
 
 /* ---------- Start ---------- */

@@ -1,0 +1,93 @@
+{
+ "motor": "chromium",
+ "W": 390,
+ "H": 844,
+ "res": [
+  {
+   "name": "W spa-knopf: Fenster auf spa.html (spa@doldenhorn.ch) bedient, landet mit Abteilung Spa, Sprache de",
+   "stand": "grün",
+   "info": "ANFRAGE · SPA-TEAM → Vielen Dank, Spa. Ihre Anfrage ist beim Spa-Team angekommen. Wir melde · Eingang: Spa, spa, de, Seite Spa, Personen 2"
+  },
+  {
+   "name": "W event: Fenster auf feste.html (event@doldenhorn.ch) bedient, landet mit Abteilung Event, Sprache de",
+   "stand": "grün",
+   "info": "ANFRAGE · EVENT-TEAM → Vielen Dank, Event. Ihre Anfrage ist beim Event-Team angekommen. Wir m · Eingang: Event, feier, de, Seite Feste, Personen 45"
+  },
+  {
+   "name": "W tisch-en: Fenster auf au-gourmet.html (info@doldenhorn.ch) bedient, landet mit Abteilung Rezeption, Sprache en",
+   "stand": "grün",
+   "info": "ANFRAGE · REZEPTION → Vielen Dank, Table. Ihre Anfrage ist beim Rezeption angekommen. Wir me · Eingang: Rezeption, tisch, en, Seite Au Gourmet, Personen 2"
+  },
+  {
+   "name": "W zimmer-fr: Fenster auf zimmer.html (info@doldenhorn.ch) bedient, landet mit Abteilung Rezeption, Sprache fr",
+   "stand": "grün",
+   "info": "ANFRAGE · REZEPTION → Vielen Dank, Chambre. Ihre Anfrage ist beim Rezeption angekommen. Wir  · Eingang: Rezeption, aufenthalt, fr, Seite Zimmer, Personen 2"
+  },
+  {
+   "name": "W spa-it: Fenster auf spa.html (spa@doldenhorn.ch) bedient, landet mit Abteilung Spa, Sprache it",
+   "stand": "grün",
+   "info": "ANFRAGE · SPA-TEAM → Vielen Dank, Spa. Ihre Anfrage ist beim Spa-Team angekommen. Wir melde · Eingang: Spa, spa, it, Seite Spa, Personen 2"
+  },
+  {
+   "name": "W spa-termin: Termin-Fenster (Calendly-Verweis) mit Behandlung, Tag, Uhrzeit → Spa, Datum mit Uhrzeit",
+   "stand": "grün",
+   "info": "Vielen Dank, Spa. Ihr Wunschtermin ist beim Spa-Team angekom · Eingang: Termin im Spa: Klassische Massage · Teilkörpermassage · Sonntag, 18. Oktober 2026, 09:00 Uhr"
+  },
+  {
+   "name": "W bewerbung: offene Stelle → «Jetzt bewerben» → Personal (ohne Datum, Personen)",
+   "stand": "grün",
+   "info": "ANFRAGE · PERSONAL → Vielen Dank, Bewerbung. Ihre Anfrage ist beim Personal angekommen. Wir · Bewerbung als Sous Chef (m/w/d)"
+  },
+  {
+   "name": "W weiterreichen: Website über den Server von La Réception (heiraten.html) → Event",
+   "stand": "grün",
+   "info": "ANFRAGE · EVENT-TEAM → Vielen Dank, Hochzeit. Ihre Anfrage ist beim Event-Team angekommen. Wi"
+  },
+  {
+   "name": "W leer: ohne Name und Kontakt geht nichts ab, Meldung im Fenster",
+   "stand": "grün",
+   "info": "Bitte Ihren Namen und eine E-Mail-Adresse oder Telefonnummer angeben, damit wir "
+  },
+  {
+   "name": "E Abteilung Spa im Eingang: Filter zeigt die Spa-Anfragen der Website",
+   "stand": "grün",
+   "info": "drei Spa-Anfragen, keine fremde"
+  },
+  {
+   "name": "E Detail einer Website-Anfrage: An, Über, Seite, Nachricht; Öffnen = gelesen an der Website",
+   "stand": "grün",
+   "info": "Website-Stand gelesen"
+  },
+  {
+   "name": "E Brief der Spa-Anfrage: Kopf mit Adresse und Telefon des Hauses, Absender spa@, Unterschrift Spa",
+   "stand": "grün",
+   "info": "Waldhotel Doldenhorn KANDERSTEG · FAMILIE MAEDER · SEIT 1976 AN Spa Termin ch390 termin@ex"
+  },
+  {
+   "name": "E Erledigt → Website erledigt; Wieder offen → Website gelesen",
+   "stand": "grün",
+   "info": "beide Richtungen"
+  },
+  {
+   "name": "E Im alten Eingang gelöscht → verschwindet in La Réception",
+   "stand": "grün",
+   "info": "weg"
+  },
+  {
+   "name": "E Löschen in La Réception (zweiter Klick) → auch an der Website weg, kommt nicht wieder",
+   "stand": "grün",
+   "info": "weg an beiden Stellen"
+  },
+  {
+   "name": "E Protokoll: Erledigt, Wieder offen und Löschen stehen mit dem gemerkten Namen drin (E06)",
+   "stand": "grün",
+   "info": "erledigt, wieder offen, gelöscht, erledigt, wieder offen, gelöscht"
+  },
+  {
+   "name": "E Alte Adresse /studio/eingang.html?an=spa am Server von La Réception → Eingang, Abteilung Spa gewählt; am Hausserver bleibt der alte Eingang",
+   "stand": "grün",
+   "info": "weiter mit Abteilung, alter Eingang zeigt dieselben Anfragen"
+  }
+ ],
+ "fehler": []
+}

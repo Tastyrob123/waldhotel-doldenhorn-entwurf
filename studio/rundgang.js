@@ -1,10 +1,10 @@
-/* Le Bureau · Waldhotel Doldenhorn: übernommen aus dem Grand Beau-Rivage (assets/js/rundgang.js dort, 16.10.2026, über das Haus in Interlaken), nur der Gang
+/* Website bearbeiten · Waldhotel Doldenhorn: übernommen aus dem Grand Beau-Rivage (assets/js/rundgang.js dort, 16.10.2026, über das Haus in Interlaken), nur der Gang
    des Bureau, Schlüssel des Hauses «rundgang-dh-…», Karte im Kleid des Hauses (Caslon, Nachtblau, Gold). */
 /* Kurzer Rundgang beim ersten Öffnen eines Werkzeugs (Robert 16.10.2026: «einmal ganz kurz zeigen, hier kannst du das machen,
    da das, damit man weiss, wo man gelandet ist»). Ein Lichtkegel liegt auf dem echten Bedienelement, daneben eine Karte mit
    zwei, drei Sätzen. Je Werkzeug und Browser einmal; wieder aufrufen über «Kurzer Rundgang» im Rand oder ?rundgang.
    Einbinden: <script src="../assets/js/rundgang.js?v=1" defer data-werkzeug="bureau"></script>
-   L’Imprimerie hat ihre eigene Begrüssung mit Führung (fuehrung.js im Drucksachen-Studio) und braucht diese Datei nicht.
+   Drucksachen & Feed hat ihre eigene Begrüssung mit Führung (fuehrung.js im Drucksachen-Studio) und braucht diese Datei nicht.
    Automatische Prüfungen (navigator.webdriver) und eingebettete Ansichten (Werkbank, Bildschirm-Aufnahmen) sehen nichts. */
 (function () {
   var S = document.currentScript, WZ = (S && S.dataset.werkzeug) || '';
@@ -13,8 +13,8 @@
 
   /* ziel: Liste von Wahlorten, der erste sichtbare gilt (Handy hat andere Flächen). */
   var GAENGE = {
-    bureau: { name: 'Le Bureau', schritte: [
-      { ziel: ['#ansicht .titel'], titel: 'Das ist Le Bureau',
+    bureau: { name: 'Website bearbeiten', schritte: [
+      { ziel: ['#ansicht .titel'], titel: 'Das ist Website bearbeiten',
         text: 'Ihre Website zum Selbstpflegen. Texte, Fotos, Preise, Öffnungszeiten, Angebote: alles, was Gäste online sehen, ändern Sie hier, ohne Agentur und ohne Programmierer.' },
       { ziel: ['#rand .nav', '#rand'], titel: 'Jede Seite Ihrer Website',
         text: 'Zimmer, Küche und Restaurants, Spa, Feste, Angebote, das Haus: jede Seite einzeln, mit ihren Texten und Fotos.' },
@@ -26,8 +26,8 @@
   };
 
 
-  /* La Réception: «Das weiss der Chat» bekommt seinen eigenen Rundgang, sobald man dorthin wechselt. */
-  function aktuell() { return WZ === 'reception' && (document.querySelector('#ansicht .wi-oben, #w-ein') || /^#wissen/.test(location.hash)) ? 'savoir' : WZ; }   /* La Réception merkt sich die letzte Ansicht, darum nach dem Inhalt fragen */
+  /* Anfragen & Chat: «Das weiss der Chat» bekommt seinen eigenen Rundgang, sobald man dorthin wechselt. */
+  function aktuell() { return WZ === 'reception' && (document.querySelector('#ansicht .wi-oben, #w-ein') || /^#wissen/.test(location.hash)) ? 'savoir' : WZ; }   /* Anfragen & Chat merkt sich die letzte Ansicht, darum nach dem Inhalt fragen */
   function schluessel(w) { return 'rundgang-dh-' + w; }
   function gesehen(w) { try { return localStorage.getItem(schluessel(w)) === '1'; } catch (e) { return true; } }
   function merk(w) { try { localStorage.setItem(schluessel(w), '1'); } catch (e) { } }
@@ -58,7 +58,7 @@
     '.rdg-karte .rdg-los svg{width:14px;height:14px;fill:none;stroke:#0f1620;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}' +
     '.rdg-karte .rdg-los:hover i{transform:translateX(2px)}.rdg-karte .rdg-los i{transition:transform .2s}' +
     '.rdg-los:focus-visible,.rdg-zu:focus-visible{outline:2px solid #b89850;outline-offset:3px}' +
-    /* Werkzeug-Stile (La Carte vergrössert Knöpfe und Schrift) dürfen die Karte nicht verändern */
+    /* Werkzeug-Stile (Karten & Preislisten vergrössert Knöpfe und Schrift) dürfen die Karte nicht verändern */
     '.rdg-karte,.rdg-karte *{box-sizing:border-box!important}' +
     '.rdg-karte p{font:15px/1.55 "Instrument Sans",system-ui,sans-serif!important;letter-spacing:0!important;text-transform:none!important}' +
     '.rdg-karte h3{font:700 25px/1.14 "Caslon WD","Caslon Ersatz",Georgia,serif!important;letter-spacing:0!important;text-transform:none!important}' +

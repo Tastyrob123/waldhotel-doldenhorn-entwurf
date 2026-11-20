@@ -1,5 +1,5 @@
-/* Weiter zu La Réception (17.10.2026): Der Eingang ist in La Réception aufgegangen (dieselben Anfragen über /api/anfragen, dazu Abteilungen, Brief,
-   Chat). Antwortet La Réception unter dieser Adresse (lokal /_werkzeuge/reception/, online /werkzeuge/reception/), geht es dorthin zum Eingang, mit
+/* Weiter zu «Anfragen & Chat» (17.10.2026): Der Eingang ist in «Anfragen & Chat» aufgegangen (dieselben Anfragen über /api/anfragen, dazu Abteilungen, Brief,
+   Chat). Antwortet Anfragen & Chat unter dieser Adresse (lokal /_werkzeuge/reception/, online /werkzeuge/reception/), geht es dorthin zum Eingang, mit
    der Abteilung aus ?an= (rezeption|spa|event|personal). Antwortet sie nicht (z. B. am Hausserver :8916 oder bevor sie online ist), bleibt dieser Eingang
    wie bisher: keine Anfrage geht verloren. ?bleiben zeigt immer diesen Eingang. Die Seite bleibt bis zur Entscheidung ruhig (höchstens 1,6 s). */
 (function () {

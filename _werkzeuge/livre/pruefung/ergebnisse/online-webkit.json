@@ -1,0 +1,47 @@
+[
+ {
+  "t": "Vier Ansichten laden online (Sicherheitsregel script-src self), keine Skript- oder Konsolenfehler",
+  "ok": true,
+  "m": ""
+ },
+ {
+  "t": "api/stand online: Zahlen, nur Website-Grösse, Prüfung ohne Claude",
+  "ok": true,
+  "m": "{\"fotos\":86,\"ki\":4,\"dateien\":36}"
+ },
+ {
+  "t": "Stand-Weg für La Maison /marke/livre.json → stand:{fotos, ki, dateien}",
+  "ok": true,
+  "m": "{\"fotos\":86,\"haus\":69,\"frei\":13,\"ki\":4,\"partner\":0,\"ue\":57,\"vn\":57,\"dateien\":36,\"datum\":\"17.10.2026\"}"
+ },
+ {
+  "t": "Umleitung /_werkzeuge/livre/ → /werkzeuge/livre/",
+  "ok": true,
+  "m": ""
+ },
+ {
+  "t": "Downloads online aus der Website (auch fotos/ und umg/), Druck heisst «websitegroesse»",
+  "ok": true,
+  "m": "z-suite-1 web 200 waldhotel-doldenhorn-z-suite-1-web-2000x1342.jpg | z-suite-1 druck 200 waldhotel-doldenhorn-z-suite-1-websitegroesse-druck-2528x1696.jpg | auftakt instagram 200 waldhotel-doldenhorn-auftakt-instagram-1080x1350-hochgerechnet.jpg | umg/oeschinen-1 story 200 waldhotel-doldenhorn-umg-oeschinen-1-story-1080x1920-hochgerechnet.jpg | ueb-blumen druck 200 waldhotel-doldenhorn-ueb-blumen-mit-ki-erzeugt-websitegroesse-druck-1100x822.jpg"
+ },
+ {
+  "t": "Fenster sagt online beim Druck «in Website-Grösse»",
+  "ok": true,
+  "m": ""
+ },
+ {
+  "t": "Prüfung online mit Probe-Antwort, beschriftet",
+  "ok": true,
+  "m": ""
+ },
+ {
+  "t": "Umleitung /marke/api/pruefen (für L’Imprimerie) erreicht die Funktion",
+  "ok": true,
+  "m": "400 DATEI · Keine Datei angekommen."
+ },
+ {
+  "t": "Am Ende keine Fehler",
+  "ok": true,
+  "m": ""
+ }
+]

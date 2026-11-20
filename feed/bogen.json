@@ -1,5 +1,5 @@
 {
- "reihen": 12,
+ "reihen": 21,
  "stuecke": [
   {
    "id": "titel-1",
@@ -216,6 +216,168 @@
    "h": 1,
    "art": "html",
    "bild": ""
+  },
+  {
+   "id": "titel-5",
+   "r": 13,
+   "c": 1,
+   "w": 2,
+   "h": 2,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "z-ambiance-2",
+   "r": 13,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "z-ambiance-2"
+  },
+  {
+   "id": "z-economy-3",
+   "r": 14,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "z-economy-3"
+  },
+  {
+   "id": "zahl-5",
+   "r": 15,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "z-junior-2",
+   "r": 15,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "z-junior-2"
+  },
+  {
+   "id": "zimmer-balkon",
+   "r": 15,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "zimmer-balkon"
+  },
+  {
+   "id": "tal-oben",
+   "r": 16,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "tal-oben"
+  },
+  {
+   "id": "titel-6",
+   "r": 16,
+   "c": 2,
+   "w": 2,
+   "h": 2,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "bach",
+   "r": 17,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "bach"
+  },
+  {
+   "id": "weg-wiese",
+   "r": 18,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "../Carlton-Europe Interlaken/_quelle/doldenhorn-ruedihus/website/mediathek/225851_P1215879-scaled.jpg"
+  },
+  {
+   "id": "z-suite-4",
+   "r": 18,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "z-suite-4"
+  },
+  {
+   "id": "zahl-6",
+   "r": 18,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "titel-7",
+   "r": 19,
+   "c": 1,
+   "w": 2,
+   "h": 2,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "servietten",
+   "r": 19,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "../Carlton-Europe Interlaken/_quelle/doldenhorn-ruedihus/website/mediathek/226607_Doldenhorn_Ambiance_Aussicht_Voll_6-scaled.jpg"
+  },
+  {
+   "id": "gruener-saal",
+   "r": 20,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "gruener-saal"
+  },
+  {
+   "id": "zahl-7",
+   "r": 21,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "seminar",
+   "r": 21,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "seminar"
+  },
+  {
+   "id": "haus-abend",
+   "r": 21,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "haus-abend"
   }
  ]
 }

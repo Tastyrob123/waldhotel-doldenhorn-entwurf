@@ -1,4 +1,4 @@
-/* La Maison · Waldhotel Doldenhorn (17.10.2026). Gebaut von _werkzeuge/maison/bau.py aus quelle/maison.js, nicht in der Ausgabe ändern.
+/* Kontrollpanel · Waldhotel Doldenhorn (17.10.2026). Gebaut von _werkzeuge/maison/bau.py aus quelle/maison.js, nicht in der Ausgabe ändern.
    Gruss, Datum, Wegweiser, Auftritte und der Stand je Werkzeug. Stand nur aus den Daten der Werkzeuge selbst (nichts geschätzt): Wege als Daten
    in der Seite (#maison-wege), ein Weg darf eine Liste sein (antwortet der erste nicht, gilt der nächste). Werte gehen nur als Zahl in die Seite. */
 (function () {
@@ -135,20 +135,20 @@
     return weiter(0);
   };
 
-  /* Le Bureau: {aenderungen, zuletzt:{zeit}, bereiche:[…], seiten, sprachen?} */
+  /* Website bearbeiten: {aenderungen, zuletzt:{zeit}, bereiche:[…], seiten, sprachen?} */
   hole('bureau').then(function (u) {
     var a = ganz(u.aenderungen), z = u.zuletzt;
     if (Array.isArray(u.bereiche) && u.bereiche.length) zahl('bereiche', u.bereiche.length);
     if (ganz(u.seiten)) zahl('seiten', ganz(u.seiten));
     var sp = Array.isArray(u.sprachen) ? u.sprachen.length : ganz(u.sprachen);
-    /* Le Bureau meldet zusätzliche Sprachen; 0 oder leer heisst: die Website ist nur deutsch («Nur Deutsch, nichts zu übersetzen») */
+    /* Website bearbeiten meldet zusätzliche Sprachen; 0 oder leer heisst: die Website ist nur deutsch («Nur Deutsch, nichts zu übersetzen») */
     if (sp) zahl('sprachen', sp); else if (u.sprachen === 0 || (Array.isArray(u.sprachen) && !u.sprachen.length)) zahl('sprachen', 'Deutsch');
     var zd = z && z.zeit ? new Date(String(z.zeit).replace(' ', 'T')) : null, zul = zd && !isNaN(zd) ? tag(zd) : '';
     setze('bureau-kurz', a ? '<b>' + a + ' im Entwurf</b>' : (zul ? 'Veröffentlicht ' + esc(zul) : 'Nichts offen'));
     setze('bureau', (a ? '<b>' + a + ' Änderung' + (a > 1 ? 'en' : '') + ' im Entwurf.</b> ' : 'Nichts offen im Entwurf. ') + (zul ? 'Zuletzt veröffentlicht am ' + esc(zul) + '.' : 'Noch nichts veröffentlicht.'));
   }).catch(function () { setze('bureau-kurz', 'Website des Hauses'); setze('bureau', 'Der Stand ist gerade nicht abrufbar.'); });
 
-  /* La Carte: {karten:[{entwurf, pdf_zeit:"dd.mm.yyyy hh:mm"}]} */
+  /* Karten & Preislisten: {karten:[{entwurf, pdf_zeit:"dd.mm.yyyy hh:mm"}]} */
   hole('carte').then(function (d) {
     var k = Array.isArray(d.karten) ? d.karten : null; if (!k) throw new Error('ohne Karten');
     var e = k.filter(function (x) { return x && x.entwurf; }).length;
@@ -157,13 +157,13 @@
     zahl('karten', k.length);
     zahl('entwurf', e);
     if (pdf) { var m = String(pdf).match(/(\d+)\.(\d+)\./); zahl('pdf', ('0' + m[1]).slice(-2) + '.' + ('0' + m[2]).slice(-2) + '.'); }
-    /* «alle veröffentlicht» nur, wenn jede Karte eine PDF hat; La Carte zeigt eine Karte ohne pdf_zeit als «Noch keine PDF veröffentlicht» (Mittagsmenü) */
+    /* «alle veröffentlicht» nur, wenn jede Karte eine PDF hat; Karten & Preislisten zeigt eine Karte ohne pdf_zeit als «Noch keine PDF veröffentlicht» (Mittagsmenü) */
     var ohne = k.filter(function (x) { return x && !x.pdf_zeit; }).length;
     setze('carte-kurz', e ? '<b>' + e + ' im Entwurf</b>' : ohne ? k.length + (k.length === 1 ? ' Karte' : ' Karten') + ' · ' + ohne + ' noch ohne PDF'
       : k.length + (k.length === 1 ? ' Karte, veröffentlicht' : ' Karten, alle veröffentlicht'));
   }).catch(function () { setze('carte-kurz', 'Karten des Hauses'); });
 
-  /* L’Imprimerie: keine Änderungen, die sich zeigen liessen; die Zahl der fertigen Vorlagen aus ihrer Liste [{art, format, zahl}] */
+  /* Drucksachen & Feed: keine Änderungen, die sich zeigen liessen; die Zahl der fertigen Vorlagen aus ihrer Liste [{art, format, zahl}] */
   hole('imprimerie').then(function (l) {
     if (!Array.isArray(l) || !l.length) throw new Error('leer');
     var z = 0, arten = {}; l.forEach(function (x) { z += ganz(x && x.zahl); if (x && x.art) arten[String(x.art)] = 1; });
@@ -171,7 +171,7 @@
     setze('imprimerie-kurz', z + (z === 1 ? ' Vorlage in ' : ' Vorlagen in ') + a + (a === 1 ? ' Art' : ' Arten'));
   }).catch(function () { setze('imprimerie-kurz', 'Vorlagen, druckfertig'); });
 
-  /* La Réception: {anfragen_neu, anfragen_offen, ohne_antwort, fragen_gesamt} */
+  /* Anfragen & Chat: {anfragen_neu, anfragen_offen, ohne_antwort, fragen_gesamt} */
   hole('reception').then(function (r) {
     var u = {}; ['anfragen_neu', 'anfragen_offen', 'ohne_antwort', 'fragen_gesamt'].forEach(function (k) { u[k] = ganz(r[k]); });
     var teile = [];
@@ -183,7 +183,7 @@
     setze('reception', teile.length ? kurz : 'Nichts offen · ' + u.fragen_gesamt + (u.fragen_gesamt === 1 ? ' Frage' : ' Fragen') + ' bisher');
   }).catch(function () { setze('reception-kurz', 'Rezeption im Chat'); setze('reception', '&nbsp;'); });
 
-  /* Le Livre: stand:{fotos, ki, ue, dateien} (ki = mit KI erzeugt, ue = nachgeschärft) */
+  /* Markenbuch: stand:{fotos, ki, ue, dateien} (ki = mit KI erzeugt, ue = nachgeschärft) */
   hole('livre').then(function (d) {
     var s = d.stand || {}, f = ganz(s.fotos), da = ganz(s.dateien), ki = ganz(s.ki), ue = ganz(s.ue);
     if (!f && !da) throw new Error('leer');
@@ -193,9 +193,9 @@
     setze('livre', fo(f) + ' in fertigen Grössen' + (dazu.length ? ', davon ' + dazu.join(' und ') + ', alle gekennzeichnet' : '') + '. ' + di(da) + ' für Agenturen und Druckereien, dazu die Markenprüfung.');
   }).catch(function () { setze('livre-kurz', 'Fotos, Dateien, Markenprüfung'); setze('livre', '&nbsp;'); });
 
-  /* Le Registre: Werte der Zählung ohne Cookies. Vorführ-Betrieb: Beispielwerte, als Beispiel beschriftet (R20) */
+  /* Besucher: Werte der Zählung ohne Cookies. Vorführ-Betrieb: Beispielwerte, als Beispiel beschriftet (R20) */
   var RN = {}; try { RN = JSON.parse($('#maison-registre').textContent) || {}; } catch (e) {}
-  /* Ersatzweg Le Registre (abgelegte Beispielwerte beispiel/30.json): die Ablage enthält heute den ganzen Tag. Was nach der jetzigen Uhrzeit von
+  /* Ersatzweg Besucher (abgelegte Beispielwerte beispiel/30.json): die Ablage enthält heute den ganzen Tag. Was nach der jetzigen Uhrzeit von
      Kandersteg begänne, fällt weg, genau wie im Werkzeug (registre.js kuerzen/werteAus, dh-registre 17.10.2026), sonst stünde «heute» zu hoch (F31). */
   var jetztZuerich = function () {
     try { return new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' }).format(new Date()); }

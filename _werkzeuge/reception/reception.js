@@ -1,4 +1,4 @@
-/* La Réception · Waldhotel Doldenhorn. Das Werkzeug des Teams hinter der Rezeption im Chat (Robert 12.10.2026).
+/* Anfragen & Chat · Waldhotel Doldenhorn. Das Werkzeug des Teams hinter der Rezeption im Chat (Robert 12.10.2026).
    Eingang: Anfragen, die Gäste im Chat stellen (Zimmer, Tisch, Feier, Tagung), mit Antwortentwurf im Ton des Hauses aus den Mail-Vorlagen.
    Das wurde gefragt: jede Frage an den Chat, nach Themen; wo der Chat keine Antwort hatte, trägt das Team sie einmal nach, ab dann antwortet er damit.
    Server-Teil: _gast/rezeption.py über serve.py (/reception/api/…). Hier wird nichts verschickt. */
@@ -74,12 +74,12 @@ const TITEL = { start: 'Übersicht', eingang: 'Eingang', gefragt: 'Das wurde gef
 function kopfLeiste() {
   const u = S.ue;
   $('#kopf').innerHTML = `
-    <button class="kopf__marke" type="button" data-gehe="start" aria-label="Zur Übersicht">${ZEICHEN}<span><b>La Réception</b><small>Gäste im Chat · Waldhotel Doldenhorn</small></span></button>
-    <div class="kopf__mitte"><div class="kopf__titel">${esc(TITEL[S.ansicht] || 'La Réception')}</div><div class="kopf__stand">${u.anfragen_neu ? mal(u.anfragen_neu, 'Eine neue Anfrage', 'neue Anfragen') : 'Keine neuen Anfragen'}</div></div>
+    <button class="kopf__marke" type="button" data-gehe="start" aria-label="Zur Übersicht">${ZEICHEN}<span><b>Anfragen & Chat</b><small>Gäste im Chat · Waldhotel Doldenhorn</small></span></button>
+    <div class="kopf__mitte"><div class="kopf__titel">${esc(TITEL[S.ansicht] || 'Anfragen & Chat')}</div><div class="kopf__stand">${u.anfragen_neu ? mal(u.anfragen_neu, 'Eine neue Anfrage', 'neue Anfragen') : 'Keine neuen Anfragen'}</div></div>
     <div class="kopf__werk">
       <a class="rund" href="pruefung.html" target="_blank" rel="noopener" data-tip="Prüfung" aria-label="Prüfung">${SYM.pruef}</a>
       <a class="rund" href="anleitung.html" target="_blank" rel="noopener" data-tip="Anleitung" aria-label="Anleitung">${SYM.buch}</a>
-      <a class="rund" href="../maison/" data-tip="La Maison" aria-label="La Maison">${SYM.haus}</a>
+      <a class="rund" href="../maison/" data-tip="Kontrollpanel" aria-label="Kontrollpanel">${SYM.haus}</a>
       <span class="kopf__trenn"></span>
       <button class="kn kn--klein" type="button" id="k-probe">Chat ausprobieren<i>${SYM.chat}</i></button>
     </div>`;
@@ -102,7 +102,7 @@ function rand() {
       <a href="../../rezeption/" target="_blank" rel="noopener">So arbeitet der Chat${PF}</a>
       <a href="anleitung.html" target="_blank" rel="noopener">Anleitung${PF}</a>
       <a href="pruefung.html" target="_blank" rel="noopener">Prüfung${PF}</a>
-      <a href="../maison/">La Maison${PF}</a>
+      <a href="../maison/">Kontrollpanel${PF}</a>
     </div>`;
   $$('#rand [data-gehe]').forEach(b => b.onclick = () => gehe(b.dataset.gehe));
   $('#rand .rand__auf').onclick = e => { const auf = $('#rand').classList.toggle('auf'); e.currentTarget.setAttribute('aria-expanded', auf); };
@@ -171,8 +171,8 @@ async function ladeAlles() {
 /* Titel der Startansicht sofort, ohne auf die Daten zu warten (Prüf-Chat 18.10.2026: kam 2,3–2,5 s nach dem Aufruf); der Rest kommt nach, der Titel bleibt stehen */
 function startKopf() {
   const h = new Date().getHours(), gruss = h >= 5 && h < 11 ? 'Guten Morgen.' : h >= 11 && h < 18 ? 'Guten Tag.' : 'Guten Abend.';
-  return (window.DHStart ? DHStart({ werkzeug: 'La Réception', h1: `${gruss} <em>Wer hat geschrieben?</em>`,
-    satz: 'Hier sehen Sie, was Gäste die Rezeption im Chat fragen. Möchte jemand ein Zimmer, einen Tisch, einen Termin im Spa, ein Fest oder ein Seminar, im Chat oder im Anfrage-Fenster der Website, liegt die Anfrage im Eingang, nach Abteilung, mit einem Brief als Entwurf für Ihre Antwort. Verschickt wird nur, was Sie selbst schicken.', kn: [{ t: 'Anleitung', href: 'anleitung.html', neu: true }] }) : kopf('La Réception · Waldhotel Doldenhorn Kandersteg', `${gruss} <em>Wer hat geschrieben?</em>`,
+  return (window.DHStart ? DHStart({ werkzeug: 'Anfragen & Chat', h1: `${gruss} <em>Wer hat geschrieben?</em>`,
+    satz: 'Hier sehen Sie, was Gäste die Rezeption im Chat fragen. Möchte jemand ein Zimmer, einen Tisch, einen Termin im Spa, ein Fest oder ein Seminar, im Chat oder im Anfrage-Fenster der Website, liegt die Anfrage im Eingang, nach Abteilung, mit einem Brief als Entwurf für Ihre Antwort. Verschickt wird nur, was Sie selbst schicken.', kn: [{ t: 'Anleitung', href: 'anleitung.html', neu: true }] }) : kopf('Anfragen & Chat · Waldhotel Doldenhorn Kandersteg', `${gruss} <em>Wer hat geschrieben?</em>`,
     'Hier sehen Sie, was Gäste die Rezeption im Chat fragen. Möchte jemand ein Zimmer, einen Tisch, einen Termin im Spa, ein Fest oder ein Seminar, im Chat oder im Anfrage-Fenster der Website, liegt die Anfrage im Eingang, nach Abteilung, mit einem Brief als Entwurf für Ihre Antwort. Verschickt wird nur, was Sie selbst schicken.',
     `<a class="kn kn--linie" href="anleitung.html" target="_blank" rel="noopener">Anleitung<i>${PF}</i></a>`));
 }
@@ -295,10 +295,10 @@ const BRIEFBILDER = [['haus-abend', 'Das Haus am Abend'], ['haus-wiese', 'Das Ha
   ['becken', 'Hallenbad'], ['sauna', 'Sauna World'], ['hochzeit', 'Hochzeit'], ['luft-tal', 'Das Tal bei Kandersteg']];
 const SCHRIFT = { serif: 'font-family:var(--serif)', sans: 'font-family:var(--sans)', mono: 'font-family:var(--mono)', cinzel: 'font-family:var(--caps)', versal: 'font-family:var(--caps);letter-spacing:.16em;text-transform:uppercase' };
 const TEXTART = { normal: 'font-style:normal;font-weight:400;text-transform:none;letter-spacing:0', kursiv: 'font-style:italic', versal: 'text-transform:uppercase;letter-spacing:.16em', medium: 'font-weight:500' };
-/* Hauspalette, gleich in La Carte, La Réception und L’Imprimerie (Absprache 16.10.2026) */
+/* Hauspalette, gleich in «Karten & Preislisten», Anfragen & Chat und Drucksachen & Feed (Absprache 16.10.2026) */
 const HFARBE = { navy: '#0d1621', blau: '#142235', tinte: '#0f1620', papier: '#f1ece2', creme: '#d9d1c2', weiss: '#fbf8f1', sand: '#c7cdd4', gold: '#e3d2a6', messing: '#b89850', taupe: '#3d5370', rot: '#a33a2a' };
 const HNAME = { navy: 'Nachtblau', blau: 'Blau', tinte: 'Tinte', papier: 'Papier', creme: 'Leinen', weiss: 'Blatt', sand: 'Schiefer hell', gold: 'Hellgold', messing: 'Gold', taupe: 'Stahl', rot: 'Rot' };
-/* Quelle der Hauspalette: marke.json von L’Imprimerie (gebaut von bau.py des Hauses, nicht von Hand ändern); die Werte oben sind die Abschrift für den Fall, dass sie nicht lädt */
+/* Quelle der Hauspalette: marke.json von «Drucksachen & Feed» (gebaut von bau.py des Hauses, nicht von Hand ändern); die Werte oben sind die Abschrift für den Fall, dass sie nicht lädt */
 if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) fetch('../imprimerie/haeuser/doldenhorn/marke.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(m => { if (m && m.farben) { Object.assign(HFARBE, m.farben); Object.assign(HNAME, m.farbnamen || {}); } }).catch(() => {});
 const LFARBE = { taupe: 'rgba(61,83,112,.42)', gold: '#b89850', navy: '#0d1621' };
 const GNAME = { linie1: 'Linie unter dem Kopf', linie2: 'Linie über dem Betreff', linie3: 'Linie über der Fusszeile', zeichen: 'Zeichen', haus: 'Hausname', zeile: 'Unterzeile', an: 'Empfänger', von: 'Absender', betreff: 'Betreff', fuss: 'Fusszeile' };
@@ -393,7 +393,7 @@ function briefMail(a, e) {
   const fotos = nach => bilder.filter(b => b.nach === nach).map(b => { const g = G[b.id] || {}; const w = Math.round(Math.min(560, (g.w || 560) * (g.s || 1)));
     return `<tr><td style="padding:6px 0 18px;${g.al ? 'text-align:' + g.al : 'text-align:center'}"><img src="${basis}assets/img/${b.k}-m.webp" width="${w}" alt="${esc(b.n || '')}" style="display:inline-block;width:${w}px;max-width:100%;height:auto;border:0"></td></tr>`; }).join('');
   const mLinie = (k, pad) => { const g = G[k] || {}; if (g.aus) return ''; const w = g.w ? Math.min(504, g.w) + 'px' : '100%', al = g.al || 'center', farbe = { taupe: '#e2d6bf', gold: '#b89850', navy: '#0d1621' }[g.fb || 'taupe'] || HFARBE[g.fb];
-    return `<tr><td style="padding:${pad};text-align:${al}"><div style="display:inline-block;width:${w};height:${g.st || 1}px;background:${farbe};line-height:1px;font-size:1px">&nbsp;</div></td></tr>`; };
+    return `<tr><td style="padding:${pad};text-align:${al}"><div style="display:inline-block;width:${w};height:${g.st || 1}px;background:${farbe};line-height:1px;font-size:13px">&nbsp;</div></td></tr>`; };
   const serif = "font-family:Caslon WD,Caslon Ersatz,Georgia,serif;color:#1d2733";
   const ab = e.text.split(/\n{2,}/);
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1ece2"><tr><td align="center" style="padding:24px 12px">
@@ -407,7 +407,7 @@ function briefMail(a, e) {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 ${mLinie('linie1', '22px 0 24px')}
 ${mLinie('linie2', '0 0 14px')}
-<tr><td style="font-family:'DM Mono',Menlo,monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#8a7f68">Betreff</td></tr>
+<tr><td style="font-family:'DM Mono',Menlo,monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#8a7f68">Betreff</td></tr>
 <tr><td style="${st('betreff', 24, serif + ';font-weight:700;color:#0d1621;padding:6px 0 22px;line-height:1.15')}">${t(e.betreff)}</td></tr>
 ${fotos('kopf')}
 ${ab.map((x, n) => `<tr><td dir="auto" style="${st('p' + n, 16, "font-family:'Instrument Sans',Helvetica,Arial,sans-serif;color:#1d2733;line-height:1.66;padding-bottom:" + (14 + Math.max(0, (G['p' + n] || {}).mb || 0)) + 'px' + (ab.length > 2 && n === ab.length - 1 ? ';padding-top:8px' : ''))}">${t(x)}</td></tr>${fotos('p' + n)}`).join('\n')}
@@ -498,7 +498,7 @@ function verbindeBrief(a) {
     const sel = getSelection(); if (sel && !el.contains(sel.anchorNode)) { const r = document.createRange(); r.selectNodeContents(el); r.collapse(false); sel.removeAllRanges(); sel.addRange(r); }
   };
   const schluss = () => { $$('.gs--schreib', br).forEach(x => { x.contentEditable = 'false'; x.classList.remove('gs--schreib'); }); if (vorher) { lies(); merke(vorher); vorher = null; } };
-  /* Hilfslinien und Einrasten (wie L’Imprimerie: Kanten und Mitten von Papier und anderen Teilen, 7 px; Alt hält das Einrasten aus) */
+  /* Hilfslinien und Einrasten (wie Drucksachen & Feed: Kanten und Mitten von Papier und anderen Teilen, 7 px; Alt hält das Einrasten aus) */
   const linien = l => { $$('.hl', br).forEach(n => n.remove()); const b = br.getBoundingClientRect();
     l.forEach(x => { const n = document.createElement('i'); n.className = 'hl ' + (x.x != null ? 'hl--x' : 'hl--y'); n.style.transform = x.x != null ? `translateX(${x.x - b.left}px)` : `translateY(${x.y - b.top}px)`; br.appendChild(n); }); };
   const fang = (el, r) => {
@@ -615,7 +615,7 @@ function verbindeBrief(a) {
     if ((ev.key === 'Backspace' || ev.key === 'Delete') && (wahl.classList.contains('gs--bild') || wahl.classList.contains('gs--linie'))) { ev.preventDefault(); $('.gs-werk [data-g="weg"]').click(); }
     if (ev.key === 'Enter' && wahl.hasAttribute('data-schreib')) { ev.preventDefault(); schreib(wahl); }
   });
-  /* Seitenleiste «Gestalten» rechts (Robert 16.10.2026: «so ein kleines Side-Menü … was sich öffnet»; gleich in La Carte und L’Imprimerie):
+  /* Seitenleiste «Gestalten» rechts (Robert 16.10.2026: «so ein kleines Side-Menü … was sich öffnet»; gleich in «Karten & Preislisten» und Drucksachen & Feed):
      öffnet sich beim Wählen, schliesst mit × oder Esc, das Dokument rückt nach links. Detail-Einstellungen hier, die Leiste oben bleibt. */
   let altS = null;
   const seite = () => {
@@ -633,7 +633,7 @@ function verbindeBrief(a) {
     const cs = getComputedStyle(wahl), fs = parseFloat(cs.fontSize) || 16, lh = g.lh || Math.round((parseFloat(cs.lineHeight) / fs || 1.4) * 20) / 20;
     const pt = Math.round(fs * .75 * 2) / 2, ls = g.ls != null ? g.ls : Math.round((parseFloat(cs.letterSpacing) || 0) / fs * 100) / 100, op = g.op != null ? g.op : 1;
     const r = wahl.getBoundingClientRect();
-    /* Aufbau wie die Gestalten-Platte in L’Imprimerie (studio.js zeichneEigenschaften): Titel = Art, Gruppen mit Mono-Label, Segmente, runde Marine-Knöpfe, Regler mit Wert */
+    /* Aufbau wie die Gestalten-Platte in «Drucksachen & Feed» (studio.js zeichneEigenschaften): Titel = Art, Gruppen mit Mono-Label, Segmente, runde Marine-Knöpfe, Regler mit Wert */
     const an = x => x ? ' an' : '';
     const kn = (z, v, inhalt, aktiv, tip = '', aus = false) => `<button type="button" class="${aktiv ? 'an' : ''}" data-s="${z}" data-v="${v}" aria-pressed="${!!aktiv}"${tip ? ` title="${tip}" aria-label="${tip}"` : ''}${aus ? ' disabled' : ''}>${inhalt}</button>`;
     const gruppe = (t, inhalt) => `<div class="gs-gruppe"><span class="gs-gruppe__t">${t}</span>${inhalt}</div>`;
@@ -1327,7 +1327,7 @@ function wachen() {   // solange ein Link gelesen wird, alle drei Sekunden nachs
 }
 
 /* ---------- Chat ausprobieren (Robert 16.10.2026: «landet auf der Website und hat keine Ahnung, was man machen soll») ----------
-   Fenster in La Réception: links, was zu tun ist, mit antippbaren Gast-Fragen; rechts eine Seite der Website mit offenem Chat (?probe=1).
+   Fenster in «Anfragen & Chat»: links, was zu tun ist, mit antippbaren Gast-Fragen; rechts eine Seite der Website mit offenem Chat (?probe=1).
    gast.js bleibt unverändert (Vorlage für mehrere Häuser); bedient wird es von hier aus, die Seite liegt auf derselben Adresse.
    Anfragen und Fragen aus der Probe markiert der Server als Beispiel (rezeption.py, Referer ?probe=1). */
 const PROBEFRAGEN = ['Wann ist das Hallenbad offen?', 'Welche Saunen gibt es?', 'Welche Restaurants gibt es im Haus?', 'Wir möchten mit 40 Personen Hochzeit feiern.'];
@@ -1392,10 +1392,10 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#fenst
     try { z0 = ['start', 'eingang', 'gefragt', 'nachgetragen', 'wissen'].includes(h0) ? h0 : ((/\/maison\/?(index\.html)?([?#].*)?$/.test(document.referrer) && ((performance.getEntriesByType('navigation')[0] || {}).type !== 'reload')) ? 'start' : localStorage.getItem('reception-ansicht') || 'start'); } catch (e) { z0 = 'start'; }
     if (z0 === 'start' && a0 && !a0.querySelector('[data-dh-start]')) a0.innerHTML = startKopf(); }
   try { S.ue = await api('ueberblick'); }
-  catch (e) { $('#tuer').hidden = false; $('#tuer-t').textContent = /^VERBINDUNG/.test(String(e.message || e)) ? 'Der Server von La Réception antwortet nicht. In einer Minute neu laden; bleibt es so, die Prüfung öffnen.' : String(e.message || e).replace(/^[A-ZÄÖÜ]+ · /, ''); return; }
+  catch (e) { $('#tuer').hidden = false; $('#tuer-t').textContent = /^VERBINDUNG/.test(String(e.message || e)) ? 'Der Server von «Anfragen & Chat» antwortet nicht. In einer Minute neu laden; bleibt es so, die Prüfung öffnen.' : String(e.message || e).replace(/^[A-ZÄÖÜ]+ · /, ''); return; }
   const h = location.hash.slice(1);
   if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) try { const l = await api('wissen_links'); S.wissenDa = true; S.wissenNeu = 0; if (l.links.some(x => x.status === 'liest')) wachen(); } catch (e) { S.wissenDa = false; }   // «Das weiss der Chat» gibt es bisher nur lokal (serve.py); online wird gar nicht erst gefragt, sonst steht ein 400 in der Konsole
-  try { S.ansicht = ['start', 'eingang', 'gefragt', 'nachgetragen', 'wissen'].includes(h) ? h : ((/\/maison\/?(index\.html)?([?#].*)?$/.test(document.referrer) && ((performance.getEntriesByType('navigation')[0] || {}).type !== 'reload')) ? (localStorage.removeItem('reception-ansicht'), 'start') : localStorage.getItem('reception-ansicht') || 'start'); }   /* Aus La Maison geöffnet: immer auf der Übersicht anfangen (Robert 16.10.2026), beim Neuladen bleibt die letzte Ansicht */ catch (e) { S.ansicht = 'start'; }
+  try { S.ansicht = ['start', 'eingang', 'gefragt', 'nachgetragen', 'wissen'].includes(h) ? h : ((/\/maison\/?(index\.html)?([?#].*)?$/.test(document.referrer) && ((performance.getEntriesByType('navigation')[0] || {}).type !== 'reload')) ? (localStorage.removeItem('reception-ansicht'), 'start') : localStorage.getItem('reception-ansicht') || 'start'); }   /* Aus «Kontrollpanel» geöffnet: immer auf der Übersicht anfangen (Robert 16.10.2026), beim Neuladen bleibt die letzte Ansicht */ catch (e) { S.ansicht = 'start'; }
   if (!TITEL[S.ansicht] || (S.ansicht === 'wissen' && !S.wissenDa)) S.ansicht = 'start';
   rand(); leiste(); await zeichne();
   window.addEventListener('hashchange', () => { const z = location.hash.slice(1); if (TITEL[z] && z !== S.ansicht) gehe(z); });

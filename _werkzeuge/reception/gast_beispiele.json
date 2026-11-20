@@ -1,0 +1,304 @@
+[
+ {
+  "vor": [
+   0,
+   9,
+   38
+  ],
+  "art": "spa",
+  "status": "neu",
+  "an": "spa@doldenhorn.ch",
+  "abteilung": "Spa",
+  "seite": "/spa.html",
+  "seite_name": "Spa",
+  "web": true,
+  "name": "Lea und Jonas Brunner",
+  "kontakt": "lea.brunner@example.com",
+  "datum": "Samstag, 24. Oktober 2026, ab 14 Uhr",
+  "personen": 2,
+  "sprache": "de",
+  "anliegen": "Zwei Massagen am Samstag",
+  "nachricht": "Grüezi, wir sind ab Freitag bei Ihnen zu Gast und würden am Samstagnachmittag gern zwei Massagen buchen, wenn möglich zur gleichen Zeit. Ab 14 Uhr passt uns alles.",
+  "betreff": "Ihre Massagen am Samstag, 24. Oktober",
+  "text": "Liebe Frau Brunner, lieber Herr Brunner\n\nvielen Dank für Ihre Anfrage. Wir freuen uns, dass Sie sich während Ihres Aufenthalts Zeit für das Doldenhorn Spa nehmen.\n\nFür zwei Massagen zur gleichen Zeit am Samstagnachmittag halten wir Ihnen gern einen Termin frei: [Termin bestätigen]. Aus unserem Massage-Menü passen zum Beispiel die klassische Teilkörpermassage (25 Minuten, CHF 75.00) oder die Schulter- und Rückenmassage (40 Minuten, CHF 100.00).\n\nBitte finden Sie sich pünktlich im Wartebereich ein und tragen Sie einen Bademantel. Sollte sich etwas ändern, bitten wir Sie, den Termin mindestens 12 Stunden im Voraus abzusagen.\n\nDamit wir alles vorbereiten können:\n- Welche Massage wünschen Sie sich jeweils?\n- Gibt es etwas, worauf wir achten sollen?\n\nHerzlich\n\n[Name]\nSpa-Team · Waldhotel Doldenhorn",
+  "team": "Grundlage: spa.html (Massage-Menü 2026), Spa-Etikette.\nOffen: zwei Termine zur gleichen Zeit am 24.10. ab 14 Uhr im Spa-Kalender prüfen; Art der Massagen.",
+  "verlauf": [
+   [
+    "user",
+    "Über das Anfrage-Fenster der Website (Seite Spa): Grüezi, wir sind ab Freitag bei Ihnen zu Gast und würden am Samstagnachmittag gern zwei Massagen buchen, wenn möglich zur gleichen Zeit. Ab 14 Uhr passt uns alles."
+   ]
+  ]
+ },
+ {
+  "vor": [
+   0,
+   7,
+   5
+  ],
+  "art": "tisch",
+  "status": "neu",
+  "an": "info@doldenhorn.ch",
+  "abteilung": "Rezeption",
+  "seite": "/au-gourmet.html",
+  "seite_name": "Au Gourmet",
+  "web": true,
+  "name": "Peter Zbinden",
+  "kontakt": "p.zbinden@example.com",
+  "datum": "Freitag, 23. Oktober 2026, 19 Uhr",
+  "personen": 4,
+  "sprache": "de",
+  "anliegen": "Tisch für vier Personen",
+  "nachricht": "Wir feiern den 60. Geburtstag meines Vaters und würden gern zu viert bei Ihnen essen, am liebsten gegen 19 Uhr. Eine Person isst vegetarisch.",
+  "betreff": "Ihr Tisch im Au Gourmet, Freitag, 23. Oktober",
+  "text": "Lieber Herr Zbinden\n\nvielen Dank für Ihre Anfrage und alles Gute zum 60. Geburtstag Ihres Vaters. Es freut uns, dass Sie diesen Abend bei uns feiern möchten.\n\nIm Au Gourmet, mit 15 Punkten im GaultMillau, halten wir Ihnen gern einen Tisch für vier Personen um 19 Uhr frei: [Tisch bestätigen]. Für die Person, die vegetarisch isst, stimmen wir den Abend mit der Küche ab: [Vorschlag der Küche].\n\nFalls sich an Ihren Plänen etwas ändert, erreichen Sie uns unter +41 33 675 81 81.\n\nHerzlich\n\n[Name]\nRezeption · Waldhotel Doldenhorn",
+  "team": "Grundlage: au-gourmet.html (15 Punkte GaultMillau, Dienstag und Mittwoch geschlossen), Mail «Nach der Tisch-Anfrage».\nOffen: Tisch 23.10. 19 Uhr; vegetarischer Gang; Geburtstag (60): Dessert mit Kerze anbieten.",
+  "verlauf": [
+   [
+    "user",
+    "Über das Anfrage-Fenster der Website (Seite Au Gourmet): Wir feiern den 60. Geburtstag meines Vaters und würden gern zu viert bei Ihnen essen, am liebsten gegen 19 Uhr. Eine Person isst vegetarisch."
+   ]
+  ]
+ },
+ {
+  "vor": [
+   0,
+   4,
+   50
+  ],
+  "art": "feier",
+  "status": "gelesen",
+  "an": "event@doldenhorn.ch",
+  "abteilung": "Event",
+  "seite": "/heiraten.html",
+  "seite_name": "Heiraten",
+  "web": true,
+  "name": "Sarah Meier und Luca Rossi",
+  "kontakt": "sarah.meier@example.com",
+  "datum": "Samstag, 19. Juni 2027",
+  "personen": 80,
+  "sprache": "de",
+  "anliegen": "Hochzeit im nächsten Sommer",
+  "nachricht": "Wir heiraten nächsten Sommer und suchen einen Ort für Apéro, Essen und Tanz mit rund 80 Gästen. Ein Teil der Gäste würde gern zwei Nächte bleiben. Könnten Sie uns die Möglichkeiten und Menuvorschläge zusenden?",
+  "betreff": "Ihre Hochzeit im Waldhotel Doldenhorn, Juni 2027",
+  "text": "Liebe Frau Meier, lieber Herr Rossi\n\nherzlichen Dank für Ihre Anfrage und schon jetzt alles Gute für Ihren grossen Tag. Wir freuen uns sehr, dass Sie bei uns in Kandersteg feiern möchten.\n\nFür rund 80 Gäste passt unser Grüner Saal mit bis zu 100 Plätzen. Wir feiern Hochzeiten mit zwei Packages zum Fixpreis: Package Classic bis 1 Uhr für CHF 170.00 pro Person und Package Exquisit bis 3 Uhr für CHF 250.00 pro Person. Kinder von 8 bis 14 Jahren kosten im Package Classic CHF 75.00. In beiden Packages sind ein Probeessen für das Brautpaar und, ab 50 zahlenden Gästen, die Übernachtung im Hochzeitszimmer inbegriffen.\n\nFür Ihr Datum [Verfügbarkeit prüfen] und für die Gäste, die zwei Nächte bleiben, [Zimmerangebot freigeben].\n\nDamit wir Ihnen einen ersten Vorschlag machen können:\n- Wie viele Kinder feiern mit?\n- Wie viele Zimmer brauchen Sie für zwei Nächte?\n\nHerzlich\n\n[Name]\nEvent-Team · Waldhotel Doldenhorn",
+  "team": "Grundlage: heiraten.html (Packages, Hochzeitsflyer), feste.html (Säle).\nOffen: Datum Juni 2027 und Grüner Saal; Zimmerkontingent für zwei Nächte; Menuvorschläge beilegen.",
+  "verlauf": [
+   [
+    "user",
+    "Über das Anfrage-Fenster der Website (Seite Heiraten): Wir heiraten nächsten Sommer und suchen einen Ort für Apéro, Essen und Tanz mit rund 80 Gästen. Ein Teil der Gäste würde gern zwei Nächte bleiben. Könnten Sie uns die Möglichkeiten und Menuvorschläge zusenden?"
+   ]
+  ]
+ },
+ {
+  "vor": [
+   1,
+   21,
+   17
+  ],
+  "art": "zimmer",
+  "status": "gelesen",
+  "an": "info@doldenhorn.ch",
+  "abteilung": "Rezeption",
+  "seite": "/zimmer.html",
+  "seite_name": "Zimmer",
+  "web": true,
+  "name": "Emily Carter",
+  "kontakt": "emily.carter@example.com",
+  "datum": "one week in July 2027",
+  "personen": 4,
+  "sprache": "en",
+  "anliegen": "Family stay in July",
+  "nachricht": "Hello, we are a family of four (our children are 6 and 9) and would love to spend a week in Kandersteg next July. Could you send us an offer for a room for all of us, ideally with half board?",
+  "betreff": "Your family stay in Kandersteg, July 2027",
+  "text": "Dear Ms Carter\n\nThank you very much for your enquiry. We would be delighted to welcome your family to Kandersteg next summer.\n\nFor four people, our Suite is the right choice: about 70 m² for 2 to 4 guests, from CHF 590.00 per night. With half board, you can choose every evening from 5 menus: three in the Doldenhorn (meat, fish, vegetarian) and two in our Landgasthof Ruedihus.\n\nFor your week in July [check availability] and [approve offer with half board].\n\nSo that we can prepare an offer:\n- Your exact arrival and departure dates\n- Whether you will arrive by car or by train\n\nKind regards\n\n[Name]\nReception · Waldhotel Doldenhorn",
+  "team": "Grundlage: zimmer.html (Suite 2–4 Personen, ca. 70 m², ab CHF 590), halbpension.html (5 Menüs).\nOffen: Daten im Juli; Preis mit Halbpension für zwei Kinder (6 und 9).",
+  "deutsch": {
+   "betreff": "Ihr Familienaufenthalt in Kandersteg, Juli 2027",
+   "text": "Liebe Frau Carter\n\nvielen Dank für Ihre Anfrage. Wir würden uns freuen, Ihre Familie im nächsten Sommer in Kandersteg zu begrüssen.\n\nFür vier Personen passt unsere Suite: rund 70 m² für 2 bis 4 Gäste, ab CHF 590.00 pro Nacht. Mit Halbpension wählen Sie jeden Abend aus 5 Menüs: drei im Doldenhorn (Fleisch, Fisch, Vegetarisch) und zwei in unserem Landgasthof Ruedihus.\n\nFür Ihre Woche im Juli [Verfügbarkeit prüfen] und [Angebot mit Halbpension freigeben].\n\nDamit wir ein Angebot vorbereiten können:\n- Ihre genauen An- und Abreisedaten\n- Ob Sie mit dem Auto oder dem Zug anreisen\n\nHerzliche Grüsse\n\n[Name]\nRezeption · Waldhotel Doldenhorn"
+  },
+  "verlauf_de": [
+   "Über das Anfrage-Fenster der Website (Seite Zimmer): Guten Tag, wir sind eine vierköpfige Familie (unsere Kinder sind 6 und 9) und würden nächsten Juli gern eine Woche in Kandersteg verbringen. Können Sie uns ein Angebot für ein Zimmer für uns alle schicken, am liebsten mit Halbpension?"
+  ],
+  "verlauf": [
+   [
+    "user",
+    "Über das Anfrage-Fenster der Website (Seite Zimmer): Hello, we are a family of four (our children are 6 and 9) and would love to spend a week in Kandersteg next July. Could you send us an offer for a room for all of us, ideally with half board?"
+   ]
+  ]
+ },
+ {
+  "vor": [
+   1,
+   16,
+   42
+  ],
+  "art": "nachricht",
+  "status": "neu",
+  "an": "jobs@doldenhorn.ch",
+  "abteilung": "Personal",
+  "seite": "/karriere.html",
+  "seite_name": "Karriere",
+  "web": true,
+  "name": "Nico Frei",
+  "kontakt": "nico.frei@example.com",
+  "datum": "ab der Wintersaison",
+  "personen": null,
+  "sprache": "de",
+  "anliegen": "Bewerbung als Commis de cuisine",
+  "nachricht": "Guten Tag, ich habe meine Lehre als Koch im Sommer abgeschlossen und würde gern ab der Wintersaison in Ihrer Küche arbeiten. Meinen Lebenslauf und die Zeugnisse schicke ich Ihnen gern.",
+  "betreff": "Ihre Bewerbung in unserer Küche",
+  "text": "Lieber Herr Frei\n\nvielen Dank für Ihr Interesse an einer Stelle in unserer Küche und herzliche Gratulation zum Lehrabschluss.\n\nZurzeit suchen wir unter anderem einen Koch (m/w/d). Schicken Sie uns Ihren Lebenslauf und Ihre Zeugnisse gern per E-Mail an jobs@doldenhorn.ch. Danach melden wir uns für ein Gespräch: [Termin vorschlagen].\n\nHerzlich\n\n[Name]\nPersonal · Waldhotel Doldenhorn",
+  "team": "Grundlage: karriere.html (Offene Stellen: Sous Chef, Rezeptionist, Servicemitarbeiter, Koch).\nOffen: Gespräch mit dem Küchenchef; Beginn Wintersaison.",
+  "verlauf": [
+   [
+    "user",
+    "Über das Anfrage-Fenster der Website (Seite Karriere): Guten Tag, ich habe meine Lehre als Koch im Sommer abgeschlossen und würde gern ab der Wintersaison in Ihrer Küche arbeiten. Meinen Lebenslauf und die Zeugnisse schicke ich Ihnen gern."
+   ]
+  ]
+ },
+ {
+  "vor": [
+   1,
+   10,
+   3
+  ],
+  "art": "spa",
+  "status": "gelesen",
+  "an": "spa@doldenhorn.ch",
+  "abteilung": "Spa",
+  "seite": "/sauna-welt.html",
+  "seite_name": "Sauna World",
+  "web": true,
+  "name": "Camille Martin",
+  "kontakt": "camille.martin@example.com",
+  "datum": "novembre 2026",
+  "personen": 1,
+  "sprache": "fr",
+  "anliegen": "Journée spa en novembre",
+  "nachricht": "Bonjour, je serai à Kandersteg en novembre et j’aimerais passer une journée dans votre spa et la sauna. Est-ce possible sans nuitée à l’hôtel ?",
+  "betreff": "Votre journée au Doldenhorn Spa en novembre",
+  "text": "Chère Madame Martin\n\nMerci beaucoup pour votre demande. Nous serions ravis de vous accueillir au Doldenhorn Spa.\n\nNotre piscine couverte est ouverte du lundi au dimanche de 8 h à 22 h, avec l’eau de notre propre source. La Sauna World compte 7 espaces : saunas, bain de vapeur, Salzarium et grotte de glace.\n\nPour une journée sans nuitée [conditions pour les hôtes externes] et pour votre date [vérifier la disponibilité].\n\nCordialement\n\n[Name]\nÉquipe du spa · Waldhotel Doldenhorn",
+  "team": "Grundlage: spa.html (Hallenbad 8–22 Uhr, eigene Quelle), sauna-welt.html (7 Bereiche).\nOffen: Tageseintritt für Gäste ohne Übernachtung steht nicht auf den Seiten, Preis und Möglichkeit klären.",
+  "deutsch": {
+   "betreff": "Ihr Tag im Doldenhorn Spa im November",
+   "text": "Liebe Frau Martin\n\nvielen Dank für Ihre Anfrage. Wir würden uns freuen, Sie im Doldenhorn Spa zu begrüssen.\n\nUnser Hallenbad ist Montag bis Sonntag von 8 bis 22 Uhr geöffnet, mit Wasser aus unserer eigenen Quelle. Die Sauna World hat 7 Bereiche: Saunen, Dampfbad, Salzarium und Eisgrotte.\n\nFür einen Tag ohne Übernachtung [Bedingungen für externe Gäste] und für Ihr Datum [Verfügbarkeit prüfen].\n\nHerzliche Grüsse\n\n[Name]\nSpa-Team · Waldhotel Doldenhorn"
+  },
+  "verlauf_de": [
+   "Über das Anfrage-Fenster der Website (Seite Sauna World): Guten Tag, ich bin im November in Kandersteg und würde gern einen Tag in Ihrem Spa und der Sauna verbringen. Geht das auch ohne Übernachtung im Hotel?"
+  ],
+  "verlauf": [
+   [
+    "user",
+    "Über das Anfrage-Fenster der Website (Seite Sauna World): Bonjour, je serai à Kandersteg en novembre et j’aimerais passer une journée dans votre spa et la sauna. Est-ce possible sans nuitée à l’hôtel ?"
+   ]
+  ]
+ },
+ {
+  "vor": [
+   2,
+   14,
+   26
+  ],
+  "art": "tagung",
+  "status": "erledigt",
+  "name": "Thomas Keller",
+  "kontakt": "thomas.keller@example.com",
+  "datum": "2. und 3. Dezember 2026",
+  "personen": 16,
+  "sprache": "de",
+  "anliegen": "Zweitägiger Workshop für 16 Personen mit einer Übernachtung, Raum mit Beamer, am ersten Abend ein gemeinsames Essen.",
+  "verlauf": [
+   [
+    "user",
+    "Guten Tag, wir planen einen zweitägigen Workshop für 16 Personen mit einer Übernachtung. Haben Sie einen Raum mit Beamer?"
+   ],
+   [
+    "assistant",
+    "Guten Tag. Unsere Tagungsräume haben unter anderem Beamer, Leinwand, Flipchart und WLAN, und die Seminarpauschale schliesst Zimmer, Seminarraum und Essen ein. Gern gebe ich Ihre Anfrage an das Event-Team weiter. Auf welchen Namen, und wie erreichen wir Sie?"
+   ],
+   [
+    "user",
+    "Thomas Keller, thomas.keller@example.com. Am 2. und 3. Dezember, am ersten Abend gern ein gemeinsames Essen."
+   ],
+   [
+    "assistant",
+    "Danke, Herr Keller. Ihre Anfrage liegt beim Team, das Haus meldet sich persönlich bei Ihnen."
+   ]
+  ],
+  "betreff": "Ihr Workshop am 2. und 3. Dezember 2026",
+  "text": "Lieber Herr Keller\n\nvielen Dank für Ihre Anfrage. Wir empfangen Ihr Team gern zu zwei Tagen in Kandersteg.\n\nUnsere Seminarpauschale mit Standardzimmer kostet ab 8 Personen CHF 285 pro Person und Tag. Darin sind das Einzelzimmer mit Dusche oder Bad, der Shuttle-Service vom und zum Bahnhof Kandersteg, der Seminarraum mit Infrastruktur und Kaffeepausen, ein leichter 3-Gang-Businesslunch und ein 5-Gang-Menü am Abend.\n\nFür Ihre Daten [Raum und Verfügbarkeit prüfen].\n\nHerzlich\n\n[Name]\nEvent-Team · Waldhotel Doldenhorn",
+  "team": "Grundlage: seminare.html (Seminarpauschale, Flyer Seminare 2026).\nOffen: Raum mit Beamer für 16; Zimmer für eine Nacht; Abendessen am 2.12."
+ },
+ {
+  "vor": [
+   3,
+   19,
+   8
+  ],
+  "art": "zimmer",
+  "status": "erledigt",
+  "name": "Claudia Steiner",
+  "kontakt": "claudia.steiner@example.com",
+  "datum": "12. bis 15. Februar 2027",
+  "personen": 2,
+  "sprache": "de",
+  "anliegen": "Drei Nächte im Februar, ein ruhiges Zimmer, Anreise mit dem Zug am frühen Nachmittag.",
+  "verlauf": [
+   [
+    "user",
+    "Wir möchten im Februar drei Nächte bei Ihnen verbringen, gern in einem ruhigen Zimmer. Wir kommen mit dem Zug."
+   ],
+   [
+    "assistant",
+    "Sehr gern. Vom Bahnhof Kandersteg sind es 15 Fussminuten, und unsere Zimmer liegen ruhig zur Waldseite oder mit Blick auf Tal und Berge. Möchten Sie ein persönliches Angebot? Dann brauche ich Ihren Namen und eine E-Mail-Adresse."
+   ],
+   [
+    "user",
+    "Claudia Steiner, claudia.steiner@example.com, vom 12. bis 15. Februar."
+   ],
+   [
+    "assistant",
+    "Danke, Frau Steiner. Ihre Anfrage liegt beim Team, das Haus meldet sich persönlich bei Ihnen."
+   ]
+  ],
+  "betreff": "Ihre drei Nächte vom 12. bis 15. Februar 2027",
+  "text": "Liebe Frau Steiner\n\nvielen Dank für Ihre Anfrage. Wir freuen uns, dass Sie im Februar zu uns nach Kandersteg kommen.\n\nRuhig liegen unsere Zimmer zur Waldseite. Das Ambiance-Zimmer für 1 bis 3 Personen hat rund 30 m² und kostet ab CHF 210.00 pro Nacht. Für Ihre Daten [Verfügbarkeit prüfen].\n\nVom Bahnhof Kandersteg sind es 15 Fussminuten. Gern holen wir Sie mit dem Shuttle ab: [Ankunftszeit des Zuges].\n\nHerzlich\n\n[Name]\nRezeption · Waldhotel Doldenhorn",
+  "team": "Grundlage: zimmer.html (Ambiance ab CHF 210, ca. 30 m²), anreise.html (Bahnhof 15 Fussminuten, Shuttle).\nOffen: Zimmer zur Waldseite 12.–15.2.; Zug und Abholung."
+ },
+ {
+  "vor": [
+   4,
+   11,
+   51
+  ],
+  "art": "aufenthalt",
+  "status": "neu",
+  "name": "Hans Gerber",
+  "kontakt": "+41 79 000 00 00",
+  "datum": "nicht genannt",
+  "personen": 2,
+  "sprache": "de",
+  "anliegen": "Gourmet-Aufenthalt als Geschenk zum Hochzeitstag, Datum noch offen.",
+  "verlauf": [
+   [
+    "user",
+    "Ich möchte meiner Frau zum Hochzeitstag einen Aufenthalt bei Ihnen schenken, mit einem schönen Abendessen. Was empfehlen Sie?"
+   ],
+   [
+    "assistant",
+    "Eine schöne Idee. Der Gourmet-Aufenthalt verbindet Übernachtung, Willkommensaperitif, Frühstücksbuffet, Tea Time und ein 7-Gang Menü Gastronomique. Soll das Team Ihnen ein Angebot schicken? Dann brauche ich Ihren Namen und eine Telefonnummer oder E-Mail."
+   ],
+   [
+    "user",
+    "Hans Gerber, +41 79 000 00 00."
+   ],
+   [
+    "assistant",
+    "Danke, Herr Gerber. Ihre Anfrage liegt beim Team, das Haus meldet sich persönlich bei Ihnen."
+   ]
+  ],
+  "betreff": "Ihr Gourmet-Aufenthalt zum Hochzeitstag",
+  "text": "Lieber Herr Gerber\n\nvielen Dank für Ihre Anfrage und herzliche Gratulation zum Hochzeitstag.\n\nDer Gourmet-Aufenthalt verbindet die Übernachtung im Doppelzimmer Ihrer Wahl mit Willkommensaperitif, Frühstücksbuffet, Tea Time und einem 7-Gang Menü Gastronomique, ab CHF 285.00. Als Gutschein kommt er als PDF, zum Ausdrucken oder Weiterschicken.\n\nFür das Angebot [Zimmerkategorie und Nächte klären].\n\nHerzlich\n\n[Name]\nRezeption · Waldhotel Doldenhorn",
+  "team": "Grundlage: angebote.html (Gourmet-Aufenthalt ab CHF 285, Gutschein als PDF).\nOffen: Kategorie und Anzahl Nächte; Gutschein oder Buchung mit Datum."
+ }
+]

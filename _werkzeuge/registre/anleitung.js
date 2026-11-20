@@ -1,4 +1,4 @@
-/* Anleitung Le Registre · Waldhotel Doldenhorn: Bild gross mit Klick, Esc schliesst; das Zeichen des Hauses (drei Tannen) aus assets/logo/tannen.svg
+/* Anleitung Besucher · Waldhotel Doldenhorn: Bild gross mit Klick, Esc schliesst; das Zeichen des Hauses (drei Tannen) aus assets/logo/tannen.svg
    (eigene Datei: online laufen eingebettete Skripte ohne Prüfsumme nicht). */
 (function () {
   var g = document.getElementById('gross'), im = g.querySelector('img');

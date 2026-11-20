@@ -40,6 +40,14 @@
 
 (function () {
   'use strict';
+  /* Rückweg an die genaue Stelle (Robert 08.11.2026: «egal, wo ich gerade bin … wenn ich zurückgehe, bin ich wieder da, wo ich bei der Werkbank aufgehört habe»):
+     die Werkbank gibt ihren Pfad als ?wbu= und ihre Höhe als ?wy= mit; lokal gilt sonst die feste Adresse über den Kette-Server, nie ein fester Port. */
+  var WBU = null, WY = null;
+  try { var _q = new URLSearchParams(location.search), _u = _q.get('wbu');
+    if (_u) { var _x = new URL(_u); if (/^(127\.0\.0\.1|localhost)$/.test(_x.hostname) && /\/$/.test(_x.pathname)) sessionStorage.setItem('ws-wbu', _x.href); }
+    var _y = _q.get('wy'); if (/^\d{1,6}$/.test(_y || '')) sessionStorage.setItem('ws-wy', _y);
+    WBU = sessionStorage.getItem('ws-wbu'); WY = sessionStorage.getItem('ws-wy'); } catch (e) {}
+  var LOKAL_WERKBANK = WBU || '/';
   if (window.__zurWerkbank) return; window.__zurWerkbank = 1;
 
   var SPRACHEN = ['de', 'en', 'fr', 'zh', 'ko', 'ar'];
@@ -56,7 +64,7 @@
   var src = tag && tag.src || '';
   var fremd = !!(tag && tag.hasAttribute('data-fremd'));
   /* Wurzel des Hauses: online liegen Website, Werkbank und Werkzeuge unter einer Adresse; lokal laufen Werkzeuge auf eigenen Ports, die Werkbank auf :8916 */
-  var WURZEL = fremd ? null : ANALYSE ? HAUS : /^(127\.0\.0\.1|localhost)$/.test(location.hostname) && location.port !== '8916' ? 'https://doldenhorn.tastystudios.ch/' : location.origin + '/';
+  var WURZEL = fremd ? null : ANALYSE ? HAUS : /^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? (location.port === '8978' ? location.origin + '/haus/Waldhotel%20Doldenhorn/' : (WBU || '/')) : location.origin + '/';   // lokal über den Kette-Server, nie mehr :8916 (Robert 08.11.2026)
   var hier = location.href.split(/[?#]/)[0];
   var pfad = WURZEL && hier.indexOf(WURZEL) === 0 ? hier.slice(WURZEL.length) : location.pathname.replace(/^\//, '');
 
@@ -150,7 +158,7 @@
     var t = /^\d{1,6}$/.test(roh) ? [roh, 'de', '', roh] : /^(de|en|fr|zh|ko|ar)(?:\.([a-z0-9-]{1,40}))?$/.exec(roh);
     var o = q.get('wbo') || '';
     if (t && (!fremd || HERKUNFT.test(o) || /^\/imprimerie\//.test(location.pathname))) merke({ sp: t[1], anker: t[2] || '', y: t[3] || '', o: fremd && HERKUNFT.test(o) ? o : '' });
-    try { q.delete('wb'); q.delete('wbo'); var rest = q.toString(); history.replaceState(history.state, '', location.pathname + (rest ? '?' + rest : '') + location.hash); } catch (e) {}
+    try { q.delete('wb'); q.delete('wy'); q.delete('wbu'); q.delete('wbo'); var rest = q.toString(); history.replaceState(history.state, '', location.pathname + (rest ? '?' + rest : '') + location.hash); } catch (e) {}
   }
   if (roh && history.length === 1) { try { sessionStorage.setItem('dh-wb-tab', '1'); } catch (e) {} }   // aus der Werkbank in einem neuen Reiter geöffnet
   var von = lies();
@@ -165,7 +173,9 @@
   var imPfad = /(?:^|\/)(en|fr|zh|ko|ar)\//.exec(pfad);
   var sp = fremd || OHNE_SPRACHE.test(pfad) ? von.sp : (imPfad ? imPfad[1] : 'de');
   if (sp !== von.sp) { von.sp = sp; merke(von); }
-  var ziel = basis + 'werkbank/' + (sp === 'de' ? '' : sp + '/') + (von.y ? '?y=' + von.y : 'index.html' + (von.anker ? '#' + von.anker : ''));
+  if (location.port && /^(127\.0\.0\.1|localhost)$/.test(location.hostname)) basis = WBU || (location.port === '8978' && basis ? basis : LOKAL_WERKBANK);
+  var _wy = /^\d{1,6}$/.test(String(von.y || '')) ? String(von.y) : (WY || '');
+  var ziel = basis + 'werkbank/' + (sp === 'de' ? '' : sp + '/') + 'index.html' + (_wy ? '?y=' + _wy : (von.anker ? '#' + von.anker : ''));
 
   function baue() {
     if (document.getElementById('zur-werkbank')) return;

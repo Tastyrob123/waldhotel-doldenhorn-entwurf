@@ -1,4 +1,4 @@
-/* L’Imprimerie · Waldhotel Doldenhorn · Katalog des Hauses. GESCHRIEBEN VON _qa/vorlagen_doldenhorn.py, nicht von Hand ändern.
+/* Drucksachen & Feed · Waldhotel Doldenhorn · Katalog des Hauses. GESCHRIEBEN VON _qa/vorlagen_doldenhorn.py, nicht von Hand ändern.
    Rund 250 fertig gesetzte Vorlagen nur aus Anlässen dieses Hauses (Website, Hausmagazin Nr. 69, Seminare 2026, Hochzeiten, Massage-Menü 2026,
    Spa-Etikette, Grosse Karte Sommer 2026, Bistrokarte, Weinkarte), jede öffnet ohne KI und ohne Kosten.
    Jeder Satz, jede Uhrzeit, jeder Preis, jede Telefonnummer ist gegen api/_daten/doldenhorn-wissen.txt geprüft. Was das Haus pro Fall einträgt, steht in [eckigen Klammern]. */

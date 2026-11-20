@@ -1,0 +1,5 @@
+const path=require('path');const pw=require(path.join(process.env.HOME,'Desktop/Apps & Tools/Tasty Website Builder/node_modules/playwright'));const sleep=ms=>new Promise(r=>setTimeout(r,ms));const BEL=process.argv[2];
+(async()=>{const b=await pw.webkit.launch();const c=await b.newContext({viewport:{width:1440,height:900}});await c.addInitScript(()=>{try{localStorage.setItem('reception-name','Prüf Chat');localStorage.setItem('rundgang-dh-reception','1');}catch(e){}});const p=await c.newPage();const f=[];p.on('pageerror',e=>f.push(String(e)));
+for(const a of ['start','eingang','gefragt','nachgetragen']){await p.goto('about:blank');await p.goto('http://localhost:18959/_werkzeuge/reception/#'+a);await p.waitForSelector('#ansicht > *');await sleep(2200);
+const t=(await p.locator('#ansicht').innerText()).replace(/\s+/g,' ');await p.screenshot({path:BEL+'/leer-'+a+'.jpg',type:'jpeg',quality:60});console.log(a,'·',t.slice(0,230));}
+console.log('Skriptfehler',f.length,f.join('|'));await b.close();})();

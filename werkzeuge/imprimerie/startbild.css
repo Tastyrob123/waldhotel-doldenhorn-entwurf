@@ -17,7 +17,7 @@
 .dh-st__foto.da img{transform:none}
 .dh-st__foto::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,12,20,.5),transparent 48%),linear-gradient(90deg,rgba(13,22,33,.3),transparent 60%)}
 .dh-st>:not(.dh-st__foto){position:relative;z-index:1;max-width:min(60%,720px)}
-.dh-st__zier{display:flex;align-items:center;gap:12px;margin:0;font:400 9.5px/1.3 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--dh-gold)}
+.dh-st__zier{display:flex;align-items:center;gap:12px;margin:0;font:400 13px/1.3 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--dh-gold)}
 .dh-st__zier svg{display:none}   /* wie Le Bureau: Zeile ohne Zeichen */
 .dh-st__zier i{flex:0 1 110px;min-width:36px;width:110px;height:1px;background:linear-gradient(90deg,rgba(205,184,134,.65),rgba(205,184,134,0))}
 .dh-st h1.dh-st__h{margin:18px 0 0;padding:0;font:500 clamp(42px,4.3vw,70px)/1.02 'DH Caslon','Caslon WD',Georgia,serif;letter-spacing:-.008em;text-align:left;color:#fbf8f1;text-shadow:0 2px 26px rgba(0,0,0,.4);text-wrap:balance}
@@ -25,7 +25,7 @@
 .dh-st__satz{margin:18px 0 0;max-width:58ch;font:400 16px/1.6 'DH Sans','Instrument Sans',system-ui,sans-serif;color:rgba(251,248,241,.84);text-shadow:0 1px 14px rgba(0,0,0,.45)}
 .dh-st__kn{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:26px}
 .dh-st__k{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;gap:12px;height:46px;padding:0 6px 0 20px;border:0;border-radius:999px;cursor:pointer;text-decoration:none!important;
-  font:400 11px/1 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#0d1621!important;text-shadow:0 1px 0 rgba(255,253,246,.5);
+  font:400 13px/1 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#0d1621!important;text-shadow:0 1px 0 rgba(255,253,246,.5);
   background:linear-gradient(180deg,#f6ecd0 0%,#e3d2a6 46%,#b89850 100%);
   box-shadow:inset 0 1px 0 rgba(255,253,248,.95),inset 0 -3px 0 rgba(80,64,30,.5),inset 0 0 0 1px rgba(150,125,64,.36),0 1px 1px rgba(7,12,20,.14),0 16px 26px -14px rgba(7,12,20,.35);transition:transform .55s var(--dh-e)}
 .dh-st__k:hover{transform:translateY(-1px)}
@@ -35,7 +35,7 @@
 .dh-st__zusatz{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
 /* Zahlen und Wahl neben dem Knopf (Le Livre, Le Registre): gleiche Schilder auf der dunklen Karte */
 .dh-st__chip,.dh-st .buehne__chips li{display:inline-flex;align-items:baseline;gap:9px;height:auto;margin:0;padding:10px 15px;border-radius:999px;list-style:none;background:rgba(7,12,20,.42);box-shadow:inset 0 0 0 1px rgba(205,184,134,.42);
-  font:400 10px/1 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,248,241,.78)}
+  font:400 13px/1 'DH Mono',ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,248,241,.78)}
 .dh-st__chip b,.dh-st .buehne__chips b{font:500 19px/1 'DH Caslon',Georgia,serif;letter-spacing:0;text-transform:none;color:var(--dh-gold);font-variant-numeric:lining-nums tabular-nums}
 .dh-st .buehne__chips span{font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit}
 .dh-st .buehne__chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;animation:none}
@@ -68,4 +68,4 @@ html body .kopf__marke>.kopf__zeichen{display:grid;place-items:center;padding:0}
 html body .kopf__marke>.kopf__zeichen>*{width:17px!important;height:auto!important}
 html body :is(.kopf__marke,.oben__marke) b{display:block;font:700 17px/1.05 var(--serif,'Caslon WD',Georgia,serif)!important;letter-spacing:.01em!important;text-transform:none!important;
   background:linear-gradient(180deg,#f8efd6 0%,#e6d4a6 34%,#c9ad6c 52%,#9a7d3e 62%,#dcc79a 80%,#f2e5c4 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
-html body :is(.kopf__marke,.oben__marke) small{display:block;margin-top:6px;font:9.5px/1 var(--mono,'DM Mono',ui-monospace,monospace)!important;letter-spacing:.26em!important;text-transform:uppercase;color:rgba(227,210,166,.7)!important;text-align:left}
+html body :is(.kopf__marke,.oben__marke) small{display:block;margin-top:6px;font:13px/1 var(--mono,'DM Mono',ui-monospace,monospace)!important;letter-spacing:.26em!important;text-transform:uppercase;color:rgba(227,210,166,.7)!important;text-align:left}

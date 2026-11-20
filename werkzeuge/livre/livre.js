@@ -1,4 +1,4 @@
-/* Le Livre · Waldhotel Doldenhorn. Die Marke des Hauses zum Arbeiten (Nachbau von Le Livre des Grand Beau-Rivage und des Carlton-Europe, dort nur gelesen):
+/* Markenbuch · Waldhotel Doldenhorn. Die Marke des Hauses zum Arbeiten (Nachbau von «Markenbuch» des Grand Beau-Rivage und des Carlton-Europe, dort nur gelesen):
    Bildarchiv mit fertigen Grössen, Dateien (drei Tannen, Logo, Name, Tapete, Farben, Schriften), Markenprüfung für Entwürfe, Markenbuch (buch.html).
    Daten: livre.json (gebaut von bau.py), Downloads und Prüfung über den Server-Teil (server.py lokal, online/livre_online.py). Gespeichert wird nichts,
    ausser «Ergebnis sichern» legt auf Wunsch eine Datei auf diesem Rechner ab. Fehlermelder, Ladezeichen und Startfehler laufen vorher in start.js. */
@@ -19,7 +19,7 @@ const S_ = 'waldhotel-doldenhorn';
 const ZEICHEN = `<img src="dateien/${S_}-tannen-hellgold.svg" alt="" width="31" height="45" decoding="async">`;
 const ZEICHEN_N = `<img src="dateien/${S_}-tannen-nacht.svg" alt="" width="31" height="45" decoding="async">`;
 const MARKE = 'buch.html', DAT = 'dateien/', ORIG = 'original/';
-const MAISON = '/_werkzeuge/maison/';     // lokal und online gleich (online leitet /_werkzeuge/maison/ auf /maison/ um, La Maison online.json)
+const MAISON = '/_werkzeuge/maison/';     // lokal und online gleich (online leitet /_werkzeuge/maison/ auf /maison/ um, Kontrollpanel online.json)
 const WEBSITE = '/';
 const IMPRIMERIE = '../imprimerie/';      // immer relativ, nie nach Port (F18): lokal _werkzeuge/imprimerie/, online werkzeuge/imprimerie/
 const okey = k => k.replace(/\//g, '-');
@@ -31,12 +31,12 @@ const SPRACHEN = [['de', 'DE', 'Deutsch']];
 const T = {
 de: {
   unter: 'Marke · Waldhotel Doldenhorn', start: 'Übersicht', arbeiten: 'Arbeiten', nachschlagen: 'Nachschlagen', bilder: 'Bildarchiv', dateien: 'Logo & Dateien', pruefung: 'Markenprüfung', buch: 'Markenbuch',
-  anleitung: 'Anleitung', maison: 'La Maison', website: 'Website ansehen', sprache: 'Sprache', rundgang: 'Kurzer Rundgang', bereiche: 'Bereiche',
+  anleitung: 'Anleitung', maison: 'Kontrollpanel', website: 'Website ansehen', sprache: 'Sprache', rundgang: 'Kurzer Rundgang', bereiche: 'Bereiche',
   morgen: 'Guten Morgen.', tag: 'Guten Tag.', abend: 'Guten Abend.', frage: 'Was brauchen Sie heute?',
-  start_satz: 'Le Livre ist die Marke des Hauses zum Arbeiten: alle Fotos in fertigen Grössen für Instagram, Website und Druck, die drei Tannen, Logo, Tapete und Farben als Dateien, und eine Prüfung für Entwürfe von Agenturen und aus dem Haus.',
+  start_satz: 'Markenbuch ist die Marke des Hauses zum Arbeiten: alle Fotos in fertigen Grössen für Instagram, Website und Druck, die drei Tannen, Logo, Tapete und Farben als Dateien, und eine Prüfung für Entwürfe von Agenturen und aus dem Haus.',
   k_bilder: 'Alle Fotos der Website, nach Bereich, Saison und Format. Jedes Foto als Beitrag, Story, für die Website oder den Druck.',
   k_dateien: 'Die drei Tannen, das Logo und der Name für helle und dunkle Flächen, die Tapete und die Farbwerte zum Kopieren.',
-  k_pruefung: 'Ein Entwurf als Bild oder PDF. Le Livre sagt, was zum Haus passt und was nicht, Punkt für Punkt.',
+  k_pruefung: 'Ein Entwurf als Bild oder PDF. Markenbuch sagt, was zum Haus passt und was nicht, Punkt für Punkt.',
   k_buch: 'Zeichen, Farben und ihre Herkunft im Haus, Schriften, Tapete, Bilder und Ton, nach denen alles gestaltet ist.',
   oeffnen: 'Öffnen', lesen: 'Lesen',
   ue_kurz: 'nachgeschärft', z_haus: 'Fotos des Hauses', z_frei: 'frei lizenziert', z_ki: 'mit KI erzeugt', z_dateien: 'Dateien',
@@ -48,7 +48,7 @@ de: {
   b_zimmer: 'Zimmer', b_kueche: 'Küche & Keller', b_spa: 'Spa', b_feste: 'Feste & Seminare', b_haus: 'Haus & Halle', b_aussen: 'Das Haus von aussen', b_tal: 'Tal & Umgebung', b_familie: 'Familie & Schwesterhäuser',
   s_sommer: 'Sommer', s_winter: 'Winter', s_jahr: 'Ganzjährig', f_hoch: 'Hochformat', f_quer: 'Querformat', f_quadrat: 'Quadrat',
   h_haus: 'Fotos des Hauses', h_frei: 'Frei lizenziert', h_ki: 'Mit KI erzeugt',
-  im_titel: 'In L’Imprimerie gestalten', im_beitrag: 'Als Instagram-Beitrag', im_story: 'Als Story', im_satz: 'Öffnet L’Imprimerie mit diesem Foto und Ihrem Ausschnitt.',
+  im_titel: 'In «Drucksachen & Feed» gestalten', im_beitrag: 'Als Instagram-Beitrag', im_story: 'Als Story', im_satz: 'Öffnet Drucksachen & Feed mit diesem Foto und Ihrem Ausschnitt.',
   treffer: '{0} von {1} Fotos', keine: 'Kein Foto passt. Ein Filter weniger hilft.', mehr: 'Mehr zeigen', zuruecksetzen: 'Filter zurücksetzen',
   frei_kurz: 'Kein Hausfoto', ki: 'KI', ki_lang: 'Mit KI erzeugt', ki_satz: 'Dieses Bild ist mit KI erzeugt und kein Foto des Hauses. Es steht als Platzhalter auf der Website, bis das Haus eigene Fotos hat. Für Werbung nur mit diesem Hinweis oder nach einem echten Foto.',
   frei_satz: 'Frei lizenziert: verwenden nur mit dem Namen des Fotografen und der Lizenz, wie unter «Quelle» genannt.',
@@ -56,7 +56,7 @@ de: {
   quelle: 'Quelle', original: 'Grösste Fassung', laden: 'Laden', grossen: 'Grössen', ausschnitt: 'Ausschnitt: das Feld im Bild ziehen.',
   g_instagram: 'Instagram-Beitrag', g_story: 'Story', g_web: 'Website', g_druck: 'Druck',
   i_instagram: '1080 × 1350, JPG', i_story: '1080 × 1920, JPG', i_web: 'längste Seite 2000 px, JPG', i_druck: 'volle Auflösung, {0} × {1}, JPG', i_druck_web: 'in Website-Grösse (Original nicht hinterlegt), JPG',
-  ohne_server: 'Fertige Grössen brauchen den Server-Teil von Le Livre. Ohne ihn lädt der Knopf das Foto in Website-Grösse.',
+  ohne_server: 'Fertige Grössen brauchen den Server-Teil von «Markenbuch». Ohne ihn lädt der Knopf das Foto in Website-Grösse.',
   vn_vorher: 'Vorher', vn_nachher: 'Nachher', vn_schieber: 'Schieber', vn_t_vorher: 'Vorher · so geliefert', vn_t_nachher: 'Nachher · nachgeschärft', vn_t_schieber: 'Vorher links · nachher rechts',
   vn_hilfe: 'Mit «Vorher» sehen Sie das Foto, wie das Haus es geliefert hat.', vn_orig: 'Vorher laden',
   d_titel: 'Logo & Dateien', d_satz: 'Alles, was eine Agentur oder eine Druckerei braucht. SVG bleibt in jeder Grösse scharf, PNG hat einen durchsichtigen Grund.',
@@ -83,10 +83,10 @@ de: {
   u_passt: 'passt', u_achten: 'achten', u_passt_nicht: 'passt nicht',
   ber: { farben: 'Farben', schrift: 'Schrift', zeichen: 'Zeichen', abstand: 'Abstand', bild: 'Bild', ton: 'Ton' },
   p_ki_fehler: 'Die Beurteilung durch Claude war gerade nicht möglich ({0}). Die Messung der Farben steht links.', p_fehler: 'Die Prüfung ging nicht durch',
-  p_seiten: '{0} Seiten, geprüft die ersten {1}', p_text: 'Gelesener Text', fehler_verb: 'Der Server-Teil von Le Livre antwortet nicht.',
-  schliessen: 'Schliessen', fehler_json: 'Die Daten von Le Livre (livre.json) fehlen.',
+  p_seiten: '{0} Seiten, geprüft die ersten {1}', p_text: 'Gelesener Text', fehler_verb: 'Der Server-Teil von «Markenbuch» antwortet nicht.',
+  schliessen: 'Schliessen', fehler_json: 'Die Daten von «Markenbuch» (livre.json) fehlen.',
   p_typ: 'Diese Datei ist kein Bild und keine PDF. Erlaubt sind JPG, PNG, WebP und PDF.', p_gross: 'Die Datei ist grösser als 30 MB.', p_pdf_online: 'Online geht eine PDF bis 3 MB. Bitte kleiner speichern oder die erste Seite als Bild prüfen.', p_offline: 'Keine Verbindung. Der Entwurf bleibt gewählt, bitte noch einmal prüfen, sobald das Netz wieder da ist.', fehler_code: 'Der Server antwortete mit Fehler {0}.',
-  tuer_t: 'Le Livre startet nicht.', tuer_neu: 'Neu laden', tuer_hilfe: 'Hilft das nicht: die Anleitung öffnen oder Tasty Studios Bescheid geben.'
+  tuer_t: 'Markenbuch startet nicht.', tuer_neu: 'Neu laden', tuer_hilfe: 'Hilft das nicht: die Anleitung öffnen oder Tasty Studios Bescheid geben.'
 }
 };
 if (/[?&]sprachen=probe\b/.test(location.search)) {   // nur für die Prüfung des Sprachwechsels: jeder Text in ‹ ›
@@ -109,7 +109,7 @@ function kopf() {
   const st = S.d ? t('stand', zahl(S.d.stand.fotos), zahl(S.d.stand.dateien)) : '';
   const akt = SPRACHEN.find(x => x[0] === SP) || SPRACHEN[0];
   $('#kopf').innerHTML = `
-    <button class="kopf__marke" type="button" data-gehe="start" aria-label="${esc(t('start'))}"><span class="li-z">${ZEICHEN}</span><span><b>Le Livre</b><small>${esc(t('unter'))}</small></span></button>
+    <button class="kopf__marke" type="button" data-gehe="start" aria-label="${esc(t('start'))}"><span class="li-z">${ZEICHEN}</span><span><b>Markenbuch</b><small>${esc(t('unter'))}</small></span></button>
     <div class="kopf__mitte"><div class="kopf__titel">${esc(titel)}</div><div class="kopf__stand">${esc(st)}</div></div>
     <div class="kopf__werk">
       ${SPRACHEN.length > 1 ? `<div class="li-sp"><button class="li-sp__k" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="${esc(t('sprache'))}">${esc(akt[1])}<i>${PFEIL}</i></button>
@@ -133,7 +133,7 @@ function rand() {
   $('#rand').innerHTML = `
     <button class="rand__auf" type="button" aria-expanded="false" aria-controls="li-nav">${esc(t('bereiche'))}<i>${PFEIL}</i></button>
     <div class="rand__in" id="li-nav">
-    <nav class="nav" aria-label="Le Livre">
+    <nav class="nav" aria-label="Markenbuch">
       ${nw('start', t('start'))}
       <p>${esc(t('arbeiten'))}</p>
       ${nw('bilder', t('bilder'), S.d ? zahl(S.d.stand.fotos) : '')}${nw('dateien', t('dateien'), S.d ? zahl(S.d.stand.dateien) : '')}${nw('pruefung', t('pruefung'))}
@@ -207,7 +207,7 @@ function start() {
       <span class="li-k__b">${inhalt}</span>
       <span class="li-k__n"><small>${esc(mono)}</small><b>${esc(name)}</b><span>${esc(satz)}</span><i class="li-k__p">${PF}</i></span></button>`;
   const chips = [[zahl(st.fotos), t('bilder')], [zahl(st.dateien), t('z_dateien')], ['ΔE', t('pruefung')]].map(([a, b]) => `<span class="dh-st__chip"><b>${esc(a)}</b>${esc(b)}</span>`).join('');
-  return `${window.DHStart ? DHStart({ werkzeug: 'Le Livre', h1: `${esc(gruss)} <em>${esc(t('frage'))}</em>`, satz: esc(t('start_satz')), kn: [{ t: 'Anleitung', href: 'anleitung.html', neu: true }], zusatz: chips })   /* einheitliches Startbild (17.10.2026) */
+  return `${window.DHStart ? DHStart({ werkzeug: 'Markenbuch', h1: `${esc(gruss)} <em>${esc(t('frage'))}</em>`, satz: esc(t('start_satz')), kn: [{ t: 'Anleitung', href: 'anleitung.html', neu: true }], zusatz: chips })   /* einheitliches Startbild (17.10.2026) */
     : titel('start', [gruss, t('frage')], t('start_satz'), '', [[zahl(st.fotos), t('bilder')], [zahl(st.dateien), t('z_dateien')], ['ΔE', t('pruefung')]])}
     <div class="li-karten">
       ${karte('bilder', zahl(st.fotos) + ' · ' + t('bilder'), t('bilder'), t('k_bilder'), `<span class="li-stapel"><img src="${foto('z-suite-1')}" alt="" decoding="async"><img src="${foto('becken')}" alt="" decoding="async"><img src="${foto('salon')}" alt="" decoding="async"></span>`, 0)}
@@ -548,7 +548,7 @@ function ergebnis(j, ziel) {
 }
 function alsText(j) {
   const m = j.messung, k = j.ki || {};
-  const z = [`Le Livre · ${t('pruefung')} · ${j.name}`, ''];
+  const z = [`Markenbuch · ${t('pruefung')} · ${j.name}`, ''];
   if (j.beispiel) z.push(t('p_beispiel_hand'), '');
   if (j.probe) z.push(t('p_probe'), '');
   if (k.gesamt) z.push(k.gesamt, '');
@@ -560,9 +560,9 @@ function alsText(j) {
 }
 function sichere(j) {
   // nur auf ausdrücklichen Wunsch: eine Datei auf diesem Rechner, nichts auf dem Server
-  const html = `<!doctype html><meta charset="utf-8"><title>Le Livre · ${esc(j.name)}</title><body style="font:15px/1.6 system-ui;max-width:820px;margin:40px auto;color:#0f1620;background:#f1ece2;padding:0 20px">
+  const html = `<!doctype html><meta charset="utf-8"><title>Markenbuch · ${esc(j.name)}</title><body style="font:15px/1.6 system-ui;max-width:820px;margin:40px auto;color:#0f1620;background:#f1ece2;padding:0 20px">
     <h1 style="font:700 32px Georgia,serif">${esc(t('pruefung'))}: ${esc(j.name)}</h1><img src="${j.vorschau}" style="max-width:360px;border-radius:12px"><pre style="white-space:pre-wrap;font:14px/1.6 system-ui">${esc(alsText(j))}</pre>
-    <p style="color:#3d5370;font-size:12px">Le Livre · Waldhotel Doldenhorn, Kandersteg · ${new Date().toLocaleString('de-CH')}</p></body>`;
+    <p style="color:#3d5370;font-size:13px">Markenbuch · Waldhotel Doldenhorn, Kandersteg · ${new Date().toLocaleString('de-CH')}</p></body>`;
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
   a.download = 'le-livre-pruefung-' + (j.name.replace(/\.[a-z0-9]+$/i, '').replace(/[^a-z0-9äöü_-]+/gi, '-').toLowerCase().slice(0, 60) || 'entwurf') + '.html';
@@ -597,7 +597,7 @@ function melde(text, fehl = false) {
 }
 
 /* ---------------------------------------------------------------- Start */
-/* Startfehler-Tür (R04): statt einer leeren Fläche sagt Le Livre, dass und warum es nicht startet */
+/* Startfehler-Tür (R04): statt einer leeren Fläche sagt Markenbuch, dass und warum es nicht startet */
 function startfehler(grund) {
   window.LIVRE_BEREIT = true; clearTimeout(window.LIVRE_LADE);
   $('#ansicht').innerHTML = `<div class="platte li-tuer" role="alert"><span class="li-tuer__z">${ZEICHEN_N}</span><h1>${esc(t('tuer_t'))}</h1>
