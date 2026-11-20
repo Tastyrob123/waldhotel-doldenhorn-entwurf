@@ -176,6 +176,9 @@
     var z = u.searchParams.get('z'); if (!z || !/^[a-z0-9-]+$/.test(z) || (u.searchParams.get('q') || 'live') !== 'live') return;
     a.setAttribute('href', '/unterlagen/pdf/' + z + '.pdf');
   }
+  function alleA(r) { if (r && r.querySelectorAll) [].forEach.call(r.querySelectorAll('a[href*="/api/pdf"]'), um); }
+  new MutationObserver(function (ms) { ms.forEach(function (m) { if (m.type === 'attributes') { if (m.target.matches && m.target.matches('a[href*="/api/pdf"]')) um(m.target); } else [].forEach.call(m.addedNodes, function (x) { if (x.nodeType === 1) { if (x.matches('a[href*="/api/pdf"]')) um(x); alleA(x); } }); }); })
+    .observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['href'] });
   ['pointerdown', 'mousedown', 'click', 'auxclick', 'contextmenu', 'keydown', 'touchstart'].forEach(function (n) {
     document.addEventListener(n, function (ev) { var a = ev.target && ev.target.closest && ev.target.closest('a[href]'); if (a) um(a); }, { capture: true, passive: true });
   });

@@ -535,3 +535,6 @@ html:not(#q1):not(#q2):not(#q3) .besuch__b .sbild{border-radius:12px}
 /* Prüfung 20.11.2026 (Leerraum-Regel): Tafeln mit ungleich viel Inhalt stehen untereinander, jede so hoch wie ihr Inhalt; Namen in Ranglisten brechen um statt abgeschnitten */
 html:not(#q1):not(#q2):not(#q3) .zwei.zwei--unter{grid-template-columns:minmax(0,1fr)}
 html:not(#q1):not(#q2):not(#q3) .rang__n,html:not(#q1):not(#q2):not(#q3) .rang__n small{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:break-word}
+
+/* Prüfung 20.11.2026: «Zurück zur Werkbank» steht unten auf der Seitenleiste genau über der Zeile «Waldhotel Doldenhorn · 3718 Kandersteg»; solange der Knopf da ist, tritt die Zeile zurück (der Name steht oben im Kopf) */
+@media (min-width:901px){body:has(#zur-werkbank) .rand__haus{visibility:hidden}}

@@ -477,3 +477,6 @@ html:not(#q1):not(#q2):not(#q3) .kopf{margin-bottom:34px}
 
 /* Messlauf 30.10.2026 (Kriterium 35): Schrift der Knöpfe in der Leiste unten optisch mittig (Handy) */
 #leiste .kn>span{text-box:trim-both cap alphabetic}
+
+/* Prüfung 20.11.2026: «Karten · Waldhotel Doldenhorn» unter dem Werkzeugnamen lief in einer Zeile über die Marke hinaus in den Kartentitel; die Zeile bricht jetzt um */
+.oben__marke span{min-width:0}html body .oben__marke small{white-space:normal!important;font:12.5px/1.3 var(--mono,'DM Mono',ui-monospace,monospace)!important;letter-spacing:.1em!important;margin-top:4px}
