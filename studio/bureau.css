@@ -1039,3 +1039,6 @@ html body .leiste__t span{font-size:13px!important}
 html body .lage .lg{align-content:center}
 @media (min-width:1100px){html body .bereiche.edel{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 html body .ag b{line-height:1.2!important}
+
+/* Prüfung 20.11.2026 (Nachtrag): «Speichern» in der Leiste unten am Handy 12,5 px statt 9,5 px */
+html body .leiste .kn{font-size:12.5px!important}

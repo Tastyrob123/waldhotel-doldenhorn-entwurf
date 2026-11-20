@@ -1030,3 +1030,8 @@ html body :is(.kopf__marke,.oben__marke) small{display:block;margin-top:6px;font
 .dh-st__h{line-height:1.2!important}
 @media (max-width:700px){.ws__t small{white-space:normal!important;overflow:visible!important}}
 @media (max-width:900px){.m-buehne{grid-template-columns:minmax(0,1fr)!important}.m-buehne>*{min-width:0}}
+
+/* Prüfung 20.11.2026 (Nachtrag): Fensterleisten der Bildschirme brechen auf jeder Breite um (bei 1280 px wurde «… · Spa» abgeschnitten); umbrochene Saal-Titel am Handy mit Luft zwischen den Zeilen */
+.m-schirm__leiste{height:auto!important;min-height:28px;padding:5px 10px!important}
+.m-schirm__leiste span,.m-schirme .m-schirm__leiste span{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;text-align:center;line-height:1.35!important}
+@media (max-width:700px){.m-titel{line-height:1.12!important}}

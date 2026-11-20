@@ -787,3 +787,9 @@ html.probe-offen{overflow:hidden}
 /* Prüfung 20.11.2026: Vorschauzeilen in den Listen (Name, Art und Zeit, Antwort) wurden mitten im Wort abgeschnitten; jetzt höchstens zwei ganze Zeilen */
 html body .re-a__k,html body .re-a__n b,html body .re-a__n small{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden!important;text-overflow:clip!important;overflow-wrap:anywhere}
 html body .re-a__n small *,html body .re-a__n b *{white-space:normal!important}
+
+/* Prüfung 20.11.2026 (Nachtrag, Leerraum-Regel): «Zuletzt angefragt» und «Zuletzt gefragt» haben ungleich hohe Karten; beide Listen stehen untereinander, jede so hoch wie ihr Inhalt.
+   Zweizeilige Titel und Antworten mit Luft für Ober- und Unterlängen, damit nichts am Rand gekappt wird. */
+html body .re-start{grid-template-columns:minmax(0,1fr)!important}
+html body .re-a__n b,html body .re-q .re-a__n b{line-height:1.3!important}
+html body .re-a__n small,html body .re-a__k{line-height:1.45!important}

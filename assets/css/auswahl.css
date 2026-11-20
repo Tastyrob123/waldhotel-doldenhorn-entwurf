@@ -62,3 +62,6 @@
 .dw-z[aria-selected=true]{color:#f1ece2;background:linear-gradient(#27405f,#16263c);box-shadow:inset 0 1px 0 rgba(226,236,255,.2)}
 .dw-doppel{align-self:center;font-family:var(--titel,Georgia,serif);font-weight:700;font-size:1.404rem;font-style:normal;color:#3d5370}
 @media (prefers-reduced-motion:reduce){.dw-liste,.dw-blatt{transition:none}}
+
+/* Prüfung 20.11.2026: im Buchungsfeld des Auftakts wurde das Datum abgeschnitten («Fr, 20. Nov 20…»); Schrift dort etwas kleiner, damit Tag, Datum und Jahr ganz stehen */
+.auftakt__reihe .leiste .dw-knopf b{font-size:.9em;letter-spacing:-.005em}
