@@ -783,3 +783,7 @@ html.probe-offen{overflow:hidden}
 /* Schrift optisch mittig in Knöpfen und Pillen (Robert 29.10.2026: «Die Schriften in deinen Buttons sitzen IMMER falsch»; Messlauf-Regel text-mitte, gemessen in Chromium und WebKit).
    text-box schneidet die Zeile auf Versalhöhe und Grundlinie zu, dann zentriert der Knopf genau die Buchstaben; wo der Text ohne eigenes Element im Knopf steht, ein gemessener Ausgleich. */
 .nw>span{text-box:trim-both cap alphabetic}
+
+/* Prüfung 20.11.2026: Vorschauzeilen in den Listen (Name, Art und Zeit, Antwort) wurden mitten im Wort abgeschnitten; jetzt höchstens zwei ganze Zeilen */
+html body .re-a__k,html body .re-a__n b,html body .re-a__n small{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden!important;text-overflow:clip!important;overflow-wrap:anywhere}
+html body .re-a__n small *,html body .re-a__n b *{white-space:normal!important}

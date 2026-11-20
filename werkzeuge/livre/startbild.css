@@ -69,3 +69,6 @@ html body .kopf__marke>.kopf__zeichen>*{width:17px!important;height:auto!importa
 html body :is(.kopf__marke,.oben__marke) b{display:block;font:700 17px/1.05 var(--serif,'Caslon WD',Georgia,serif)!important;letter-spacing:.01em!important;text-transform:none!important;
   background:linear-gradient(180deg,#f8efd6 0%,#e6d4a6 34%,#c9ad6c 52%,#9a7d3e 62%,#dcc79a 80%,#f2e5c4 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
 html body :is(.kopf__marke,.oben__marke) small{display:block;margin-top:6px;font:13px/1 var(--mono,'DM Mono',ui-monospace,monospace)!important;letter-spacing:.26em!important;text-transform:uppercase;color:rgba(227,210,166,.7)!important;text-align:left}
+
+/* Prüfung 20.11.2026: Begrüssung mit Luft für Ober- und Unterlängen (die zwei Zeilen berührten sich) */
+.dh-st h1.dh-st__h{line-height:1.18!important}

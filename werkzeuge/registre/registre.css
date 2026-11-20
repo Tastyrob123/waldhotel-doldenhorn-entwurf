@@ -538,3 +538,8 @@ html:not(#q1):not(#q2):not(#q3) .rang__n,html:not(#q1):not(#q2):not(#q3) .rang__
 
 /* Prüfung 20.11.2026: «Zurück zur Werkbank» steht unten auf der Seitenleiste genau über der Zeile «Waldhotel Doldenhorn · 3718 Kandersteg»; solange der Knopf da ist, tritt die Zeile zurück (der Name steht oben im Kopf) */
 @media (min-width:901px){body:has(#zur-werkbank) .rand__haus{visibility:hidden}}
+
+/* Prüfung 20.11.2026: Titel im Kopf mit Luft für Unterlängen (das «Ü» wurde oben gekappt); Zeile unter den Besuchen ganz lesbar; am Handy bricht die Zeile unter «Besucher» um, statt über den Rand zu laufen */
+html body .kopf__titel{line-height:1.3!important}
+html body .besuch__n small{white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
+@media (max-width:700px){html body .kopf__marke{min-width:0}html body .kopf__marke span{min-width:0}html body .kopf__marke small{white-space:normal!important;letter-spacing:.08em!important;line-height:1.25}}

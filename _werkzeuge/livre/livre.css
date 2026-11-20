@@ -473,3 +473,6 @@ img{display:block;max-width:100%}
    text-box schneidet die Zeile auf Versalhöhe und Grundlinie zu, dann zentriert der Knopf genau die Buchstaben; wo der Text ohne eigenes Element im Knopf steht, ein gemessener Ausgleich. */
 .nw>span{text-box:trim-both cap alphabetic}
 .li-buch>span.kn{padding-top:1px}
+
+/* Prüfung 20.11.2026: lange Wörter in den Karten («Markenprüfung») ragten bei 1280 px über die Karte; sie trennen jetzt */
+html body .li-k__n b{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}

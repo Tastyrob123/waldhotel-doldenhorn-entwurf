@@ -360,7 +360,7 @@ function saeulen(werte, beschrift, tip, klasse = '', vorher) {
 function karteBesuch(b, i, aktiv) {
   const marke = b.buchung ? 'Zur Buchung' : b.anfrage ? 'Anfrage' : b.kontakt ? 'Kontakt' : b.chat ? 'Chat' : esc(GERAET[b.g] || '');
   return `<button class="besuch rg-a${b.buchung ? ' gold' : ''}${aktiv ? ' aktiv' : ''}" type="button" data-gehe="besuche" data-wahl="${i}" aria-pressed="${aktiv}">
-    <span class="besuch__b">${sbild(b.weg && b.weg[0] ? b.weg[0].s : 'index.html')}<span class="besuch__l">${esc(b.l && b.l !== '??' ? b.l : '–')}</span></span>
+    <span class="besuch__b">${sbild(((b.weg || []).map(x => x.s).find(s => s && s !== 'index.html')) || 'index.html')}<span class="besuch__l">${esc(b.l && b.l !== '??' ? b.l : '–')}</span></span>
     <span class="besuch__n"><b>${esc(ort(b))}</b><small>${esc(tagWort(b.tag))}, ${esc(b.z)} Uhr · ${mal(b.seiten, 'eine Seite', 'Seiten')}${b.dauer ? ' · ' + dauer(b.dauer, true) : ''}</small></span>
     <span class="besuch__z">${marke}<small>${esc(SPRACHE[b.sp] || b.sp)}</small></span></button>`;
 }

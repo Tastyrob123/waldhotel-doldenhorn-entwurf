@@ -1028,3 +1028,14 @@ html,body{overflow-x:clip}
 
 /* Bilder in jeder Liste (Robert 19.10.2026): Google-Texte zeigen das Bild ihrer Seite */
 .karte[data-s] > .kh{margin-bottom:16px}
+
+/* Prüfung 20.11.2026: Etiketten, Leiste und Knöpfe waren 9 bis 11 px klein; jetzt mindestens 12,5 px, Sperrung höchstens .16em */
+html body .kopf__marke small,html body .kopf__stand,html body .kopf__werk .kn,html body .nav p,html body .nw em,html body .nw i,html body .dh-st__zier span,html body .dh-st__k,html body .lg .mono,html body .bk__n small,html body .leiste__t span{font-size:12.5px!important}
+html body .kopf__marke small,html body .kopf__stand,html body .nav p,html body .dh-st__zier span,html body .lg .mono{letter-spacing:.16em!important}
+html body .leiste__t span{font-size:13px!important}
+
+/* Prüfung 20.11.2026: drei Stand-Tafeln mit ungleich viel Text: Inhalt mittig in der Höhe statt Leerfläche unten. Neun Bereiche immer in drei Spalten (3+3+3, nie 4+4+1).
+   Zweizeilige Titel der Aufgaben mit Luft für Ober- und Unterlängen. */
+html body .lage .lg{align-content:center}
+@media (min-width:1100px){html body .bereiche.edel{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+html body .ag b{line-height:1.2!important}

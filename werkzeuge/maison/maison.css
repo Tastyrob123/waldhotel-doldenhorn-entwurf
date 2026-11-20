@@ -1016,3 +1016,17 @@ html body :is(.kopf__marke,.oben__marke) small{display:block;margin-top:6px;font
 .fk-gruss{margin-top:20px}
 .m-f5__ort{margin-bottom:.7em}
 .dh-st h1.dh-st__h{line-height:1.14}
+
+/* Prüfung 20.11.2026: die deutschen Werkzeugnamen sind länger als die französischen der Vorlage. Schilder: Name kleiner, Stand schmaler, damit nichts in den Stand läuft («Drucksachen & Feed» lag auf «252 Vorlagen»); Untertitel ganz lesbar.
+   Am Handy brechen Saal-Titel und Fensterleisten um, statt abgeschnitten zu werden. Gruss: Zeilen mit Luft für Ober- und Unterlängen. */
+.ws__stand{max-width:12ch!important}
+.ma .ws__t b{font-size:clamp(1.05rem,1.45vw,1.3rem)!important}
+.ws__t small{letter-spacing:.12em!important}
+@media (max-width:1400px){.ws__stand{max-width:10ch!important}.ws__t small{letter-spacing:.06em!important}}
+@media (max-width:700px){.ma .ws__t b{white-space:normal!important;font-size:1.12rem!important}
+  .m-titel{white-space:normal!important;overflow-wrap:break-word}
+  .m-schirm__leiste{height:auto!important;min-height:28px;padding:5px 10px!important}
+  .m-schirm__leiste span,.m-schirme .m-schirm__leiste span{white-space:normal!important;overflow:visible!important;text-align:center;letter-spacing:.08em!important;line-height:1.35!important}}
+.dh-st__h{line-height:1.2!important}
+@media (max-width:700px){.ws__t small{white-space:normal!important;overflow:visible!important}}
+@media (max-width:900px){.m-buehne{grid-template-columns:minmax(0,1fr)!important}.m-buehne>*{min-width:0}}

@@ -2754,3 +2754,11 @@ main>.fl:not(:nth-child(6),:nth-child(11),:nth-child(14),:nth-child(17),:nth-chi
 .kap--z span,.wfa__zahl{letter-spacing:.14em!important}
 /* Prüfung 20.11.2026: am Handy passten die Namen der Unterlagen-Blätter nicht in ihre Leiste («Hochzeit an…»): Name darf umbrechen, «ansehen» entfällt dort */
 @media (max-width:640px){.faecher .blattk span{white-space:normal;letter-spacing:.06em;padding:9px 9px;line-height:1.25}.faecher .blattk span b{display:none}}
+
+/* Prüfung 20.11.2026: Adressen in den nachgebauten Browserfenstern und Namen unter den Abzügen wurden abgeschnitten; sie brechen jetzt um */
+html body .lu-fen__adr{white-space:normal;align-items:flex-start;height:auto}
+html body .lu-fen__adr i{margin-top:5px}
+html body .lu-fen__adr span{overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.35;min-width:0}
+html body .fen__k{height:auto;min-height:34px;padding-top:7px;padding-bottom:7px}
+html body .fen__k span{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.35;min-width:0}
+html body .abzug span{white-space:normal;overflow:visible;text-overflow:clip;padding:0 6px}
