@@ -793,3 +793,6 @@ html body .re-a__n small *,html body .re-a__n b *{white-space:normal!important}
 html body .re-start{grid-template-columns:minmax(0,1fr)!important}
 html body .re-a__n b,html body .re-q .re-a__n b{line-height:1.3!important}
 html body .re-a__n small,html body .re-a__k{line-height:1.45!important}
+
+/* Prüfung 20.11.2026 (Nachtrag): Fragen und Namen in den Listen stehen ganz da (die zweite Zeile wurde am Handy unten gekappt) */
+html body .re-a__n b,html body .re-q .re-a__n b{display:block!important;-webkit-line-clamp:unset!important;overflow:visible!important}
