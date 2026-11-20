@@ -1,0 +1,132 @@
+[
+ {
+  "vor": [
+   0,
+   8,
+   12
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Wann ist das Hallenbad offen?",
+  "antwort": "Das Hallenbad ist Montag bis Sonntag von 8:00 bis 22:00 Uhr geöffnet, mit Wasser aus unserer hauseigenen Quelle.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   0,
+   10,
+   40
+  ],
+  "sprache": "en",
+  "belegt": true,
+  "frage": "Which saunas do you have?",
+  "antwort": "Our Sauna World has 7 areas:\n- Classic Finnish sauna, 90°\n- Herbal sauna, 75°\n- Arven bio sauna, 65°\n- Hay sauna, 50°\nThere is also a steam bath, the Salzarium and an ice grotto.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   1,
+   9,
+   20
+  ],
+  "sprache": "de",
+  "belegt": false,
+  "frage": "Darf ich meinen Hund mitbringen?",
+  "antwort": "Dazu steht nichts in meinen Unterlagen. Die Rezeption hilft Ihnen gerne weiter:\n- Telefon: +41 33 675 81 81\n- E-Mail: info@doldenhorn.ch",
+  "thema": "Hund im Haus",
+  "buchung": false
+ },
+ {
+  "vor": [
+   1,
+   16,
+   5
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Was kostet das Mittagsmenü?",
+  "antwort": "Das Mittagsmenü hat 4 Gänge und kostet CHF 50.00, mit 2 Glas Wein, Wasser und Kaffee CHF 75.00. Es gibt es täglich ausser Dienstag und Mittwoch, 11.30 bis 13.30 Uhr.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   1,
+   19,
+   20
+  ],
+  "sprache": "fr",
+  "belegt": true,
+  "frage": "Le restaurant Au Gourmet est-il ouvert le mardi ?",
+  "antwort": "Non, l’Au Gourmet est fermé le mardi toute la journée ainsi que le mercredi. Pour réserver une table : +41 33 675 81 81.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   2,
+   8,
+   30
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Wie weit ist es vom Bahnhof zu Ihnen?",
+  "antwort": "Vom Bahnhof Kandersteg sind es 15 Fussminuten. Für die Abreise melden Sie den Shuttle zum Bahnhof an, die Rezeption bestätigt Ihnen die Fahrt.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   2,
+   13,
+   45
+  ],
+  "sprache": "en",
+  "belegt": false,
+  "frage": "What time is check-in?",
+  "antwort": "There is nothing about this in my documents. The reception will be happy to help:\n- Phone: +41 33 675 81 81\n- E-mail: info@doldenhorn.ch",
+  "thema": "Check-in",
+  "buchung": false
+ },
+ {
+  "vor": [
+   3,
+   9,
+   15
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Was kostet eine Massage?",
+  "antwort": "Aus dem Massage-Menü 2026:\n- Klassische Teilkörpermassage, 25 min: CHF 75.00\n- Schulter & Rückenmassage, 40 min: CHF 100.00\nTermine täglich auf Anfrage über spa@doldenhorn.ch.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   3,
+   14,
+   2
+  ],
+  "sprache": "en",
+  "belegt": true,
+  "frage": "How many guests fit in your largest hall?",
+  "antwort": "Up to 200 guests in the seminar hall. The other rooms: Grüner Saal 100, Wintergarten 60, Burestube 34.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   4,
+   11,
+   5
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Was kostet der Gourmet-Aufenthalt?",
+  "antwort": "Ab CHF 285.00, mit Willkommensaperitif, Frühstücksbuffet, Tea Time und einem 7-Gang Menü Gastronomique. Die Buchungsmaske zeigt freie Zimmer und Preise für Ihre Daten.",
+  "thema": "",
+  "buchung": true
+ }
+]

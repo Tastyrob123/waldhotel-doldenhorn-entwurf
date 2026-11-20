@@ -1,0 +1,428 @@
+[
+ {
+  "nr": 1,
+  "text": "Übersicht lädt, Gruss nach Tageszeit im Titel",
+  "ok": true,
+  "mass": "Guten Morgen. Was brauchen Sie heute?"
+ },
+ {
+  "nr": 2,
+  "text": "Drei Karten Bildarchiv, Dateien, Prüfung",
+  "ok": true,
+  "mass": "3"
+ },
+ {
+  "nr": 3,
+  "text": "Vier Zahlen unter den Karten",
+  "ok": true,
+  "mass": "69 FOTOS DES HAUSES 13 FREI LIZENZIERT 4 MIT KI ERZEUGT 36 D"
+ },
+ {
+  "nr": 4,
+  "text": "Karte Markenbuch mit Knopf «Lesen»",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 5,
+  "text": "Rand: Arbeiten, Nachschlagen, Zahlen je Eintrag",
+  "ok": true,
+  "mass": "5"
+ },
+ {
+  "nr": 6,
+  "text": "Kopf: Zeichen und Name, Titel und Stand, Anleitung, La Maison, Website",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 7,
+  "text": "Leiste unten: Bildrechte und ZIP",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 8,
+  "text": "Sprachwahl vorgebaut: mit einer Sprache verborgen, mit ?sprachen=probe sichtbar und offen",
+  "ok": true,
+  "mass": "ohne 0, mit 2"
+ },
+ {
+  "nr": 9,
+  "text": "Sprache wechselt Titel, Rand, Leiste (Probe-Sprache)",
+  "ok": true,
+  "mass": "‹Guten Morgen.› ‹Was brauchen "
+ },
+ {
+  "nr": 10,
+  "text": "Gewählte Sprache bleibt nach Neuladen",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 11,
+  "text": "Unbekannte Sprache in der Adresse fällt auf Deutsch zurück",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 12,
+  "text": "Zurück auf Deutsch",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 13,
+  "text": "Sprachwahl schliesst beim Klicken daneben",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 14,
+  "text": "Alle Links in Kopf, Rand und Leiste antworten",
+  "ok": true,
+  "mass": "6 Links"
+ },
+ {
+  "nr": 15,
+  "text": "ZIP mit allen Dateien lädt",
+  "ok": true,
+  "mass": "714 KB"
+ },
+ {
+  "nr": 16,
+  "text": "Rand → Bildarchiv",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 17,
+  "text": "Rand → Logo & Dateien",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 18,
+  "text": "Rand → Markenprüfung",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 19,
+  "text": "Marke im Kopf führt zur Übersicht",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 20,
+  "text": "Karte «Logo & Dateien» öffnet die Ansicht",
+  "ok": true,
+  "mass": "7"
+ },
+ {
+  "nr": 21,
+  "text": "Adresse mit #bilder öffnet gleich das Bildarchiv",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 22,
+  "text": "Raster zeigt zuerst 48 Kacheln",
+  "ok": true,
+  "mass": "48 von 86"
+ },
+ {
+  "nr": 23,
+  "text": "Nachladen beim Scrollen hängt Kacheln an, bis alle da sind",
+  "ok": true,
+  "mass": "86"
+ },
+ {
+  "nr": 24,
+  "text": "Suche «sauna» filtert",
+  "ok": true,
+  "mass": "2"
+ },
+ {
+  "nr": 25,
+  "text": "Zähler «x von y» stimmt zur Suche",
+  "ok": true,
+  "mass": "2 VON 86 FOTOS"
+ },
+ {
+  "nr": 26,
+  "text": "Leere Suche zeigt Hinweis statt Kacheln",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 27,
+  "text": "«Filter zurücksetzen» zeigt wieder alle",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 28,
+  "text": "Filter Bereich: 8 Knöpfe, Wahl wirkt, «Alle» löst",
+  "ok": true,
+  "mass": "22/18/10/4/5/3/17/7"
+ },
+ {
+  "nr": 29,
+  "text": "Filter Saison: 3 Knöpfe, Wahl wirkt, «Alle» löst",
+  "ok": true,
+  "mass": "14/7/48"
+ },
+ {
+  "nr": 30,
+  "text": "Filter Format: 2 Knöpfe, Wahl wirkt, «Alle» löst",
+  "ok": true,
+  "mass": "1/48"
+ },
+ {
+  "nr": 31,
+  "text": "Filter Herkunft: 3 Knöpfe, Wahl wirkt, «Alle» löst",
+  "ok": true,
+  "mass": "48/13/4"
+ },
+ {
+  "nr": 32,
+  "text": "Foto öffnet gross im Fenster mit Titel, Quelle, Original",
+  "ok": true,
+  "mass": "Suite unter dem Dach mit Kachelofen und Truhe"
+ },
+ {
+  "nr": 33,
+  "text": "Vier Grössen Instagram, Story, Website, Druck",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 34,
+  "text": "Hinweis zum Beschneiden: «Ausschnitt: Feld ziehen»",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 35,
+  "text": "Über jede Grösse fahren zeigt den Rahmen mit Mass",
+  "ok": true,
+  "mass": "Story · 1080 × 1920 px | Website · 2000 × 1342 px | Druck · 2'528 × 1'696 px"
+ },
+ {
+  "nr": 36,
+  "text": "Rahmen ziehen ändert den Ausschnitt im Download- und Imprimerie-Link",
+  "ok": true,
+  "mass": "k=z-suite-1&f=instagram&x=0.892&y=0.500"
+ },
+ {
+  "nr": 37,
+  "text": "Download Instagram 1080 × 1350 (Server)",
+  "ok": true,
+  "mass": "oldenhorn-z-suite-1-instagram-1080x1350.jpg\""
+ },
+ {
+  "nr": 38,
+  "text": "Download Story 1080 × 1920 (Server)",
+  "ok": true,
+  "mass": "z-suite-1-story-1080x1920-hochgerechnet.jpg\""
+ },
+ {
+  "nr": 39,
+  "text": "Download Website 2000 px (Server)",
+  "ok": true,
+  "mass": "otel-doldenhorn-z-suite-1-web-2000x1342.jpg\""
+ },
+ {
+  "nr": 40,
+  "text": "Download Druck volle Auflösung (Server)",
+  "ok": true,
+  "mass": "el-doldenhorn-z-suite-1-druck-2528x1696.jpg\" 1764 KB"
+ },
+ {
+  "nr": 41,
+  "text": "Klick auf «Laden» speichert eine JPG-Datei",
+  "ok": true,
+  "mass": "waldhotel-doldenhorn-z-suite-1-web-2000x1342.jpg"
+ },
+ {
+  "nr": 42,
+  "text": "Zwei Wege in L’Imprimerie (Beitrag, Story) mit Foto und Ausschnitt",
+  "ok": true,
+  "mass": "haus=doldenhorn&foto=z-suite-1&art=insta&x=0.892&y=0.500 | haus=doldenhorn&foto=z-suite-1&art=story&"
+ },
+ {
+  "nr": 43,
+  "text": "Esc schliesst das Fenster",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 44,
+  "text": "Kreuz schliesst das Fenster",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 45,
+  "text": "Klick neben das Fenster schliesst es",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 46,
+  "text": "KI-Bild trägt den dunklen Hinweis und «-mit-ki-erzeugt» im Dateinamen",
+  "ok": true,
+  "mass": "enhorn-ueb-blumen-mit-ki-erzeugt-web-1100x822.jpg\""
+ },
+ {
+  "nr": 47,
+  "text": "Dateien: Zeichen, Logo, Name, Tapete, Farben, Schriften, Logo der heutigen Website",
+  "ok": true,
+  "mass": "7"
+ },
+ {
+  "nr": 48,
+  "text": "Jede Datei der Ansicht ist abrufbar",
+  "ok": true,
+  "mass": "37 Dateien"
+ },
+ {
+  "nr": 49,
+  "text": "Farbe antippen kopiert den Hexwert, Meldung erscheint",
+  "ok": true,
+  "mass": "#0D1621 #0D1621"
+ },
+ {
+  "nr": 50,
+  "text": "Farben des Drucks stehen getrennt von denen der Website",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 51,
+  "text": "Zweite Zeile einer Farbe kopiert den RGB-Wert",
+  "ok": true,
+  "mass": "rgb(13, 22, 33)"
+ },
+ {
+  "nr": 52,
+  "text": "Schriften mit WOFF2-Knopf",
+  "ok": true,
+  "mass": "4"
+ },
+ {
+  "nr": 53,
+  "text": "Knopf «Regeln im Markenbuch» führt ins Markenbuch",
+  "ok": true,
+  "mass": "buch.html#zeichen"
+ },
+ {
+  "nr": 54,
+  "text": "Prüfung: Feld mit «Datei wählen», Beispiel-Link, Hinweis «nichts gespeichert»",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 55,
+  "text": "Unter dem leeren Feld steht schon ein Beispiel",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 56,
+  "text": "Falscher Dateityp wird abgewiesen, Meldung erscheint",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 57,
+  "text": "Gewählte Datei: Vorschau, Name, Grösse, «Prüfen»",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 58,
+  "text": "Nach der Wahl verschwindet das Beispiel darunter",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 59,
+  "text": "Prüfen zeigt drei Schritte mit Abtastung",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 60,
+  "text": "Prüfung endet mit Ergebnis (Messung) oder mit Meldung und Feld",
+  "ok": true,
+  "mass": "Ergebnis"
+ },
+ {
+  "nr": 61,
+  "text": "Ergebnis: Vorschau, gemessene Farben, Prozent im Rahmen",
+  "ok": true,
+  "mass": "1 Töne"
+ },
+ {
+  "nr": 62,
+  "text": "Ergebnis: Probe-Antwort deutlich beschriftet, wenn Claude aus ist, sonst Punkte",
+  "ok": true,
+  "mass": "5 Punkte"
+ },
+ {
+  "nr": 63,
+  "text": "«Als Text kopieren» legt die Rückmeldung in die Zwischenablage",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 64,
+  "text": "«Ergebnis sichern» speichert eine HTML-Datei auf dem Rechner",
+  "ok": true,
+  "mass": "le-livre-pruefung-entwurf.html"
+ },
+ {
+  "nr": 65,
+  "text": "«Neuen Entwurf prüfen» setzt das Feld zurück",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 66,
+  "text": "«Beispiel ansehen» zeigt die Rückmeldung zum Beispiel-Entwurf, als Beispiel und «von Hand» beschriftet",
+  "ok": true,
+  "mass": "7 Punkte"
+ },
+ {
+  "nr": 67,
+  "text": "Beispiel: Punkte sortiert, «passt nicht» zuerst",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 68,
+  "text": "Adresse mit ?beispiel=1#pruefung öffnet das Beispiel gleich",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 69,
+  "text": "Kein seitliches Verrutschen (390 px, vier Ansichten)",
+  "ok": true,
+  "mass": "0 px"
+ },
+ {
+  "nr": 70,
+  "text": "Keine Fehler in der Konsole, keine toten Anfragen",
+  "ok": true,
+  "mass": ""
+ },
+ {
+  "nr": 84,
+  "text": "Handy: Menü «Bereiche» öffnet, Wahl wechselt und schliesst, Foto-Fenster passt",
+  "ok": true,
+  "mass": "true/true/366"
+ }
+]

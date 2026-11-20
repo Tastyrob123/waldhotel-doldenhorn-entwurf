@@ -1,0 +1,29 @@
+{
+ "name": "Waldhotel Doldenhorn",
+ "ort": "Kandersteg",
+ "tel": "+41 33 675 81 81",
+ "mail": "info@doldenhorn.ch",
+ "adresse": "Doldenhornstrasse 26, 3718 Kandersteg",
+ "zeiten": "Rezeption des Hauses",
+ "fahrplan": "oeschinensee.ch, sunnbuel.ch und sbb.ch",
+ "kategorien": [],
+ "orte": [
+  [
+   "Kandersteg (1176 m)",
+   46.495,
+   7.675
+  ],
+  [
+   "Oeschinensee (1578 m)",
+   46.498,
+   7.727
+  ],
+  [
+   "Gemmipass (2314 m)",
+   46.398,
+   7.614
+  ]
+ ],
+ "muster": "Frage: Wann ist das Hallenbad offen?\nAntwort: Täglich von 8 bis 22 Uhr, mit Wasser aus der hauseigenen Quelle.\n- Massagen: täglich auf Anfrage\n- Termin: spa@doldenhorn.ch\n\nFrage: Habt ihr einen Fitnessraum?\nAntwort: Dazu steht nichts in meinen Unterlagen. Die Rezeption hilft Ihnen gerne weiter:\n- Telefon: +41 33 675 81 81\n- E-Mail: info@doldenhorn.ch",
+ "modell": "claude-sonnet-5-5"
+}

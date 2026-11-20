@@ -1,0 +1,74 @@
+Le Livre · Doldenhorn · chromium 320 × 700
+ 1 ✓ Übersicht lädt, Gruss nach Tageszeit im Titel  · Guten Morgen. Was brauchen Sie heute?
+ 2 ✓ Drei Karten Bildarchiv, Dateien, Prüfung  · 3
+ 3 ✓ Vier Zahlen unter den Karten  · 69 FOTOS DES HAUSES 13 FREI LIZENZIERT 4 MIT KI ERZEUGT 36 D
+ 4 ✓ Karte Markenbuch mit Knopf «Lesen»
+ 5 ✓ Rand: Arbeiten, Nachschlagen, Zahlen je Eintrag  · 5
+ 6 ✓ Kopf: Zeichen und Name, Titel und Stand, Anleitung, La Maison, Website
+ 7 ✓ Leiste unten: Bildrechte und ZIP
+ 8 ✓ Sprachwahl vorgebaut: mit einer Sprache verborgen, mit ?sprachen=probe sichtbar und offen  · ohne 0, mit 2
+ 9 ✓ Sprache wechselt Titel, Rand, Leiste (Probe-Sprache)  · ‹Guten Morgen.› ‹Was brauchen 
+10 ✓ Gewählte Sprache bleibt nach Neuladen
+11 ✓ Unbekannte Sprache in der Adresse fällt auf Deutsch zurück
+12 ✓ Zurück auf Deutsch
+13 ✓ Sprachwahl schliesst beim Klicken daneben
+14 ✓ Alle Links in Kopf, Rand und Leiste antworten  · 6 Links
+15 ✓ ZIP mit allen Dateien lädt  · 714 KB
+16 ✓ Rand → Bildarchiv
+17 ✓ Rand → Logo & Dateien
+18 ✓ Rand → Markenprüfung
+19 ✓ Marke im Kopf führt zur Übersicht
+20 ✓ Karte «Logo & Dateien» öffnet die Ansicht  · 7
+21 ✓ Adresse mit #bilder öffnet gleich das Bildarchiv
+22 ✓ Raster zeigt zuerst 48 Kacheln  · 48 von 86
+23 ✓ Nachladen beim Scrollen hängt Kacheln an, bis alle da sind  · 86
+24 ✓ Suche «sauna» filtert  · 2
+25 ✓ Zähler «x von y» stimmt zur Suche  · 2 VON 86 FOTOS
+26 ✓ Leere Suche zeigt Hinweis statt Kacheln
+27 ✓ «Filter zurücksetzen» zeigt wieder alle
+28 ✓ Filter Bereich: 8 Knöpfe, Wahl wirkt, «Alle» löst  · 22/18/10/4/5/3/17/7
+29 ✓ Filter Saison: 3 Knöpfe, Wahl wirkt, «Alle» löst  · 14/7/48
+30 ✓ Filter Format: 2 Knöpfe, Wahl wirkt, «Alle» löst  · 1/48
+31 ✓ Filter Herkunft: 3 Knöpfe, Wahl wirkt, «Alle» löst  · 48/13/4
+32 ✓ Foto öffnet gross im Fenster mit Titel, Quelle, Original  · Suite unter dem Dach mit Kachelofen und Truhe
+33 ✓ Vier Grössen Instagram, Story, Website, Druck
+34 ✓ Hinweis zum Beschneiden: «Ausschnitt: Feld ziehen»
+35 ✓ Über jede Grösse fahren zeigt den Rahmen mit Mass  · Story · 1080 × 1920 px | Website · 2000 × 1342 px | Druck · 2'528 × 1'696 px
+36 ✓ Rahmen ziehen ändert den Ausschnitt im Download- und Imprimerie-Link  · k=z-suite-1&f=instagram&x=0.969&y=0.500
+37 ✓ Download Instagram 1080 × 1350 (Server)  · oldenhorn-z-suite-1-instagram-1080x1350.jpg"
+38 ✓ Download Story 1080 × 1920 (Server)  · z-suite-1-story-1080x1920-hochgerechnet.jpg"
+39 ✓ Download Website 2000 px (Server)  · otel-doldenhorn-z-suite-1-web-2000x1342.jpg"
+40 ✓ Download Druck volle Auflösung (Server)  · el-doldenhorn-z-suite-1-druck-2528x1696.jpg" 1764 KB
+41 ✓ Klick auf «Laden» speichert eine JPG-Datei  · waldhotel-doldenhorn-z-suite-1-web-2000x1342.jpg
+42 ✓ Zwei Wege in L’Imprimerie (Beitrag, Story) mit Foto und Ausschnitt  · haus=doldenhorn&foto=z-suite-1&art=insta&x=0.969&y=0.500 | haus=doldenhorn&foto=z-suite-1&art=story&
+43 ✓ Esc schliesst das Fenster
+44 ✓ Kreuz schliesst das Fenster
+45 ✓ Klick neben das Fenster schliesst es
+46 ✓ KI-Bild trägt den dunklen Hinweis und «-mit-ki-erzeugt» im Dateinamen  · enhorn-ueb-blumen-mit-ki-erzeugt-web-1100x822.jpg"
+47 ✓ Dateien: Zeichen, Logo, Name, Tapete, Farben, Schriften, Logo der heutigen Website  · 7
+48 ✓ Jede Datei der Ansicht ist abrufbar  · 37 Dateien
+49 ✓ Farbe antippen kopiert den Hexwert, Meldung erscheint  · #0D1621 #0D1621
+50 ✓ Farben des Drucks stehen getrennt von denen der Website
+51 ✓ Zweite Zeile einer Farbe kopiert den RGB-Wert  · rgb(13, 22, 33)
+52 ✓ Schriften mit WOFF2-Knopf  · 4
+53 ✓ Knopf «Regeln im Markenbuch» führt ins Markenbuch  · buch.html#zeichen
+54 ✓ Prüfung: Feld mit «Datei wählen», Beispiel-Link, Hinweis «nichts gespeichert»
+55 ✓ Unter dem leeren Feld steht schon ein Beispiel
+56 ✓ Falscher Dateityp wird abgewiesen, Meldung erscheint
+57 ✓ Gewählte Datei: Vorschau, Name, Grösse, «Prüfen»
+58 ✓ Nach der Wahl verschwindet das Beispiel darunter
+59 ✓ Prüfen zeigt drei Schritte mit Abtastung
+60 ✓ Prüfung endet mit Ergebnis (Messung) oder mit Meldung und Feld  · Ergebnis
+61 ✓ Ergebnis: Vorschau, gemessene Farben, Prozent im Rahmen  · 1 Töne
+62 ✓ Ergebnis: Probe-Antwort deutlich beschriftet, wenn Claude aus ist, sonst Punkte  · 5 Punkte
+63 ✓ «Als Text kopieren» legt die Rückmeldung in die Zwischenablage
+64 ✓ «Ergebnis sichern» speichert eine HTML-Datei auf dem Rechner  · le-livre-pruefung-entwurf.html
+65 ✓ «Neuen Entwurf prüfen» setzt das Feld zurück
+66 ✓ «Beispiel ansehen» zeigt die Rückmeldung zum Beispiel-Entwurf, als Beispiel und «von Hand» beschriftet  · 7 Punkte
+67 ✓ Beispiel: Punkte sortiert, «passt nicht» zuerst
+68 ✓ Adresse mit ?beispiel=1#pruefung öffnet das Beispiel gleich
+69 ✓ Kein seitliches Verrutschen (320 px, vier Ansichten)  · 0 px
+70 ✓ Keine Fehler in der Konsole, keine toten Anfragen
+84 ✓ Handy: Menü «Bereiche» öffnet, Wahl wechselt und schliesst, Foto-Fenster passt  · true/true/304
+
+Summe: 71/71

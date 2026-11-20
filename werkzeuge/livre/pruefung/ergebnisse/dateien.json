@@ -1,0 +1,20 @@
+[
+ {
+  "nr": 85,
+  "t": "Jede Datei gegen ihre Quelle (Farben, Schriften, Tapete, Logo, Zeichen, ZIP)",
+  "ok": true,
+  "m": "14 Farben, 4 Schriften, 35 Dateien, ZIP gleich"
+ },
+ {
+  "nr": 86,
+  "t": "Alle 86 Fotos in allen vier Grössen (344 Dateien)",
+  "ok": true,
+  "m": "0 Abweichungen, 21 ohne Original in Website-Grösse benannt, 54 s"
+ },
+ {
+  "nr": 90,
+  "t": "Probe-Antwort ohne Claude: kein Schlüssel gelesen, keine Anfrage nach aussen, Antwort in derselben Form",
+  "ok": true,
+  "m": "5 Punkte, 100 % im Rahmen, Schlüssel 0, aussen 0"
+ }
+]

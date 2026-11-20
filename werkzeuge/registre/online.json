@@ -1,0 +1,38 @@
+{
+ "name": "Besucher",
+ "hinweis": "Waldhotel Doldenhorn, 17.10.2026 (Form wie Carlton _werkzeuge/registre/online.json). Oberfläche statisch unter /werkzeuge/registre/ (Vorführung liest beispiel/*.json, braucht keinen Dienst); /api/registre für «Kontrollpanel» (Beispielwerte, dieselbe Rechnung) und für echte Werte mit Schlüssel. Eigener Speicher nur über REGISTRE_READ_WRITE_TOKEN (fehlt er: /tmp/doldenhorn-registre-demo, nie der gemeinsame Speicher). Braucht api/_speicher.py des gemeinsamen Online-Wegs (Carlton _werkzeuge/online/, beim Doldenhorn baut ihn der Werkbank-Chat). Bühnenfotos aus /assets/img/ der Website (haus-abend, empfang, luft-tal, kamin, halle, tal, salon-bleu, arvengang, je -l/-s.webp), Tapete /assets/img/tapete-gold-055.png, Zeichen /assets/logo/tannen.svg, Schriften /assets/fonts/. Die Zählung der Website (assets/js/messung.js) sendet an /api/registre.",
+ "funktionen": {
+  "api/registre.py": {
+   "von": "_werkzeuge/registre/online/registre.py",
+   "dauer": 30
+  }
+ },
+ "lib": {
+  "_werkzeuge/registre/registre.py": "api/_lib/registre/registre.py",
+  "_werkzeuge/registre/beispiel": "api/_lib/registre/beispiel"
+ },
+ "statik": {
+  "_werkzeuge/registre/index.html": "werkzeuge/registre/index.html",
+  "_werkzeuge/registre/registre.css": "werkzeuge/registre/registre.css",
+  "_werkzeuge/registre/registre.js": "werkzeuge/registre/registre.js",
+  "_werkzeuge/registre/auftakt.js": "werkzeuge/registre/auftakt.js",
+  "_werkzeuge/registre/rundgang.js": "werkzeuge/registre/rundgang.js",
+  "_werkzeuge/registre/zur-werkbank.js": "werkzeuge/registre/zur-werkbank.js",
+  "_werkzeuge/registre/fehler.js": "werkzeuge/registre/fehler.js",
+  "_werkzeuge/registre/seiten.json": "werkzeuge/registre/seiten.json",
+  "_werkzeuge/registre/anleitung.html": "werkzeuge/registre/anleitung.html",
+  "_werkzeuge/registre/anleitung.js": "werkzeuge/registre/anleitung.js",
+  "_werkzeuge/registre/anleitung": "werkzeuge/registre/anleitung",
+  "_werkzeuge/registre/beispiel": "werkzeuge/registre/beispiel",
+  "_werkzeuge/registre/startbild.css": "werkzeuge/registre/startbild.css",
+  "_werkzeuge/registre/startbild.js": "werkzeuge/registre/startbild.js",
+  "_werkzeuge/registre/auftritt.js": "werkzeuge/registre/auftritt.js",
+  "_werkzeuge/registre/auftritt.css": "werkzeuge/registre/auftritt.css"
+ },
+ "umleitungen": [],
+ "stand": "/api/registre?tage=30&beispiel=1",
+ "pruefung": {
+  "weg": "/werkzeuge/registre/",
+  "kurz": true
+ }
+}

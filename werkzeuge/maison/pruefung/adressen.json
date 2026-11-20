@@ -1,0 +1,26 @@
+{
+ "bureau": {
+  "auf": "/studio/",
+  "status": "geliefert"
+ },
+ "carte": {
+  "auf": "/_werkzeuge/carte/",
+  "status": "geliefert"
+ },
+ "imprimerie": {
+  "auf": "/_werkzeuge/imprimerie/",
+  "status": "geliefert"
+ },
+ "reception": {
+  "auf": "/_werkzeuge/reception/",
+  "status": "geliefert"
+ },
+ "livre": {
+  "auf": "/_werkzeuge/livre/",
+  "status": "geliefert"
+ },
+ "registre": {
+  "auf": "/_werkzeuge/registre/",
+  "status": "geliefert"
+ }
+}
