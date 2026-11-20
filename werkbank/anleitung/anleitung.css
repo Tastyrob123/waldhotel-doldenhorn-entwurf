@@ -49,3 +49,11 @@
 .schluss2 .t2 em{color:var(--gold);font-style:normal}
 @media(max-width:999px){.kapitel__f{order:-1}}
 body.kino-offen{overflow:hidden}
+
+/* Prüfung 20.11.2026: Titelzeilen ganz verdeckt bis zu ihrem Auftritt (lugten unten hervor); Kapiteltitel brechen in ihrer Spalte um statt hinauszuragen;
+   gesperrte Etiketten («Gut zu wissen», Schrittnummern, Fensterleiste, «Grösser ansehen») mindestens 14 bis 15 px */
+.zt:not(.da) .z>span{transform:translateY(calc(100% + .5em))}
+.kapitel__t .zt .z{white-space:normal}
+.kapitel__t .zt .z>span{width:auto}
+.schritte2 li i,.tipp b,.kino__lupe{font-size:15px!important}
+.kino .fen__k span{font-size:14px!important}
